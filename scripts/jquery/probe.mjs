@@ -1,0 +1,12 @@
+import path from 'node:path';
+import {read,write,output} from './common.mjs';
+import {metadata,embeddings,validate} from './models.mjs';
+const meta=await metadata();
+const data=read(path.join(output,'detector-input.json'));
+const source=data.sources.flatMap(s=>s.functions).find(f=>f.name==='isFunction')||data.sources[0].functions.find(f=>f.code.length<300&&f.propertyOperations>0);
+console.log('probe source',source.name,source.code);
+const e=await embeddings([source],'passage',meta.digests['qwen3-embedding:0.6b']);
+console.log('embedding dimensions',e.vectors[0].length,'ms',e.wallMs);
+const result=await validate(source,source,[],meta.digests);
+write(path.join(output,'model-probe.json'),{function:source.id,embeddingWallMs:e.wallMs,embeddingDimensions:e.vectors[0].length,verdict:result.verdict,wallMs:result.wallMs,response:result.response});
+console.log('validation',result.verdict,'ms',result.wallMs,'tokens',result.response?.eval_count,'reason',result.reason);

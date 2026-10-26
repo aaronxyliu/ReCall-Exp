@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Experiment 4: validation checks and assessed identity precision. Checks include repeated exact-request cache hits.}
+\label{tab:exp4-validation}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+Bundler & Checks & Accepted & Pair precision & Final precision & Top-5 recall\\
+\midrule
+esbuild & 1082 & 483 & 94.89\% & 98.66\% & 87.32\%\\
+Rollup & 1125 & 515 & 92.02\% & 98.82\% & 88.81\%\\
+webpack & 755 & 487 & 97.23\% & 99.81\% & 94.99\%\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,614 @@
+{
+  "inputs": {
+    "summary.json": {
+      "path": "/Users/aaronxyliu/GitHub/FAPI Study/results/jquery-4.0.0/minified-no-tree-shaking-mapping-v8/summary.json",
+      "sha256": "5b411a3ba096d6aa6f59d002f32bef42bfcab0a55693e243d05c14d59cf0bf1f"
+    },
+    "comparison-summary.json": {
+      "path": "/Users/aaronxyliu/GitHub/FAPI Study/results/jquery-4.0.0/minified-no-tree-shaking-mapping-v8/comparison-summary.json",
+      "sha256": "a1fddaf26ad910f62204f38775625877a136cb3a88237ad10994d05976fa7a4a"
+    },
+    "verification.json": {
+      "path": "/Users/aaronxyliu/GitHub/FAPI Study/results/jquery-4.0.0/minified-no-tree-shaking-mapping-v8/verification.json",
+      "sha256": "71eed841108465a364fbac783a4f97c0f9d5abda496df0aa0ccc0c9797126134"
+    },
+    "recovery-bottlenecks/summary.json": {
+      "path": "/Users/aaronxyliu/GitHub/FAPI Study/results/jquery-4.0.0/minified-no-tree-shaking-mapping-v8/recovery-bottlenecks/summary.json",
+      "sha256": "7e0901b5a1524b130a31a5cf06e83932c17b18e4649084da30d0b393b7ac54df"
+    }
+  },
+  "promptVersion": "jquery-pilot-v8-short-mapping-verdict-only",
+  "builds": [
+    {
+      "build": "esbuild-min-keep",
+      "status": "fixed-point",
+      "thinking": false,
+      "supportedJqueryDefinitions": 545,
+      "anchors": {
+        "total": 85,
+        "correct": 85,
+        "wrong": 0,
+        "unassessed": 0
+      },
+      "recoveredSeeds": {
+        "total": 401,
+        "correct": 383,
+        "wrong": 9,
+        "unassessed": 9
+      },
+      "final": {
+        "total": 486,
+        "correct": 468,
+        "wrong": 9,
+        "unassessed": 9
+      },
+      "conditionalPrecision": 98.11320754716981,
+      "correctRecovery": 85.87155963302752,
+      "correctAdditionalRecovery": 83.26086956521739,
+      "modelPairs": 2394,
+      "acceptedModelPairs": {
+        "total": 925,
+        "correct": 559,
+        "wrong": 343,
+        "unassessed": 23
+      },
+      "pairAcceptanceRate": 38.63826232247285,
+      "jsonValidityRate": 99.95822890559732,
+      "acceptedPairIdentityPrecision": 61.97339246119734,
+      "positiveIdentityPairs": 578,
+      "negativeIdentityPairs": 1721,
+      "identityNegativeAcceptanceRate": 19.930273097036608,
+      "positiveIdentityAcceptanceRate": 96.71280276816609,
+      "uncertain": 0,
+      "invalid": 1,
+      "errors": 0,
+      "knownQueries": 783,
+      "inCandidate": 763,
+      "inTop3": 578,
+      "candidateRecall": 97.44572158365261,
+      "top3Recall": 73.81864623243933,
+      "conditionalTop3Recall": 75.75360419397117,
+      "queryCount": 827,
+      "round": 6,
+      "wrongPromotions": [
+        "esbuild-min-keep:27192:27231",
+        "esbuild-min-keep:28759:28798",
+        "esbuild-min-keep:32160:32187",
+        "esbuild-min-keep:78743:78763",
+        "esbuild-min-keep:10466:10610",
+        "esbuild-min-keep:14477:14516",
+        "esbuild-min-keep:21446:21524",
+        "esbuild-min-keep:8612:8674",
+        "esbuild-min-keep:14523:14562"
+      ],
+      "potentiallyAffectedDescendants": [
+        "esbuild-min-keep:78602:78642",
+        "esbuild-min-keep:21615:21673"
+      ],
+      "modelCalls": 1583,
+      "cacheHits": 811,
+      "modelWallMs": 2611740.976079006,
+      "rankWallMs": 210.2754129963443,
+      "elapsedMs": 2722442.1412090003,
+      "oversizedFunctions": 2,
+      "byRound": [
+        {
+          "round": 0,
+          "total": 85,
+          "correct": 85,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 1,
+          "total": 265,
+          "correct": 254,
+          "wrong": 4,
+          "unassessed": 7
+        },
+        {
+          "round": 2,
+          "total": 103,
+          "correct": 99,
+          "wrong": 3,
+          "unassessed": 1
+        },
+        {
+          "round": 3,
+          "total": 25,
+          "correct": 23,
+          "wrong": 2,
+          "unassessed": 0
+        },
+        {
+          "round": 4,
+          "total": 6,
+          "correct": 5,
+          "wrong": 0,
+          "unassessed": 1
+        },
+        {
+          "round": 5,
+          "total": 2,
+          "correct": 2,
+          "wrong": 0,
+          "unassessed": 0
+        }
+      ],
+      "identityConfusion": {
+        "truePositive": 559,
+        "falsePositive": 343,
+        "trueNegative": 1377,
+        "falseNegative": 19,
+        "positiveAbstained": 0,
+        "negativeAbstained": 1
+      },
+      "assessablePairs": 2299,
+      "binaryDecisionCoverage": 99.95650282731623,
+      "coveredIdentityDecisionAccuracy": 84.24717145343777,
+      "strictIdentityDecisionSuccessRate": 84.21052631578948,
+      "smallKnownTargets": 460,
+      "correctSmallRecovered": 383,
+      "smallRecoveryRate": 83.26086956521739,
+      "potentialWrongAllocationBlocks": [
+        {
+          "bundleId": "esbuild-min-keep:5455:5493",
+          "sourceId": "s58afc4248993aea9:15585:15666",
+          "wrongOwner": "esbuild-min-keep:27192:27231"
+        },
+        {
+          "bundleId": "esbuild-min-keep:8612:8674",
+          "sourceId": "s58afc4248993aea9:26289:26371",
+          "wrongOwner": "esbuild-min-keep:21446:21524"
+        },
+        {
+          "bundleId": "esbuild-min-keep:10490:10608",
+          "sourceId": "s58afc4248993aea9:34497:34873",
+          "wrongOwner": "esbuild-min-keep:10466:10610"
+        },
+        {
+          "bundleId": "esbuild-min-keep:14477:14516",
+          "sourceId": "s58afc4248993aea9:47372:47435",
+          "wrongOwner": "esbuild-min-keep:14523:14562"
+        },
+        {
+          "bundleId": "esbuild-min-keep:14523:14562",
+          "sourceId": "s58afc4248993aea9:47447:47510",
+          "wrongOwner": "esbuild-min-keep:14477:14516"
+        },
+        {
+          "bundleId": "esbuild-min-keep:21446:21524",
+          "sourceId": "s58afc4248993aea9:72618:72769",
+          "wrongOwner": "esbuild-min-keep:8612:8674"
+        },
+        {
+          "bundleId": "esbuild-min-keep:23794:23818",
+          "sourceId": "s58afc4248993aea9:80463:80500",
+          "wrongOwner": "esbuild-min-keep:78743:78763"
+        },
+        {
+          "bundleId": "esbuild-min-keep:28673:28712",
+          "sourceId": "s58afc4248993aea9:99788:99867",
+          "wrongOwner": "esbuild-min-keep:28759:28798"
+        },
+        {
+          "bundleId": "esbuild-min-keep:78743:78763",
+          "sourceId": "s58afc4248993aea9:255101:255133",
+          "wrongOwner": "esbuild-min-keep:32160:32187"
+        }
+      ],
+      "correctReferenceIdentities": 468,
+      "referenceInventoryCoverage": 83.87096774193549,
+      "modelSeedsBeyondAst": 232,
+      "recoveredSeedPrecision": 97.70408163265306,
+      "anyAcceptedQueryRate": 81.4993954050786,
+      "uniqueAcceptedQueryRate": 57.67835550181378,
+      "promotedQueryRate": 48.48851269649335,
+      "ambiguousQueries": 197,
+      "identityConflictQueries": 76
+    },
+    {
+      "build": "rollup-min-keep",
+      "status": "fixed-point",
+      "thinking": false,
+      "supportedJqueryDefinitions": 544,
+      "anchors": {
+        "total": 77,
+        "correct": 77,
+        "wrong": 0,
+        "unassessed": 0
+      },
+      "recoveredSeeds": {
+        "total": 418,
+        "correct": 397,
+        "wrong": 11,
+        "unassessed": 10
+      },
+      "final": {
+        "total": 495,
+        "correct": 474,
+        "wrong": 11,
+        "unassessed": 10
+      },
+      "conditionalPrecision": 97.73195876288659,
+      "correctRecovery": 87.13235294117646,
+      "correctAdditionalRecovery": 85.01070663811564,
+      "modelPairs": 2455,
+      "acceptedModelPairs": {
+        "total": 1021,
+        "correct": 578,
+        "wrong": 390,
+        "unassessed": 53
+      },
+      "pairAcceptanceRate": 41.58859470468432,
+      "jsonValidityRate": 99.06313645621181,
+      "acceptedPairIdentityPrecision": 59.710743801652896,
+      "positiveIdentityPairs": 604,
+      "negativeIdentityPairs": 1738,
+      "identityNegativeAcceptanceRate": 22.43958573072497,
+      "positiveIdentityAcceptanceRate": 95.69536423841059,
+      "uncertain": 0,
+      "invalid": 23,
+      "errors": 0,
+      "knownQueries": 801,
+      "inCandidate": 779,
+      "inTop3": 604,
+      "candidateRecall": 97.25343320848938,
+      "top3Recall": 75.40574282147315,
+      "conditionalTop3Recall": 77.53530166880616,
+      "queryCount": 853,
+      "round": 8,
+      "wrongPromotions": [
+        "rollup-min-keep:27001:27040",
+        "rollup-min-keep:28530:28559",
+        "rollup-min-keep:78348:78368",
+        "rollup-min-keep:5395:5431",
+        "rollup-min-keep:6803:6841",
+        "rollup-min-keep:14366:14405",
+        "rollup-min-keep:19691:19744",
+        "rollup-min-keep:45434:45571",
+        "rollup-min-keep:7962:8000",
+        "rollup-min-keep:14412:14451",
+        "rollup-min-keep:19749:19802"
+      ],
+      "potentiallyAffectedDescendants": [
+        "rollup-min-keep:11466:11565"
+      ],
+      "modelCalls": 1437,
+      "cacheHits": 1018,
+      "modelWallMs": 2622177.594455991,
+      "rankWallMs": 167.85662300512195,
+      "elapsedMs": 2733551.144125,
+      "oversizedFunctions": 2,
+      "byRound": [
+        {
+          "round": 0,
+          "total": 77,
+          "correct": 77,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 1,
+          "total": 264,
+          "correct": 254,
+          "wrong": 3,
+          "unassessed": 7
+        },
+        {
+          "round": 2,
+          "total": 120,
+          "correct": 113,
+          "wrong": 5,
+          "unassessed": 2
+        },
+        {
+          "round": 3,
+          "total": 24,
+          "correct": 21,
+          "wrong": 3,
+          "unassessed": 0
+        },
+        {
+          "round": 4,
+          "total": 3,
+          "correct": 2,
+          "wrong": 0,
+          "unassessed": 1
+        },
+        {
+          "round": 5,
+          "total": 2,
+          "correct": 2,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 6,
+          "total": 4,
+          "correct": 4,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 7,
+          "total": 1,
+          "correct": 1,
+          "wrong": 0,
+          "unassessed": 0
+        }
+      ],
+      "identityConfusion": {
+        "truePositive": 578,
+        "falsePositive": 390,
+        "trueNegative": 1333,
+        "falseNegative": 19,
+        "positiveAbstained": 7,
+        "negativeAbstained": 15
+      },
+      "assessablePairs": 2342,
+      "binaryDecisionCoverage": 99.06063193851409,
+      "coveredIdentityDecisionAccuracy": 82.37068965517241,
+      "strictIdentityDecisionSuccessRate": 81.59692570452604,
+      "smallKnownTargets": 459,
+      "correctSmallRecovered": 391,
+      "smallRecoveryRate": 85.18518518518519,
+      "potentialWrongAllocationBlocks": [
+        {
+          "bundleId": "rollup-min-keep:1036:1067",
+          "sourceId": "s58afc4248993aea9:2669:2713",
+          "wrongOwner": "rollup-min-keep:6803:6841"
+        },
+        {
+          "bundleId": "rollup-min-keep:5395:5431",
+          "sourceId": "s58afc4248993aea9:15585:15666",
+          "wrongOwner": "rollup-min-keep:27001:27040"
+        },
+        {
+          "bundleId": "rollup-min-keep:7962:8000",
+          "sourceId": "s58afc4248993aea9:24155:24230",
+          "wrongOwner": "rollup-min-keep:5395:5431"
+        },
+        {
+          "bundleId": "rollup-min-keep:14366:14405",
+          "sourceId": "s58afc4248993aea9:47372:47435",
+          "wrongOwner": "rollup-min-keep:14412:14451"
+        },
+        {
+          "bundleId": "rollup-min-keep:14412:14451",
+          "sourceId": "s58afc4248993aea9:47447:47510",
+          "wrongOwner": "rollup-min-keep:14366:14405"
+        },
+        {
+          "bundleId": "rollup-min-keep:19691:19744",
+          "sourceId": "s58afc4248993aea9:67007:67098",
+          "wrongOwner": "rollup-min-keep:19749:19802"
+        },
+        {
+          "bundleId": "rollup-min-keep:19749:19802",
+          "sourceId": "s58afc4248993aea9:67106:67196",
+          "wrongOwner": "rollup-min-keep:19691:19744"
+        },
+        {
+          "bundleId": "rollup-min-keep:27001:27040",
+          "sourceId": "s58afc4248993aea9:93971:94053",
+          "wrongOwner": "rollup-min-keep:7962:8000"
+        },
+        {
+          "bundleId": "rollup-min-keep:28619:28648",
+          "sourceId": "s58afc4248993aea9:100191:100251",
+          "wrongOwner": "rollup-min-keep:28530:28559"
+        },
+        {
+          "bundleId": "rollup-min-keep:34490:34513",
+          "sourceId": "s58afc4248993aea9:119372:119411",
+          "wrongOwner": "rollup-min-keep:78348:78368"
+        },
+        {
+          "bundleId": "rollup-min-keep:45466:45564",
+          "sourceId": "s58afc4248993aea9:155618:155882",
+          "wrongOwner": "rollup-min-keep:45434:45571"
+        }
+      ],
+      "correctReferenceIdentities": 474,
+      "referenceInventoryCoverage": 84.94623655913979,
+      "modelSeedsBeyondAst": 258,
+      "recoveredSeedPrecision": 97.30392156862744,
+      "anyAcceptedQueryRate": 82.88393903868699,
+      "uniqueAcceptedQueryRate": 53.69284876905041,
+      "promotedQueryRate": 49.00351699882766,
+      "ambiguousQueries": 249,
+      "identityConflictQueries": 40
+    },
+    {
+      "build": "webpack-min-keep",
+      "status": "fixed-point",
+      "thinking": false,
+      "supportedJqueryDefinitions": 540,
+      "anchors": {
+        "total": 76,
+        "correct": 76,
+        "wrong": 0,
+        "unassessed": 0
+      },
+      "recoveredSeeds": {
+        "total": 436,
+        "correct": 414,
+        "wrong": 5,
+        "unassessed": 17
+      },
+      "final": {
+        "total": 512,
+        "correct": 490,
+        "wrong": 5,
+        "unassessed": 17
+      },
+      "conditionalPrecision": 98.98989898989899,
+      "correctRecovery": 90.74074074074075,
+      "correctAdditionalRecovery": 89.22413793103448,
+      "modelPairs": 1607,
+      "acceptedModelPairs": {
+        "total": 645,
+        "correct": 506,
+        "wrong": 109,
+        "unassessed": 30
+      },
+      "pairAcceptanceRate": 40.13690105787181,
+      "jsonValidityRate": 99.25326695706285,
+      "acceptedPairIdentityPrecision": 82.27642276422765,
+      "positiveIdentityPairs": 528,
+      "negativeIdentityPairs": 1011,
+      "identityNegativeAcceptanceRate": 10.781404549950544,
+      "positiveIdentityAcceptanceRate": 95.83333333333333,
+      "uncertain": 0,
+      "invalid": 12,
+      "errors": 0,
+      "knownQueries": 565,
+      "inCandidate": 542,
+      "inTop3": 528,
+      "candidateRecall": 95.929203539823,
+      "top3Recall": 93.45132743362832,
+      "conditionalTop3Recall": 97.41697416974169,
+      "queryCount": 590,
+      "round": 8,
+      "wrongPromotions": [
+        "webpack-min-keep:43321:43351",
+        "webpack-min-keep:45535:45672",
+        "webpack-min-keep:43280:43313",
+        "webpack-min-keep:41584:41626",
+        "webpack-min-keep:41631:41675"
+      ],
+      "potentiallyAffectedDescendants": [
+        "webpack-min-keep:43357:43562",
+        "webpack-min-keep:43383:43536",
+        "webpack-min-keep:43444:43534"
+      ],
+      "modelCalls": 1206,
+      "cacheHits": 401,
+      "modelWallMs": 2070419.3331730226,
+      "rankWallMs": 10.027061013504863,
+      "elapsedMs": 2088075.3290840006,
+      "oversizedFunctions": 3,
+      "byRound": [
+        {
+          "round": 0,
+          "total": 76,
+          "correct": 76,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 1,
+          "total": 175,
+          "correct": 164,
+          "wrong": 2,
+          "unassessed": 9
+        },
+        {
+          "round": 2,
+          "total": 143,
+          "correct": 139,
+          "wrong": 1,
+          "unassessed": 3
+        },
+        {
+          "round": 3,
+          "total": 77,
+          "correct": 73,
+          "wrong": 0,
+          "unassessed": 4
+        },
+        {
+          "round": 4,
+          "total": 25,
+          "correct": 23,
+          "wrong": 1,
+          "unassessed": 1
+        },
+        {
+          "round": 5,
+          "total": 7,
+          "correct": 6,
+          "wrong": 1,
+          "unassessed": 0
+        },
+        {
+          "round": 6,
+          "total": 6,
+          "correct": 6,
+          "wrong": 0,
+          "unassessed": 0
+        },
+        {
+          "round": 7,
+          "total": 3,
+          "correct": 3,
+          "wrong": 0,
+          "unassessed": 0
+        }
+      ],
+      "identityConfusion": {
+        "truePositive": 506,
+        "falsePositive": 109,
+        "trueNegative": 895,
+        "falseNegative": 18,
+        "positiveAbstained": 4,
+        "negativeAbstained": 7
+      },
+      "assessablePairs": 1539,
+      "binaryDecisionCoverage": 99.28525016244315,
+      "coveredIdentityDecisionAccuracy": 91.68848167539267,
+      "strictIdentityDecisionSuccessRate": 91.03313840155946,
+      "smallKnownTargets": 455,
+      "correctSmallRecovered": 408,
+      "smallRecoveryRate": 89.67032967032966,
+      "potentialWrongAllocationBlocks": [
+        {
+          "bundleId": "webpack-min-keep:41584:41626",
+          "sourceId": "s58afc4248993aea9:143492:143582",
+          "wrongOwner": "webpack-min-keep:41631:41675"
+        },
+        {
+          "bundleId": "webpack-min-keep:41631:41675",
+          "sourceId": "s58afc4248993aea9:143590:143683",
+          "wrongOwner": "webpack-min-keep:41584:41626"
+        },
+        {
+          "bundleId": "webpack-min-keep:43280:43313",
+          "sourceId": "s58afc4248993aea9:148390:148456",
+          "wrongOwner": "webpack-min-keep:43321:43351"
+        },
+        {
+          "bundleId": "webpack-min-keep:43321:43351",
+          "sourceId": "s58afc4248993aea9:148468:148528",
+          "wrongOwner": "webpack-min-keep:43280:43313"
+        },
+        {
+          "bundleId": "webpack-min-keep:45567:45665",
+          "sourceId": "s58afc4248993aea9:155618:155882",
+          "wrongOwner": "webpack-min-keep:45535:45672"
+        }
+      ],
+      "correctReferenceIdentities": 490,
+      "referenceInventoryCoverage": 87.81362007168458,
+      "modelSeedsBeyondAst": 270,
+      "recoveredSeedPrecision": 98.80668257756564,
+      "anyAcceptedQueryRate": 91.35593220338983,
+      "uniqueAcceptedQueryRate": 75.2542372881356,
+      "promotedQueryRate": 73.89830508474576,
+      "ambiguousQueries": 95,
+      "identityConflictQueries": 8
+    }
+  ],
+  "nonRecoveryReasons": {
+    "correct_accepted_but_multiple_positives": 88,
+    "correct_candidate_never_top3": 36,
+    "correct_accepted_but_identity_conflict": 6,
+    "never_queried_no_matched_neighbor": 19,
+    "wrong_source_promoted": 25,
+    "correct_top3_but_never_accepted": 16,
+    "correct_source_never_candidate": 4,
+    "correct_top3_only_invalid_or_error": 2,
+    "never_queried_input_length": 1
+  }
+}

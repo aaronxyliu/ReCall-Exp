@@ -1,0 +1,45 @@
+{
+  "experiment": 5,
+  "verification": {
+    "checks": 20359,
+    "status": "passed"
+  },
+  "inputs": [
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/experiment-5-summary.json",
+      "sha256": "709e5294cf2838423ca2330e964aa3e304ee0ef140c44544fe35e2571e746c1b"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/validator-model-comparison.json",
+      "sha256": "962c4cbea597717b9c90803667bf2a8863d034bfa17b0fbd38464e98b1412d2d"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/verification.json",
+      "sha256": "a2fd8fed651afcba34d8e0b27941cfec7a0ff08f001435338a0cdff239254187"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/execution-status.json",
+      "sha256": "424ef04ec0c79b37493e6cf5cab8b2298692b1989d93704b63bdfc0464d5bc26"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/model-manifest.json",
+      "sha256": "0bda3b6315c58b79c82b60a11b2c60d3fcc0958038e11adf426b8c22bc4c595f"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/input-provenance.json",
+      "sha256": "37c2ae4a62171ae9ac3123b605cf178148aaea39091217d2aefef7da4d668201"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/checked-misidentification-review.json",
+      "sha256": "86ac99ab4dc08bf9eec2638ed39789fd28207547b43fda81779dfe8d1796316b"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/wrong-identity-followup.json",
+      "sha256": "12267e511a5801db6917eeb0b98813637810ed96e58e43fd0aa2b48f959b8a1a"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-5-validator-4b/wrong-identity-audit/cases.json",
+      "sha256": "b4475c257a1f1b35f49d774e5d5d59b7158fb8ce2b6be666c0e7b0cf6cc1a8ab"
+    }
+  ]
+}

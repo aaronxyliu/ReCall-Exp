@@ -1,0 +1,76 @@
+\subsection{RQ1: Performance}
+\label{sec:rq1}
+\textit{How does ReCall perform across local builds from different bundlers, libraries, and frameworks, and how are function transformations related to library recovery rate?} We measure correct recovery, assessed identity precision, wrong and unassessed mappings, and computational cost using the units in Section~\ref{sec:identity-measurements}. The three planned experiments separately characterize bundler coverage, library/framework coverage, and split, combine, and remove transformations.
+
+\subsubsection{Completed evidence: jQuery model recovery}
+These completed results use the known-version jQuery fixture and original local graph (Section~\ref{sec:model-fixture}). All three builds reach a fixed point.
+
+The reference distribution contains 558 static definitions: 85 (15.23\%) have at least ten own-body property-operation occurrences, 393 have one to nine, and 80 have none. These are implementation instances, not distinct implementation patterns. Eligibility alone does not establish a stable or unique fingerprint.
+
+\input{data/exp4-recovery}
+
+Table~\ref{tab:exp4-recovery} separates initial POG matches from final recovery. The builds contain 568, 568, and 577 total function definitions, respectively. Of these, 545, 544, and 540 have supported jQuery identities and form the recovery denominators. Matching nevertheless retains all definitions, including application and runtime code.
+
+Initial POG matching supplies 85, 77, and 76 correct anchors. Expansion adds 429, 427, and 444 correct matches. Final recovery ranges from 92.65\% to 96.30\%. The descriptive pooled result is 1538/1629 supported bundled-function occurrences (94.41\%), including 1300 correct matches beyond the 238 initial POG correspondences. There are 14 wrong identities and 45 unassessed promotions. Repeated occurrences across builds are correlated. Across configurations, 541 distinct reference identities are correctly recovered; this uses the 558-definition reference inventory as its denominator and must not be confused with bundled-target recovery.
+
+\paragraph{Validation and final identity accuracy.}
+
+\input{data/exp4-validation}
+
+Table~\ref{tab:exp4-validation} distinguishes precision among assessable accepted pairs from precision of final matches. The procedure performs 2962 pair checks using 2286 distinct fresh requests and 676 exact-request cache hits. All responses satisfy the T/F contract; no API error or thinking text is recorded. Among 1485 accepted checks, 1363 agree with supported reference identities, 77 disagree, and 45 are unassessed. Assessed accepted-pair precision is 1363/1440 (94.65\%), rather than 1363/1485. Repeated checks are not independent trials.
+
+Across attempted assessable pairs, there are 1363 true positives, 68 false negatives, 77 false positives, and 1363 true negatives under the identity-label policy. These counts concern candidates actually examined, not arbitrary function pairs. Final assessed identity precision is 1538/(1538+14), or 99.10\%. Initial POG matches, repeated-query outcomes, and one-to-one filtering explain why pair and final-match denominators differ; a positive judgment alone is not the final output.
+
+Top-five recall is conditional on attempted queries with a supported counterpart. A function may contribute several queries as its matched neighborhood changes. Of the 1300 correct model-promoted matches, 1104 were accepted at rank one, 132 at rank two, 36 at rank three, 12 at rank four, and 16 at rank five. Thus, 28 correct promotions occur at ranks four or five in their saved queries. This is an observed distribution, not an isolated estimate of the gain from increasing the validation budget.
+
+\paragraph{Remaining failures.}
+
+\input{data/exp4-barriers}
+
+Table~\ref{tab:exp4-barriers} assigns an exclusive outcome to each of the 91 supported targets not correctly recovered. Wrong promotion takes precedence; the other outcomes inspect all saved queries. The largest categories are explicit rejection of a correct top-five pair (21), an accepted correct pair blocked by a reference-identity conflict (17), a correct candidate never entering the top five (16), and early acceptance preventing validation of a correct top-five candidate (15). Six targets lack a matched neighbor. One exceeds the input limit and one never has its correct reference in a candidate pool. The 14 wrong promotions are included in the 91, not added to it.
+
+These are observed outcomes, not additive estimates of gains from repairs. Changing a match changes later neighborhoods and reference availability. The decrease in unmatched-neighbor failures from 75 to six is consistent with greater expansion coverage, but does not isolate graph stability or the effect of an individual component.
+
+The detailed review of all 14 wrong identities is retained in Appendix~\ref{sec:wrong-identities}.
+
+\subsubsection{Planned experiment 1: different bundlers}
+\label{sec:rq1-bundlers}
+We will apply the complete method, including the extended relationship graphs, to local repository builds produced by different bundlers. The verification cohort will be held out from configuration selection, with references and input conditions fixed in advance. We will report recovery, assessed precision, wrong and unassessed mappings, runtime, and model calls per bundler, with macro summaries and pooled counts. Where the same subject can be built with multiple bundlers, we will retain paired comparisons; comparisons between different applications will be described as cohort differences rather than isolated bundler effects. Failure analysis will distinguish absent matched neighbors, missing or poorly ranked candidates, model decisions, and allocation conflicts.
+
+\subsubsection{Planned experiment 2: different libraries and frameworks}
+\label{sec:rq1-libraries}
+Using local builds and exact versioned references, we will evaluate different libraries and frameworks and report the same recovery and cost measures per target package. Package selection and the inclusion of framework runtimes will be declared before observing results. The framework-runtime exclusions in the completed graph cohorts remain part of those historical cohorts; they do not constitute completed framework recovery evidence. The planned evaluation will retain reference sizes, supported target counts, parse failures, and unresolved cases, and distinguish previously used subjects from held-out subjects. We will report POG size eligibility and admitted anchors separately; the planned eligibility measurement in Background remains unfilled.
+
+\rqoverview{Local builds across\\bundlers and packages}{Run fixed method;\\validate transformations}{Recovery, precision,\\cost, and associations}{Planned RQ1 experiments 1--3: evaluate bundler and library/framework performance and relate validated transformations to recovery.}{fig:rq1-goal}
+
+\subsubsection{Planned experiment 3: function transformations and recovery rate}
+\label{sec:boundary-characterization}
+We will count split, combine, and remove candidates using source-map relations, then manually validate every flagged candidate before drawing conclusions about transformation frequency. For each selected library and build, we will relate source definitions to the bundled functions receiving their mapping points. Nested bodies will be attributed to their innermost functions. We will retain all contributor votes rather than only the dominant identity used by the recovery oracle. The initial screen will require at least two mapping points per relation and report sensitivity to this threshold. Relations will be aggregated across the supplied chunks of one build; independent builds will remain separate.
+
+\begin{table}[htbp]
+\caption{Planned source-map screening for function-boundary transformations. Each relation identifies a candidate requiring manual validation.}
+\label{tab:boundary-candidates}
+\centering\small
+\begin{tabular}{@{}p{.43\linewidth}p{.52\linewidth}@{}}
+\toprule
+Observed relation & Candidate interpretation\\
+\midrule
+One source function $\rightarrow$ multiple bundled functions & Split candidate; duplication or mapping artifacts are alternatives.\\
+\addlinespace
+Multiple source functions $\rightarrow$ one bundled function & Combine candidate, including inlining.\\
+\addlinespace
+Source function $\rightarrow$ no mapped target & Possible removal; missing mappings or surviving top-level code are alternatives.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Manual validation.}
+Review will inspect the exact source and generated code, mapping locations, and enclosing contexts. Multi-target cases will be checked for genuine partitioning versus duplicated copies or nesting artifacts; multi-source cases will be checked for combined contributions, including inlining. For no-target cases, reviewers will also inspect generated top-level regions and all supplied chunks, using build-input inventories and compiler evidence where available. A missing function definition after inlining will count as combination when its computation survives, rather than as removal. Removal requires evidence that the function's computation was eliminated. Cases without sufficient evidence will remain unresolved. Each decision will retain source/generated locations, supporting evidence, and review notes, with disagreements adjudicated explicitly. These labels will be independent of ReCall's predictions.
+
+\paragraph{Counts and recovery consequences.}
+We will report screened candidates, confirmed transformations, alternative explanations, and unresolved cases per library and bundler. Counts will identify affected source definitions per build, with bundled-function and transformation-group counts reported separately. Overlapping transformations will be marked explicitly rather than summed into an exclusive partition. The source-inventory scope, parsing failures, missing artifacts, and map coverage will accompany each denominator. Final conclusions will distinguish observed frequency from unresolved coverage and relate validated cases to ReCall's outcomes: recovery and assessed precision for surviving supported counterparts, and coverage limits where no standalone counterpart remains. Confirmed removals will be reported as build elimination rather than matcher failures. The existing supported-target recovery denominator will remain explicit; the characterization will not silently convert unsupported transformations into assessed matches or exclude them from the scope discussion.
+
+For each library/build case, we will relate its confirmed split, combine, and remove frequencies to its library recovery rate, retaining unresolved transformation cases separately. We will compare cases within bundler and library groups where the data permit and report target counts, source-inventory coverage, and anchor coverage alongside the association. This analysis will describe relationships rather than establish that transformations alone cause differences in recovery. Rates over surviving supported targets and coverage relative to the source inventory will remain separate, since removal or loss of a standalone boundary can change the available target population.
+
+\paragraph{Status.}
+\textit{Pending: experiments 1--3 across bundlers and libraries/frameworks, validated transformation counts, and their relationship with library recovery rate. The completed jQuery pilot does not establish these broader outcomes.}

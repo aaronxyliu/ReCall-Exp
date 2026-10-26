@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Completed v5 recovery runs. Precision excludes unassessed outputs. The second run reuses cached judgments and is not an independent inference trial.}
+\label{tab:completed}
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Measure & esbuild keep & esbuild shake\\
+\midrule
+Correct initial POG matches & 84 & 84\\
+Correct final matches & 479 & 479\\
+Wrong final identities & 1 & 1\\
+Unassessed final matches & 13 & 13\\
+Supported targets & 543 & 543\\
+Recovery & 88.21\% & 88.21\%\\
+Assessed identity precision & 99.79\% & 99.79\%\\
+Productive expansion rounds & 3 & 3\\
+Pair checks & 1758 & 1758\\
+Fresh validator calls & 1613 & 0\\
+Cache hits & 145 & 1758\\
+Recovery wall time (s) & 1359.6 & 48.2\\
+\bottomrule
+\end{tabular}
+\end{table}

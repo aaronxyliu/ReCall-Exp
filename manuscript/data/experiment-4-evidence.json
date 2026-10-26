@@ -1,0 +1,58 @@
+{
+  "experiment4": "results/jquery-4.0.0/experiment-4-minified-ranking-top5",
+  "experiment3": "results/jquery-4.0.0/experiment-3-first-positive-27b",
+  "verification": {
+    "checks": 22576,
+    "status": "passed"
+  },
+  "inputs": [
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/summary.json",
+      "sha256": "955a585b7bb605cef6c094c41391e3d81151cdb19ec868d87a538f36f52388e4"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/experiment-4-summary.json",
+      "sha256": "7031d69fe2691003167b48855829d4cfbf9ee85c7442056bb6c85cd554ad5ca1"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/recovery-bottlenecks/summary.json",
+      "sha256": "3febbbf552f16f593be05c067c38704dd591e9b1d33dcbe9800a247d9a53fb44"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/checked-misidentification-review.json",
+      "sha256": "8771fa10b52217967dfe48b34f4d705e72473a8963aa49e9e7bf8f8a53221f45"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/wrong-identity-followup.json",
+      "sha256": "944cbdf6cf5bf08c126ccdaafdbffc2e50734e486f59e0413a66801b7543a714"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/model-manifest.json",
+      "sha256": "3ea781b5eb03be1443cc599e73f716b7832df323a86f7472d1445a69ab20e40c"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-4-minified-ranking-top5/verification.json",
+      "sha256": "d3e5d6b4dac378508b15fb363b218aa043fee494545535d2d88a90c49406f35c"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-3-first-positive-27b/summary.json",
+      "sha256": "44d3e951585f06956f65c5c71d679d3f7a83895c66260f3b2feab1b690b06c79"
+    },
+    {
+      "path": "results/jquery-4.0.0/experiment-3-first-positive-27b/experiment-3-summary.json",
+      "sha256": "301b2a8f2fa012d586372d3198c5fa424686e6fffd90d636fa36d1f41049038a"
+    }
+  ],
+  "counts": {
+    "targets": 1629,
+    "correct": 1538,
+    "wrong": 14,
+    "unassessed": 45,
+    "notCorrect": 91,
+    "pairChecks": 2962,
+    "freshCalls": 2286,
+    "cacheHits": 676,
+    "correctModelPromotions": 1300,
+    "initialCorrectPogMatches": 238
+  }
+}

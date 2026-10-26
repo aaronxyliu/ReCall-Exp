@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-23T04:17:15.512143+00:00",
+  "policy": "Ignore large payloads, generated output, dependencies, and model caches while retaining code, TeX, and small dataset metadata. No files deleted or staged.",
+  "repositories": {
+    "ReCall": {
+      "ignored_probe_paths": 20,
+      "source_metadata_probe_paths_kept": 8,
+      "existing_files_at_least_5MiB_ignored": 0,
+      "large_files_remaining_in_git_add_candidates": 0,
+      "git_add_candidate_file_count": 35,
+      "largest_candidate_files": [
+        {
+          "bytes": 28683,
+          "path": "scripts/real-app/bundle-graph-v2/analyzer.mjs"
+        },
+        {
+          "bytes": 22616,
+          "path": "vendor/debun/fingerprint-collector/pog-generator.js"
+        },
+        {
+          "bytes": 12144,
+          "path": "scripts/real-app/bundle-graph-v2/recognize.mjs"
+        }
+      ],
+      "tracked_files": 0
+    },
+    "ReCall Exp": {
+      "ignored_probe_paths": 26,
+      "source_metadata_probe_paths_kept": 6,
+      "existing_files_at_least_5MiB_ignored": 202,
+      "large_files_remaining_in_git_add_candidates": 0,
+      "git_add_candidate_file_count": 297,
+      "largest_candidate_files": [
+        {
+          "bytes": 1131344,
+          "path": "scripts/real-app/robustness/legacy-patterns/recognizer.cjs"
+        },
+        {
+          "bytes": 944194,
+          "path": "manuscript/data/bundler-sources/stateofjs2025-build-tools-page-data.json"
+        },
+        {
+          "bytes": 306814,
+          "path": "manuscript/template/acmart/acmart.dtx"
+        }
+      ],
+      "tracked_files": 0
+    },
+    "ReCall Dataset": {
+      "ignored_probe_paths": 25,
+      "source_metadata_probe_paths_kept": 8,
+      "existing_files_at_least_5MiB_ignored": 1,
+      "large_files_remaining_in_git_add_candidates": 0,
+      "git_add_candidate_file_count": 113,
+      "largest_candidate_files": [
+        {
+          "bytes": 239198,
+          "path": "datasets/bundling-dataset/audit.json"
+        },
+        {
+          "bytes": 64231,
+          "path": "datasets/bundling-dataset/rspack/zxwk1998--vue-admin-better/map-enabled.manifest.json"
+        },
+        {
+          "bytes": 49117,
+          "path": "datasets/bundling-dataset/rspack/zxwk1998--vue-admin-better/artifacts.json"
+        }
+      ],
+      "tracked_files": 0
+    }
+  },
+  "status": "passed"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "compiled-text-and-layout-verified",
+  "archive": "archive/2026-10-24-before-boundary-protocol",
+  "modifiedFiles": [
+    "sections/rq1.tex",
+    "sections/experiment.tex",
+    "sections/datasets.tex",
+    "README.md"
+  ],
+  "visualReviewPages": [
+    13,
+    17,
+    18
+  ],
+  "noUndefinedReferencesOrOverfullBoxes": true,
+  "completedRq1EvidenceUnchanged": true,
+  "corpusWideScreenRun": false,
+  "manualTransformationValidationRun": false,
+  "inferenceCalls": 0,
+  "files": {
+    "sections/rq1.tex": "0d773b1a4e56dbe1c98a52982bd99d74e9aa1ab9cebf6f886100fbde2130cb79",
+    "sections/experiment.tex": "3a010e56c3861251b5cbd2c2bbd92f9ac13fd34302c69f84923c34ad12a89ef3",
+    "sections/datasets.tex": "9911150af8dde680f97d85b118035ac38debde4d4ca0ac3c53b45cd9180fd3bc",
+    "README.md": "c341187742e6c2feb94e38bf56f289a6be8593a1e226867ff0e025a3f2f7887d",
+    "build/main.pdf": "66a7d6a36f0b97619795b382136db1775debe46f411cb06f5980ad472e4b1e28"
+  }
+}

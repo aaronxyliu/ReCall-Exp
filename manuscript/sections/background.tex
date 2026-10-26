@@ -1,0 +1,36 @@
+\section{Background}
+\label{sec:background}
+
+\subsection{JavaScript bundling and terminology}
+A JavaScript application typically consists of application modules and third-party packages connected by imports. A bundler starts from configured entry points, resolves dependencies, and constructs a module dependency graph. It then transforms and organizes the reachable code into deployable assets~\cite{webpackConcepts}. We use \emph{bundle} for the resulting JavaScript code and \emph{chunk} for a unit of code grouped for loading and emitted into output assets. A build can produce several chunks, for example to separate shared dependencies or defer loading. A \emph{module} is a dependency unit within this process; it need not retain a separate file or lexical boundary in the output.
+
+\paragraph{Module linking in emitted code.}
+Bundled code can contain application logic, library implementations, and bundler-generated \emph{runtime} code. The runtime connects modules through loading and initialization operations, using manifest information such as module identifiers~\cite{webpackManifest}. In a wrapped representation, a \emph{module factory} is a function that initializes a module, often receiving access to a module object, its exports, and a loader. A loader selects and initializes a module and returns its exports. An \emph{export getter} exposes a binding through an accessor. Consequently, a source import may become a chain of loader calls and property accesses. Another strategy, \emph{scope hoisting}, combines module bodies into a shared scope and connects them through lexical bindings~\cite{webpackConcatenation}. These representations can coexist within one build.
+
+\paragraph{Code transformations and recovery objects.}
+Bundling pipelines can also transpile syntax, remove unused exports through tree shaking, and minify code. Minification shortens identifiers and expressions; optimizations can inline calls or eliminate functions~\cite{webpackTreeShaking,terserOptions}. A \emph{function definition} is a static syntactic entity, including an anonymous callback or nested function. A \emph{bundled occurrence} is one emitted definition in a particular output file, not a runtime invocation. Its \emph{reference identity} identifies a definition in a versioned library reference. Several occurrences may correspond to the same reference identity, while an eliminated or fully inlined function may have no distinct emitted definition. Recovering an identity therefore differs from restoring the original source text or assigning an origin to every generated helper.
+
+\subsection{Challenges for function recovery}
+\label{sec:recovery-challenges}
+\paragraph{Loss of direct identity cues.}
+Names, file boundaries, and source expressions can change together. Textual equality is consequently too restrictive, while similarity alone can confuse helpers that implement common operations. Even identical bodies can originate from distinct definitions or library versions. Function recovery must distinguish a plausible behavioral match from evidence for a particular reference identity.
+
+\paragraph{Obscured relationships.}
+A function's surroundings can help disambiguate it, but imports and exports may survive only as runtime operations or flattened bindings. An analyzer that follows ordinary lexical calls can miss a target reached through a loader and export getter. Module membership alone does not establish which functions interact. Recovering useful context therefore requires interpreting the emitted binding and linking mechanisms.
+
+\paragraph{Uneven evidence across functions.}
+A function with many distinctive operations can provide a useful structural fingerprint. Short helpers and callbacks may expose few such features, even when their bodies survive bundling. Their identities may depend more on surrounding functions and binding context, motivating recovery beyond individually distinctive functions.
+
+\subsection{Existing techniques and the remaining gap}
+\label{sec:background-prior-work}
+\paragraph{DEBUN: property-order fingerprints.}
+DEBUN introduces the \emph{property-order graph} (POG), which represents property operations and their ordering within a function. It uses property names and operation types, together with control-flow refinements, to obtain fingerprints that tolerate code transformations. Aggregating fingerprint matches supports library and version identification~\cite{kim2025debun}. For small functions, however, distinguishing structure can be sparse: DEBUN excludes functions with at most five lines of code from its fingerprint database to reduce small-function noise. This filter should not be interpreted as a guarantee of fingerprint uniqueness or transformation stability for every larger function.
+
+Our planned experiment measures the proportion of definitions meeting ReCall's property-operation size criterion (Section~\ref{sec:pog-anchors}): \textbf{[TBD\%]}. \emph{The value, numerator, denominator, and cohort remain pending.} This criterion differs from DEBUN's line-count filter. It measures size eligibility, not fingerprint uniqueness, stability, or successful recovery.
+
+\paragraph{D-Bundlr: recovering structure for security analysis.}
+D-Bundlr transforms bundles to improve downstream static vulnerability analysis. Its prototype selects frontend packages modeled by CodeQL, often including security-relevant APIs. It combines lightweight static analysis for module dissection, library prediction using patterns, similarity, and GraphCodeBERT, and dynamic checks of predictions~\cite{xu2026dbundlr}. Its supported identities do not cover an unrestricted library function inventory. The published predictor omits anonymous functions, and individual-function verification requires manually supplied behavioral models. Its analyzer also targets webpack-specific bundle structures in the reported prototype.
+
+Our read-only audit of the pinned D-Bundlr artifact confirms that the individual-function verifier rejects a predicted identity when its behavioral model is absent~\cite{dbundlrVerifier}. This bounds individual-function acceptance even with a correct prediction. Whole-module recognition can still restore API context, so the restriction does not establish an end-to-end function-recovery rate.
+
+The remaining gap is recovery of less distinctive library definitions across different bundled representations. Section~\ref{sec:approach} develops ReCall's use of structural fingerprints and function relationships to address this gap.

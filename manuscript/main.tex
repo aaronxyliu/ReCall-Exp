@@ -1,0 +1,57 @@
+\documentclass[acmsmall,screen,review,anonymous]{acmart}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,breakatwhitespace=false,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,framesep=4pt}
+
+\newcommand{\rqoverview}[5]{%
+\begin{figure}[htbp]
+\centering\small
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #1}}\hfill
+\(\rightarrow\)\hfill
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #2}}\hfill
+\(\rightarrow\)\hfill
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #3}}
+\caption{#4}\label{#5}
+\end{figure}}
+
+\setlength{\emergencystretch}{3em}
+\settopmatter{printfolios=true,printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmDOI{}
+\acmISBN{}
+\title{ReCall: Accurate and Scalable Function Recovery for Bundled JavaScript}
+\author{Anonymous Author(s)}
+\begin{abstract}
+Bundling and minification obscure the identities of library functions in deployed JavaScript. Recognizing a package alone does not recover its individual functions, and short helpers and callbacks may lack distinctive fingerprints. We present ReCall, a method for recovering function identities from supplied JavaScript files and candidate reference libraries. ReCall uses initial property-order-graph matches to guide iterative recovery of related functions. Independently constructed reference and bundled relationship graphs normalize loading and export protocols across multiple bundlers, exposing candidates beyond ordinary lexical boundaries. Code embeddings rank these candidates, and heuristic model validation assesses their compatibility before conflict checks admit new matches. The output is a partial mapping that retains unresolved functions. We evaluate model-driven recovery separately from graph reachability. In a preliminary jQuery~4.0.0 experiment with known references and the original local graph, ReCall correctly recovers 1538/1629 supported occurrences (94.41\%), with 14 wrong identities and 45 unassessed promotions. On five previously untested repositories, the extended analyzer increases reachability from 22,494 to 26,402 of 28,780 supported pairs (78.16\% to 91.74\%). This simulation uses oracle-confirmed seeds and ideal candidate selection, measuring graph reachability rather than model accuracy. Source maps provide evaluation labels only. Broader model-driven evaluation with the extended graphs remains pending.
+\end{abstract}
+\keywords{JavaScript, program analysis, library identification, bundling, code similarity}
+\begin{CCSXML}
+<ccs2012><concept><concept_id>10011007.10011006.10011041</concept_id><concept_desc>Software and its engineering~Software reverse engineering</concept_desc><concept_significance>500</concept_significance></concept></ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Software and its engineering~Software reverse engineering}
+\begin{document}
+\maketitle
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/approach}
+\input{sections/datasets}
+\input{sections/experiment}
+\input{sections/results}
+\input{sections/limitations}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\appendix
+\input{sections/approach-details}
+\input{sections/prompt}
+\input{sections/simulation-appendix}
+\input{sections/pilot-setup}
+\input{sections/recovery-audit}
+\end{document}

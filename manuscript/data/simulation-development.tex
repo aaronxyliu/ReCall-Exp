@@ -1,0 +1,22 @@
+\begin{table}[t]
+\caption{Development subjects: supported-pair connectivity (\%). Base uses the original local graph; Within uses the current graph with per-chunk promotion; Cross additionally permits cross-chunk promotion. All variants retain the same $D$ targets and seeds.}
+\label{tab:simulation-development}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{.34\linewidth}lrrrr@{}}
+\toprule
+Subject & Family & $D$ & Base & Within & Cross\\
+\midrule
+\nolinkurl{vue-admin-better} & Rspack & 13,160 & 82.52 & 95.05 & 97.70\\
+\nolinkurl{Motrix} & Rolldown & 16,221 & 88.54 & 97.60 & 98.38\\
+\nolinkurl{cypress-realworld-app} & Rolldown & 5,548 & 73.00 & 82.93 & 82.93\\
+\nolinkurl{ZyPlayer} & Rolldown & 114,389 & 57.24 & 98.83 & 98.89\\
+\nolinkurl{wechat-miniapp-radar} & Turbo & 12 & 25.00 & 25.00 & 25.00\\
+\nolinkurl{next-ai-draw-io} & Turbo & 8,126 & 93.61 & 96.49 & 96.49\\
+\nolinkurl{github-profile-readme-generator} & Turbo & 3,835 & 57.26 & 88.92 & 88.92\\
+\nolinkurl{focalboard} & Parcel & 38 & 94.74 & 97.37 & 97.37\\
+\midrule
+Total & & 161,329 & 64.83 & 97.49 & 97.83\\
+\bottomrule
+\end{tabular}
+\end{table}

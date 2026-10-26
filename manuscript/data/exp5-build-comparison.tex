@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Recovery by bundler with unchanged inputs. Wrong counts include known non-library functions incorrectly identified as jQuery.}
+\label{tab:exp5-build-comparison}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Bundler & Targets & 27B correct & 4B correct & Wrong 27B / 4B\\
+\midrule
+esbuild & 545 & 514 (94.31\%) & 404 (74.13\%) & 7 / 23\\
+Rollup & 544 & 504 (92.65\%) & 423 (77.76\%) & 6 / 14\\
+webpack & 540 & 520 (96.30\%) & 473 (87.59\%) & 1 / 25\\
+\bottomrule
+\end{tabular}
+\end{table}

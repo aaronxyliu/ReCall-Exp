@@ -1,0 +1,24 @@
+{
+  "name": "recall-experiments",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/jquery/build.mjs",
+    "inventory": "node scripts/jquery/inventory.mjs && node scripts/jquery/oracle.mjs",
+    "recover": "node scripts/jquery/recover.mjs",
+    "report": "node scripts/jquery/report.mjs",
+    "test": "node --test scripts/jquery/analysis.test.mjs scripts/jquery/validator-policy.test.mjs scripts/jquery/variable-mapping-policy.test.mjs scripts/jquery/promotion-policy.test.mjs"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "16.0.1",
+    "esbuild": "0.25.9",
+    "jquery": "4.0.0",
+    "meriyah": "6.0.6",
+    "puppeteer-core": "24.16.0",
+    "rollup": "4.50.0",
+    "source-map": "0.6.1",
+    "terser": "5.43.1",
+    "webpack": "5.97.1"
+  }
+}

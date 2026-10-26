@@ -1,0 +1,17 @@
+{
+  "artifact": "https://github.com/Anemone95/D-Bundlr",
+  "commit": "c28a5d62efeecc46cc146c3548c71b8071ba2e89",
+  "files": [
+    {
+      "name": "webpackfingerprint.ts",
+      "sha256": "8504ae23f50d7dd31d4db173fd33b337dee7a369b7babfbeea671bc68f1114b4"
+    },
+    {
+      "name": "subASTSearch.ts",
+      "sha256": "fcf2a475bf76d8f0e8870b1eee6411b3b0fce3ae8e6fdd700765c6ecdade4762"
+    }
+  ],
+  "adapter": "Original patterns and isSubTree matcher copied unchanged. A plain-JavaScript Babel parser and in-memory codeFromLocation replace the artifact parser/logging/file-host dependencies. No authors predictor, dynamic sandbox, or Jelly solver is executed.",
+  "hostSha256": "f03dca9dc1cf85c11ec899ad7e57a96c01bcafe5cdc658d1a25948cf3639d48f",
+  "compiledRecognizerSha256": "37fc67517ba7ae054459492e5305f20fec840d36623733a1cdd2858422b01544"
+}

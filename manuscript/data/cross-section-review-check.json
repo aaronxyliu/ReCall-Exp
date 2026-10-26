@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "revision": "2026-10-24-joint-narrative-consistency-review",
+  "checked_at_utc": "2026-10-24T02:44:19.369622+00:00",
+  "review_dimensions": [
+    "motivation",
+    "contributions",
+    "terminology",
+    "research scope",
+    "repetition"
+  ],
+  "resolved_findings": [
+    {
+      "issue": "Reference-side functions were alternately called source or reference functions.",
+      "resolution": "Standardized reference-side matching terms, including pseudocode; preserved source maps, source text, and source-order proximity."
+    },
+    {
+      "issue": "Anchor could be read as a size-eligible function rather than an admitted correspondence.",
+      "resolution": "Defined POG anchors as initial matched pairs; size criterion and uniqueness/POG agreement conditions remain separately specified."
+    },
+    {
+      "issue": "Abstract used an unquantified many-functions claim while the motivating size proportion is pending.",
+      "resolution": "Used conditional language; retained the Background TBD percentage and pending denominator/cohort."
+    },
+    {
+      "issue": "Graph coverage and graph reachability were mixed in high-level contributions.",
+      "resolution": "Used graph reachability consistently for the simulation result."
+    },
+    {
+      "issue": "Scope, prior-work limitations, neighborhood motivation, and example implications were repeated.",
+      "resolution": "Consolidated detailed definitions and prior-work limits in Background, scope/acceptance rules in Approach, and example explanations at their corresponding stages. Retained standalone Abstract/Introduction summaries."
+    }
+  ],
+  "scope_confirmed": {
+    "inputs": "supplied JavaScript and available local dependency context, with candidate references",
+    "outside_recovery": "file acquisition and reference selection; no missing-chunk discovery/download",
+    "output": "partial reference-identity mapping with unresolved functions",
+    "validation": "heuristic model compatibility judgment",
+    "evaluation": "known-reference jQuery model recovery versus separate oracle-assisted extended-graph reachability",
+    "pending": "POG eligibility percentage, broader model-driven evaluation, downstream case study"
+  },
+  "word_counts_whitespace_delimited": {
+    "main.tex": {
+      "before": 279,
+      "after": 280
+    },
+    "sections/introduction.tex": {
+      "before": 566,
+      "after": 492
+    },
+    "sections/background.tex": {
+      "before": 962,
+      "after": 807
+    },
+    "sections/approach.tex": {
+      "before": 3358,
+      "after": 3033
+    }
+  },
+  "source_sha256": {
+    "main.tex": "24c8d8c73c008e458388ffb4a21eb9315b02b74049d17a010242054c4ba67d2d",
+    "sections/introduction.tex": "83b856fde9b3d112988d90a67fc0633dc447267831e0382465d44dde06992573",
+    "sections/background.tex": "0cbf01392777aefe4dab0ebdb7cc0084fc0ab4679217fde8e927cd8445df6a12",
+    "sections/approach.tex": "ee1317e843f3407ec7c336bbda56711dc948a3467ec7d900594871eb7977c360",
+    "README.md": "87658acc8afd715c949fe8bc0956388295619246371e197f0d423f803df49b49"
+  },
+  "pdf_sha256": "7b57ee08c3019c562c319f6500f979fb5882186e2d2b5c01be6ec55d5b4e3417",
+  "pages": 39,
+  "compilation": "Tectonic success; no errors, undefined references, missing glyphs, or overfull boxes.",
+  "remaining_warnings": "Font requests, underfull boxes, template and bibliography metadata warnings.",
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "scope": "All four reviewed sections, figures, tables, algorithms, and transition to Dataset Preparation; later pages not re-reviewed.",
+    "result": "No clipping, overlap, or broken references observed."
+  },
+  "preservation_checks": {
+    "equations_unchanged": true,
+    "example_code_unchanged": true,
+    "tables_unchanged": true,
+    "diagram_body_unchanged": true,
+    "algorithmic_blocks_unchanged_except_reference_terminology": true,
+    "content_numeric_tokens_unchanged_excluding_label_identifiers": true,
+    "all_original_labels_retained": true,
+    "no_duplicate_or_unresolved_cross_references": true,
+    "pending_eligibility_placeholder_retained": true
+  },
+  "evidence_files_verified_unchanged": 76,
+  "new_experiment_runs": 0,
+  "new_inference_calls": 0,
+  "backup": "archive/2026-10-24-before-cross-section-review",
+  "previous_validation_record_preserved": "data/abstract-revision-check.json"
+}

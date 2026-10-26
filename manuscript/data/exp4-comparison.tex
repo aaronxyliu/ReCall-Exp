@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\caption{Completed overall experiments on identical bundle and oracle inputs. Several method changes are combined; this is not a component ablation. Both runs start with fresh experiment caches.}
+\label{tab:exp4-comparison}
+\centering\small
+\begin{tabular}{p{0.52\linewidth}rr}
+\toprule
+Measurement & Experiment 3 & Experiment 4\\
+\midrule
+Correct identities / supported targets & 1165/1629 & 1538/1629\\
+Correct recovery & 71.52\% & 94.41\%\\
+Wrong identities & 5 & 14\\
+Unassessed promotions & 36 & 45\\
+Assessed identity precision & 99.57\% & 99.10\%\\
+Overall run time (minutes) & 179.14 & 81.84\\
+Distinct validation requests & 2837 & 2286\\
+Validation request time (seconds) & 7051.33 & 4731.87\\
+Invalid responses / API errors & 0/5 & 0/0\\
+\bottomrule
+\end{tabular}
+\end{table}

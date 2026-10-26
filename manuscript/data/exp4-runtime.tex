@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Experiment 4 per-build execution. Rounds include the final round without additions. Time includes bundle embedding, validation and checkpoint overhead, but excludes the shared source embedding stage.}
+\label{tab:exp4-runtime}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Bundler & Rounds & Fresh calls & Cache hits & Minutes\\
+\midrule
+esbuild & 5 & 891 & 191 & 28.83\\
+Rollup & 5 & 839 & 286 & 31.44\\
+webpack & 8 & 556 & 199 & 21.24\\
+\bottomrule
+\end{tabular}
+\end{table}

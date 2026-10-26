@@ -1,0 +1,249 @@
+{
+  "source": "https://2025.stateofjs.com/en-US/libraries/build-tools/",
+  "dataSource": "https://2025.stateofjs.com/page-data/en-US/libraries/build-tools/page-data.json",
+  "accessed": "2026-10-23",
+  "metric": "Published 2025 usage ratio: respondents having used an item; not current production market share. Keep the chart API rounded ratios rather than recomputing percentages with a different denominator.",
+  "selection": "Dedicated JavaScript bundler families among surveyed entries. Vite and tsup are build frontends/wrappers, SWC/tsc are compiler entries, Bun is a multipurpose runtime with bundling; these are not additional dedicated emitted-protocol families in this study.",
+  "entries": [
+    {
+      "tool": "webpack",
+      "publishedUsageRatio": 0.87,
+      "completionCount": 11342,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 138
+        },
+        {
+          "id": "heard",
+          "count": 1298
+        },
+        {
+          "id": "used",
+          "count": 9797
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "vite",
+      "publishedUsageRatio": 0.84,
+      "completionCount": 11348,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 285
+        },
+        {
+          "id": "heard",
+          "count": 1454
+        },
+        {
+          "id": "used",
+          "count": 9579
+        }
+      ],
+      "dedicatedBundlerSelected": false
+    },
+    {
+      "tool": "esbuild",
+      "publishedUsageRatio": 0.54,
+      "completionCount": 11271,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 1465
+        },
+        {
+          "id": "heard",
+          "count": 3667
+        },
+        {
+          "id": "used",
+          "count": 6061
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "tsc",
+      "publishedUsageRatio": 0.53,
+      "completionCount": 11264,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 3658
+        },
+        {
+          "id": "heard",
+          "count": 1590
+        },
+        {
+          "id": "used",
+          "count": 5931
+        }
+      ],
+      "dedicatedBundlerSelected": false
+    },
+    {
+      "tool": "rollup",
+      "publishedUsageRatio": 0.47,
+      "completionCount": 11293,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 2078
+        },
+        {
+          "id": "heard",
+          "count": 3832
+        },
+        {
+          "id": "used",
+          "count": 5310
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "turbopack",
+      "publishedUsageRatio": 0.28,
+      "completionCount": 11276,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 2770
+        },
+        {
+          "id": "heard",
+          "count": 5232
+        },
+        {
+          "id": "used",
+          "count": 3240
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "swc",
+      "publishedUsageRatio": 0.27,
+      "completionCount": 11237,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 4666
+        },
+        {
+          "id": "heard",
+          "count": 3451
+        },
+        {
+          "id": "used",
+          "count": 3076
+        }
+      ],
+      "dedicatedBundlerSelected": false
+    },
+    {
+      "tool": "parcel",
+      "publishedUsageRatio": 0.26,
+      "completionCount": 11284,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 2949
+        },
+        {
+          "id": "heard",
+          "count": 5288
+        },
+        {
+          "id": "used",
+          "count": 2985
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "bun",
+      "publishedUsageRatio": 0.25,
+      "completionCount": 11287,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 1715
+        },
+        {
+          "id": "heard",
+          "count": 6618
+        },
+        {
+          "id": "used",
+          "count": 2897
+        }
+      ],
+      "dedicatedBundlerSelected": false
+    },
+    {
+      "tool": "tsup",
+      "publishedUsageRatio": 0.12,
+      "completionCount": 11234,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 7715
+        },
+        {
+          "id": "heard",
+          "count": 2124
+        },
+        {
+          "id": "used",
+          "count": 1359
+        }
+      ],
+      "dedicatedBundlerSelected": false
+    },
+    {
+      "tool": "rolldown",
+      "publishedUsageRatio": 0.1,
+      "completionCount": 11254,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 5405
+        },
+        {
+          "id": "heard",
+          "count": 4628
+        },
+        {
+          "id": "used",
+          "count": 1197
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    },
+    {
+      "tool": "rspack",
+      "publishedUsageRatio": 0.07,
+      "completionCount": 11228,
+      "buckets": [
+        {
+          "id": "never_heard",
+          "count": 6194
+        },
+        {
+          "id": "heard",
+          "count": 4170
+        },
+        {
+          "id": "used",
+          "count": 834
+        }
+      ],
+      "dedicatedBundlerSelected": true
+    }
+  ]
+}

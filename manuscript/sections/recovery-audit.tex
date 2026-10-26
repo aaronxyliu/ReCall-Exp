@@ -1,0 +1,18 @@
+\section{Preliminary Wrong-Identity Audit}
+\label{sec:wrong-identities}
+\input{data/exp4-wrong}
+We inspected all 14 wrong identities and independently checked their mapping witnesses. Every witness set agrees with the stored correct counterpart; no label inconsistency was found in this review. Table~\ref{tab:exp4-wrong} groups code evidence, not model-generated explanations: recorded validator responses contain only T/F.
+
+\paragraph{External binding identity: eight cases.}
+W01 and W04 swap \texttt{camelCase} and \texttt{unescapeSelector}. Both call \texttt{replace}, but their regexes and callbacks differ. Executing definitions extracted from the pinned source gives \texttt{fontSize} versus \texttt{font-size} on input \texttt{font-size}. W02, W03, and W08--W11 confuse access or removal operations on \texttt{dataUser} and \texttt{dataPriv}. These are separate \texttt{Data} instances with distinct storage keys. Controlled examples confirm that they can return different values for the same owner/key and that removal from one store preserves the other. Similar wrapper bodies do not determine their external bindings.
+
+\paragraph{Different setter operations: two cases.}
+W05 and W07 swap callbacks calling \texttt{set(this, key)} and \texttt{set(this, key, value)}. The former occurs in the object-of-properties branch; the latter supplies a key/value pair. The actual \texttt{Data.set} uses the third argument for a string key. Argument-count differences are not universally evidence of inequivalence in JavaScript, but the actual enclosing roles and helper distinguish these operations.
+
+\paragraph{Call/return mismatch: one case.}
+W06 selects a source that returns the jQuery object for a bundled layout-test accessor. The correct source calls \texttt{computeTableStyleTests} and returns a captured result, Boolean after a successful test or undefined before a result is available. The call and returned binding differ. Ignoring side effects may weaken checking of the extra call, but the response does not establish why the model accepted it.
+
+\paragraph{Outer/nested function confusion: three cases.}
+W12 and W14 select the \texttt{resolve} factory for its returned callback. The factory returns a function, while the bundled root executes that callback's processing. W13 selects the nested \texttt{statusCode} method for the entire \texttt{ajax} function. Its correct source is ranked first and rejected; the rank-two nested method is then accepted. Shared nested code cannot establish the identity of the outermost function.
+
+Five errors also involve earlier wrong allocations: W02 precedes W03, W01 precedes W04, W05 precedes W07, W08 precedes W10, and W09 precedes W11. In each later case, the correct source was already assigned elsewhere and excluded from the candidate pool. These records show propagation risk without measuring the counterfactual effect of rollback. Overall, five wrong matches accept an earlier top-five candidate before the correct pair is checked, three have the correct source below rank five, five lack it because of an earlier wrong owner, and W13 rejects the correct pair first.

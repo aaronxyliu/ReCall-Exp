@@ -1,0 +1,1 @@
+../../../ReCall/scripts/jquery/promotion-policy.mjs

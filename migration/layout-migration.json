@@ -1,0 +1,260 @@
+{
+  "created_at": "2026-10-23T03:10:47.194219+00:00",
+  "old_root": "/Users/aaronxyliu/GitHub/FAPI Study",
+  "target_root": "/Users/aaronxyliu/GitHub/ReCall Research",
+  "moves": [
+    {
+      "old": "manuscript",
+      "new": "ReCall Exp/manuscript",
+      "compatibility_link": false
+    },
+    {
+      "old": ".DS_Store",
+      "new": "ReCall Exp/.DS_Store",
+      "compatibility_link": false
+    },
+    {
+      "old": "archive",
+      "new": "ReCall Exp/archive",
+      "compatibility_link": false
+    },
+    {
+      "old": "experiments",
+      "new": "ReCall Exp/experiments",
+      "compatibility_link": false
+    },
+    {
+      "old": "datasets",
+      "new": "ReCall Dataset/datasets",
+      "compatibility_link": false
+    },
+    {
+      "old": "node_modules",
+      "new": "ReCall Exp/node_modules",
+      "compatibility_link": false
+    },
+    {
+      "old": "JUNJIE_GUIDE.md",
+      "new": "ReCall Exp/JUNJIE_GUIDE.md",
+      "compatibility_link": false
+    },
+    {
+      "old": "TODO.md",
+      "new": "ReCall Exp/TODO.md",
+      "compatibility_link": false
+    },
+    {
+      "old": "README.md",
+      "new": "ReCall Exp/README.md",
+      "compatibility_link": false
+    },
+    {
+      "old": "results",
+      "new": "ReCall Exp/results",
+      "compatibility_link": false
+    },
+    {
+      "old": "notes",
+      "new": "ReCall Exp/notes",
+      "compatibility_link": false
+    },
+    {
+      "old": ".gitignore",
+      "new": "ReCall Exp/.gitignore",
+      "compatibility_link": false
+    },
+    {
+      "old": "package-lock.json",
+      "new": "ReCall Exp/package-lock.json",
+      "compatibility_link": false
+    },
+    {
+      "old": "package.json",
+      "new": "ReCall Exp/package.json",
+      "compatibility_link": false
+    },
+    {
+      "old": "scripts",
+      "new": "ReCall Exp/scripts",
+      "compatibility_link": false
+    },
+    {
+      "old": "baselines",
+      "new": "ReCall Exp/baselines",
+      "compatibility_link": false
+    },
+    {
+      "old": "vendor",
+      "new": "ReCall Exp/vendor",
+      "compatibility_link": false
+    },
+    {
+      "old": "RESEARCH_GUIDELINE.md",
+      "new": "ReCall Exp/RESEARCH_GUIDELINE.md",
+      "compatibility_link": false
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/common.mjs",
+      "new": "ReCall/scripts/jquery/common.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/measure.mjs",
+      "new": "ReCall/scripts/jquery/measure.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/analysis.mjs",
+      "new": "ReCall/scripts/jquery/analysis.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/models.mjs",
+      "new": "ReCall/scripts/jquery/models.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/minify-source-function.mjs",
+      "new": "ReCall/scripts/jquery/minify-source-function.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/promotion-policy.mjs",
+      "new": "ReCall/scripts/jquery/promotion-policy.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/promotion-policy.test.mjs",
+      "new": "ReCall/scripts/jquery/promotion-policy.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/validator-policy.mjs",
+      "new": "ReCall/scripts/jquery/validator-policy.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/validator-policy.test.mjs",
+      "new": "ReCall/scripts/jquery/validator-policy.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/variable-mapping-policy.mjs",
+      "new": "ReCall/scripts/jquery/variable-mapping-policy.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/variable-mapping-policy.test.mjs",
+      "new": "ReCall/scripts/jquery/variable-mapping-policy.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/jquery/recover.mjs",
+      "new": "ReCall/scripts/jquery/recover.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundling-dataset/parse.mjs",
+      "new": "ReCall/scripts/real-app/bundling-dataset/parse.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/notes/jquery/validator-system-prompt.txt",
+      "new": "ReCall/notes/jquery/validator-system-prompt.txt",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/analyzer.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/analyzer.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/recognize.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/recognize.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/context.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/context.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/module-graph.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/module-graph.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/analyze.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/analyze.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/analyzer.test.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/analyzer.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/context.test.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/context.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/module-graph.test.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/module-graph.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/real-app/bundle-graph-v2/structural.test.mjs",
+      "new": "ReCall/scripts/real-app/bundle-graph-v2/structural.test.mjs",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/vendor",
+      "new": "ReCall/vendor",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/experiments/bundle-graph-v2-holdout/sources",
+      "new": "ReCall Dataset/sources/holdout",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/experiments/jquery/app",
+      "new": "ReCall Dataset/fixtures/jquery",
+      "compatibility_link": true
+    },
+    {
+      "old": "ReCall Exp/scripts/datasets",
+      "new": "ReCall Dataset/scripts/datasets",
+      "compatibility_link": true
+    }
+  ],
+  "runtime_sha256_unchanged": {
+    "scripts/jquery/common.mjs": "def93483fcf7cc5de29d206a5c1995bc7af40cdafd5d6f248d222932d26e89f5",
+    "scripts/jquery/measure.mjs": "ba2eb14d4f27b5f80ed8de4176ff8ed552c3bc7130554642d0847f821865e586",
+    "scripts/jquery/analysis.mjs": "e8e89ce14f6212bed4475b3fc5efb2f89b0f159ccb518b98a7771202d8e568d7",
+    "scripts/jquery/models.mjs": "1ea572f73e6c8c34198bb7a878dbbe37e19f99b14db69ecafcf4410f3c4d34eb",
+    "scripts/jquery/minify-source-function.mjs": "1508413c29be3c856f0fdd7c99ae4e7be1f123882dfe66cbd08e5ddd477d5585",
+    "scripts/jquery/promotion-policy.mjs": "8f512be8ac5642b94a8c1d26d847c9814b1e6ce473c2227e8f8797b88a2c8656",
+    "scripts/jquery/promotion-policy.test.mjs": "f258f0ad36a68275de5126eb04a60d0d110740d982c692b713b12d29a61f795d",
+    "scripts/jquery/validator-policy.mjs": "7d2def13111c281c1c31f8219e01f6c3e9a472e82b93fe71aa7fb2cec45bb2a0",
+    "scripts/jquery/validator-policy.test.mjs": "c4bbb276a2d621a69c2e95336e08f4965c372ca6c8dd497498bc919d0727fbda",
+    "scripts/jquery/variable-mapping-policy.mjs": "3deb6c6f83f78de1c88deca77c2d4725fb6bdbf2f7d9ed5ba3572e6750837537",
+    "scripts/jquery/variable-mapping-policy.test.mjs": "7c836a68edeea5368a0d4cc6cd3cd3f514dadef2a0a4d19b2918a3902c69d2be",
+    "scripts/jquery/recover.mjs": "f73c8381c937ebcd698cad3e795a6ae049e3005d20a1a88d979e0c9c048135d8",
+    "scripts/real-app/bundling-dataset/parse.mjs": "b3f64792a1e3539a623295b6aafa2795a9835580fa9e27efd5af984f25ef62de",
+    "notes/jquery/validator-system-prompt.txt": "599a4c2b806c13622bec3cb0a8fc80b7e1d0300ee970dad35b7551a707b075fe",
+    "scripts/real-app/bundle-graph-v2/analyzer.mjs": "714ab3f879d3067b52a3be3fb19f701641138d833558915e58cdc03167c98df3",
+    "scripts/real-app/bundle-graph-v2/recognize.mjs": "2165e49d45bdb6cdadbc42ec0b6b4cb4abff5371585205e14a62918adb071800",
+    "scripts/real-app/bundle-graph-v2/context.mjs": "2eaa4b40805483601d783aa2de7e9e2065b7a8dd6e8768fa0620ae9b09dec21d",
+    "scripts/real-app/bundle-graph-v2/module-graph.mjs": "1a0f18b0ab4e891a2af4c8c3633578e2311ce780dc8ca665a8a08d599b5a2ee9",
+    "scripts/real-app/bundle-graph-v2/analyze.mjs": "e6e7c22780e76062d2a2a6d18adc0efc9ff3e1a1b6e61129c4bfa388dd4bddf1",
+    "scripts/real-app/bundle-graph-v2/analyzer.test.mjs": "d31a721405a34dffe70d73c17e3d04c62f46d8452739010319e9f7c4b638c12a",
+    "scripts/real-app/bundle-graph-v2/context.test.mjs": "82f66c0fbda339b7c2648a5ecc6ec995681b57136650228210e5702bfcf0e88f",
+    "scripts/real-app/bundle-graph-v2/module-graph.test.mjs": "d1d147ae74420ecadb0dd4a31694c0122f503ec7e0ca5d67a4f91b40f635a467",
+    "scripts/real-app/bundle-graph-v2/structural.test.mjs": "09b8be7eda432cee305348ecc8be2053a0fbf889846d10826fc406ce8ffd2623"
+  },
+  "manuscript_evidence_files_verified": 76,
+  "historical_data_policy": "Exact result/cache/baseline bytes preserved. Relative compatibility links join sibling repositories. The old top-level name will be a compatibility directory of links into ReCall Exp for embedded absolute paths.",
+  "nested_git_policy": "Original source checkout histories preserved under ReCall Dataset/sources and ignored by its parent repository."
+}

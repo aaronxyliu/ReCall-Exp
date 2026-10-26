@@ -1,0 +1,62 @@
+{
+  "created": "2026-10-19T08:19:25.207469+00:00",
+  "policy": {
+    "embedding": "qwen3-embedding:0.6b",
+    "validator": "qwen3.5:4b",
+    "thinking": false,
+    "promptVersion": "jquery-pilot-v5-binary-default-true",
+    "decisionPolicy": "false only with definite behavioral difference; otherwise true; no uncertain",
+    "num_ctx": 16384,
+    "num_predict": 32,
+    "temperature": 0,
+    "topK": 3,
+    "maxCodeCharacters": 18000,
+    "embeddingBatch": 12,
+    "neighborhoodRadius": 1,
+    "siblingWindow": 2
+  },
+  "modelDigests": {
+    "qwen3-embedding:0.6b": "ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d",
+    "qwen3.5:4b": "7f3251fa6878a78a606bcb3c074283306e5ad2ea411a7774a9dd98a4bc7f2d13"
+  },
+  "serverReportedVersion": {
+    "version": "0.40.6"
+  },
+  "study": {
+    "buildIds": [
+      "esbuild-min-keep",
+      "rollup-min-keep",
+      "webpack-min-keep"
+    ],
+    "minified": true,
+    "treeShaking": false,
+    "validatorPolicy": "jquery-pilot-v5-binary-default-true",
+    "thinking": false,
+    "created": "2026-10-19T08:08:25.322601+00:00",
+    "provenance": "Reuse identical prebuilt minified/no-tree-shaking artifacts from original build manifest. Full inventories retained, but only these three profiles may run or enter active reports.",
+    "supersedes": "results/jquery-4.0.0/v5-binary-validator"
+  },
+  "promptAndContextNoteMatchImplementation": true,
+  "files": [
+    {
+      "path": "scripts/jquery/models.mjs",
+      "sha256": "f658543bdf41d1c247dcb5bc7515ce800d7769b05730eb4b0405eeca19b46074"
+    },
+    {
+      "path": "scripts/jquery/validator-policy.mjs",
+      "sha256": "a042622cbf2b2f0e8250a01d0381e74790736d79c41cce83e212b12ceb780c79"
+    },
+    {
+      "path": "scripts/jquery/recover.mjs",
+      "sha256": "99b07bf1f6d48fed89f9dcd8b1c159d4fce4fea6ed48251a5fbdc185e5491a1f"
+    },
+    {
+      "path": "scripts/jquery/build.mjs",
+      "sha256": "c73a22ce185a7b5022e48559602ed26626960cb4ec9d3027f88a80373b493372"
+    },
+    {
+      "path": "results/jquery-4.0.0/minified-no-tree-shaking/study-config.json",
+      "sha256": "4a57e5f1d77e235e2bc8883bf7c79e0ecb71a7258c3f62c00c003b5505ef59ba"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "status": "compiled-and-reviewed",
+  "roadmap": "../README.md",
+  "archive": "archive/2026-10-24-before-roadmap-alignment",
+  "plannedExperiments": [
+    {
+      "number": 1,
+      "description": "different bundlers"
+    },
+    {
+      "number": 2,
+      "description": "different libraries and frameworks"
+    },
+    {
+      "number": 3,
+      "description": "function transformations and recovery rate"
+    },
+    {
+      "number": 4,
+      "description": "neighborhood ranking"
+    },
+    {
+      "number": 5,
+      "description": "module graph building"
+    },
+    {
+      "number": 6,
+      "description": "POG feature-count robustness"
+    },
+    {
+      "number": 7,
+      "description": "validation model selection"
+    }
+  ],
+  "completedPassages": {
+    "rq1.tex": {
+      "unchanged": true,
+      "sha256": "cbe2fd27461dab0068c250074f07deedb0a431e1e108e1edc45344f84206d600"
+    },
+    "rq2.tex": {
+      "unchanged": true,
+      "sha256": "b4ee78f1909562dbc127430a3b6ddb50a9dfc8ca96c78d40833b3ba1526db14d"
+    },
+    "rq3.tex": {
+      "unchanged": true,
+      "sha256": "a870ef92c770304fed0b8b7a22d084c9281ce670c265812a3eb886446cdba7f3"
+    },
+    "datasetAndIdentityPolicies": {
+      "unchanged": true,
+      "sha256": "94ec7a8b1f03ac0f8df81ff1f89c385d22e0f168fe4ca5837e87c5a160937bd1"
+    }
+  },
+  "completedDataTablesUnchanged": 21,
+  "rq4Protocol": "to-be-filled",
+  "visualReviewPages": [
+    13,
+    14,
+    16,
+    17,
+    18,
+    21,
+    22,
+    25,
+    26
+  ],
+  "noOverfullBoxesOrUndefinedReferences": true,
+  "experimentsRun": false,
+  "applicationRebuilds": 0,
+  "inferenceCalls": 0,
+  "files": {
+    "sections/rq1.tex": "a68cccae56048a91eac310e2deb57f652dc21fe2ccbcbf09b19aca6d5278c6e6",
+    "sections/rq2.tex": "f47620a7f1e9b3ee39d003a13f996d99d6e89c0044376bd934471390c8117bba",
+    "sections/rq3.tex": "84c858973aaee33b2249a6c0d0ee8f30d90d456d22e56e05271538356132781f",
+    "sections/rq4.tex": "929dd193ce2564e345211feeebbbd226cc41f336769758e24e54c71ecd8bd599",
+    "sections/experiment.tex": "47ae637f5630d15b15733438689a01b10ca39bed08cc905cfe00fe0e200f14ff",
+    "sections/datasets.tex": "f1af0714977a059a3c3154bf270ee6c9e7d972adca2a8746808c4b18e0d4969d",
+    "sections/introduction.tex": "7fa2b6e275154e6b29f6878882d3954f33ddce122987eab980003e2ab3457caa",
+    "sections/limitations.tex": "db16ffef63e843eeb60103d86400a688d96d050dfcb2dfacf02f193c7ed464dd",
+    "README.md": "812810db89a563279bf384961726a4c3d24387dbb1dbc7c5894a72706f379cd5",
+    "build/main.pdf": "557a14ccaae462fecff175af274952dd6099afdb5cfa5f354c53f4ec9280e19f"
+  },
+  "roadmapSha256": "22525dcd20279002552e0c264d691ccd74fbd72f8341aec13c7a60e14522a580"
+}

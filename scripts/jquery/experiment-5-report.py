@@ -1,0 +1,60 @@
+"""Post-hoc experiment 5 runtime, recovery and wrong-identity report. No inference."""
+import json,os
+from pathlib import Path
+from collections import Counter
+from datetime import datetime
+P=Path(os.environ.get('EXPERIMENT_OUTPUT','results/jquery-4.0.0/experiment-5-validator-4b'))
+def read(p):return json.loads((P/p).read_text())
+def write(p,x):(P/p).write_text(json.dumps(x,indent=2)+'\n')
+s=read('summary.json');b=read('recovery-bottlenecks/summary.json');execution=read('execution-status.json');d=read('detector-input.json');refs={f['id']:f for x in d['sources'] for f in x['functions']};cases=read('wrong-identity-audit/cases.json')['cases']
+review=P/'misidentifications';review.mkdir(exist_ok=True);rows=[]
+for c in cases:
+ predicted=c['predicted'];expected=c.get('expected');bundle=c['bundled'];q=c['query'];reasons=[]
+ if not expected:primary='non_target_function_promoted'
+ elif predicted['code']==expected['code']:primary='identical_source_bodies_different_identities'
+ elif predicted.get('parent')==expected.get('index') or expected.get('parent')==predicted.get('index'):primary='nested_function_boundary'
+ elif predicted.get('astHash')==expected.get('astHash'):primary='same_normalized_ast_different_identities'
+ else:primary='requires_code_and_binding_review'
+ if c['earlierWrongOwner']:reasons.append('correct_source_already_assigned_to_another_bundle')
+ if not c['correctSourceInCandidatePool']:selection='correct_source_absent_from_candidate_pool'
+ elif not c.get('correctSourceInTopK',c['correctSourceInTop3']):selection='correct_source_ranked_below_top5'
+ elif c['correctSourceRank']>next((p['rank'] for p in c['queryDecisions'] if p['verdict']=='accept'),99):selection='earlier_wrong_candidate_accepted_before_correct_candidate'
+ else:selection='correct_candidate_rejected_or_invalid_before_wrong_acceptance'
+ row={'id':c['id'],'build':c['build'],'bundleId':bundle['id'],'predictedSourceId':predicted['id'],'correctSourceId':expected['id'] if expected else None,'structuralEvidenceCategory':primary,'candidateSelectionOutcome':selection,'additionalEvidence':reasons,'hasExternalBindings':bool(predicted.get('captures') or bundle.get('captures')),'wrongParentCount':sum(p['correct'] is False for p in c['parents']),'independentMapPoints':c['independentMapping']['points'],'allMapPointsAgree':c['independentMapping']['allAgreeWithStoredIdentity']};rows.append(row)
+ md='# '+c['id']+'\n\nBuild: '+c['build']+'. Structural evidence: '+primary+'. Candidate outcome: '+selection+'.\n\nThis is an identity disagreement; the T/F response contains no explanation. Structural evidence is not an independently established semantic failure cause.\n\nPredicted source:\n\n```javascript\n'+predicted['code']+'\n```\n\nBundled function:\n\n```javascript\n'+bundle['code']+'\n```\n\nMinified predicted source:\n\n```javascript\n'+c['parsedUserMessage'].get('minified_source_function','')+'\n```\n\nCorrect source:\n\n```javascript\n'+(expected['code'] if expected else '// Ground truth identifies non-target origin.')+'\n```\n\nModel output:\n\n```text\n'+c['response']['message']['content']+'\n```\n\n[Exact request and source-map witnesses](../wrong-identity-audit/cases/'+c['id']+'.json).\n';(review/(c['id']+'.md')).write_text(md)
+total=sum(x['supportedJqueryDefinitions'] for x in s['builds']);correct=sum(x['final']['correct'] for x in s['builds']);wrong=sum(x['final']['wrong'] for x in s['builds']);unassessed=sum(x['final']['unassessed'] for x in s['builds'])
+records=[json.loads(f.read_text()) for f in (P/'model-cache/validations').glob('*.json')]
+first=datetime.fromisoformat(execution['started'].replace('Z','+00:00'));elapsed=(datetime.now(first.tzinfo)-first).total_seconds()
+runs=[read('recovery/'+x['build']+'.json') for x in s['builds']];sourceEmbeddingMs=runs[0]['embedding']['source']['wallMs'];bundleEmbeddingMs=sum(r['embedding']['bundle']['wallMs'] for r in runs)
+result={'experiment':5,'status':s['status'],'targetFunctions':total,'correct':correct,'wrong':wrong,'unassessedPromotions':unassessed,'correctRecoveryPercent':100*correct/total,'assessedIdentityPrecisionPercent':100*correct/(correct+wrong),'overallElapsedSeconds':elapsed,'validationRequests':len(records),'validationRequestWallSeconds':sum(r.get('wallMs',0) for r in records)/1000,'sourceEmbeddingSeconds':sourceEmbeddingMs/1000,'sourcePreprocessingSeconds':runs[0]['embedding']['source'].get('preprocessingMs',0)/1000,'bundleEmbeddingSeconds':bundleEmbeddingMs/1000,'rankingSeconds':sum(r['rankWallMs'] for r in runs)/1000,'unrecoveredBreakdown':b['aggregate'],'misidentificationSelectionBreakdown':dict(Counter(r['candidateSelectionOutcome'] for r in rows)),'misidentificationStructuralEvidenceBreakdown':dict(Counter(r['structuralEvidenceCategory'] for r in rows)),'misidentificationCases':rows,'invalidResponses':sum(r.get('verdict')=='invalid' for r in records),'apiErrors':sum(r.get('verdict')=='error' for r in records),'timingPolicy':'Fresh experiment caches; repeated exact requests within run reused. Stage wall times include metadata/model loading/checkpoint overhead. Source embedding counted once. Embedding and validation API load/prefill/decode metadata preserved in raw outputs.','interpretation':'Recovery is exact source-map identity agreement on supported jQuery functions. Unassessed promotions separate. Reasons from saved pipeline outcomes; structural wrong-match evidence is not a model-generated explanation or semantic proof.'};write('experiment-5-summary.json',result)
+md='# Overall experiment 5\n\nRanking: qwen3-embedding:0.6b, approved semantic-comparison instruction on Terser-minified source functions, bundled code only. Validation: qwen3.5:4b, source + minified source + bundled code; approved reference/examples prompt, T/F output, thinking off. First passing top-five candidate is proposed; preserve round-level one-to-one source conflicts. jQuery 4.0.0, three builds, minified on and tree shaking off.\n\n| Build | Correct / targets | Recovery | Wrong | Unassessed promotions |\n|---|---:|---:|---:|---:|\n'
+for x in s['builds']:md+='| '+x['build']+' | '+str(x['final']['correct'])+'/'+str(x['supportedJqueryDefinitions'])+' | '+format(x['correctRecovery'],'.2f')+'% | '+str(x['final']['wrong'])+' | '+str(x['final']['unassessed'])+' |\n'
+md+='\nPooled: '+str(correct)+'/'+str(total)+' ('+format(result['correctRecoveryPercent'],'.2f')+'%) correctly identified; '+str(wrong)+' wrong, '+str(unassessed)+' unassessed promotions. Assessed identity precision: '+format(result['assessedIdentityPrecisionPercent'],'.2f')+'%. Build occurrences are correlated.\n\n## Time\n\nElapsed through recovery and post-hoc analysis: '+format(elapsed,'.2f')+' seconds. Validation requests: '+str(len(records))+', summed request wall time '+format(result['validationRequestWallSeconds'],'.2f')+' seconds. Source embeddings: '+format(sourceEmbeddingMs/1000,'.2f')+' seconds; bundle embeddings: '+format(bundleEmbeddingMs/1000,'.2f')+' seconds. Ranking: '+format(result['rankingSeconds'],'.3f')+' seconds. Stage boundaries and model metadata are recorded separately. Total elapsed includes overhead and model load time; API subtotals do not sum to total elapsed.\n\n## Not correctly recovered: exclusive pipeline outcomes\n\n| Outcome | Count |\n|---|---:|\n'
+for k,v in Counter(b['aggregate']).most_common():md+='| '+k+' | '+str(v)+' |\n'
+md+='\nThese outcomes include wrong promotions, which also appear in the wrong-identity audit. They are not additive to that audit.\n\n## Misidentification: candidate selection outcomes\n\n| Outcome | Count |\n|---|---:|\n'
+for k,v in Counter(result['misidentificationSelectionBreakdown']).most_common():md+='| '+k+' | '+str(v)+' |\n'
+md+='\n## Misidentification: structural evidence\n\n| Evidence | Count |\n|---|---:|\n'
+for k,v in Counter(result['misidentificationStructuralEvidenceBreakdown']).most_common():md+='| '+k+' | '+str(v)+' |\n'
+md+='\nRemaining code/binding cases need human review before assigning semantic causes. Raw T/F decisions contain no reasoning. [Per-case source, bundle, correct counterpart and verdict](misidentifications/) and [independent source-map witnesses](wrong-identity-audit/cases.json) are saved.\n\n[Detailed pipeline outcomes](recovery-bottlenecks/REPORT.md), [machine-readable experiment summary](experiment-5-summary.json), [generic metrics](summary.json), [mechanical checks](verification.json), and [stage times](execution-status.json).\n';(P/'REPORT.md').write_text(md)
+print(json.dumps({k:v for k,v in result.items() if k!='misidentificationCases'},indent=2))
+
+# Compare only completed outputs, never recompute experiment 4.
+BASE=Path(read('study-config.json')['baseline'])
+old=json.loads((BASE/'experiment-4-summary.json').read_text())
+bs=json.loads((BASE/'summary.json').read_text())
+compare={'experiment4':old,'experiment5':result,'recoveryDeltaPercentagePoints':result['correctRecoveryPercent']-old['correctRecoveryPercent'],'additionalCorrect':result['correct']-old['correct'],'wrongDelta':result['wrong']-old['wrong'],'elapsedRatio':result['overallElapsedSeconds']/old['overallElapsedSeconds'],'comparisonPolicy':'Identical source/bundle populations and frozen source-map oracle. Only the validator changes from qwen3.5:27b to qwen3.5:4b. Ranking, prompt, three-code input, top-five first-positive policy, frozen functions and oracle are unchanged. Different model deployments and run conditions limit hardware-independent speed claims. Fresh caches for both runs.'}
+write('comparison-with-experiment-4.json',compare)
+cm='# Experiment 5 versus experiment 4\n\n'+compare['comparisonPolicy']+'\n\n| Metric | Experiment 4 | Experiment 5 |\n|---|---:|---:|\n'
+for label,key,fmt in [('Correct recovery','correctRecoveryPercent','.2f'),('Correct functions','correct','d'),('Wrong identities','wrong','d'),('Unassessed promotions','unassessedPromotions','d'),('Assessed identity precision','assessedIdentityPrecisionPercent','.2f'),('Elapsed seconds','overallElapsedSeconds','.2f'),('Validation requests','validationRequests','d'),('Validation request seconds','validationRequestWallSeconds','.2f'),('Source embedding seconds','sourceEmbeddingSeconds','.2f'),('Bundle embedding seconds','bundleEmbeddingSeconds','.2f')]:cm+='| '+label+' | '+format(old[key],fmt)+' | '+format(result[key],fmt)+' |\n'
+cm+='\n| Build | Experiment 4 correct / targets | Experiment 5 correct / targets | Recovery change (pp) | Wrong: 4 → 5 |\n|---|---:|---:|---:|---:|\n'
+for row in s['builds']:
+ prior=next(x for x in bs['builds'] if x['build']==row['build']);cm+='| '+row['build']+' | '+str(prior['final']['correct'])+'/'+str(prior['supportedJqueryDefinitions'])+' | '+str(row['final']['correct'])+'/'+str(row['supportedJqueryDefinitions'])+' | '+format(row['correctRecovery']-prior['correctRecovery'],'.2f')+' | '+str(prior['final']['wrong'])+' → '+str(row['final']['wrong'])+' |\n'
+cm+='\n## Failure outcome comparison\n\nBoth experiments use top-five validation; failures are grouped by their pipeline stage.\n\n| Outcome | Experiment 4 | Experiment 5 |\n|---|---:|---:|\n'
+def canonical(k):return k.replace('top3','topK').replace('top5','topK')
+a=Counter();z=Counter()
+for k,v in old['unrecoveredBreakdown'].items():a[canonical(k)]+=v
+for k,v in result['unrecoveredBreakdown'].items():z[canonical(k)]+=v
+for k in sorted(set(a)|set(z)):cm+='| '+k+' | '+str(a[k])+' | '+str(z[k])+' |\n'
+cm+='\nThe wrong-promotion outcome is already included among unrecovered functions; do not add it again. Identity disagreements include semantically equivalent but source-distinct functions. Structural evidence is not automatically a semantic error. Per-case code and raw model outputs are in [misidentifications](misidentifications/), with independent source-map witnesses in [the audit](wrong-identity-audit/cases.json).\n\n[Full experiment report](REPORT.md), [machine-readable comparison](comparison-with-experiment-4.json), [mechanical verification](verification.json).\n'
+(P/'COMPARISON-WITH-EXPERIMENT-4.md').write_text(cm)
+with (P/'REPORT.md').open('a') as f:f.write('\n[Comparison with experiment 4](COMPARISON-WITH-EXPERIMENT-4.md).\n')

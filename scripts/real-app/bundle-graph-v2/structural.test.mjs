@@ -1,0 +1,1 @@
+../../../../ReCall/scripts/real-app/bundle-graph-v2/structural.test.mjs

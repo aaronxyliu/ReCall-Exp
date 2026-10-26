@@ -1,0 +1,304 @@
+{
+  "created": "2026-10-19T07:45:10.317985+00:00",
+  "executionStatus": {
+    "status": "stopped-by-user",
+    "stages": [
+      {
+        "file": "recover.mjs",
+        "started": "2026-10-19T06:11:54.165Z",
+        "status": "stopped-by-user"
+      }
+    ],
+    "stopped": "2026-10-19T06:36:36.628979+00:00",
+    "reason": "User requested: stop for now."
+  },
+  "sourcePopulation": {
+    "functions": 558,
+    "zeroOwnPropertyOperations": 80,
+    "oneToNineOwnPropertyOperations": 393,
+    "atLeast10OwnPropertyOperations": 85,
+    "atLeast10GraphOperationOccurrences": 102,
+    "atLeast10DistinctGraphOperationPairs": 51
+  },
+  "builds": [
+    {
+      "build": "esbuild-readable-keep",
+      "minified": false,
+      "treeShaking": false,
+      "supported": 543,
+      "status": "fixed-point",
+      "checkpoint": "2026-10-19T06:34:34.015Z",
+      "anchors": {
+        "correct": 84,
+        "wrong": 0,
+        "unassessed": 1
+      },
+      "final": {
+        "correct": 479,
+        "wrong": 1,
+        "unassessed": 13
+      },
+      "pairs": 1758,
+      "acceptedPairs": {
+        "correct": 426,
+        "wrong": 32,
+        "unassessed": 14
+      },
+      "freshCalls": 1613,
+      "cacheHits": 145,
+      "elapsedSeconds": 1359.6043465409998,
+      "productiveRounds": 3,
+      "inputHash": "25373b8c33a46c6a17b3cc93a79701c285f8b61d32f4c19f2b36d10663766d45",
+      "configuration": {
+        "embedding": "qwen3-embedding:0.6b",
+        "validator": "qwen3.5:4b",
+        "thinking": false,
+        "promptVersion": "jquery-pilot-v5-binary-default-true",
+        "decisionPolicy": "false only with definite behavioral difference; otherwise true; no uncertain",
+        "num_ctx": 16384,
+        "num_predict": 32,
+        "temperature": 0,
+        "topK": 3,
+        "maxCodeCharacters": 18000,
+        "embeddingBatch": 12,
+        "neighborhoodRadius": 1,
+        "siblingWindow": 2,
+        "neighborhoodKinds": [
+          "lexically-resolved-call",
+          "function-argument",
+          "contains",
+          "same-parent-ast-order-window-2"
+        ],
+        "policy": "Evaluate all top-three pairs; promote only exactly one accepted pair, strict one-to-one source use within a build. No ground-truth access."
+      }
+    },
+    {
+      "build": "esbuild-readable-shake",
+      "minified": false,
+      "treeShaking": true,
+      "supported": 543,
+      "status": "fixed-point",
+      "checkpoint": "2026-10-19T06:35:22.198Z",
+      "anchors": {
+        "correct": 84,
+        "wrong": 0,
+        "unassessed": 1
+      },
+      "final": {
+        "correct": 479,
+        "wrong": 1,
+        "unassessed": 13
+      },
+      "pairs": 1758,
+      "acceptedPairs": {
+        "correct": 426,
+        "wrong": 32,
+        "unassessed": 14
+      },
+      "freshCalls": 0,
+      "cacheHits": 1758,
+      "elapsedSeconds": 48.154749708000104,
+      "productiveRounds": 3,
+      "inputHash": "25373b8c33a46c6a17b3cc93a79701c285f8b61d32f4c19f2b36d10663766d45",
+      "configuration": {
+        "embedding": "qwen3-embedding:0.6b",
+        "validator": "qwen3.5:4b",
+        "thinking": false,
+        "promptVersion": "jquery-pilot-v5-binary-default-true",
+        "decisionPolicy": "false only with definite behavioral difference; otherwise true; no uncertain",
+        "num_ctx": 16384,
+        "num_predict": 32,
+        "temperature": 0,
+        "topK": 3,
+        "maxCodeCharacters": 18000,
+        "embeddingBatch": 12,
+        "neighborhoodRadius": 1,
+        "siblingWindow": 2,
+        "neighborhoodKinds": [
+          "lexically-resolved-call",
+          "function-argument",
+          "contains",
+          "same-parent-ast-order-window-2"
+        ],
+        "policy": "Evaluate all top-three pairs; promote only exactly one accepted pair, strict one-to-one source use within a build. No ground-truth access."
+      }
+    },
+    {
+      "build": "esbuild-min-keep",
+      "minified": true,
+      "treeShaking": false,
+      "supported": 545,
+      "status": "stopped-by-user",
+      "checkpoint": "2026-10-19T06:36:36.089Z",
+      "anchors": {
+        "correct": 85,
+        "wrong": 0,
+        "unassessed": 0
+      },
+      "final": {
+        "correct": 85,
+        "wrong": 0,
+        "unassessed": 0
+      },
+      "pairs": 117,
+      "acceptedPairs": {
+        "correct": 28,
+        "wrong": 2,
+        "unassessed": 1
+      },
+      "freshCalls": 117,
+      "cacheHits": 0,
+      "elapsedSeconds": 73.8630761249999,
+      "productiveRounds": 0,
+      "inputHash": "25373b8c33a46c6a17b3cc93a79701c285f8b61d32f4c19f2b36d10663766d45",
+      "configuration": {
+        "embedding": "qwen3-embedding:0.6b",
+        "validator": "qwen3.5:4b",
+        "thinking": false,
+        "promptVersion": "jquery-pilot-v5-binary-default-true",
+        "decisionPolicy": "false only with definite behavioral difference; otherwise true; no uncertain",
+        "num_ctx": 16384,
+        "num_predict": 32,
+        "temperature": 0,
+        "topK": 3,
+        "maxCodeCharacters": 18000,
+        "embeddingBatch": 12,
+        "neighborhoodRadius": 1,
+        "siblingWindow": 2,
+        "neighborhoodKinds": [
+          "lexically-resolved-call",
+          "function-argument",
+          "contains",
+          "same-parent-ast-order-window-2"
+        ],
+        "policy": "Evaluate all top-three pairs; promote only exactly one accepted pair, strict one-to-one source use within a build. No ground-truth access."
+      }
+    },
+    {
+      "build": "esbuild-min-shake",
+      "minified": true,
+      "treeShaking": true,
+      "supported": 545,
+      "status": "not-started"
+    },
+    {
+      "build": "rollup-readable-keep",
+      "minified": false,
+      "treeShaking": false,
+      "supported": 554,
+      "status": "not-started"
+    },
+    {
+      "build": "rollup-readable-shake",
+      "minified": false,
+      "treeShaking": true,
+      "supported": 554,
+      "status": "not-started"
+    },
+    {
+      "build": "rollup-min-keep",
+      "minified": true,
+      "treeShaking": false,
+      "supported": 544,
+      "status": "not-started"
+    },
+    {
+      "build": "rollup-min-shake",
+      "minified": true,
+      "treeShaking": true,
+      "supported": 544,
+      "status": "not-started"
+    },
+    {
+      "build": "webpack-readable-keep",
+      "minified": false,
+      "treeShaking": false,
+      "supported": 522,
+      "status": "not-started"
+    },
+    {
+      "build": "webpack-readable-shake",
+      "minified": false,
+      "treeShaking": true,
+      "supported": 522,
+      "status": "not-started"
+    },
+    {
+      "build": "webpack-min-keep",
+      "minified": true,
+      "treeShaking": false,
+      "supported": 540,
+      "status": "not-started"
+    },
+    {
+      "build": "webpack-min-shake",
+      "minified": true,
+      "treeShaking": true,
+      "supported": 540,
+      "status": "not-started"
+    }
+  ],
+  "files": [
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/ground-truth.json",
+      "sha256": "f84ba90759d276db6c8bf48f6117b9d66e19d96591e703be773667841e94e24d"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/detector-input.json",
+      "sha256": "fd64185068cf1051bdc155e382495f1391108cb3cd220f51bf2e65d2db167fed"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/build-manifest.json",
+      "sha256": "54a673f83b04f99e7ee064d79a861d2030e0c940717be7aef9b2de5bfa306e5c"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/model-manifest.json",
+      "sha256": "91d4ee03f1d39b2e80bf79e458e25cb837f63d5fcd503855a63709f473c5b925"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/execution-status.json",
+      "sha256": "09fc07a018d9380ab994b9542b71611724c953bc27d3e3bb2b25965887309324"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/recovery/esbuild-min-keep.json",
+      "sha256": "5535a6ae65605f07bab90938ebe3884a10508715d561f8f55e5b28ed52a78377"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/recovery/esbuild-readable-keep.json",
+      "sha256": "d2718d1233b9bd1905070009716b720f284bd7548fb2039eece7e708a32dfeb0"
+    },
+    {
+      "path": "results/jquery-4.0.0/v5-binary-validator/recovery/esbuild-readable-shake.json",
+      "sha256": "1476424fbc9a4c16fce3ea84257359028321ee96e6c88196d3f0976eb51b102a"
+    },
+    {
+      "path": "scripts/jquery/recover.mjs",
+      "sha256": "64f3e38a0db63eeaaa1e11b5e0e4d1130c07f7710eb76f00de91226a8d068c4f"
+    },
+    {
+      "path": "scripts/jquery/models.mjs",
+      "sha256": "f658543bdf41d1c247dcb5bc7515ce800d7769b05730eb4b0405eeca19b46074"
+    },
+    {
+      "path": "scripts/jquery/validator-policy.mjs",
+      "sha256": "a042622cbf2b2f0e8250a01d0381e74790736d79c41cce83e212b12ceb780c79"
+    },
+    {
+      "path": "scripts/jquery/analysis.mjs",
+      "sha256": "e8e89ce14f6212bed4475b3fc5efb2f89b0f159ccb518b98a7771202d8e568d7"
+    },
+    {
+      "path": "scripts/jquery/measure.mjs",
+      "sha256": "ba2eb14d4f27b5f80ed8de4176ff8ed552c3bc7130554642d0847f821865e586"
+    },
+    {
+      "path": "scripts/jquery/oracle.mjs",
+      "sha256": "b038e9cc90ad17e05c8f8adda1db581a93b052448f61292e555c56350bf8c1f6"
+    },
+    {
+      "path": "scripts/jquery/oracle-point.mjs",
+      "sha256": "b2951e202c5c49a89e053bbba1d3d678d7a33dd968b4a3404d06c938ec821faf"
+    }
+  ],
+  "note": "Read-only aggregation of saved experiments. No recovery or model calls run by this script."
+}

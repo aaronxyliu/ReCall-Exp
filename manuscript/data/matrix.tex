@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Build inventory and recovery status at the saved stopping point. All twelve builds passed fixture checks. Supported targets have a source-map-backed jQuery identity.}
+\label{tab:matrix}
+\centering\small
+\begin{tabular}{lllrrl}
+\toprule
+Bundler & Minify & Shake & All functions & Supported & Recovery\\
+\midrule
+esbuild & Off & Off & 568 & 543 & Complete\\
+esbuild & Off & On & 568 & 543 & Complete\\
+esbuild & On & Off & 568 & 545 & Interrupted\\
+esbuild & On & On & 568 & 545 & Not started\\
+rollup & Off & Off & 568 & 554 & Not started\\
+rollup & Off & On & 568 & 554 & Not started\\
+rollup & On & Off & 568 & 544 & Not started\\
+rollup & On & On & 568 & 544 & Not started\\
+webpack & Off & Off & 580 & 522 & Not started\\
+webpack & Off & On & 568 & 522 & Not started\\
+webpack & On & Off & 577 & 540 & Not started\\
+webpack & On & On & 568 & 540 & Not started\\
+\bottomrule
+\end{tabular}
+\end{table}

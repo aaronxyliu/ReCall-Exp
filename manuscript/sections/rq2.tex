@@ -1,0 +1,71 @@
+\subsection{RQ2: Ablation}
+\label{sec:rq2}
+\textit{How do neighborhood ranking and module graph building affect recovery quality and computational cost?} Planned experiment~4 compares neighborhood ranking with directly embedding every function and searching the full reference pool. Planned experiment~5 isolates module-aware graph building relative to local function relationships. The completed expansion and connectivity studies below provide preliminary evidence; graph reachability alone does not measure ranking, validation, or final model recovery.
+
+\paragraph{Completed expansion evidence.}
+In the jQuery pilot, final recovery includes 1300 correct matches beyond 238 correct initial POG correspondences (Table~\ref{tab:exp4-recovery}). This comparison measures expansion under the pilot's local graph. The graph simulations below separately measure the extended resolver under ideal candidate selection; their rates must not be pooled with model recovery.
+
+\subsubsection{Completed graph experiment: protocol}
+\label{sec:connectivity-design}
+This experiment isolates whether the graph can expose the correct candidate. We keep the original fingerprint proposal rule, record every proposal, and admit only oracle-confirmed, unambiguous initial pairs as seeds. Incorrect and unassessed proposals are recorded and withheld. The same seeds are used for every graph variant. This sanitization is specific to simulation; it is not an extra oracle available to model-driven recovery.
+
+Let $T$ be the fixed set of source-map-supported target pairs, $A_0\subseteq T$ the confirmed seeds, and $A_r$ the accepted pairs after round $r$. We replace both embedding ranking and model validation with an oracle selection rule:
+\begin{equation}
+\label{eq:oracle-connectivity}
+A_{r+1}=A_r\cup\{(b,s)\in T\mid s\in C_r(b),\ b,s\text{ are eligible}\}.
+\end{equation}
+Here $C_r$ is Equation~\ref{eq:candidate-neighborhood} evaluated using $A_r$. The oracle selects the correct reference anywhere in the neighborhood, without a top-$k$ restriction. Eligibility retains the 18,000-code-unit promotion limit. Supported pairs with repeated reference identities within the same target chunk stay in the denominator but cannot promote or bridge. Source definitions may recur across distinct chunks. No model, embedding service, or cached model judgment is invoked.
+
+The baseline uses the original local calls, function arguments, containment, and sibling window of two. The source-only comparison augments the reference graph while retaining the original bundled graph. The within-chunk comparison augments both graphs but permits each promotion only through a bundled neighbor in the same target chunk. The separate cross-chunk comparison additionally permits statically resolved inter-chunk relationships. Both can analyze runtime-only dependency code: context availability and permission to promote across chunks are different factors. Neither variant adds target pairs or initial anchors through those helper files, matches initialization functions as a prerequisite, or copies an anchor by reference identity alone.
+
+The simulation iterates to a fixed point and reports $R/D$, where $R$ counts reached supported pairs and $D=|T|$. A reference function duplicated across chunks can contribute several pairs, so this is not unique-source-function recall. We retain zero-supported library cases as N/A, reference parse failures, and ambiguous transformations. Each promotion has a checked reference-side and bundled-side parent witness; independent queue and layered traversals agree on the fixed point. Exact target/seed hashes are unchanged across variants, and the new-repository run also verifies the frozen analyzer hashes. The resulting rate measures reachable correct candidates under ideal ranking and validation. It does not measure final model accuracy or prove that every graph edge is a real call.
+
+\subsubsection{Completed graph experiment: results}
+We report each cohort separately to preserve its development or test role.
+\label{sec:connectivity-results}
+\paragraph{Development subjects.}
+Table~\ref{tab:simulation-development} reports the current graph extension on the eight development repositories. With the same targets and seeds, within-chunk reachability rises from 104,594/161,329 (64.83\%) to 157,282/161,329 (97.49\%). Cross-chunk promotion adds 550 pairs, reaching 157,832/161,329 (97.83\%). Table~\ref{tab:simulation-stages} separates source-only augmentation from augmentation on both sides. The source-only stage reaches 110,561 pairs; adding the bundled relationships reaches another 46,721. These increments are staged effects, rather than independent causal effects of individual adapter rules.
+
+\input{data/simulation-development}
+
+
+
+\input{data/simulation-stages}
+
+The largest gain comes from ZyPlayer's \nolinkurl{tdesign-icons-vue-next}. Its baseline reaches 8/41,489 pairs, an intermediate graph revision reaches 1530, and the current graph reaches all 41,489 using the same four icon seeds. The intermediate input omitted an imported Rolldown runtime helper, leaving 39,959 targets inside 2352 lazy-factory groups without accepted bundled neighbors. A controlled diagnostic adds that helper as context with no matchable helper functions and recovers the 39,959 pairs while retaining the reference graph, target set, seeds, and within-chunk protocol. Automatic dependency collection supplies the same context in the current run. Resolving initialization/export behavior thus exposes relationships without first matching initialization functions.
+
+This one library contributes 41,481 of the 52,688 additional pairs (78.7\%). Excluding it, development-cohort reachability still rises from 104,586/119,840 (87.27\%) to 115,793/119,840 (96.62\%). We therefore report the complete per-library results rather than interpreting the 97.49\% aggregate as a typical application rate (Appendix~\ref{sec:simulation-library-results}).
+
+\paragraph{Previously untested repositories.}
+The analyzer is unchanged for the five new repositories in Table~\ref{tab:simulation-holdout}. Within-chunk reachability increases from 22,494/28,780 (78.16\%) to 26,402/28,780 (91.74\%); allowing cross-chunk promotion reaches 26,540/28,780 (92.22\%). Four repositories improve, and 26 of the 40 evaluable library cases improve. The source-only stage adds 3143 pairs; bundled relationships add another 765; cross-chunk promotion adds 138. Thus, both graph sides contribute, and the gain is not confined to the missing-helper case observed during development.
+
+\input{data/simulation-holdout}
+
+The per-library changes include Ionic's RxJS (47/287 to 270/287), Geeker Admin's ECharts (3135/3681 to 3660/3681) and axios (222/308 to 284/308), RobustMQ's lodash (7/196 to 163/196), and 9router's Recharts (648/1267 to 1009/1267). RobustMQ's date-fns reaches 74/107 within chunks and 90/107 with cross-chunk promotion, compared with 6/107 at baseline. These examples involve lexical imports, wrapped module exports, and namespace relationships across different applications.
+
+Some packages remain disconnected. Geeker's \nolinkurl{@element-plus/icons-vue} stays at 1/293, with 292 targets lacking an accepted bundled neighbor. RobustMQ's \nolinkurl{@radix-ui/react-icons} stays at 0/12 without initial seeds. In 9router, \nolinkurl{@reduxjs/toolkit} remains 0/114 without seeds. Simplefolio stays at 4/14: five cases are excluded from promotion by same-chunk identity ambiguity and five lack an accepted bundled neighbor. Its small emitted library population provides limited evidence about Parcel. Moreover, 85 selected reference files in 9router's \nolinkurl{@dnd-kit/core} fail parsing and yield no supported targets for that package; its N/A entry must not be interpreted as successful recovery.
+
+\paragraph{Earlier esbuild evidence.}
+The preceding esbuild graph revision improves three applications from 5763/7497 (76.87\%) to 6832/7497 (91.13\%) within chunks and 6853/7497 (91.41\%) across chunks (Table~\ref{tab:simulation-esbuild}). It supplies additional evidence for lexical/import resolution, but its different implementation revision is retained separately. The unchanged-analyzer Ionic result above provides the new-repository esbuild check for the current implementation.
+
+\input{data/simulation-esbuild}
+
+\paragraph{Candidate-edge audit and interpretation.}
+We inspect 55 deterministic, edge-kind-stratified added relationships and selected new-promotion witnesses from the new repositories. Fifty have supporting code/binding evidence; four getter reads are mislabeled as function arguments but retain a genuine caller/accessor dependency; one write-only assignment produces a spurious function-value reference. All edges remain in the reported experiment. This graph deliberately supplies candidates rather than certifying calls, and these observations do not trigger a precision-oriented repair in this evaluation. A separate diagnostic suppressing the syntax-screened getter-value and write-only patterns changes reachability by only one Ionic pair; that statement itself reads a getter, so the loss does not establish a false source correspondence. The small stratified audit is not an unbiased edge-precision estimate.
+
+The results show that mechanism-based graph construction transfers to several previously untested repositories and exposes additional correct candidates. They do not establish a universal bundler recognizer or final model recovery on these expanded graphs. Broad candidate edges can increase ranking work or compete for the validation budget; actual ranking and validation remain necessary to decide identities. The earlier 94.41\% jQuery result and these oracle connectivity rates measure different stages and populations and must not be combined.
+
+\subsubsection{Planned experiment 4: neighborhood ranking}
+\label{sec:rq2-ranking}
+On the same local verification subjects and fixed references as RQ1, we will compare ReCall's neighborhood ranking with a baseline that directly embeds every eligible source and bundled function. The baseline will consider every eligible unmatched bundled function and rank candidates across the full available reference-function pool, without requiring a matched graph neighbor. Both conditions will use identical initial POG anchors, embedding and validation models, prompts, top-$k$, size limits, acceptance/conflict rules, and declared resource budgets. Anchors will be admitted by ReCall's rule without oracle filtering. Thus the comparison measures the neighborhood search strategy, including which targets it reaches, rather than changing the validator.
+
+We will compare recovery, assessed precision, wrong and unassessed mappings, embedding work, candidate comparisons, validation calls, runtime, and memory. Cost accounting will include the baseline's complete embedding preparation and identify cache reuse explicitly. Budget-limited runs will retain their stopping status and recovered counts. The full-method condition can reuse the RQ1 runs. The completed graph simulations do not provide results for this global-embedding baseline.
+
+\subsubsection{Planned experiment 5: module graph building}
+\label{sec:rq2-modules}
+We will compare model-driven recovery using local function relationships with recovery using the module-aware graph. Both conditions will retain the same input files, source references, initial anchors, neighborhood ranking, validator, thresholds, and other settings. We will measure final recovery and assessed precision together with wrong and unassessed mappings, graph-construction cost, candidate breadth, model calls, and total runtime. The module-aware condition can reuse the full-method RQ1 runs. Oracle-assisted reachability will remain a separate diagnostic; the completed simulations above do not fill this model-driven ablation.
+
+\rqoverview{Same inputs, references,\\anchors, and models}{Neighborhood vs. global;\\local vs. module graph}{Compare recovery\\quality and cost}{Planned RQ2 experiments 4--5: independently compare neighborhood ranking and module graph building.}{fig:rq2-goal}
+
+\paragraph{Status.}
+\textit{Pending: experiment 4's neighborhood-versus-global comparison and experiment 5's model-driven graph ablation. Completed pilot expansion and oracle-assisted graph reachability remain preliminary evidence for different comparisons.}

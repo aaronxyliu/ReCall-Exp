@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "revision": "2026-10-24-background-and-approach-alignment",
+  "checked_at_utc": "2026-10-24T02:36:23.219162+00:00",
+  "user_decision": "Eligibility percentage left [TBD%]; numerator, denominator, and cohort pending experiment.",
+  "source_sha256": {
+    "main.tex": "23f16b2a993fd7083a7559201f6fb4fc163f3c4399cac2c9d5985c84e559dad1",
+    "sections/background.tex": "5f46e263470764252a212eebbc424318b9c6c1c50aa67f3ef3d75eb643746479",
+    "sections/approach.tex": "f108b322db4b2189f4185fc54d794a180ef72c80321dcca50f7ea5b6881a40d9",
+    "sections/introduction.tex": "0f1d0d7e693b985e331618e582f4f51850370fe833691a8bb40a634ec1ac7424",
+    "references.bib": "ee1c0b4460af6ebb882ea1d4a9312032dd5959f042f9a86950617d97058a5385",
+    "README.md": "48b384ec9c220dfc6029b9621b7aae5e031a13c38bef5c6fdf0d7fc5c4dfa3d0",
+    "data/background-evidence.json": "d3e714fe2f66eb5d6dd7106e44fc71ea5714e76279dd96fb5589c438cf8db702"
+  },
+  "pdf_sha256": "14dd6dd3b840f6487745106e6c4132831269e0c3d7f3e462fe47d3df9b85b27d",
+  "pages": 40,
+  "compilation": "Tectonic success; no errors, undefined references, missing glyphs, or overfull boxes.",
+  "remaining_warnings": "Font requests, underfull boxes, template algorithm warning, and bibliography metadata warnings.",
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      25,
+      26
+    ],
+    "scope": "Background, Approach, transitions from Introduction and to Dataset Preparation, references, and adjacent pages. Other pages not re-reviewed.",
+    "result": "No clipping, overlapping text, or broken cross-references observed."
+  },
+  "approach_algorithms_figures_tables_preserved_verbatim": true,
+  "evidence_files_verified_unchanged": 76,
+  "new_experiment_runs": 0,
+  "new_inference_calls": 0,
+  "backup": "archive/2026-10-24-before-background",
+  "evidence_ledger": "data/background-evidence.json",
+  "previous_validation_records_preserved": [
+    "data/manuscript-check.json",
+    "data/approach-revision-check.json"
+  ]
+}

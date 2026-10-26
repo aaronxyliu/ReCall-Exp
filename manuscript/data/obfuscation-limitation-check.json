@@ -1,0 +1,23 @@
+{
+  "status": "compiled-and-text-verified",
+  "modifiedFiles": [
+    "sections/limitations.tex",
+    "references.bib",
+    "README.md"
+  ],
+  "archive": "archive/2026-10-24-before-obfuscation-limitation",
+  "limitationPages": [
+    24
+  ],
+  "citationResolved": true,
+  "noUndefinedReferencesOrOverfullBoxes": true,
+  "newCitationBibliographyWarnings": false,
+  "experimentsRun": false,
+  "inferenceCalls": 0,
+  "files": {
+    "sections/limitations.tex": "4cc0e04b4c44c821daa823db94ee87673f5f6495d9c8373ea30a05356948f666",
+    "references.bib": "5cec7f1cf4a53e96ef7e32c5188e86a3363a60e33acb5088ad20f107bcb9ae93",
+    "README.md": "839391d5e6a5521f017aff12bc7284e43c0827ca831399b07ebbda5878001428",
+    "build/main.pdf": "4900677e6fb5026b0e3507c263abbed66d61c394c8a5f5325aa3a8cc9306c296"
+  }
+}

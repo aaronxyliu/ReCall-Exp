@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Recovery execution time and cache reuse. Rounds include the final round with no additions.}
+\label{tab:v8-runtime}
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Bundler & Rounds & Fresh calls & Cache hits & Minutes\\
+\midrule
+esbuild & 6 & 1583 & 811 & 45.37\\
+Rollup & 8 & 1437 & 1018 & 45.56\\
+webpack & 8 & 1206 & 401 & 34.80\\
+\bottomrule
+\end{tabular}
+\end{table}

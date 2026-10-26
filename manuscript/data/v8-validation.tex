@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Pair-level validation and final-match precision. Rates describe saved pair checks, including cache reuse.}
+\label{tab:v8-validation}
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Bundler & Checks & Accepted & Pair precision & Final precision & Invalid\\
+\midrule
+esbuild & 2394 & 925 & 61.97\% & 98.11\% & 1\\
+Rollup & 2455 & 1021 & 59.71\% & 97.73\% & 23\\
+webpack & 1607 & 645 & 82.28\% & 98.99\% & 12\\
+\bottomrule
+\end{tabular}
+\end{table}

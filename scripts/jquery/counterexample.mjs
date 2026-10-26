@@ -1,0 +1,14 @@
+import path from 'node:path';
+import vm from 'node:vm';
+import {output,read,write,now} from './common.mjs';
+const data=read(path.join(output,'detector-input.json'));
+const refs=new Map(data.sources.flatMap(s=>s.functions).map(f=>[f.id,f])),compiled=new Map(data.bundles.flatMap(b=>b.functions).map(f=>[f.id,f]));
+const r=read(path.join(output,'calibration-nonthinking-v3/recovery/esbuild-readable-keep.json'));
+const pair=r.pairs.find(p=>p.verdict==='accept'&&compiled.get(p.bundleId)?.name==='isWindow'&&refs.get(p.sourceId)?.name==='isPlainObject');
+if(!pair)throw new Error('The specified observed counterexample pair is not in this run');
+const bundle=compiled.get(pair.bundleId),source=refs.get(pair.sourceId);
+const scaffold=`const getProto=Object.getPrototypeOf; const toString=Object.prototype.toString; const hasOwn=Object.prototype.hasOwnProperty; const fnToString=Function.prototype.toString; const ObjectFunctionString=fnToString.call(Object);`;
+const result=vm.runInNewContext(scaffold+`const bundled=(${bundle.code}); const reference=(${source.code}); ({input:"{}",bundleResult:bundled({}),referenceResult:reference({})});`,{}, {timeout:1000});
+if(result.bundleResult===result.referenceResult)throw new Error('Expected counterexample did not distinguish behaviors');
+write(path.join(output,'semantic-counterexample.json'),{created:now(),configuration:'calibration-nonthinking-v3 (joint batched validation), not the final independent-pair main run',kind:'Concrete counterexample to an observed non-thinking batched equivalence acceptance. This one failure is semantic, not only a source-identity disagreement.',pair,referenceCode:source.code,bundleCode:bundle.code,environment:scaffold,result});
+console.log(result);

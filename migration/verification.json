@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-23T03:14:46.326509+00:00",
+  "workspace": "/Users/aaronxyliu/GitHub/ReCall Research",
+  "repositories": {
+    "ReCall": {
+      "git_root": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall",
+      "branch": "main",
+      "remotes": [],
+      "initial_commit_created": false
+    },
+    "ReCall Exp": {
+      "git_root": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Exp",
+      "branch": "main",
+      "remotes": [],
+      "initial_commit_created": false
+    },
+    "ReCall Dataset": {
+      "git_root": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset",
+      "branch": "main",
+      "remotes": [],
+      "initial_commit_created": false
+    }
+  },
+  "tool_tests_passed": 38,
+  "experiment_tests_passed": 15,
+  "graph_cli_smoke": "passed after rename; no model calls",
+  "frozen_baseline": {
+    "status": "passed",
+    "files": 14490,
+    "baseline": "bundling-connectivity-v1-2026-10-22"
+  },
+  "manuscript_evidence_files_verified": 76,
+  "runtime_files_byte_identical": 23,
+  "legacy_path": {
+    "path": "/Users/aaronxyliu/GitHub/FAPI Study",
+    "type": "compatibility-directory-with-relative-links",
+    "target": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Exp",
+    "reason": "The executor rejects a symlinked writable root; real directory shim preserves original absolute artifact paths.",
+    "owns_git_repository": false
+  },
+  "preserved_nested_source_git_repositories": 2,
+  "dataset_metadata_files_copied_unchanged": 107,
+  "new_inference_calls": 0,
+  "new_recovery_experiments": 0,
+  "paper_title": "ReCall: Accurate and Scalable Function Recovery for Bundled JavaScript",
+  "paper_pdf_sha256": "ceee511ff556b842d8608c2ec72dbca7df91974600ec1e1953f0cf2eb86794b3"
+}

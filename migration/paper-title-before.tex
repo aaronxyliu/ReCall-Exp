@@ -1,0 +1,53 @@
+\documentclass[acmsmall,screen,review,anonymous]{acmart}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,breakatwhitespace=false,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,framesep=4pt}
+
+\newcommand{\rqoverview}[5]{%
+\begin{figure}[htbp]
+\centering\small
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #1}}\hfill
+\(\rightarrow\)\hfill
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #2}}\hfill
+\(\rightarrow\)\hfill
+\fbox{\parbox[c][2.7em][c]{.265\linewidth}{\centering #3}}
+\caption{#4}\label{#5}
+\end{figure}}
+
+\setlength{\emergencystretch}{3em}
+\settopmatter{printfolios=true,printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmDOI{}
+\acmISBN{}
+\title{Recovering Library Functions from Bundled JavaScript}
+\author{Anonymous Author(s)}
+\begin{abstract}
+Bundling and minification obscure the correspondence between delivered JavaScript functions and library implementations. We target library function recovery from JavaScript intercepted during webpage visits. The workflow uses DEBUN-based property-order-graph identification to obtain library/version candidates, retrieves their published npm references, and applies iterative matching using static neighborhoods, code embeddings, and a language-model validator. Existing experiments evaluate recovery given known references; the identification and retrieval front end remains to be evaluated end to end. A bundler-aware graph layer normalizes module loading and exports across webpack, Rspack, esbuild, Rollup, Rolldown, Turbopack, and Parcel. Independently constructed source and bundled graphs expose candidates around accepted matches; graph edges generate candidates rather than certify identities. Reference functions are minified before ranking, and a validator checks up to five candidates in order, with round-level one-to-one promotion. In the jQuery~4.0.0 preliminary model experiment, the procedure correctly recovers 1538/1629 source-map-supported occurrences (94.41\%), with 14 wrong identities, 45 unassessed promotions, and 99.10\% assessed identity precision. Replacing the 27B validator with 4B lowers recovery to 79.80\% and increases wrong identities to 62. We separately evaluate the graph extension through model-free connectivity simulation. On eight development repositories, supported-pair reachability rises from 64.83\% to 97.49\%. With the analyzer unchanged on five previously untested repositories, it rises from 22,494/28,780 (78.16\%) to 26,402/28,780 (91.74\%), or 92.22\% with cross-chunk promotion. These latter measurements use oracle candidate selection and do not measure final model accuracy. Model-driven evidence remains restricted to one library and a crafted application; graph generalization is evaluated on a bounded application sample.
+\end{abstract}
+\keywords{JavaScript, program analysis, library identification, bundling, code similarity}
+\begin{CCSXML}
+<ccs2012><concept><concept_id>10011007.10011006.10011041</concept_id><concept_desc>Software and its engineering~Software reverse engineering</concept_desc><concept_significance>500</concept_significance></concept></ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Software and its engineering~Software reverse engineering}
+\begin{document}
+\maketitle
+\input{sections/introduction}
+\input{sections/approach}
+\input{sections/datasets}
+\input{sections/experiment}
+\input{sections/results}
+\input{sections/limitations}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\appendix
+\input{sections/prompt}
+\input{sections/simulation-appendix}
+\input{sections/pilot-setup}
+\input{sections/recovery-audit}
+\end{document}

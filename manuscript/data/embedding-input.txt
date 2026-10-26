@@ -1,0 +1,2 @@
+Instruct: Represent this minified JavaScript function for semantic similarity comparison with other minified JavaScript functions. Focus on behavior, allowing for identifier renaming and equivalent syntactic rewrites.
+Query:<minified source function code>

@@ -1,0 +1,7 @@
+// General analyzer CLI. Manifest contains JavaScript file paths, never source maps.
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {Analyzer} from './analyzer.mjs';import {moduleGraph} from './module-graph.mjs';
+const [manifest,output]=process.argv.slice(2);if(!manifest||!output)throw Error('Usage: node --expose-gc --max-old-space-size=8192 analyze.mjs manifest.json output.json');if(fs.existsSync(output))throw Error('Output exists');
+const m=JSON.parse(fs.readFileSync(manifest)),a=new Analyzer(m.options),inputs=[],start=Date.now();for(const [i,f]of m.files.entries()){
+ const filename=path.resolve(path.dirname(manifest),typeof f==='string'?f:f.path),code=fs.readFileSync(filename,'utf8');inputs.push({path:filename,sha256:crypto.createHash('sha256').update(code).digest('hex')});a.addUnit({id:typeof f==='string'?'u'+i:f.id??'u'+i,path:filename,code});if(global.gc&&i%25===0)global.gc()
+}
+const r=a.solve();r.moduleGraph=moduleGraph(a);r.functions=[...a.tokens].filter(([,f])=>f.inventory).map(([,f])=>({id:f.inventory,unit:f.unit,span:f.span}));r.provenance={inputs,analyzerSha256:crypto.createHash('sha256').update(fs.readFileSync(new URL('./analyzer.mjs',import.meta.url))).digest('hex'),elapsedMs:Date.now()-start};fs.writeFileSync(output,JSON.stringify(r)+'\n');console.log(JSON.stringify({output,functions:r.functions.length,edges:r.edges.length,errors:r.errors,stats:r.stats}));

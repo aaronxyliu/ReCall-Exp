@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "revision": "2026-10-24-approach-reorganization",
+  "checked_at_utc": "2026-10-24T02:22:27.688056+00:00",
+  "approved_choices": [
+    "six-part recovery structure",
+    "retain validation with a precise heuristic definition",
+    "add explicitly illustrative running example"
+  ],
+  "scope": "Recover identities from supplied JavaScript; automatic missing-chunk discovery is outside the method.",
+  "changed_existing_sources": [
+    "main.tex",
+    "README.md",
+    "sections/approach.tex"
+  ],
+  "new_source": "sections/approach-details.tex",
+  "source_sha256": {
+    "main.tex": "498e7f3594259b25253bc9729fee1011b690a9c9212e982aa1d9eaed53dd6e51",
+    "README.md": "3cf354cf4c5f57785657ba6885523517149e581657266ac480e130431171bf0e",
+    "sections/approach.tex": "8db302f838dced26d395d2e5d363e9fe597399caa913ab69044a9085afccdba1",
+    "sections/approach-details.tex": "5951e3aa113bbae99fbc1511cab44b90f4262abded6eb785297f841016078e23"
+  },
+  "pdf_sha256": "8456f5fd832ae570f57ad3c7a1107c4f01ae978a80ac206508177f93132c47c8",
+  "pages": 39,
+  "compilation": "Tectonic success; no errors, undefined references, missing glyphs, or overfull boxes",
+  "remaining_warnings": "Font requests, underfull boxes, template algorithm warning, and bibliography metadata warnings.",
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      25,
+      26
+    ],
+    "scope": "Revised Approach, its figures/tables/algorithms, transition to Dataset Preparation, and added appendix; other pages not re-reviewed in this revision.",
+    "result": "No clipping, overlap, or broken labels observed."
+  },
+  "original_labels_preserved": true,
+  "adapter_detail_preserved_verbatim": true,
+  "evidence_files_verified_unchanged": 76,
+  "new_experiment_runs": 0,
+  "new_inference_calls": 0,
+  "backup": "archive/2026-10-24-before-approach-revision",
+  "previous_validation_record_preserved": "data/manuscript-check.json"
+}

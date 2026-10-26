@@ -1,0 +1,81 @@
+{
+  "revision": "2026-10-24-background",
+  "organization": "bundling process and terminology; consequences for function recovery; prior techniques and remaining gap",
+  "user_decision": "Leave the exact eligibility number empty and fill it after the experiment.",
+  "pending_measurement": {
+    "manuscript_placeholder": "[TBD%]",
+    "required_before_filling": [
+      "numerator",
+      "denominator",
+      "evaluated cohort",
+      "size threshold consistent with Approach"
+    ],
+    "historical_counts_inserted": false,
+    "interpretation": "Size eligibility is not fingerprint stability, uniqueness, or identity recovery."
+  },
+  "primary_sources": [
+    {
+      "key": "kim2025debun",
+      "url": "https://plrg.korea.ac.kr/assets/data/publication/ase25-park-debun.pdf",
+      "sections": [
+        "III",
+        "IV-B",
+        "V-D"
+      ],
+      "claims": [
+        "POG and refinements",
+        "library/version objective",
+        "database filter LOC > 5"
+      ],
+      "boundary": "Do not identify the LOC filter with ReCall property-operation count or assert guaranteed stability for larger functions."
+    },
+    {
+      "key": "xu2026dbundlr",
+      "url": "https://reallytg.github.io/files/papers/debundling_icse.pdf",
+      "sections": [
+        "2",
+        "3.4",
+        "3.6"
+      ],
+      "claims": [
+        "static analysis plus learned prediction and dynamic checks",
+        "CodeQL-modeled frontend packages",
+        "anonymous functions omitted in predictor labels",
+        "manual individual function models",
+        "webpack-focused prototype"
+      ],
+      "boundary": "No purely static characterization and no unsupported end-to-end function recovery percentage."
+    },
+    {
+      "key": "webpackConcepts",
+      "url": "https://webpack.js.org/concepts/"
+    },
+    {
+      "key": "webpackManifest",
+      "url": "https://webpack.js.org/concepts/manifest/"
+    },
+    {
+      "key": "webpackConcatenation",
+      "url": "https://webpack.js.org/plugins/module-concatenation-plugin/"
+    },
+    {
+      "key": "webpackTreeShaking",
+      "url": "https://webpack.js.org/guides/tree-shaking/"
+    },
+    {
+      "key": "terserOptions",
+      "url": "https://terser.org/docs/options/"
+    }
+  ],
+  "dbundlr_audit": {
+    "summary_path": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Exp/archive/2026-10-19-pre-library-recovery/results/d-bundlr-coverage-audit/summary.json",
+    "summary_sha256": "288a612831303a50865653590bb6902fe9c3cb649c8fdc3836e0a7ddcc7c36e6",
+    "commit": "c28a5d62efeecc46cc146c3548c71b8071ba2e89",
+    "verifier_path": "/Users/aaronxyliu/GitHub/D-Bundlr/d-bundlr/src/unbundle/verifypackageis.ts",
+    "verifier_sha256": "f346e2e78c1878a0159b784f4e67f161cf266b956bb3f3d49f6f6faef30eb05d",
+    "claim": "verifyCodeIsFunction returns false if executeSequencesFeatures lacks a model for the predicted key.",
+    "boundary": "Only individual-function verification; whole-module recovery is distinct. Source audit, not predictor execution."
+  },
+  "new_experiments": 0,
+  "new_model_inference_calls": 0
+}

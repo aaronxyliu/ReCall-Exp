@@ -1,0 +1,1 @@
+../../../ReCall/scripts/jquery/variable-mapping-policy.mjs

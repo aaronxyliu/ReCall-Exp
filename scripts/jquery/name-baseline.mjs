@@ -1,0 +1,8 @@
+import path from 'node:path';
+import {output,read,write,now} from './common.mjs';
+const data=read(path.join(output,'detector-input.json')),truth=new Map(read(path.join(output,'ground-truth.json')).records.map(g=>[g.bundleId,g]));
+function groups(fs){const out=new Map();for(const f of fs)if(f.name&&f.name!=='<anonymous>'){if(!out.has(f.name))out.set(f.name,[]);out.get(f.name).push(f)}return out}
+const source=groups(data.sources.flatMap(s=>s.functions)),builds=[];
+for(const b of data.bundles){const target=groups(b.functions),records=[];for(const [name,fs] of target){const refs=source.get(name);if(fs.length!==1||refs?.length!==1)continue;const f=fs[0],s=refs[0],g=truth.get(f.id);records.push({bundleId:f.id,sourceId:s.id,name,oracle:g?.nonTarget?'wrong':!g?.sourceId?'unassessed':g.sourceId===s.id?'correct':'wrong'})}const correct=records.filter(r=>r.oracle==='correct').length,wrong=records.filter(r=>r.oracle==='wrong').length,known=[...truth.values()].filter(g=>g.build===b.build&&g.sourceId).length;builds.push({build:b.build,predictions:records.length,correct,wrong,unassessed:records.length-correct-wrong,conditionalPrecision:correct+wrong?100*correct/(correct+wrong):null,correctRecovery:100*correct/known,records})}
+write(path.join(output,'name-baseline.json'),{created:now(),method:'Auxiliary exact function/binding-name baseline: unique parsed name on both sides, excluding anonymous. Names derive only from code declarations, variable assignments, property keys, or member assignments, never map names. This is a known-library/known-version baseline and not a semantic proof. Public property names may survive minification. Not used as seeds in main recovery.',builds});
+console.log(builds.map(({records,...b})=>b));

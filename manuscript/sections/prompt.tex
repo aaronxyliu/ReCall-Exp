@@ -1,0 +1,157 @@
+\section{Model Prompts and Requests}
+\label{sec:prompt}
+This appendix records completed experiments~4 and~5, identified as \nolinkurl{jquery-pilot-v11-three-input-reference-patterns-tf}. The system message comes from the frozen implementation. The replication file \nolinkurl{manuscript/data/validator-system-prompt.txt} preserves its exact UTF-8 bytes. Printed listings wrap lines, normalize alignment spaces, and replace typographic arrows and dashes with ASCII equivalents; exact replay uses the preserved UTF-8 file. Angle-bracketed placeholders below denote substituted data.
+
+\subsection{Embedding input}
+Source functions are first minified. Their embedding input has the following instruction, one newline before \texttt{Query:}, and code immediately after the colon:
+\lstinputlisting{data/embedding-input.txt}
+A bundled function is embedded as code only, without an instruction or field label. The implementation retains the source-side role name \texttt{passage} and the bundle-side role name \texttt{query}; these are internal labels, not a statement that the bundled side receives the instruction. Each \nolinkurl{/api/embed} request has at most 12 inputs, \texttt{truncate: false}, and \texttt{keep\_alive: 60m}. The embedding prompt version is \nolinkurl{minified-semantic-comparison-v2}.
+
+\subsection{Validator system message}
+The listing reproduces the adopted message, including its permissive policy and exclusion of side effects. These instructions characterize the experiment, not complete semantic checking. In the printed version, \texttt{<=>} represents the equivalence arrow and \texttt{->} the transformation arrow; other content is retained.
+\lstinputlisting{data/validator-system-prompt-listing.txt}
+
+\subsection{Validator user message and output}
+The user content is a JSON-encoded string with exactly three fields, in this order:
+\begin{lstlisting}
+{
+  "source_function": "<original reference function code>",
+  "minified_source_function": "<Terser-minified reference code>",
+  "bundled_function": "<candidate bundled function code>"
+}
+\end{lstlisting}
+No capture lists, binding declarations, neighboring code, supported correspondences, source-map labels, or required mapping keys are added. Each request compares one pair; the extra representation is a reference for the same source function, not another candidate.
+
+The \nolinkurl{/api/chat} body is as follows. User content is a string containing the JSON above, with code escaped by \texttt{JSON.stringify}; indentation here is illustrative.
+\begin{lstlisting}
+{
+  "model": "qwen3.5:27b",
+  "messages": [
+    {"role": "system", "content": "<system message above>"},
+    {"role": "user", "content": "<JSON-encoded three-code object>"}
+  ],
+  "think": false,
+  "stream": false,
+  "keep_alive": "60m",
+  "options": {
+    "temperature": 0,
+    "num_ctx": 16384,
+    "num_predict": 384,
+    "seed": 42
+  }
+}
+\end{lstlisting}
+Experiment~5 changes only the request model to \texttt{qwen3.5:4b}; the system message, user fields, and other request options remain identical. No output schema or \texttt{format} parameter is supplied. The parser trims whitespace and accepts only literal uppercase T/F. JSON, punctuation, extra text, or lowercase output is invalid. Invalid responses and API errors do not count as T. No mapping or explanation is requested. No thinking trace is present in recorded responses. The 384-token ceiling is a service limit, not a request to generate that many tokens; median generated-token count is one.
+
+\section{Detailed Experimental Settings}
+\label{sec:detailed-settings}
+\subsection{Models and inputs}
+\begin{table}[htbp]
+\caption{Recorded deployment and inference settings for experiments 4 and 5. These do not imply determinism across runtimes or hardware.}
+\label{tab:model-settings}
+\centering\small
+\begin{tabular}{p{0.34\linewidth}p{0.56\linewidth}}
+\toprule
+Setting & Value\\
+\midrule
+Embedding model & \texttt{qwen3-embedding:0.6b}; 595.78M parameters\\
+Embedding deployment & GGUF; Q8\_0; 1024-dimensional vectors\\
+Embedding requests & Up to 12 missing inputs; truncation disabled\\
+Source representation & Terser-minified function plus approved instruction\\
+Bundle representation & Function code only\\
+Main validator (Exp. 4) & \texttt{qwen3.5:27b}; 27.4B parameters\\
+Comparison validator (Exp. 5) & \texttt{qwen3.5:4b}; metadata reports 4.54B parameters\\
+Validator deployments & Safetensors; NVFP4; MLX runner\\
+Thinking; streaming & Disabled; disabled\\
+Temperature; seed & 0; 42\\
+Context; output ceiling & 16,384 tokens; 384 tokens\\
+Function-size limit & 18,000 JavaScript string code units per original body\\
+Validator input & Source, minified source, bundled function\\
+Validator output & Uppercase T/F; no schema\\
+Retention; timeout & \texttt{keep\_alive: 60m}; 300 seconds per HTTP request\\
+Validation schedule & One pair per sequential request; stop at first T\\
+Server-reported API version & 0.40.6\\
+\bottomrule
+\end{tabular}
+\end{table}
+The endpoint is \nolinkurl{http://127.0.0.1:11434}, unless overridden by \texttt{OLLAMA\_URL}. Model aliases alone are insufficient for reproduction. Recorded SHA-256 digests are:
+\begin{lstlisting}
+qwen3-embedding:0.6b
+ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d
+qwen3.5:27b
+2d2e4b8fc7c0479b70f8cba9fc8bdb49a3c9a43a8a6da3873b724c9fca4672ef
+qwen3.5:4b
+7f3251fa6878a78a606bcb3c074283306e5ad2ea411a7774a9dd98a4bc7f2d13
+\end{lstlisting}
+Endpoint metadata describes models and the runner, not a controlled hardware benchmark. The maximum recorded prompt count is 8463, below the context budget minus output ceiling. Original function sizes are checked before preprocessing, but a complete prompt-token budget is not computed before every request. This post-hoc check is not a general guarantee against long-input failures.
+
+\subsection{Source minification}
+The exact Terser~5.43.1 options for minified source references are:
+\begin{lstlisting}
+{
+  compress: {passes: 2, toplevel: false},
+  mangle: {toplevel: false},
+  format: {comments: false}
+}
+\end{lstlisting}
+Input is \texttt{const <fresh-name> = (<source-function>);}, with a wrapper identifier absent from the source text. Meriyah parses the minified result with ranges enabled. The initializer must remain a function or arrow-function expression; its exact text is extracted, the wrapper discarded, and the extracted expression parsed again. The same cached representation supplies source embeddings and validator reference fields. Enclosing declarations are not synthesized or renamed. The original source is retained unchanged.
+
+\subsection{Matching and iteration}
+\begin{table}[htbp]
+\caption{Matching rules shared by experiments 4 and 5.}
+\label{tab:matching-settings}
+\centering\small
+\begin{tabular}{p{0.34\linewidth}p{0.56\linewidth}}
+\toprule
+Setting & Rule\\
+\midrule
+Anchor eligibility & At least 10 own-body property-operation occurrences\\
+Initial correspondence & Exact POG fingerprint; unique on both eligible sides\\
+Static relationships & Resolved calls, function arguments, containment, source order\\
+Source-order window & At most 2 positions; same immediate enclosing function\\
+Neighborhood & One hop; edges traversed in both directions\\
+Candidate pool & Source neighbors of matched counterparts; exclude used sources\\
+Ranking & Cosine similarity; inventory order breaks ties\\
+Validation budget & Up to 5 candidates per query, in rank order\\
+Early stopping & First T proposes that source; do not check later ranks\\
+No positive response & No proposal after selected candidates are exhausted\\
+Invalid/error response & Continue to the next selected candidate\\
+Across-query conflict & Reject all simultaneous proposals sharing a source identity\\
+Round updates & Accept conflict-free proposals for use in the next round\\
+Re-examination & Candidate or matched-neighbor state must change\\
+Termination & A complete round adds no match\\
+Correction & No oracle-based correction or automatic retraction\\
+\bottomrule
+\end{tabular}
+\end{table}
+First-positive checking does not remove one-to-one allocation. A positive can be blocked by another proposal using the same source. A fixed point is a stopping condition, not evidence of complete recovery.
+
+\subsection{Selected build profiles}
+The profiles are \texttt{esbuild-min-keep}, \texttt{rollup-min-keep}, and \texttt{webpack-min-keep}. Each imports the same jQuery~4.0.0 ESM distribution and crafted entry point. Minification is on; tree shaking is off. The fixture exposes the complete library through \texttt{window.fixtureJQuery = \$}. Previously browser-checked bundles and maps are reused with matching hashes; compilation is excluded from matching runtime. Maps embed source contents and provide evaluation-only counterpart evidence.
+
+\begin{sloppypar}
+\paragraph{esbuild 0.25.9.}
+The request sets \texttt{bundle: true}, \texttt{platform: browser}, \texttt{format: iife}, \texttt{target: es2020}, \texttt{minify: true}, \texttt{treeShaking: false}, \texttt{sourcemap: true}, \texttt{sourcesContent: true}, and \texttt{legalComments: none}.
+
+\paragraph{Rollup 4.50.0 and Terser 5.43.1.}
+Resolution uses \nolinkurl{@rollup/plugin-node-resolve}~16.0.1 with \texttt{browser: true}. Rollup sets \texttt{treeshake: false}, \texttt{format: iife}, \texttt{sourcemap: true}, and \texttt{sourcemapExcludeSources: false}. Bundle-level Terser sets \texttt{compress: true}, \texttt{mangle: true}, and \texttt{format.comments: false}; it chains Rollup's map, includes source contents, and sets \texttt{filename: bundle.js} and \texttt{url: bundle.js.map}. No explicit language target is supplied. These settings differ from isolated-function minification above.
+
+\paragraph{webpack 5.97.1.}
+The request sets \texttt{mode: none}, \texttt{target: [web, es2020]}, \texttt{devtool: source-map}, and an immediately invoked output wrapper. Optimization sets \texttt{minimize: true}, \texttt{usedExports: false}, \texttt{sideEffects: false}, and \texttt{concatenateModules: false}. No custom minimizer is supplied; webpack's lockfile-pinned default is used. These flags do not disable every minifier optimization.
+\end{sloppypar}
+
+\subsection{Caches, checkpoints, and evaluation artifacts}
+An embedding key hashes the model digest, a newline, and the exact input. A validation key hashes a JSON object with both model digests and the complete chat request. Changing prompt text, reference code, request settings, or digests changes the corresponding key. Neither experiment imports a preceding cache. Reused judgments are exact within-run requests, not independent trials.
+
+Completed profiles can be skipped only when their prompt version, embedding prompt version, top-$K$ setting, promotion policy, thinking flag, detector-input hash, and digests agree. An interrupted profile reconstructs its sequence and reuses matching requests; it does not resume halfway through an API call. Overall elapsed time includes preparation, requests, ranking, and checkpoints. API service timings and cache hits are separate. The pre-inference dependency-path failure is archived outside the measured run.
+
+Evaluation follows Section~\ref{sec:datasets}: at least two interior own-body map points, at least 80\% agreement, and a unique winner. Unsupported predictions remain unassessed. The verifier passes 22,576 mechanical checks, including strict T/F parsing, exact minified references and system messages, ranked-prefix validation, first-positive stopping, and unique source allocations. These checks do not prove model judgments correct. Independent mapping witnesses agree with all 14 reviewed wrong-identity labels.
+
+The replication directory is \nolinkurl{results/jquery-4.0.0/experiment-4-minified-ranking-top5}. It retains input hashes, model metadata, frozen implementation, exact prompt, vector caches, requests/responses, rankings, promotions, dependencies, stage times, and per-case witnesses. Tables are generated by \nolinkurl{scripts/jquery/write-experiment-4-manuscript.py}; input hashes are recorded in \nolinkurl{manuscript/data/experiment-4-evidence.json}. The generator reads completed results and never invokes inference. Earlier sources and measurements remain archived.
+
+\subsection{Controlled 4B rerun artifacts}
+Experiment~5 sets \texttt{VALIDATOR\_MODEL=qwen3.5:4b} while running a byte-identical copy of experiment~4's core recovery, model-request, source-minification, and promotion-policy modules. It uses a separate result directory and fresh caches. The model alias denotes the installed 4B-class deployment; its metadata reports 4,538,986,496 parameters, rather than exactly four billion. The active-run deployment snapshot records the MLX validator at a 16,384-token context alongside the 0.6B embedding model.
+
+The replication directory is \nolinkurl{results/jquery-4.0.0/experiment-5-validator-4b}. The run passes 20,359 mechanical checks, records a maximum prompt length of 8463 tokens, and retains 62 per-case wrong-identity files. Its \nolinkurl{validator-model-comparison.json} records shared identity-pair judgments, shared exact-request timing, final target transitions, and byte-identical embedding values for all 2092 cache entries. Shared-pair statistics are conditional on the completed trajectories. Overall elapsed time includes the same scheduled recovery and evaluation stages as experiment~4; later manual inspection and supplementary comparison analysis are excluded.
+
+The comparison tables are generated by \nolinkurl{scripts/jquery/write-experiment-5-manuscript.py}, which reads only completed results and performs no inference. Source hashes are recorded in \nolinkurl{manuscript/data/experiment-5-evidence.json}. The 27B results and their evidence files remain unchanged.

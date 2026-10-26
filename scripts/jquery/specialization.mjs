@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {enumerate,children} from './measure.mjs';
+import {root,output,read,write,now} from './common.mjs';
+const d=read(path.join(output,'detector-input.json')),gt=read(path.join(output,'ground-truth.json')).records;
+const source=d.sources.flatMap(s=>s.functions).find(f=>f.name==='jQueryFactory');
+const sourceCode=fs.readFileSync('node_modules/jquery/dist-module/jquery.module.js','utf8');
+const sourceCalls=[];function walk(n,visit){visit(n);for(const c of children(n))walk(c,visit)}
+walk(enumerate(sourceCode).ast,n=>{if(n.type==='CallExpression'&&n.callee.type==='Identifier'&&n.callee.name==='jQueryFactory')sourceCalls.push({span:n.range,code:sourceCode.slice(...n.range),arguments:n.arguments.map(a=>sourceCode.slice(...a.range))})});
+const builds=[];
+for(const b of d.bundles){const code=fs.readFileSync(path.join(root,b.file),'utf8'),scan=enumerate(code);for(const g of gt.filter(g=>g.build===b.build&&g.sourceId===source.id)){const f=b.functions.find(f=>f.id===g.bundleId),node=scan.functions.find(x=>x.node.range.join(':')===f.span.join(':')).node;let parent=scan.parents.get(node);const calls=[];if(parent?.type==='CallExpression'&&parent.callee===node)calls.push({code:code.slice(...parent.range).slice(-240),arguments:parent.arguments.map(a=>code.slice(...a.range))});builds.push({build:b.build,sourceId:source.id,bundleId:f.id,sourceParameters:['window','noGlobal'],compiledParameters:node.params.map(p=>code.slice(...p.range)),sourcePropertyOperations:source.propertyOperations,compiledPropertyOperations:f.propertyOperations,pogEqual:source.pogHash===f.pogHash,sourceCodeCharacters:source.code.length,compiledCodeCharacters:f.code.length,compiledTail:f.code.slice(-600),directInvocationArguments:calls,oraclePurity:g.purity})}}
+write(path.join(output,'specialization-case.json'),{created:now(),case:'jQueryFactory source lineage versus unconditional function equivalence',sourceCalls,sourceTail:source.code.slice(-1000),builds,interpretation:'The source module calls jQueryFactory(window, true). Some optimization profiles remove the noGlobal-dependent global-export branch and, after minification, the unused second parameter. Property occurrences fall 651 to 649 and the exact POG changes. This is consistent with call-context specialization: source origin can remain valid even when unrestricted standalone function behavior differs. The prototype does not supply general argument-constraint proofs, and this very large function exceeds its model-input limit. Code/call-site evidence, not a separately executed whole-factory equivalence test.'});
+console.log({sourceCalls,changedProfiles:builds.filter(b=>!b.pogEqual).map(b=>b.build)});

@@ -1,0 +1,167 @@
+{
+  "schema": "recall.obfuscation-mechanism-probe/v1",
+  "status": "completed-handwritten-mechanism-probe-only",
+  "toolCommit": "27a14c6be086ee7588bcff585b40fda625d13d49",
+  "nodeVersion": "v24.15.0",
+  "sourceFiles": [
+    {
+      "path": "components/pog/index.mjs",
+      "sha256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9"
+    },
+    {
+      "path": "src/analysis/measure.mjs",
+      "sha256": "875871eb6400ffb2cb8efce503759d98985a2184f59228396012a3bbbfefd85b"
+    },
+    {
+      "path": "vendor/debun/fingerprint-collector/pog-generator.js",
+      "sha256": "f8bb69bf934e8abb9073ae0a4f73e29b80cf9009e06f311612eef081c0777df7"
+    },
+    {
+      "path": "vendor/debun/fingerprint-collector/hash-function.js",
+      "sha256": "3f33cdd18a33dd8c286667fd4f648699d81f6d92e5352e35d4407f2abc494d55"
+    }
+  ],
+  "scope": "One synthetic function; seven handwritten forms; four numeric inputs per form; no obfuscator, models, or full recovery run. Sampled behavior is not an equivalence proof.",
+  "inputs": [
+    -2,
+    0,
+    3,
+    100
+  ],
+  "referencePogHash": "e64ea669bb5d1a74",
+  "rows": [
+    {
+      "id": "unchanged",
+      "code": "function target(x){const o={alpha:x+0,beta:x+1,gamma:x+2,delta:x+3,epsilon:x+4,zeta:x+5,eta:x+6,theta:x+7,iota:x+8,kappa:x+9};return o.alpha+o.beta+o.gamma+o.delta+o.epsilon+o.zeta+o.eta+o.theta+o.iota+o.kappa;}",
+      "codeSha256": "2f9b154a843419486b60427d4a32bdabe0af2bb85120fd12721916652a89a946",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 20,
+      "pogHash": "e64ea669bb5d1a74",
+      "samePogAsReference": true,
+      "anchorsAtDefaultFeatureThreshold": 1,
+      "diagnostics": []
+    },
+    {
+      "id": "local-renaming",
+      "code": "function renamed(a){const b={alpha:a+0,beta:a+1,gamma:a+2,delta:a+3,epsilon:a+4,zeta:a+5,eta:a+6,theta:a+7,iota:a+8,kappa:a+9};return b.alpha+b.beta+b.gamma+b.delta+b.epsilon+b.zeta+b.eta+b.theta+b.iota+b.kappa;}",
+      "codeSha256": "7838b8bc5e968789540a7199e4d10296e8c5fde5bca6a03dd8058e9ee36553e0",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 20,
+      "pogHash": "e64ea669bb5d1a74",
+      "samePogAsReference": true,
+      "anchorsAtDefaultFeatureThreshold": 1,
+      "diagnostics": []
+    },
+    {
+      "id": "literal-bracket-properties",
+      "code": "function target(x){const o={alpha:x+0,beta:x+1,gamma:x+2,delta:x+3,epsilon:x+4,zeta:x+5,eta:x+6,theta:x+7,iota:x+8,kappa:x+9};return o[\"alpha\"]+o[\"beta\"]+o[\"gamma\"]+o[\"delta\"]+o[\"epsilon\"]+o[\"zeta\"]+o[\"eta\"]+o[\"theta\"]+o[\"iota\"]+o[\"kappa\"];}",
+      "codeSha256": "008e3920eb32706fdd21fc85c58439b25f9966af75a24663741e2e8d80b6147c",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 20,
+      "pogHash": "e64ea669bb5d1a74",
+      "samePogAsReference": true,
+      "anchorsAtDefaultFeatureThreshold": 1,
+      "diagnostics": []
+    },
+    {
+      "id": "table-indexed-properties",
+      "code": "const keys=[\"alpha\",\"beta\",\"gamma\",\"delta\",\"epsilon\",\"zeta\",\"eta\",\"theta\",\"iota\",\"kappa\"];function target(x){const o={alpha:x+0,beta:x+1,gamma:x+2,delta:x+3,epsilon:x+4,zeta:x+5,eta:x+6,theta:x+7,iota:x+8,kappa:x+9};return o[keys[0]]+o[keys[1]]+o[keys[2]]+o[keys[3]]+o[keys[4]]+o[keys[5]]+o[keys[6]]+o[keys[7]]+o[keys[8]]+o[keys[9]];}",
+      "codeSha256": "3e4f076b2568b6e19cf43dc22bab9df1b25cb1b66b977d1eb6f6dcec04216582",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 30,
+      "pogHash": "13a53bcbb23ebee9",
+      "samePogAsReference": false,
+      "anchorsAtDefaultFeatureThreshold": 0,
+      "diagnostics": []
+    },
+    {
+      "id": "private-property-renaming",
+      "code": "function target(x){const o={p0:x+0,p1:x+1,p2:x+2,p3:x+3,p4:x+4,p5:x+5,p6:x+6,p7:x+7,p8:x+8,p9:x+9};return o.p0+o.p1+o.p2+o.p3+o.p4+o.p5+o.p6+o.p7+o.p8+o.p9;}",
+      "codeSha256": "e20aeef7ff84524901c888757b33d1d630aa6eeae2ff60db92c1803456b719b3",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 20,
+      "pogHash": "24761333a3454af6",
+      "samePogAsReference": false,
+      "anchorsAtDefaultFeatureThreshold": 0,
+      "diagnostics": []
+    },
+    {
+      "id": "unreachable-property-noise",
+      "code": "function target(x){const o={alpha:x+0,beta:x+1,gamma:x+2,delta:x+3,epsilon:x+4,zeta:x+5,eta:x+6,theta:x+7,iota:x+8,kappa:x+9};if(x<0 && x>=0){o.noise;}return o.alpha+o.beta+o.gamma+o.delta+o.epsilon+o.zeta+o.eta+o.theta+o.iota+o.kappa;}",
+      "codeSha256": "5c26f62cdf3230dfa4bab0530f43f26f8daa7ff1e53ea8e5e1f4159a59217831",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 1,
+      "targetEnumerated": true,
+      "propertyOperations": 21,
+      "pogHash": "b138d93c9edb2d53",
+      "samePogAsReference": false,
+      "anchorsAtDefaultFeatureThreshold": 0,
+      "diagnostics": []
+    },
+    {
+      "id": "runtime-generated-body",
+      "code": "const target=new Function('x',\"const o={alpha:x+0,beta:x+1,gamma:x+2,delta:x+3,epsilon:x+4,zeta:x+5,eta:x+6,theta:x+7,iota:x+8,kappa:x+9};return o.alpha+o.beta+o.gamma+o.delta+o.epsilon+o.zeta+o.eta+o.theta+o.iota+o.kappa;\");",
+      "codeSha256": "abc165e79d140c9a2cabe346ce0834e41fd8db385285d0c7177ad5478641e39d",
+      "sampledOutputs": [
+        25,
+        45,
+        75,
+        1045
+      ],
+      "sampledBehaviorMatches": true,
+      "parsedFunctions": 0,
+      "targetEnumerated": false,
+      "propertyOperations": null,
+      "pogHash": null,
+      "samePogAsReference": null,
+      "anchorsAtDefaultFeatureThreshold": 0,
+      "diagnostics": []
+    }
+  ]
+}

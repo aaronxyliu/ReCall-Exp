@@ -1,0 +1,66 @@
+\section{Preliminary Model-Experiment Protocol}
+\label{sec:pilot-setup}
+This appendix preserves the protocol of the completed jQuery experiments. Historical experiment numbers identify saved runs, not the four research questions. These runs supplied the library and version and did not evaluate website interception, DEBUN identification, or npm retrieval. They remain preliminary evidence for recovery and model tradeoffs.
+\subsection{Library, application, and build configurations}
+We use jQuery~4.0.0, selected from the official stable download and release information when the pilot was prepared on 19~October~2026. The reference is the published ESM distribution \nolinkurl{jquery/dist-module/jquery.module.js}, which is the JavaScript input to the bundlers. We do not claim correspondence to jQuery's upstream modular development sources. All configurations use identical reference bytes, verified by SHA-256, and pinned dependency versions.
+
+The crafted application is a small task board. Its checks exercise DOM construction, selectors, traversal, delegated events, form handling, data access, deep extension, mapping, callbacks, deferreds, serialization, and CSS. We expose the complete jQuery object for inspection. This makes the object escape and limits opportunities to remove unused API methods. The checks establish behavior for the fixture, rather than exhaustive coverage of jQuery.
+
+The initial design built twelve configurations: esbuild, Rollup, and webpack, each with minification off/on and tree-shaking off/on. The active preliminary experiment is restricted to three configurations: one per bundler, with minification always enabled and tree shaking always disabled. Appendix~\ref{sec:detailed-settings} records the exact settings. The procedure below describes initial artifact preparation; recovery now selects only those three existing configurations. Every configuration emits a source map with embedded source contents. esbuild uses its built-in minifier, Rollup uses Terser, and webpack uses its configured default minimizer. esbuild and webpack target ES2020 in this fixture; Rollup does not impose a corresponding target transformation. All outputs use an immediately invoked wrapper for browser execution.
+
+\begin{table}[t]
+\caption{Pinned build and analysis tools. The lockfile also pins transitive dependencies.}
+\label{tab:tools}
+\centering
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Tool & Version & Tool & Version\\
+\midrule
+jQuery & 4.0.0 & esbuild & 0.25.9\\
+Rollup & 4.50.0 & webpack & 5.97.1\\
+Terser & 5.43.1 & Meriyah & 6.0.6\\
+source-map & 0.6.1 & Node.js & 24.15.0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The recovery comparison reuses the three selected bundles and their labels byte-for-byte. It does not rebuild the application or estimate the isolated effect of tree shaking. Disabling tree shaking does not disable every simplification performed by the minifier.
+
+\subsection{Experimental procedure}
+The procedure separates compilation, recovery, and evaluation:
+\begin{enumerate}
+\item \textbf{Freeze the inputs.} Install pinned packages and record library, application, build-tool, and model identities. Hash the reference distribution and fixture.
+\item \textbf{Build the application.} Produce the twelve bundles and source maps, recording the effective settings and hashes of both artifacts.
+\item \textbf{Check the fixture.} Load each build in a browser and run the same twelve behavior checks. All twelve builds passed these checks before recovery.
+\item \textbf{Extract function inventories.} Parse the reference and each bundle, including functions with no property operations. Extract property-operation counts, POG fingerprints, static relationships, and captured bindings. Check that map-embedded reference contents are byte-identical to the installed distribution. Maps help construct and check the experimental reference; function matching receives no map-derived counterpart labels.
+\item \textbf{Prepare evaluation labels separately.} Derive source-map-supported identities with the rule below and preserve ambiguous cases. Store these labels separately from detector inputs.
+\item \textbf{Run recovery.} Establish initial POG matches and execute Algorithm~\ref{alg:recovery}. Save every candidate ranking, pair response, proposed match, conflict, accepted match, round, and supporting earlier match. Neither the recovery script nor its model requests receive source-map labels.
+\item \textbf{Evaluate the saved output.} Compare predictions with the separate labels. Count correct, wrong, and unassessed predictions; analyze candidate retrieval, validation, propagation, and runtime separately.
+\item \textbf{Preserve the stopping state.} Distinguish a completed fixed point from an interrupted run. Retain prompts, model digests, request/response caches, hashes, and checkpoints so results can be inspected without another model run.
+\end{enumerate}
+
+\subsection{Models and runtime settings}
+Both models are served through a local Ollama-compatible endpoint. The embedding model is \texttt{qwen3-embedding:0.6b}, with 1024-dimensional output and Q8\_0 GGUF weights. The validator is \texttt{qwen3.5:27b}; its metadata records 27.4 billion parameters, NVFP4 safetensors weights, and an MLX runner. Model digests, deployment metadata, and the server-reported version are retained. These identify the installed deployments rather than every model sharing an alias.
+
+Validation uses temperature~0, seed~42, a 16,384-token context budget, a 384-token output budget, and \texttt{think: false}. Requests are sequential and return only T/F. The embedding API returns vectors without generated reasoning text. Appendix~\ref{sec:detailed-settings} supplies the exact prompts, request fields, minifier options, matching settings, and build profiles. No training or fine-tuning is performed.
+
+Experiment~4 starts with empty embedding and validation caches. Repeated exact requests within the run can be reused across rounds and builds, and are counted as cache hits. We freeze the implementation and prompt, preserve hashes of copied inputs, and record the stopping state of every profile. An initial dependency-path preflight failed before inference; its log is archived separately and excluded from the measured matching run.
+
+\subsection{Controlled validator comparison}
+\label{sec:validator-comparison-design}
+Experiment~5 replaces \texttt{qwen3.5:27b} with the locally deployed \texttt{qwen3.5:4b}. Both deployments use NVFP4 weights and an MLX runner. We retain experiment~4's frozen recovery implementation, detector inventories, bundled artifacts, source-map labels, system prompt, three-code user message, inference options, and top-five first-positive schedule. The ranking model remains \texttt{qwen3-embedding:0.6b}. Both runs start with fresh embedding and validation caches; no prior model decisions are imported. All 2092 embedding-cache entries have identical keys and vector values across the completed runs. Thus, the initial representations agree exactly, although later candidate pools and rankings can differ as accepted matches change.
+
+We compare whole-pipeline recovery and time, then inspect judgments shared by both runs. An identity pair is shared when the bundled and source definition IDs agree; an exact user request is shared when its complete three-code JSON string agrees. Repeated requests can cover different identities with identical code. These are separate units. The shared subset is selected by both recovery trajectories, rather than a held-out sample. The comparison controls the algorithm and inputs but does not isolate parameter count from deployment characteristics or single-run system conditions. Appendix~\ref{sec:detailed-settings} records both deployments.
+
+\subsection{Measurements and comparisons}
+Let $C$, $W$, and $U$ be correct, wrong, and unassessed accepted matches, and let $D$ be the number of bundled functions with supported jQuery identities. We report recovery as $C/D$, assessed identity precision as $C/(C+W)$, and $U$ separately. Coverage of the reference inventory uses the number of distinct correctly recovered reference identities divided by the 558 source definitions. This is a different denominator from bundled-target recovery, because source functions can lack a supported bundled counterpart. Results are reported per configuration; repeated builds do not provide independent observations.
+
+For validation, we report valid T/F responses, pair acceptance rate, and precision among assessable accepted pairs. Pair-level precision is distinct from final-match precision because repeated queries and one-to-one conflict checks can prevent accepted pairs from entering the mapping. For retrieval, we measure whether a supported counterpart enters a candidate pool and then its top five. These rates are conditional on attempted queries; the same function can contribute several queries after its context changes.
+
+For unrecovered targets, we distinguish lack of a matched neighbor, absence of the correct source from the candidate pool, loss at top-five ranking, validator rejection, early stopping before the correct pair, identity conflicts, and input-size restrictions. Supporting-match records allow us to identify predictions potentially affected by an earlier error. This dependency indicates possible propagation, not proof that an earlier error caused a later decision.
+
+We compare initial POG matches with final expansion, and compare experiment~4 with experiment~3 on the same supported targets and initial matches. Experiment~3 uses the same 0.6B embedding model and 27B validator, embeds the original source with its preceding instruction, validates source--bundle inputs without the minified reference, and checks up to three candidates with first-positive stopping. Experiment~4 changes the source representation and instruction, the validator prompt and input, and the top-five budget together. Both retain round-level one-to-one conflict checks and use fresh experiment caches. This comparison evaluates complete procedures, not an isolated ablation of any one change.
+
+For wrong final identities, we inspect the selected source, bundled function, correct source, minified reference, candidate order, and supporting matches. We independently decode raw own-body source-map points using range-based innermost-function lookup. We also inspect decisive source bindings and run controlled examples with definitions extracted from the pinned distribution. These checks establish concrete differences and allocation outcomes, not access to the model's internal reasoning.
+
+Runtime measurements distinguish total recovery wall time, embedding preparation, fresh validator calls, and cache hits. Cache records retain their original service timings; summing those timings does not measure a new cached execution. Cross-configuration cache reuse is reported explicitly. Each overall timing is one completed observation; this model comparison is exploratory and uses no held-out library or version.

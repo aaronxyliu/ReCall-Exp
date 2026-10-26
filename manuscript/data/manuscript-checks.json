@@ -1,0 +1,16 @@
+{
+  "compiler": "Tectonic PDF export",
+  "compilation": "success",
+  "mainFile": "main.tex",
+  "promptMatchesImplementation": true,
+  "referencesResolved": true,
+  "templateAssetsMatch": true,
+  "evidenceHashesMatch": true,
+  "pages": 14,
+  "appendixPromptsAndSettingsChecked": true,
+  "overfullText": false,
+  "visualReview": "All 14 pages rendered and inspected",
+  "pdfSha256": "3e5e475cb08852726c0dc2759ba0a1c7d31be1d95b73a2c7f6e1dfe63ffe1452",
+  "verified": "2026-10-19T08:23:19.673774+00:00",
+  "inferenceNotModifiedByManuscriptEdit": true
+}

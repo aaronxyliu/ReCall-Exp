@@ -1,0 +1,269 @@
+\section{Approach}
+\label{sec:approach}
+
+\subsection{Problem definition and overview}
+\paragraph{Inputs, outputs, and scope.}
+Given the supplied JavaScript files $F_b$ and versioned reference files $F_s$, ReCall produces a partial mapping from bundled occurrences to reference identities. We represent each bundled occurrence by its file/hash and function span, and each reference identity by its package/version candidate, file/hash, and function span. The input can contain application and runtime code as well as library functions; ReCall does not assume that every definition has a reference counterpart. Unmatched functions remain unresolved. Source maps and evaluation counterpart labels are excluded from the recovery procedure.
+
+The available input comprises supplied files and dependency context already present within declared local roots. ReCall does not discover or download missing chunks. Local context collection and runtime scoping are specified in Section~\ref{sec:local-context}.
+
+\paragraph{Reference preparation.}
+Candidate libraries can be supplied directly or selected beforehand using a versioned POG index and package-identification evidence derived from DEBUN~\cite{kim2025debun}. Corresponding npm distributions provide reference JavaScript; their versions, selected browser/ESM/CommonJS variants, integrity metadata, and file hashes are retained~\cite{npmpack}. A published distribution is not necessarily the upstream development source. Missing references and ambiguous versions remain explicit rather than being resolved using evaluation labels. Reference selection is input preparation. The completed model experiments use known references and therefore do not evaluate automatic package identification or reference selection.
+
+\paragraph{Recovery workflow.}
+Figure~\ref{fig:webpage-workflow} shows the complete recovery process. Function inventories support both POG anchoring and graph construction. Unique agreeing POG fingerprints establish initial matched pairs, called \emph{POG anchors}. The graphs then expose reference candidates around accepted correspondences; embeddings rank these candidates, and a model validates a bounded shortlist. Positive judgments become proposals. Only proposals that pass the allocation checks enter the next round's accepted matches. Thus, graph edges supply candidates, similarity orders them, and model judgments provide compatibility evidence; none of these signals alone proves a reference identity.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw,rounded corners=2pt,align=center,font=\small,inner sep=5pt},
+  flow/.style={-{Stealth[length=2mm]},semithick}]
+\node[box,text width=.86\linewidth] (input) {Supplied JavaScript $F_b$ and candidate references $F_s$\\Function inventories and retained input identities};
+\node[box,text width=.36\linewidth,below=8mm of input.south,xshift=-.25\linewidth] (anchors) {Unique POG agreement\\Initial matches $M_0$};
+\node[box,text width=.36\linewidth,below=8mm of input.south,xshift=.25\linewidth] (graphs) {Independent relationship graphs\\Reference $G_s$ and bundled $G_b$};
+\node[box,text width=.24\linewidth,below=14mm of anchors,xshift=-.08\linewidth] (candidates) {Neighborhood\\candidate generation};
+\node[box,text width=.24\linewidth,right=6mm of candidates] (rank) {Minified-reference ranking and validation};
+\node[box,text width=.24\linewidth,right=6mm of rank] (promote) {Conflict checks and match promotion};
+\draw[flow] (input.south) -- ++(0,-3mm) -| (anchors.north);
+\draw[flow] (input.south) -- ++(0,-3mm) -| (graphs.north);
+\draw[flow] (anchors.south) -- node[left,font=\scriptsize] {accepted matches} (candidates.north);
+\draw[flow] (graphs.south) -- ++(0,-4mm) -| (candidates.north east);
+\draw[flow] (candidates) -- (rank);
+\draw[flow] (rank) -- (promote);
+\draw[flow] (promote.south) -- ++(0,-9mm) -| node[pos=.25,below,font=\scriptsize] {new matches: expand neighborhoods in the next round} (candidates.south);
+\end{tikzpicture}
+\caption{ReCall's recovery workflow. POG anchors initialize the accepted mapping; promoted proposals supply matches for subsequent neighborhood searches.}
+\label{fig:webpage-workflow}
+\end{figure}
+
+\paragraph{Running example.}
+In Figure~\ref{fig:recovery-example}, assume that the omitted statements establish the POG anchor $(\texttt{a},\texttt{render})$. The short helpers do not meet the anchor size criterion. The following stages show how imports and exports expose their relationships and how the accepted pair supports candidate search for \texttt{q}.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{.47\linewidth}
+\small\textbf{Reference files}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+// helpers.js
+export function normalize(x) {
+  return x.trim().toLowerCase();
+}
+export function emphasize(x) {
+  return x.trim().toUpperCase();
+}
+// app.js
+import {normalize, emphasize}
+  from './helpers.js';
+function render(row) {
+  // Other anchor statements omitted.
+  return row.loud
+    ? emphasize(row.title)
+    : normalize(row.title);
+}
+\end{lstlisting}
+\end{minipage}\hfill
+\begin{minipage}[t]{.49\linewidth}
+\small\textbf{Stylized bundled code}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+// Bootstrap omitted; load.d
+// publishes export getters.
+factories[7] = (m, e, load) => {
+  load.d(e, {k:()=>q, h:()=>r});
+  function q(x) {
+    return x.trim().toLowerCase();
+  }
+  function r(x) {
+    return x.trim().toUpperCase();
+  }
+};
+const n = load(7);
+function a(t) {
+  // Other anchor statements omitted.
+  return t.loud ? n.h(t.title)
+                : n.k(t.title);
+}
+\end{lstlisting}
+\end{minipage}
+\caption{Running example of recovery across an import/export boundary. The POG anchor is assumed; the example illustrates the procedure and is not experimental evidence.}
+\label{fig:recovery-example}
+\end{figure}
+
+\subsection{Function inventory and POG anchors}
+\label{sec:pog-anchors}
+We parse each input into an abstract syntax tree (AST), enumerate function definitions, and retain their code, file locations, enclosing definitions, lexical bindings, and property operations. Anonymous and nested functions receive separate identities. Denote the reference inventory by $S$ and the bundled inventory by $B$. These inventories include functions that are ineligible for POG anchoring.
+
+The size criterion for POG anchoring counts syntactic property-operation occurrences in a function's own body. Member reads, writes, and object-literal property initializations contribute to the count; a compound assignment or update contributes one read/write occurrence. For example, \texttt{x.value = y.value} contributes two occurrences. Repeated operations count repeatedly. Parameter defaults and nested function bodies are excluded, and unresolved computed property names use a common placeholder. This count differs from the number of distinct properties or graph nodes.
+
+We use the DEBUN POG backend introduced in Section~\ref{sec:background-prior-work} to extract fingerprints~\cite{kim2025debun}. Nested bodies are removed or replaced by empty function expressions before extraction. An extraction failure cannot establish an anchor. A pair enters the initial mapping $M_0$ only if both functions have at least ten property-operation occurrences, their POG fingerprints agree, and the fingerprint has a unique eligible reference definition and a unique eligible bundled definition within the target matching unit. A matching unit is the target chunk for multi-chunk analysis; the single-chunk pilot has one such unit per build.
+
+The size threshold restricts anchoring to functions with more structural evidence, while uniqueness excludes observed fingerprint collisions. Neither condition proves identity. Functions below the threshold remain in the recovery inventory and can be matched during expansion.
+
+\subsection{Bundler-aware relationship graphs}
+\label{sec:graph-construction}
+ReCall constructs $G_s=(S,E_s)$ and $G_b=(B,E_b)$ independently. Their purpose is to expose candidates around accepted matches. Edges represent modeled calls, function-valued arguments and references, direct containment, and local source-order proximity. These relationships offer complementary search directions: resolved bindings connect functions across module boundaries, while containment and proximity can supply candidates where direct call resolution is unavailable. They are not assertions that every linked pair executes together.
+
+The construction has three steps: collect available context, normalize module operations into a shared representation, and propagate function values to emit relationships. Algorithm~\ref{alg:graphs} summarizes this procedure.
+
+\begin{algorithm}[htbp]
+\caption{Constructing graphs for neighborhood search}
+\label{alg:graphs}
+\begin{algorithmic}[1]
+\Require Reference files $F_s$, supplied bundled files $F_b$, matching inventories $S,B$
+\Ensure Reference graph $G_s$ and bundled graph $G_b$
+\ForAll{$x\in\{s,b\}$}
+  \State $U\gets\operatorname{CollectLocalContext}(F_x)$
+  \State Parse $U$ and bind identifiers to lexical declarations
+  \State $\mathcal{M},K\gets\emptyset$ \Comment{module records and value constraints}
+  \ForAll{units $u\in U$}
+    \State Normalize aliases, constant keys, and registry addresses
+    \State $\mathcal{M}\gets\mathcal{M}\cup\operatorname{RecognizeModules}(u)$
+    \State Add ordinary binding, field, and return constraints to $K$
+    \State Add adapter constraints for imports and exports to $K$
+  \EndFor
+  \State $V\gets\operatorname{SolveToFixedPoint}(K,\mathcal{M})$ within analysis limits
+  \State $E\gets\operatorname{FunctionRelations}(U,V)$
+  \State Add direct containment and same-parent sibling edges to $E$
+  \State Project nodes and relationships to the matching inventory $S$ or $B$
+  \State $G_x\gets(\operatorname{MatchingFunctionNodes}(F_x),E)$
+\EndFor
+\State \Return $G_s,G_b$
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Available context and runtime scope}
+\label{sec:local-context}
+Context collection is independent of target selection. A supplied runtime helper can explain an export operation even if the helper itself is not a matching target. Starting from the files listed in each input manifest, the collector follows relative ESM imports and reexports, literal dynamic imports, local CommonJS requests, and statically specified module URLs only within declared local roots. It records missing files and unresolved requests. Computed chunk loading requires the relevant files to be supplied explicitly. The collector does not execute bundle code.
+
+Module identities are scoped by environment and loader or registry. Equal numeric IDs in independent runtimes must not merge. Explicit annotations and supported worker-entry forms establish these scopes; unknown scope information remains a limitation of the input. Context code supplies constraints, while function-node emission is projected to the chosen matching inventory. This distinction lets runtime initialization/export code assist recovery without first matching its initialization functions.
+
+\subsubsection{A shared module and function-value representation}
+Building on D-Bundlr's module-analysis decomposition~\cite{xu2026dbundlr}, ReCall recognizes runtime structures, binds factory parameters to module operations, and resolves imported values. These operations produce relationships for candidate search.
+
+For a factory with identifier $i$ in scoped registry $\rho$, the adapter creates $\mathcal{M}[\rho,i]$, containing its module object, initial exports object, and loader identity. The abstract state also contains lexical value slots, function/class tokens, allocation-site objects, and constant-key property slots. Ordinary assignments and adapter operations propagate values between these slots. Table~\ref{tab:module-operations} shows how several emitted forms feed the same representation.
+
+\begin{table}[htbp]
+\caption{Representative operations in the common module/value model.}
+\label{tab:module-operations}
+\centering\small
+\begin{tabular}{@{}p{.29\linewidth}p{.65\linewidth}@{}}
+\toprule
+Operation & Modeled effect\\
+\midrule
+Factory registration & Allocate a module record under its scoped registry and ID; bind module/exports/loader parameter roles.\\
+\addlinespace
+Export assignment & Replace the modeled export value for \texttt{module.exports}, or populate a property for \texttt{exports.name}.\\
+\addlinespace
+Export getter & Transfer the getter's returned value to the published property.\\
+\addlinespace
+Constant-ID load or import & Transfer the selected module's export or namespace value to the importing binding.\\
+\addlinespace
+Call through a resolved value & Emit a relationship from the enclosing function to the modeled function target.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the running example, the reference import binds \texttt{normalize} to its definition. On the bundled side, \texttt{load(7)} selects the scoped module record, and the getter for \texttt{k} transfers the function token for \texttt{q} to that record's export property. Resolving \texttt{n.k(...)} consequently exposes the relationship from \texttt{a} to \texttt{q}. Module registration alone would not resolve this function-level connection.
+
+The common solver propagates aliases, object fields, selected class members, imports, exports, and small return summaries. The summaries specialize direct parameter returns, constant member paths from parameters, and returned function/class values at individual call sites. They handle common identity and interop helpers without propagating every argument through every application function. Relationships are emitted for uniquely modeled callable values, with function-valued arguments and binding references recorded separately and opaque native alternatives retained. Flow-insensitive and accessor approximations can add neighbors. This is an incomplete candidate graph, not an exact or sound JavaScript call graph.
+
+\subsubsection{Adapters for emitted mechanisms}
+\label{sec:bundler-adapters}
+Adapters normalize loading and export protocols into this shared model. They target structural roles rather than application names, library names, chunk hashes, or fixed local-variable spellings. Table~\ref{tab:bundler-mechanisms} summarizes the supported families. For scope-hoisted code, adapters use surviving lexical and ESM bindings without reconstructing erased module boundaries.
+
+\begin{table}[htbp]
+\caption{Bundler mechanisms normalized into the shared module/value model.}
+\label{tab:bundler-mechanisms}
+\centering\small
+\begin{tabular}{@{}p{.19\linewidth}p{.34\linewidth}p{.39\linewidth}@{}}
+\toprule
+Family & Emitted relationship & Resolution strategy\\
+\midrule
+webpack/Rspack & Factory tables, scoped loaders, registered chunks & Bind module/exports/require roles; resolve constant IDs and export getters.\\
+\addlinespace
+esbuild/Rollup & Flattened bindings and ESM chunk imports & Follow lexical declarations and ESM namespaces; summarize retained CJS/interop helpers.\\
+\addlinespace
+Rolldown & ESM links, lazy CJS factories, shared runtime helpers & Allocate exports per lazy factory; interpret thunk results and getter namespaces.\\
+\addlinespace
+Turbopack & ID/factory registrations and context APIs & Resolve require/namespace operations and published export bindings.\\
+\addlinespace
+Parcel & Scope-hoisted code or loader-specific registrations & Resolve lexical links and loader-scoped factory exports; model default interop.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Section~\ref{sec:bundler-selection} gives the survey-based selection rule. Appendix~\ref{sec:graph-details} preserves the individual runtime cases and bounded-worklist implementation. Those bounds control analysis cost and report incomplete analysis explicitly; they do not establish a linear-time complexity bound or complete recovery.
+
+\subsection{Neighborhood candidate generation}
+\label{sec:neighborhoods}
+Accepted matches connect the two graphs for candidate search. Let $M$ map bundled functions to reference functions accepted before the current round, and let $N_s$ and $N_b$ denote undirected one-hop neighborhoods. Traversing both directions allows callers, callees, and other linked definitions to seed a search. The one-hop restriction keeps each expansion local; successive rounds can advance farther as new matches are accepted. Source-order proximity connects definitions at most two positions apart with the same immediate parent, with top-level functions grouped separately for each file.
+
+For an unmatched bundled function $b$, let $U_M(b)$ contain reference identities already allocated in its target matching unit. In a single-chunk run, $U_M(b)=\operatorname{range}(M)$. The structural candidate pool is
+\begin{equation}
+\label{eq:candidate-neighborhood}
+C(b)=\left(\bigcup_{b'\in N_b(b)\cap\operatorname{dom}(M)}N_s(M(b'))\right)
+\setminus U_M(b).
+\end{equation}
+A function without a matched bundled neighbor is not examined. Otherwise, reference neighbors of the accepted counterparts supply its candidates. Taking their union avoids requiring every approximate relationship to agree, but can admit additional wrong candidates. Ranking and validation must handle that ambiguity.
+
+For \texttt{q} in Figure~\ref{fig:recovery-example}, its accepted neighbor \texttt{a} maps to \texttt{render}. Both \texttt{normalize} and \texttt{emphasize} are neighbors of \texttt{render}, so both enter $C(\texttt{q})$ if unallocated. If either the reference import or bundled export remains unresolved, the required corresponding connection can be absent and prevent this expansion.
+
+One-to-one allocation is scoped to the target chunk, so a reference definition may be recovered in several chunks. Within-chunk expansion restricts supporting bundled neighbors to the same chunk. The cross-chunk variant also admits statically resolved relationships to accepted functions in other supplied chunks; it does not copy matches solely because they share a reference identity. Context availability and permission to expand across chunks are separate choices.
+
+The jQuery model pilot uses the original local graph of lexical calls, function arguments, containment, and sibling proximity. Section~\ref{sec:rq2} evaluates the extended graph separately through oracle-assisted reachability.
+
+\subsection{Candidate ranking and validation}
+\paragraph{Minified reference representations.}
+ReCall minifies each reference function $s$ to obtain $m(s)$ before embedding. This representation reduces syntactic differences caused by identifier renaming and compact expressions, while retaining the original function for validation and reporting. Terser compresses the function within a temporary top-level constant; the resulting root function is extracted by its AST range and the wrapper removed. Compression uses two passes and local identifier mangling, with top-level optimization and mangling disabled. External names remain unchanged because enclosing declarations are unavailable. Isolated minification is a comparison aid, not a reconstruction of the full bundling context.
+
+\paragraph{Bounded candidate ranking.}
+We embed $m(s)$ with \texttt{qwen3-embedding:0.6b} using the semantic-comparison instruction in Appendix~\ref{sec:prompt}; bundled functions are embedded as code only. Cosine similarity orders eligible candidates in $C(b)$, with reference inventory order breaking ties. Vectors are cached by their distinct inputs. At most five candidates proceed to validation. This bounds validation work per query state, while allowing the correct identity to rank below another candidate. A correct candidate outside the shortlist cannot be recovered by that query, and similarity alone never accepts a match.
+
+Expansion excludes reference or bundled functions longer than 18,000 JavaScript string code units before embedding; such functions may still obtain POG matches. Admitted bodies are not silently truncated. Minification failures remain explicit rather than yielding a substituted reference representation. These restrictions bound the implemented comparison procedure, not recoverability in principle.
+
+\paragraph{Validation as a heuristic judgment.}
+Here \emph{validation} means a model's assessment of a candidate pair under the adopted comparison policy. It is neither a semantic-equivalence proof nor an independent confirmation of reference identity. Each request to \texttt{qwen3.5:27b} contains the complete reference function $s$, its minified reference $m(s)$, and the bundled function $b$. Captured initializers, neighbor code, oracle names, and counterpart labels are not included. The prompt asks the model to map parameters, locals, and external variables between the bodies and compare their behavior; it permits inferred renaming of external bindings even when their declarations are absent.
+
+The prompt illustrates compact JavaScript rewrites, including comma expressions, short-circuit and complementary conditions, operand-valued logical operators, implicit returns, and nullish coalescing. It instructs the model to reject only on clear evidence of a difference and otherwise accept, explicitly excluding corner cases and side effects. These are substantive limits of the implemented policy. Behaviorally compatible helpers can still have different reference identities, and missing binding context can make a plausible correspondence wrong. Section~\ref{sec:limitations} analyzes the observed failures.
+
+The response must be uppercase \texttt{T} or \texttt{F}; thinking is disabled, and no variable mapping or explanation is returned. Whitespace is trimmed before strict parsing. Other outputs and API errors never count as acceptance. In the running example, the visible \texttt{toLowerCase}/\texttt{toUpperCase} difference offers evidence against pairing \texttt{q} with \texttt{emphasize}. If validation accepts \texttt{normalize}, the pair becomes a proposal, subject to the next stage's allocation checks.
+
+\subsection{Conflict resolution and iterative expansion}
+For each query, validation follows rank order and stops at the first \texttt{T}. Exhausting the selected candidates produces no proposal; invalid responses and errors allow checking the next candidate. First-positive stopping saves subsequent checks after an acceptance, but makes ranking and false acceptance consequential: lower-ranked candidates are not compared once a proposal exists. The procedure does not require a unique positive judgment across the shortlist.
+
+\begin{algorithm}[htbp]
+\caption{Iterative matching with minified references}
+\label{alg:recovery}
+\begin{algorithmic}[1]
+\Require Reference functions $S$, bundled functions $B$, graphs $G_s,G_b$, initial anchors $M_0$
+\Ensure Partial mapping $M$, one-to-one within each matching unit
+\State $M\gets M_0$
+\State Prepare minified references; cache embeddings as functions are queried
+\Repeat
+  \State $P\gets\emptyset$ \Comment{$M$ is fixed during this round}
+  \ForAll{eligible unmatched $b$ with a matched neighbor}
+    \State $C\gets$ eligible unused reference neighbors from Equation~\ref{eq:candidate-neighborhood}
+    \If{$C\neq\emptyset$ and this candidate/neighbor state is new}
+      \State $T\gets$ up to five candidates ranked by cosine similarity
+      \ForAll{$s\in T$ in rank order}
+        \If{$\operatorname{Validate}(s,m(s),b)=\texttt{T}$}
+          \State Add $(b,s)$ to $P$
+          \State \textbf{break}
+        \EndIf
+      \EndFor
+    \EndIf
+  \EndFor
+  \State Remove proposals with duplicate or already used reference identities in their unit
+  \State $M\gets M\cup P$
+\Until{$P=\emptyset$}
+\State \Return $M$
+\end{algorithmic}
+\end{algorithm}
+
+The mapping $M$ stays fixed during a round. At the round's end, all proposals sharing a reference identity within a matching unit are rejected, as are proposals for an already allocated reference identity. Remaining proposals extend $M$ and supply new neighborhoods in the next round. This avoids resolving competing proposals by traversal order, but does not identify which conflicting proposal, if any, was correct.
+
+One-to-one allocation prevents a reference definition from explaining several targets in the same chunk under the current matching policy. It is an algorithmic restriction, not a property guaranteed by JavaScript bundling. It cannot recover multiple bundled copies of one reference definition within that unit, and an incorrect allocation can exclude a later correct candidate. Accepted matches are not automatically retracted. These consequences are retained in evaluation rather than treated as evidence that the affected targets lack counterparts.
+
+Algorithm~\ref{alg:recovery} repeats this process. A query can be reconsidered when its candidates or matched neighbors change; identical states are skipped, and complete validator requests are cached with model digests and settings. If the running example's $(\texttt{q},\texttt{normalize})$ proposal passes the conflict checks, its neighbors become usable in the following round.
+
+Each nonterminal round adds at least one previously unmatched bundled function, so unrestricted iteration terminates on a finite inventory. A fixed point means that the procedure adds no further match under its candidate and acceptance rules, not that every target has been recovered. Configured budget stops are reported separately from convergence. The output retains accepted correspondences, their anchor or model origin, supporting matches, and reference allocations so that subsequent analysis can inspect both recovery and error propagation.
+

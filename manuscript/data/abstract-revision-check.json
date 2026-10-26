@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "revision": "2026-10-24-abstract-alignment",
+  "checked_at_utc": "2026-10-24T02:41:09.405682+00:00",
+  "changed_sources": [
+    "main.tex (abstract only)",
+    "README.md"
+  ],
+  "abstract_words_whitespace_delimited": 196,
+  "source_sha256": {
+    "main.tex": "a940b6d39a98ad747ad0077dc76815c1fcc8fb6a8902f7c8a34354875a538759",
+    "README.md": "ff74cb5c03ebb2bce26eae78f93d7a86deb16cd546b674329846b084667b0850",
+    "sections/introduction.tex": "89283ab70211245663968a2fc00d1e45de025a94dab1bc5ca86a29e10ec88660",
+    "sections/background.tex": "5f46e263470764252a212eebbc424318b9c6c1c50aa67f3ef3d75eb643746479",
+    "sections/approach.tex": "f108b322db4b2189f4185fc54d794a180ef72c80321dcca50f7ea5b6881a40d9"
+  },
+  "pdf_sha256": "0d56d1cfe729d69cdeb93dde8d0a3f546b1d2b57a44212aecbb7dcb496368107",
+  "pages": 40,
+  "compilation": "Tectonic success; no errors, undefined references, missing glyphs, or overfull boxes.",
+  "remaining_warnings": "Font requests, underfull boxes, template and bibliography metadata warnings.",
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "scope": "Abstract and opening section transitions; remaining pages not re-reviewed.",
+    "result": "No clipping, overlap, or broken cross-references observed."
+  },
+  "introduction_background_approach_unchanged": true,
+  "evidence_files_verified_unchanged": 76,
+  "new_experiment_runs": 0,
+  "new_inference_calls": 0,
+  "backup": "archive/2026-10-24-before-abstract-revision",
+  "previous_validation_record_preserved": "data/introduction-revision-check.json"
+}

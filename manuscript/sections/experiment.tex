@@ -1,0 +1,29 @@
+\section{Evaluation}
+\label{sec:experiment}
+\label{sec:results}
+The evaluation follows four research questions. RQ1 measures recovery performance across local builds from different bundlers, libraries, and frameworks, and examines the relationship between function transformations and library recovery rate. RQ2 ablates neighborhood ranking and module graph building. RQ3 studies the tradeoffs introduced by the POG feature-count threshold and validation model selection. RQ4 reserves the practical-use evaluation; its research question and experimental protocol remain to be filled.
+
+\paragraph{Completed evidence and planned work.}
+Table~\ref{tab:evidence-status} separates completed evidence from the seven planned experiments, numbered consistently with the experiment repository's roadmap. Within RQ1--RQ3, completed results precede the planned experiments. The model pilot, graph simulations, and validator comparison retain their original subjects and settings. Oracle-assisted graph reachability is reported separately from model-driven recovery. This preliminary evidence does not complete the seven planned experiments, and RQ4 has no completed practical-use result.
+
+\begin{table}[htbp]
+\caption{Evaluation status. Planned studies have no results in this draft.}
+\label{tab:evidence-status}
+\centering\small
+\begin{tabular}{@{}p{.07\linewidth}p{.43\linewidth}p{.44\linewidth}@{}}
+\toprule
+RQ & Completed evidence & Planned experiment\\
+\midrule
+RQ1 & Known-reference jQuery model pilot with the original local graph. & (1) Different bundlers; (2) different libraries/frameworks; (3) validated function transformations and their relationship with library recovery rate.\\
+\addlinespace
+RQ2 & Pilot expansion and oracle-assisted graph reachability on documented repository cohorts. & (4) Neighborhood ranking versus embedding every function; (5) local versus module-aware graph building.\\
+\addlinespace
+RQ3 & Joint procedure/runtime comparison and controlled 27B/4B deployment comparison. & (6) POG feature-count robustness; (7) validation model correctness and cost, including end-to-end effects.\\
+\addlinespace
+RQ4 & None. & Practical use: to be filled.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Shared design for planned experiments.}
+Experiments~1--5 will use the local verification inputs and fixed, versioned references specified in Section~\ref{sec:planned-verification}. Complete-method runs can supply RQ1's recovery measurements and the full-method condition for both RQ2 ablations. Experiments~6--7 will use separate development subjects to select thresholds and model settings before the held-out evaluation; the selected setting's test costs can then be reused from RQ1. Comparisons will retain the same input population, identity labels, and denominator policy within each experiment. The global-embedding condition is an internal baseline for neighborhood ranking. The practical-use task, dataset, and protocol for RQ4 remain undefined.

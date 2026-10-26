@@ -1,0 +1,60 @@
+\subsection{RQ3: Tradeoff}
+\label{sec:rq3}
+\textit{How do the POG feature-count threshold and validation model selection trade recovery and validation quality against computational cost?} Planned experiment~6 varies anchor eligibility to assess POG robustness, anchor coverage and precision, and downstream recovery. Planned experiment~7 compares validation correctness and cost across model deployments and measures their end-to-end effects. The completed procedure and model comparisons below retain their original settings and do not complete these planned studies.
+
+\subsubsection{Completed pilot: procedure and runtime comparison}
+
+\input{data/exp4-runtime}
+
+
+
+\input{data/exp4-comparison}
+
+Experiment~4 completes matching and its scheduled evaluation in 4910.19 seconds (81.84 minutes), compared with 10748.47 seconds (179.14 minutes) for experiment~3: an observed reduction of 54.32\%. Summed validator request time is 4731.87 seconds; reference embedding takes 15.28 seconds, bundle embeddings 35.95 seconds, and reference preprocessing (including minification and input construction) 0.389 seconds. Ranking takes 0.585 seconds. API subtotals exclude other control and checkpoint overhead and do not sum to overall elapsed time. Per-build times exclude shared reference preparation. Request latency has a median of 1.419 seconds and a 95th percentile of 5.030 seconds.
+
+Correct recovery increases by 373 occurrences and 22.90 percentage points, while distinct validation requests decrease from 2837 to 2286 (Table~\ref{tab:exp4-comparison}). Correct-pair rejection outcomes decrease from 274 to 21, and ranking misses from 83 to 16, with different top-$K$ budgets. Wrong identities increase from five to 14, and assessed precision decreases from 99.57\% to 99.10\%. The revised procedure improves observed coverage and runtime while retaining a precision cost. Several changes are combined and each timing is a single run; these results do not identify the contribution of minification, the prompt, or the larger validation budget individually.
+
+\subsubsection{Completed pilot: changing the validator deployment}
+\label{sec:4b-results}
+
+\input{data/exp5-model-comparison}
+
+
+
+\input{data/exp5-build-comparison}
+
+Experiment~5 correctly recovers 1300/1629 supported targets (79.80\%), including 1062 matches beyond the same 238 correct initial POG matches. Recovery decreases by 238 occurrences, or 14.61 percentage points, relative to experiment~4. There are 62 wrong identities and 38 unassessed promotions; final assessed precision decreases from 99.10\% to 95.45\% (Table~\ref{tab:exp5-model-comparison}). Recovery decreases for every bundler (Table~\ref{tab:exp5-build-comparison}). Of the 62 errors, 58 assign a wrong reference to a supported jQuery target, while four identify application functions as library functions. All 62 count against precision, but only the 58 belong to the recovery denominator.
+
+Observed overall time decreases from 4910.19 to 780.22 seconds (81.84 to 13.00 minutes), a 6.29-fold speedup. The 4B run makes 1517 fresh validation requests and reuses 1626 exact requests, producing 3143 pair checks. Summed fresh-validator request time is 562.78 seconds. Reference and bundle embedding take 14.87 and 34.82 seconds, respectively. All responses satisfy the T/F contract; no API error or thinking text is recorded. On 1428 shared exact user requests, median request wall time is 1.542 seconds for 27B and 0.258 seconds for 4B. These timings describe the installed deployments and observed runs, not a hardware-independent effect of model size.
+
+\paragraph{More acceptances do not imply greater recovery.}
+The 4B validator accepts all 1660 evaluated correct-pair checks, but also accepts 1060 incorrect-pair checks. It rejects 333 incorrect checks; 90 checks are unassessed. Accepted-pair assessed precision is therefore 1660/(1660+1060), or 61.03\%, compared with 94.65\% for 27B. These counts include repeated, adaptively selected checks; accepting every examined correct pair does not establish recall on all possible pairs.
+
+The models examine 1569 common bundled/reference identity pairs. For 208 incorrect pairs, 27B rejects while 4B accepts; for 21 correct pairs, 27B rejects while 4B accepts. Another 11 unassessed pairs change from rejection to acceptance. No shared pair changes from acceptance to rejection. The result supports increased permissiveness as the observed decision difference, without revealing the model's internal reason for any judgment.
+
+\input{data/exp5-barriers}
+
+Table~\ref{tab:exp5-barriers} explains the resulting loss of coverage. Early acceptance prevents checking a correct top-five candidate for 113 targets, and identity conflicts block an accepted correct candidate for 92. A further 58 targets receive a wrong reference. Because the procedure stops at the first positive and excludes allocated references from later candidate pools, an incorrect positive can obstruct a correct match even when the validator would accept that correct pair. No target is classified as a correct top-five pair explicitly rejected in this 4B run. The nine exclusive outcomes sum to 329 unrecovered or wrongly recovered supported targets. Thirteen wrong predictions also have an earlier wrong owner that has already consumed the correct reference identity; this is allocation evidence, not a measured gain from rollback.
+
+\paragraph{Concrete wrong acceptances and review scope.}
+Experiment~5 case W01 assigns a callback-producing factory to a string-replacement function. The selected reference is \texttt{createInputPseudo}; the bundled counterpart is \texttt{unescapeSelector}. W12 selects \texttt{Identity}, which returns its argument, for a callback that writes an object flag and returns implicitly. W16 and W17 identify application DOM-building and event callbacks as library selector predicates; W31 and W32 repeat these errors in Rollup. W21 confuses the enclosing \texttt{then} method with its nested \texttt{mightThrow} function. These errors include visible root behavior differences, beyond uncertainty about external variable declarations. Case IDs are local to each experiment.
+
+Independent own-body mapping witnesses agree with all 62 stored wrong-identity labels. Requests, outputs, and code pairs are retained for every case. The preliminary structural grouping leaves 52 cases for individual review and one same-structure binding case unresolved; we do not claim complete semantic adjudication of all 62 errors. Under the fixed prompt and allocation rules, the 4B deployment provides lower latency but substantially lower recovery and identity precision. We retain 27B as the main configuration; a revised 4B prompt would require a separate evaluation.
+
+\subsubsection{Planned experiment 6: POG feature-count robustness}
+\label{sec:rq3-pog}
+On repository-disjoint development subjects, we will vary the minimum number of own-body property-operation occurrences required for POG anchoring, initially comparing thresholds 5, 10, and 20 with the 27B validator fixed. References, graph construction, the 0.6B embedding model, prompts, and other settings will remain fixed. We will report eligible function counts, anchor coverage, anchor precision, fingerprint ambiguity, final recovery and assessed precision, wrong and unassessed mappings, and computational cost. This experiment changes anchor eligibility rather than the POG hashing algorithm; threshold eligibility, retained fingerprint evidence, and accepted anchors will be reported separately. The selected threshold will be frozen before the held-out RQ1 evaluation.
+
+\subsubsection{Planned experiment 7: validation model selection}
+\label{sec:rq3-validator}
+We will compare validation model deployments, initially the 27B and 4B configurations, with the POG threshold held at 10 and the references, graph, ranker, prompt, and acceptance rules fixed. A shared labeled function-pair set from development subjects will measure correct acceptances, false acceptances, false rejections, invalid/error responses, and latency and resource cost. Pair selection and labels will be frozen before comparing models, with correct pairs and hard negative identities represented explicitly. These judgments measure source-identity agreement rather than formal semantic-equivalence proofs.
+
+Separate end-to-end runs on the same development builds will measure recovery, assessed precision, wrong and unassessed mappings, allocation conflicts, model calls, and total cost under each validator. This separates comparison on identical pairs from consequences of the different search trajectories. Model digests and serving settings will be recorded, and the selected configuration will be frozen before the held-out evaluation. The chosen setting's test costs can be reused from RQ1. Recovery time will be separated from input preparation and oracle scoring; historical pilot totals retain their recorded timing boundaries.
+
+\rqoverview{Fixed development set\\and reference inputs}{Vary POG threshold;\\compare validators}{Anchor / pair quality,\\recovery, and cost}{Planned RQ3 experiments 6--7: vary anchor eligibility and validation models separately before selecting the test configuration.}{fig:rq3-goal}
+
+\begin{samepage}
+\paragraph{Status.}
+\textit{Pending: experiments 6--7 on the development dataset, including the POG threshold sweep and shared-pair validation-model comparison. The current threshold of 10 is not claimed to be optimal. The completed pilot compares only the installed validator deployments at threshold 10 on its original subject.}
+\par
+\end{samepage}

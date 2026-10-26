@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "revision": "2026-10-24-introduction-alignment",
+  "checked_at_utc": "2026-10-24T02:40:05.602857+00:00",
+  "changed_sources": [
+    "sections/introduction.tex",
+    "README.md"
+  ],
+  "organization": [
+    "motivation",
+    "prior-work gap",
+    "central observation",
+    "scope and three contributions",
+    "bounded evidence summary",
+    "evaluation roadmap"
+  ],
+  "contributions": [
+    "iterative recovery beyond POG anchors",
+    "bundler-aware candidate relationships",
+    "evaluation separating model decisions from graph reachability"
+  ],
+  "preserved_boundaries": [
+    "supplied files and candidate references",
+    "heuristic model validation",
+    "preliminary known-reference jQuery model experiment",
+    "oracle-assisted graph simulation distinct from model accuracy",
+    "broader model and downstream evaluations pending",
+    "Background eligibility percentage remains TBD"
+  ],
+  "source_sha256": {
+    "sections/introduction.tex": "89283ab70211245663968a2fc00d1e45de025a94dab1bc5ca86a29e10ec88660",
+    "README.md": "7c87a2d4d7f76cc7db0ac365329f9e654f96e704f31377b719703b69b98a4c28",
+    "sections/background.tex": "5f46e263470764252a212eebbc424318b9c6c1c50aa67f3ef3d75eb643746479",
+    "sections/approach.tex": "f108b322db4b2189f4185fc54d794a180ef72c80321dcca50f7ea5b6881a40d9",
+    "main.tex": "23f16b2a993fd7083a7559201f6fb4fc163f3c4399cac2c9d5985c84e559dad1"
+  },
+  "pdf_sha256": "e6fd2632cd6265d0a3d473cf93dad1bcebef0096b73ba0c19760fee64ea37e0e",
+  "pages": 40,
+  "compilation": "Tectonic success; no errors, undefined references, missing glyphs, or overfull boxes.",
+  "remaining_warnings": "Font requests, underfull boxes, template and bibliography metadata warnings.",
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "scope": "Introduction and transitions into Background and Approach; other pages not re-reviewed.",
+    "result": "No clipping, overlap, or broken cross-references observed."
+  },
+  "background_approach_and_main_unchanged": true,
+  "evidence_files_verified_unchanged": 76,
+  "new_experiment_runs": 0,
+  "new_inference_calls": 0,
+  "backup": "archive/2026-10-24-before-introduction-revision",
+  "previous_validation_record_preserved": "data/background-revision-check.json"
+}

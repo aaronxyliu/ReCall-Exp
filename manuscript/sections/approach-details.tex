@@ -1,0 +1,23 @@
+\section{Graph Construction Details}
+\label{sec:graph-details}
+This appendix records the adapter cases and solver bounds summarized in Section~\ref{sec:graph-construction}. These mechanisms resolve relationships in supplied code; they do not discover or download missing chunks.
+
+\subsection{Adapter mechanisms}
+\paragraph{webpack and Rspack.}
+The main loader selects a factory from a module table and supplies module, exports, and loader arguments. We recognize this calling convention in object and sparse-array tables, including aliased tables, immediate bootstrap arguments, and factory invocations using \texttt{.call}. Additional chunks can contribute factories through legacy JSONP callbacks, global array-push registries, or CommonJS/ESM table exports. Normalized registry paths and table-installation writes associate these chunks with the proper loader. Rspack uses compatible module operations but permits different output and registration configurations~\cite{webpackManifest,rspackOutput}. We therefore recover argument and registry roles rather than requiring one fixed webpack template or global name. Getter-map exports and the older single-property getter form both feed the shared export model.
+
+\paragraph{esbuild and Rollup.}
+Scope-hoisted output can replace original module interfaces with direct lexical references. In this case we resolve the remaining bindings and ESM chunk links instead of inventing erased module boundaries. A small helper can still wrap a CommonJS dependency or convert its default export. Structural summaries expose the exported value while the ordinary resolver follows the surrounding calls and references. The same logic applies to retained flattened regions within other bundlers' output.
+
+\paragraph{Rolldown.}
+In addition to lexical and ESM links, the adapter recognizes memoized CommonJS initializers by their callback and module-allocation roles~\cite{rolldownRuntime}. Each callback receives a fresh modeled module/exports record. Calling its returned thunk reads that record's exports, enabling later property calls to reach the exported functions. Export helpers may populate an existing namespace or create and return a fresh one; we distinguish these forms. Helpers imported from a shared runtime chunk are collected as context. Initialization code supplies these constraints without requiring an initialization-function match before propagation can proceed.
+
+\paragraph{Turbopack.}
+The adapter reads module-ID/factory registrations and binds the factory's context, module, and exports roles. The context API distinguishes CommonJS loading, namespace imports, and export publication~\cite{turbopackRuntime}. We interpret getter and direct-value export arrays, optional setters, explicit export IDs, and factories shared by multiple IDs. Aliased factory expressions retain their lexical identities. Module IDs are resolved within the appropriate context/registry, allowing renamed local bindings and supplied chunks to share exported function values.
+
+\paragraph{Parcel.}
+Parcel can concatenate modules into lexical scopes or retain registered factories~\cite{parcelScopeHoisting}. The latter form associates a factory with a particular loader's registry. We follow the actual bound loader identity through direct or aliased registration operations, then bind the factory's module and exports objects. Equal module IDs registered under separate loaders remain separate. Scope-hoisted code and default-export interop use the common lexical/value resolver; this also handles bundles with few explicit module wrappers.
+
+\subsection{Solver bounds}
+Worklists are indexed by dependent slots, and module lookup uses a registry/ID index. Aliases and registry paths are normalized by bounded worklists rather than recursive expansion. The prototype bounds value sets at 64 alternatives, inspects at most 512 AST nodes when summarizing a helper, and stops explicitly at a 50-million-event budget. These bounds control difficult inputs; they do not imply complete recovery or a linear-time complexity bound.
+
