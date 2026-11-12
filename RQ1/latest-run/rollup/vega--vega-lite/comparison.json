@@ -1,0 +1,265 @@
+{
+  "alignment": {
+    "denominator": 87,
+    "correct": 0,
+    "recoveryRate": 0,
+    "assessedPredictions": 0,
+    "precision": null,
+    "missingSourceCounterparts": 0,
+    "missingTargetCounterparts": 0
+  },
+  "matchingArtifacts": [
+    {
+      "file": "source.json",
+      "key": "units",
+      "simulation": 1,
+      "real": 1,
+      "equal": true
+    },
+    {
+      "file": "source.json",
+      "key": "functions",
+      "simulation": 87,
+      "real": 87,
+      "equal": true
+    },
+    {
+      "file": "bundle.json",
+      "key": "units",
+      "simulation": 1,
+      "real": 1,
+      "equal": true
+    },
+    {
+      "file": "bundle.json",
+      "key": "functions",
+      "simulation": 6245,
+      "real": 6245,
+      "equal": true
+    },
+    {
+      "file": "anchors.json",
+      "key": "matches",
+      "simulation": 15,
+      "real": 15,
+      "equal": true
+    },
+    {
+      "file": "sourceGraph.json",
+      "key": "edges",
+      "simulation": 486,
+      "real": 486,
+      "equal": true
+    },
+    {
+      "file": "bundleGraph.json",
+      "key": "edges",
+      "simulation": 32101,
+      "real": 32101,
+      "equal": true
+    }
+  ],
+  "equalEmbeddingDigest": true,
+  "realRecoverySettings": {
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "minAnchors": 3,
+    "uniqueBundle": false,
+    "topK": 3,
+    "astBeforeRanking": true,
+    "matchEdgeRoles": true,
+    "radius": 1,
+    "maxCodeCharacters": 18000,
+    "maxRounds": 1000,
+    "maxValidationCalls": null,
+    "minSimilarity": -1,
+    "sourceRepresentation": "minified",
+    "crossChunk": true,
+    "libraryGate": false,
+    "conflictPolicy": "discard"
+  },
+  "simulationRecoverySettings": {
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "minAnchors": 3,
+    "uniqueBundle": false,
+    "topK": 3,
+    "astBeforeRanking": true,
+    "radius": 1,
+    "maxCodeCharacters": 18000,
+    "maxRounds": 1000,
+    "maxValidationCalls": null,
+    "minSimilarity": -1,
+    "sourceRepresentation": "minified",
+    "crossChunk": true,
+    "libraryGate": false,
+    "conflictPolicy": "discard"
+  },
+  "equalRecoverySettings": false,
+  "simulationImplementation": "402c71a330e4d1e6795068fbf469365175ae6e2e7c8e70bdb8850a3f62b8e602",
+  "realImplementation": "658f667cf3292f6dfa8dad16c479d6f53f93c39c764ee40e1514a620b721a47c",
+  "commonPromotions": 87,
+  "validationDecisions": {
+    "simulation": {
+      "oracle unassessed, validator reject": 42
+    },
+    "real": {
+      "oracle unassessed, validator reject": 15
+    }
+  },
+  "simulation": {
+    "status": "fixed-point",
+    "stages": {
+      "POG": {
+        "denominator": 87,
+        "correct": 15,
+        "recoveryRate": 0.1724137931034483,
+        "assessedPredictions": 15,
+        "precision": 1,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 15,
+        "targetsOutsideOracle": 0
+      },
+      "AST": {
+        "denominator": 87,
+        "correct": 71,
+        "recoveryRate": 0.8160919540229885,
+        "assessedPredictions": 72,
+        "precision": 0.9861111111111112,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 72,
+        "targetsOutsideOracle": 0
+      },
+      "Validation": {
+        "denominator": 87,
+        "correct": 0,
+        "recoveryRate": 0,
+        "assessedPredictions": 0,
+        "precision": null,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 0,
+        "targetsOutsideOracle": 0
+      },
+      "Overall": {
+        "denominator": 87,
+        "correct": 86,
+        "recoveryRate": 0.9885057471264368,
+        "assessedPredictions": 87,
+        "precision": 0.9885057471264368,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 87,
+        "targetsOutsideOracle": 0
+      }
+    },
+    "queries": 86,
+    "stats": {
+      "validationCalls": 114,
+      "embeddingFunctions": 51,
+      "rounds": 2,
+      "conflicts": 0,
+      "astPreRankingChecks": 1056,
+      "astPreRankingAccepted": 72,
+      "elapsedMs": 352.215167,
+      "model": {
+        "requests": 1,
+        "cacheHits": 19,
+        "validationCacheHits": 0,
+        "embeddingCacheHits": 19,
+        "embeddingRequests": 0,
+        "validationRequests": 0,
+        "wallMs": 37.13704200000001,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "astChecks": 0,
+        "astAccepted": 0,
+        "astMs": 0
+      }
+    },
+    "modelDigests": {
+      "qwen3-embedding:0.6b": "ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d"
+    }
+  },
+  "real": {
+    "status": "fixed-point",
+    "stages": {
+      "POG": {
+        "denominator": 87,
+        "correct": 15,
+        "recoveryRate": 0.1724137931034483,
+        "assessedPredictions": 15,
+        "precision": 1,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 15,
+        "targetsOutsideOracle": 0
+      },
+      "AST": {
+        "denominator": 87,
+        "correct": 71,
+        "recoveryRate": 0.8160919540229885,
+        "assessedPredictions": 72,
+        "precision": 0.9861111111111112,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 72,
+        "targetsOutsideOracle": 0
+      },
+      "Validation": {
+        "denominator": 87,
+        "correct": 0,
+        "recoveryRate": 0,
+        "assessedPredictions": 0,
+        "precision": null,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 0,
+        "targetsOutsideOracle": 0
+      },
+      "Overall": {
+        "denominator": 87,
+        "correct": 86,
+        "recoveryRate": 0.9885057471264368,
+        "assessedPredictions": 87,
+        "precision": 0.9885057471264368,
+        "missingSourceCounterparts": 0,
+        "missingTargetCounterparts": 0,
+        "promotions": 87,
+        "targetsOutsideOracle": 0
+      }
+    },
+    "queries": 86,
+    "stats": {
+      "validationCalls": 87,
+      "embeddingFunctions": 13,
+      "rounds": 2,
+      "conflicts": 0,
+      "astPreRankingChecks": 1056,
+      "astPreRankingAccepted": 72,
+      "relationshipCandidatesPruned": 157,
+      "relationshipQueriesPruned": 5,
+      "elapsedMs": 41723.823584,
+      "model": {
+        "requests": 26,
+        "cacheHits": 2,
+        "validationCacheHits": 2,
+        "embeddingCacheHits": 0,
+        "embeddingRequests": 12,
+        "validationRequests": 13,
+        "wallMs": 41222.89574900002,
+        "inputTokens": 22038,
+        "outputTokens": 13,
+        "astChecks": 0,
+        "astAccepted": 0,
+        "astMs": 0
+      }
+    },
+    "modelDigests": {
+      "qwen3-embedding:0.6b": "ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d",
+      "qwen3.5:27b": "2d2e4b8fc7c0479b70f8cba9fc8bdb49a3c9a43a8a6da3873b724c9fca4672ef"
+    }
+  }
+}

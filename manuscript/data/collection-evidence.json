@@ -1,0 +1,2075 @@
+{
+  "manifestSHA256": "89dd62d3c1f1cb441f2c8187818751e9a85f5eda85a20244091c9f7173fc85eb",
+  "analyzerSHA256": "82779f3f9e8300ea178a51114d3869e7448920cfa310e9f86db47ac67322ef1f",
+  "sourceFunctions": 95716,
+  "counts": {
+    "oneToOne": 78884,
+    "splitOnly": 85,
+    "combineOnly": 2711,
+    "splitAndCombine": 1514,
+    "noCounterpart": 8058,
+    "unresolvedMapping": 3211,
+    "insufficientPositions": 1253
+  },
+  "repositories": [
+    {
+      "repo": "jlfwong/speedscope",
+      "sourceFunctions": 605,
+      "withCounterpart": 567,
+      "counts": {
+        "oneToOne": 499,
+        "splitOnly": 0,
+        "combineOnly": 21,
+        "splitAndCombine": 34,
+        "noCounterpart": 38,
+        "unresolvedMapping": 13,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/jlfwong--speedscope",
+      "commit": "fe804e6281cf847713448c2c3e0faec3e1f62b2d",
+      "recordsSHA256": "64bec6261cf27a3ec1271d561e190fa9cf5874e54d2c7818f366bbafd2dc4e5c",
+      "samplingRule": "frontend-visible-v1",
+      "selectedLibraries": [
+        "jfrview",
+        "preact",
+        "pako",
+        "source-map",
+        "aphrodite",
+        "uint8array-json-parser",
+        "protobufjs"
+      ],
+      "pairsPerLibrary": {
+        "source-map": 113,
+        "preact": 44,
+        "aphrodite": 84,
+        "pako": 102,
+        "uint8array-json-parser": 3,
+        "protobufjs": 112,
+        "jfrview": 41
+      }
+    },
+    {
+      "repo": "mattlewis92/angular-calendar",
+      "sourceFunctions": 85,
+      "withCounterpart": 37,
+      "counts": {
+        "oneToOne": 37,
+        "splitOnly": 0,
+        "combineOnly": 0,
+        "splitAndCombine": 0,
+        "noCounterpart": 48,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
+          "source": "node_modules/.pnpm/calendar-utils@0.12.5_date-fns@4.1.0_moment@2.30.1/node_modules/calendar-utils/package.json",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
+          "source": "node_modules/.pnpm/positioning@3.0.1/node_modules/positioning/package.json",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
+          "source": "node_modules/.pnpm/calendar-utils@0.12.5_date-fns@4.1.0_moment@2.30.1/node_modules/calendar-utils/package.json",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
+          "source": "node_modules/.pnpm/positioning@3.0.1/node_modules/positioning/package.json",
+          "reason": "source parse failed"
+        }
+      ],
+      "missingSourceContents": [
+        "node_modules/.pnpm/positioning@3.0.1/node_modules/positioning/src/positioning.ts"
+      ],
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
+      "recordsSHA256": "902c90c2a433cf1073bd7ddfa1e692f6e07f5eafd0b4e2286e8577aefb580da4",
+      "samplingRule": "manifest-only-v1",
+      "selectedLibraries": [
+        "calendar-utils",
+        "positioning",
+        "tslib",
+        "@scarf/scarf"
+      ],
+      "pairsPerLibrary": {
+        "tslib": 37
+      }
+    },
+    {
+      "repo": "ng-bootstrap/ng-bootstrap",
+      "sourceFunctions": 85,
+      "withCounterpart": 29,
+      "counts": {
+        "oneToOne": 29,
+        "splitOnly": 0,
+        "combineOnly": 0,
+        "splitAndCombine": 0,
+        "noCounterpart": 56,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/ng-bootstrap--ng-bootstrap",
+      "commit": "2a45c97082c66c955ac9c4865cf66d8d4dfd27fc",
+      "recordsSHA256": "f08844b520f7bb503458d16d1e10181240f0f6f1ad1873593733ef41ca149fdd",
+      "samplingRule": "manifest-only-v1",
+      "selectedLibraries": [
+        "tslib"
+      ],
+      "pairsPerLibrary": {
+        "tslib": 29
+      }
+    },
+    {
+      "repo": "okikio/bundlejs",
+      "sourceFunctions": 45349,
+      "withCounterpart": 44286,
+      "counts": {
+        "oneToOne": 43064,
+        "splitOnly": 1,
+        "combineOnly": 18,
+        "splitAndCombine": 28,
+        "noCounterpart": 1063,
+        "unresolvedMapping": 1155,
+        "insufficientPositions": 20
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/js/chunk-VJYBG7QC.js",
+          "source": "node_modules/.pnpm/workbox-window@7.4.0/node_modules/workbox-window/Workbox.js",
+          "reason": "original coordinate out of bounds"
+        }
+      ],
+      "missingSourceContents": [],
+      "subject": "esbuild/okikio--bundlejs",
+      "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
+      "recordsSHA256": "b99267ac1d675f492f3eadc683c95b1b63590a19fbe6a55967eb9b9310ca0535",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "pairsPerLibrary": {
+        "@okikio/native": 160,
+        "workbox-window": 5,
+        "@okikio/animate": 263,
+        "@okikio/emitter": 38,
+        "solid-js": 107,
+        "parse-package-name": 2,
+        "@okikio/sharedworker": 15,
+        "monaco-editor": 42085,
+        "esbuild-wasm": 320,
+        "@dprint/formatter": 69
+      }
+    },
+    {
+      "repo": "primefaces/primeng",
+      "sourceFunctions": 1760,
+      "withCounterpart": 1692,
+      "counts": {
+        "oneToOne": 1388,
+        "splitOnly": 2,
+        "combineOnly": 86,
+        "splitAndCombine": 106,
+        "noCounterpart": 68,
+        "unresolvedMapping": 105,
+        "insufficientPositions": 5
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/primefaces--primeng",
+      "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
+      "recordsSHA256": "396ef4cadc59f585bfa54b05fc829f74c47854b2b752a2b1d14ed13550099a09",
+      "samplingRule": "frontend-visible-v1",
+      "selectedLibraries": [
+        "chart.js",
+        "tslib",
+        "@primeuix/themes",
+        "rxjs"
+      ],
+      "pairsPerLibrary": {
+        "@primeuix/themes": 11,
+        "chart.js": 1095,
+        "rxjs": 253,
+        "tslib": 29
+      }
+    },
+    {
+      "repo": "primefaces/sakai-ng",
+      "sourceFunctions": 1730,
+      "withCounterpart": 1662,
+      "counts": {
+        "oneToOne": 1362,
+        "splitOnly": 2,
+        "combineOnly": 86,
+        "splitAndCombine": 106,
+        "noCounterpart": 68,
+        "unresolvedMapping": 103,
+        "insufficientPositions": 3
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/primefaces--sakai-ng",
+      "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
+      "recordsSHA256": "aacde22ccbeb9e7b71992b4f2d42700283522608364e457e615a3b4df5bcd519",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "@primeuix/themes",
+        "chart.js",
+        "tslib",
+        "rxjs"
+      ],
+      "pairsPerLibrary": {
+        "chart.js": 1095,
+        "@primeuix/themes": 8,
+        "rxjs": 230,
+        "tslib": 29
+      }
+    },
+    {
+      "repo": "sissbruecker/linkding",
+      "sourceFunctions": 911,
+      "withCounterpart": 911,
+      "counts": {
+        "oneToOne": 911,
+        "splitOnly": 0,
+        "combineOnly": 0,
+        "splitAndCombine": 0,
+        "noCounterpart": 0,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/sissbruecker--linkding",
+      "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
+      "recordsSHA256": "602b6381419a3af87326f37b9e9f036d3b4cce4fabbc9e02090a7754f4878be4",
+      "samplingRule": "manifest-only-v1",
+      "selectedLibraries": [
+        "@hotwired/turbo",
+        "lit",
+        "@floating-ui/dom",
+        "esbuild"
+      ],
+      "pairsPerLibrary": {
+        "@hotwired/turbo": 869,
+        "@floating-ui/dom": 42
+      }
+    },
+    {
+      "repo": "swimlane/ngx-charts",
+      "sourceFunctions": 1201,
+      "withCounterpart": 1135,
+      "counts": {
+        "oneToOne": 904,
+        "splitOnly": 2,
+        "combineOnly": 0,
+        "splitAndCombine": 0,
+        "noCounterpart": 66,
+        "unresolvedMapping": 216,
+        "insufficientPositions": 13
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/swimlane--ngx-charts",
+      "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+      "recordsSHA256": "0f3a5b4f25b3601c5f26ad530ad71ed4ec377372dece1df6ad170727af4f0695",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "rxjs",
+        "d3-format",
+        "d3-interpolate",
+        "tslib",
+        "d3-transition",
+        "d3-scale",
+        "emoji-flags",
+        "d3-hierarchy",
+        "zone.js",
+        "d3-selection"
+      ],
+      "pairsPerLibrary": {
+        "zone.js": 250,
+        "emoji-flags": 7,
+        "rxjs": 258,
+        "tslib": 30,
+        "d3-scale": 67,
+        "d3-interpolate": 39,
+        "d3-format": 21,
+        "d3-selection": 104,
+        "d3-transition": 83,
+        "d3-hierarchy": 45
+      }
+    },
+    {
+      "repo": "swimlane/ngx-datatable",
+      "sourceFunctions": 412,
+      "withCounterpart": 346,
+      "counts": {
+        "oneToOne": 174,
+        "splitOnly": 3,
+        "combineOnly": 30,
+        "splitAndCombine": 39,
+        "noCounterpart": 66,
+        "unresolvedMapping": 97,
+        "insufficientPositions": 3
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+      "recordsSHA256": "4354529f833c8128ffeb5526fdc37e136d3e1cd0e1675540dd47a52aaed89731",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "tslib",
+        "rxjs"
+      ],
+      "pairsPerLibrary": {
+        "rxjs": 151,
+        "tslib": 23
+      }
+    },
+    {
+      "repo": "CorentinTh/it-tools",
+      "sourceFunctions": 2032,
+      "withCounterpart": 1823,
+      "counts": {
+        "oneToOne": 856,
+        "splitOnly": 0,
+        "combineOnly": 715,
+        "splitAndCombine": 77,
+        "noCounterpart": 209,
+        "unresolvedMapping": 174,
+        "insufficientPositions": 1
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/CorentinTh--it-tools",
+      "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
+      "recordsSHA256": "044b4f2e349b8f44d5b5f7315fe98ddf0a7f5e01ce8cdb8c123b03616c67f4f2",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "pairsPerLibrary": {
+        "vue": 1,
+        "pinia": 25,
+        "lodash": 183,
+        "plausible-tracker": 14,
+        "figue": 20,
+        "naive-ui": 358,
+        "vue-router": 138,
+        "date-fns": 9,
+        "fuse.js": 68,
+        "dompurify": 40
+      }
+    },
+    {
+      "repo": "DavidHDev/react-bits",
+      "sourceFunctions": 4863,
+      "withCounterpart": 915,
+      "counts": {
+        "oneToOne": 913,
+        "splitOnly": 0,
+        "combineOnly": 0,
+        "splitAndCombine": 0,
+        "noCounterpart": 3948,
+        "unresolvedMapping": 2,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/DavidHDev--react-bits",
+      "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
+      "recordsSHA256": "8fe9bd7fdfa9a79b7aadc392f679ceca3495855711e31bb4e6c1fe6eda801244",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "react",
+        "react-router-dom",
+        "@hugeicons/react",
+        "react-icons",
+        "lucide-react",
+        "nuqs",
+        "next-themes",
+        "react-haiku",
+        "react-dom"
+      ],
+      "pairsPerLibrary": {
+        "react-router-dom": 25,
+        "nuqs": 101,
+        "react-haiku": 3,
+        "react-icons": 51,
+        "next-themes": 29,
+        "lucide-react": 11,
+        "@hugeicons/react": 3,
+        "react": 67,
+        "react-dom": 623
+      }
+    },
+    {
+      "repo": "LibreChat-AI/LibreChat",
+      "sourceFunctions": 2258,
+      "withCounterpart": 2053,
+      "counts": {
+        "oneToOne": 2012,
+        "splitOnly": 0,
+        "combineOnly": 16,
+        "splitAndCombine": 6,
+        "noCounterpart": 205,
+        "unresolvedMapping": 2,
+        "insufficientPositions": 17
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/LibreChat-AI--LibreChat",
+      "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
+      "recordsSHA256": "1de691714ee933351c0385eaf9445051f7139b59cec3866f78680a7f573e2672",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "@mcp-ui/client",
+        "react",
+        "copy-to-clipboard",
+        "@ariakit/react-components",
+        "swr",
+        "react-dom",
+        "web-vitals",
+        "framer-motion",
+        "jotai",
+        "@radix-ui/react-direction"
+      ],
+      "pairsPerLibrary": {
+        "react": 55,
+        "framer-motion": 229,
+        "react-dom": 485,
+        "@radix-ui/react-direction": 4,
+        "@ariakit/react-components": 850,
+        "jotai": 110,
+        "copy-to-clipboard": 3,
+        "@mcp-ui/client": 162,
+        "swr": 81,
+        "web-vitals": 33
+      }
+    },
+    {
+      "repo": "Lissy93/dashy",
+      "sourceFunctions": 4840,
+      "withCounterpart": 4684,
+      "counts": {
+        "oneToOne": 4671,
+        "splitOnly": 0,
+        "combineOnly": 2,
+        "splitAndCombine": 0,
+        "noCounterpart": 156,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 11
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/Lissy93--dashy",
+      "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
+      "recordsSHA256": "4ce923d1b046f0e8c2523a3442ad2640d1363a4c1a0b3a531dbfae4c6dbb91e7",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "pairsPerLibrary": {
+        "vue-select": 124,
+        "vuex": 127,
+        "js-yaml": 248,
+        "crypto-js": 133,
+        "vue-i18n": 233,
+        "dompurify": 118,
+        "rsup-progress": 23,
+        "ajv-formats": 28,
+        "sortablejs": 170,
+        "simple-icons": 3467
+      }
+    },
+    {
+      "repo": "drawdb-io/drawdb",
+      "sourceFunctions": 5716,
+      "withCounterpart": 5529,
+      "counts": {
+        "oneToOne": 5444,
+        "splitOnly": 0,
+        "combineOnly": 18,
+        "splitAndCombine": 10,
+        "noCounterpart": 187,
+        "unresolvedMapping": 22,
+        "insufficientPositions": 35
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/drawdb-io--drawdb",
+      "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
+      "recordsSHA256": "3d64c7da37e9013ce558102427a737954223ee1bd49cf1a8bb24dbb02d4b6a62",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "pairsPerLibrary": {
+        "react-dom": 485,
+        "@douyinfe/semi-ui": 1806,
+        "@dnd-kit/sortable": 62,
+        "react-i18next": 41,
+        "usehooks-ts": 17,
+        "jsonschema": 106,
+        "oracle-sql-parser": 1532,
+        "lexical": 521,
+        "framer-motion": 803,
+        "react-tweet": 71
+      }
+    },
+    {
+      "repo": "excalidraw/excalidraw",
+      "sourceFunctions": 864,
+      "withCounterpart": 842,
+      "counts": {
+        "oneToOne": 705,
+        "splitOnly": 0,
+        "combineOnly": 51,
+        "splitAndCombine": 42,
+        "noCounterpart": 22,
+        "unresolvedMapping": 44,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/excalidraw--excalidraw",
+      "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
+      "recordsSHA256": "389667f07dde87d7ddbe9eae126423a12d1f2a9ffb466cc8e5b5f3aa1b024b75",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "react-dom",
+        "idb-keyval",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ],
+      "pairsPerLibrary": {
+        "react": 51,
+        "react-dom": 545,
+        "@sentry/browser": 60,
+        "idb-keyval": 26,
+        "i18next-browser-languagedetector": 23
+      }
+    },
+    {
+      "repo": "hoppscotch/hoppscotch",
+      "sourceFunctions": 2389,
+      "withCounterpart": 1356,
+      "counts": {
+        "oneToOne": 1340,
+        "splitOnly": 1,
+        "combineOnly": 6,
+        "splitAndCombine": 5,
+        "noCounterpart": 1033,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 4
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "vite/hoppscotch--hoppscotch",
+      "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
+      "recordsSHA256": "fcb37c972b1257561c42f0451cc90c3aea3a04dd2383448a96b0e4ead0d882cf",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "pairsPerLibrary": {
+        "buffer": 266,
+        "process": 31,
+        "@tauri-apps/plugin-dialog": 1,
+        "axios": 350,
+        "dioc": 128,
+        "@vueuse/core": 217,
+        "verzod": 3,
+        "workbox-window": 56,
+        "stream-browserify": 8,
+        "util": 280
+      }
+    },
+    {
+      "repo": "immich-app/immich",
+      "sourceFunctions": 835,
+      "withCounterpart": 775,
+      "counts": {
+        "oneToOne": 675,
+        "splitOnly": 0,
+        "combineOnly": 7,
+        "splitAndCombine": 6,
+        "noCounterpart": 60,
+        "unresolvedMapping": 74,
+        "insufficientPositions": 13
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/_app/immutable/nodes/0.DPE7UqEB.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/ScreencastOverlay/ScreencastOverlay.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/nodes/0.DPE7UqEB.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/ScreencastOverlay/ScreencastOverlay.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/LoadingSpinner/LoadingSpinner.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Tooltip/Tooltip.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Icon/Icon.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/IconWrapper.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Button.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Button/Button.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/IconButton/IconButton.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Text.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Text/Text.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CloseButton/CloseButton.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Tooltip/TooltipProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastContainer.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastContent.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/Toast.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastPanel.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/LoadingSpinner/LoadingSpinner.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Tooltip/Tooltip.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Icon/Icon.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/IconWrapper.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Button.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Button/Button.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/IconButton/IconButton.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Text.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Text/Text.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CloseButton/CloseButton.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Tooltip/TooltipProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastContainer.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastContent.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/Toast.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BWGXZOld.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Toast/ToastPanel.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/ebE4XYO6.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Logo/Logo.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/ebE4XYO6.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Logo/Logo.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D3Kp4JyR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardFooter.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D3Kp4JyR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardTitle.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D3Kp4JyR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardFooter.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D3Kp4JyR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardTitle.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/Card.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Child.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardBody.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardHeader.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Heading/Heading.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/Stack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/Card.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/Child.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardBody.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Card/CardHeader.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Heading/Heading.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/BKXq98Fw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/Stack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/Modal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalBody.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalFooter.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/HStack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/Modal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalBody.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalFooter.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/re19tBwk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/HStack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/HT1SFYer.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/ConfirmModal/ConfirmModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/HT1SFYer.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/ConfirmModal/ConfirmModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/DHdLoEHL.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/BasicModal/BasicModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/DHdLoEHL.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/BasicModal/BasicModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/rJsyg0Jk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/InputIcon.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/rJsyg0Jk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Input/Input.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/rJsyg0Jk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/InputIcon.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/rJsyg0Jk.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Input/Input.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D5IvDVDj.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Badge/Badge.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/D5IvDVDj.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Badge/Badge.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/CLCZ5bVw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Label/Label.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/CLCZ5bVw.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Label/Label.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/DS-Fmr8a.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalHeader.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/DS-Fmr8a.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Modal/ModalHeader.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Kbd/Kbd.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CommandPalette/CommandPaletteItem.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/CommandPaletteModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CommandPalette/CommandPaletteProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Kbd/Kbd.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CommandPalette/CommandPaletteItem.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/internal/CommandPaletteModal.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dp4FOC2-.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/CommandPalette/CommandPaletteProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/CFuMN6C-.js",
+          "source": "../../../../../node_modules/.pnpm/@tanstack+svelte-query@6.3.6_svelte@5.57.3_@typescript-eslint+types@8.72.1_/node_modules/@tanstack/svelte-query/dist/QueryClientProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/CFuMN6C-.js",
+          "source": "../../../../../node_modules/.pnpm/@tanstack+svelte-query@6.3.6_svelte@5.57.3_@typescript-eslint+types@8.72.1_/node_modules/@tanstack/svelte-query/dist/QueryClientProvider.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Cm9IpxpI.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/VStack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Cm9IpxpI.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Stack/VStack.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dm00bXxR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Link/Link.svelte",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/_app/immutable/chunks/Dm00bXxR.js",
+          "source": "../../../../../node_modules/.pnpm/@immich+ui@0.91.1_@sveltejs+kit@3.1.0_@opentelemetry+api@1.10.0_@sveltejs+vite-plugin-s_f0296bd102b2d9201714a31300182252/node_modules/@immich/ui/dist/components/Link/Link.svelte",
+          "reason": "source parse failed"
+        }
+      ],
+      "missingSourceContents": [],
+      "subject": "vite/immich-app--immich",
+      "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
+      "recordsSHA256": "8c744e58ed4a977f240defc1a31ffa100f08f487bdf68a3c68108db16f9e65d7",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "pairsPerLibrary": {
+        "@immich/ui": 146,
+        "@formatjs/icu-messageformat-parser": 111,
+        "tailwind-merge": 113,
+        "tailwind-variants": 189,
+        "tabbable": 34,
+        "@tanstack/svelte-query": 35,
+        "svelte-persisted-store": 16,
+        "@futo-org/backups-orchestrator-ui": 6,
+        "media-chrome": 6,
+        "justified-layout": 19
+      }
+    },
+    {
+      "repo": "PanJiaChen/vue-element-admin",
+      "sourceFunctions": 5601,
+      "withCounterpart": 5552,
+      "counts": {
+        "oneToOne": 5330,
+        "splitOnly": 6,
+        "combineOnly": 15,
+        "splitAndCombine": 25,
+        "noCounterpart": 49,
+        "unresolvedMapping": 152,
+        "insufficientPositions": 24
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/PanJiaChen--vue-element-admin",
+      "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "recordsSHA256": "af02c68efac972a5af1c57b3e2f36532e355701ebc53bcc4c15b655250bdbb94",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "pairsPerLibrary": {
+        "element-ui": 3964,
+        "core-js": 487,
+        "axios": 91,
+        "vue": 463,
+        "nprogress": 34,
+        "vue-router": 215,
+        "screenfull": 14,
+        "js-cookie": 9,
+        "path-to-regexp": 12,
+        "fuse.js": 41
+      }
+    },
+    {
+      "repo": "akveo/ngx-admin",
+      "sourceFunctions": 5870,
+      "withCounterpart": 5622,
+      "counts": {
+        "oneToOne": 4018,
+        "splitOnly": 5,
+        "combineOnly": 193,
+        "splitAndCombine": 102,
+        "noCounterpart": 248,
+        "unresolvedMapping": 279,
+        "insufficientPositions": 1025
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/BehaviorSubject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Notification.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/toSubscriber.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/ReplaySubject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subscriber.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subscription.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/ConnectableObservable.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/fromEvent.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/merge.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/delay.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/multicast.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/refCount.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/isPromise.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/isScheduler.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/scan.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/BehaviorSubject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Notification.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/toSubscriber.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/ReplaySubject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subject.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subscriber.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/Subscription.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/ConnectableObservable.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/fromEvent.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/observable/merge.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/delay.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/multicast.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/refCount.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/isPromise.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/util/isScheduler.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/main.9d04d184f8c7281f.js",
+          "source": "webpack:///node_modules/rxjs/src/internal/operators/scan.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/pie-chart/pie-arc.component.ts",
+          "reason": "source parse failed"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/tooltip/position/position.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/tooltip/tooltip.component.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/tooltip/injection-registery.service.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/axes/axis-label.component.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/trim-label.helper.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/axes/ticks.helper.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/shape.helper.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/axes/axes.module.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/utils/id.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/events.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/chart-common.module.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/view-dimensions.helper.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/utils/color-sets.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/common/domain.helper.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/area-chart/area-chart-stacked.component.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/utils/sort.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/bar-chart/bar-vertical-stacked.component.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/line-chart/line-chart.module.ts",
+          "reason": "original coordinate out of bounds"
+        },
+        {
+          "asset": "<local>/800.711685baa55e970f.js",
+          "source": "webpack:///node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/@swimlane/ngx-charts/lib/pie-chart/pie-arc.component.ts",
+          "reason": "source parse failed"
+        }
+      ],
+      "missingSourceContents": [],
+      "subject": "webpack/akveo--ngx-admin",
+      "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
+      "recordsSHA256": "102e0e4dc06596e142cf079058fa4e9cecb1788c399c3105acb594ae3d09864a",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "ngx-echarts",
+        "angular2-chartjs",
+        "web-animations-js",
+        "tslib",
+        "rxjs",
+        "core-js",
+        "tinymce",
+        "@swimlane/ngx-charts",
+        "classlist.js",
+        "leaflet"
+      ],
+      "pairsPerLibrary": {
+        "classlist.js": 16,
+        "core-js": 155,
+        "web-animations-js": 64,
+        "rxjs": 288,
+        "tinymce": 2275,
+        "@swimlane/ngx-charts": 425,
+        "angular2-chartjs": 6,
+        "leaflet": 755,
+        "ngx-echarts": 31,
+        "tslib": 3
+      }
+    },
+    {
+      "repo": "bailicangdu/vue2-elm",
+      "sourceFunctions": 945,
+      "withCounterpart": 931,
+      "counts": {
+        "oneToOne": 257,
+        "splitOnly": 2,
+        "combineOnly": 302,
+        "splitAndCombine": 224,
+        "noCounterpart": 14,
+        "unresolvedMapping": 137,
+        "insufficientPositions": 9
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
+      "recordsSHA256": "a10499c2f1c09d5683af8dedcd73baef6f5c2f50db049d9229f27b276ee7b4b1",
+      "samplingRule": "frontend-visible-v1",
+      "selectedLibraries": [
+        "vuex",
+        "vue-router",
+        "vue"
+      ],
+      "pairsPerLibrary": {
+        "vuex": 7,
+        "vue-router": 65,
+        "vue": 185
+      }
+    },
+    {
+      "repo": "bilibili/flv.js",
+      "sourceFunctions": 94,
+      "withCounterpart": 94,
+      "counts": {
+        "oneToOne": 89,
+        "splitOnly": 0,
+        "combineOnly": 3,
+        "splitAndCombine": 2,
+        "noCounterpart": 0,
+        "unresolvedMapping": 0,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/bilibili--flv.js",
+      "commit": "42343088f22619cf014a057b3878fe3d320016a6",
+      "recordsSHA256": "aefb677cbe263f0dd3e2054c0c99a48184d8b09598dd768632b01b38bd79188c",
+      "samplingRule": "manifest-only-v1",
+      "selectedLibraries": [
+        "es6-promise",
+        "webworkify-webpack"
+      ],
+      "pairsPerLibrary": {
+        "es6-promise": 70,
+        "webworkify-webpack": 19
+      }
+    },
+    {
+      "repo": "dair-ai/Prompt-Engineering-Guide",
+      "sourceFunctions": 1852,
+      "withCounterpart": 1760,
+      "counts": {
+        "oneToOne": 1087,
+        "splitOnly": 8,
+        "combineOnly": 278,
+        "splitAndCombine": 185,
+        "noCounterpart": 92,
+        "unresolvedMapping": 181,
+        "insufficientPositions": 21
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
+      "recordsSHA256": "2be3089705e43bf450f03f548f77e3c9a53696ef7351dcdd02559924938d81d7",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "nextra",
+        "nextra-theme-docs",
+        "react-dom",
+        "next",
+        "react"
+      ],
+      "pairsPerLibrary": {
+        "react-dom": 301,
+        "react": 7,
+        "next": 733,
+        "nextra-theme-docs": 20,
+        "nextra": 26
+      }
+    },
+    {
+      "repo": "dokploy/dokploy",
+      "sourceFunctions": 1025,
+      "withCounterpart": 975,
+      "counts": {
+        "oneToOne": 732,
+        "splitOnly": 2,
+        "combineOnly": 126,
+        "splitAndCombine": 70,
+        "noCounterpart": 50,
+        "unresolvedMapping": 20,
+        "insufficientPositions": 25
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/_next/static/chunks/pages/_app-8c7409f7af6b4029.js",
+          "reason": "map position outside artifact"
+        }
+      ],
+      "missingSourceContents": [
+        "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/client-only/index.js"
+      ],
+      "subject": "webpack/dokploy--dokploy",
+      "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+      "recordsSHA256": "e3a662bec0e6d29896e46c9f41468e8750848bbf240b8e869127c8490c992d94",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "better-auth",
+        "react-dom",
+        "@better-auth/passkey",
+        "next",
+        "react"
+      ],
+      "pairsPerLibrary": {
+        "next": 101,
+        "@better-auth/passkey": 1,
+        "better-auth": 41,
+        "react-dom": 542,
+        "react": 47
+      }
+    },
+    {
+      "repo": "freeCodeCamp/freeCodeCamp",
+      "sourceFunctions": 1151,
+      "withCounterpart": 1066,
+      "counts": {
+        "oneToOne": 482,
+        "splitOnly": 2,
+        "combineOnly": 284,
+        "splitAndCombine": 170,
+        "noCounterpart": 85,
+        "unresolvedMapping": 120,
+        "insufficientPositions": 8
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/freeCodeCamp--freeCodeCamp",
+      "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+      "recordsSHA256": "c1103e3c63fe6c2c94630188ec3d87496922ce88fb9fe133cc13380deb75d675",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "pairsPerLibrary": {
+        "@loadable/component": 3,
+        "store": 36,
+        "validator": 16,
+        "reselect": 3,
+        "react": 9,
+        "react-dom": 347,
+        "react-redux": 16,
+        "date-fns-tz": 24,
+        "react-responsive": 27,
+        "react-monaco-editor": 1
+      }
+    },
+    {
+      "repo": "supabase/supabase",
+      "sourceFunctions": 2313,
+      "withCounterpart": 2110,
+      "counts": {
+        "oneToOne": 1081,
+        "splitOnly": 47,
+        "combineOnly": 449,
+        "splitAndCombine": 272,
+        "noCounterpart": 203,
+        "unresolvedMapping": 245,
+        "insufficientPositions": 16
+      },
+      "failedAssetsOrSources": [
+        {
+          "asset": "<local>/_next/static/chunks/4310-57fdea0eaa3ddf27.js",
+          "reason": "map position outside artifact"
+        },
+        {
+          "asset": "<local>/_next/static/chunks/1513-d32267ce10885580.js",
+          "reason": "map position outside artifact"
+        }
+      ],
+      "missingSourceContents": [],
+      "subject": "webpack/supabase--supabase",
+      "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
+      "recordsSHA256": "22462950bbbb3f12a2605b5318a1d9b6e574239d5fd16f3fb440ce1480a2b9a0",
+      "samplingRule": "frontend-counterpart-fill-v1",
+      "selectedLibraries": [
+        "recharts",
+        "react-use",
+        "@supabase/supabase-js",
+        "classnames",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs",
+        "react-markdown",
+        "class-variance-authority"
+      ],
+      "pairsPerLibrary": {
+        "next": 621,
+        "class-variance-authority": 6,
+        "nuqs": 33,
+        "motion": 309,
+        "classnames": 2,
+        "@supabase/supabase-js": 12,
+        "react-use": 7,
+        "recharts": 88,
+        "mdast-util-from-markdown": 2,
+        "react-markdown": 1
+      }
+    },
+    {
+      "repo": "swagger-api/swagger-ui",
+      "sourceFunctions": 930,
+      "withCounterpart": 906,
+      "counts": {
+        "oneToOne": 824,
+        "splitOnly": 2,
+        "combineOnly": 5,
+        "splitAndCombine": 5,
+        "noCounterpart": 24,
+        "unresolvedMapping": 70,
+        "insufficientPositions": 0
+      },
+      "failedAssetsOrSources": [],
+      "missingSourceContents": [],
+      "subject": "webpack/swagger-api--swagger-ui",
+      "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
+      "recordsSHA256": "095ddede0b502583542e396ec511f588a2bed026e94c423482f504c49c4bcd86",
+      "samplingRule": "frontend-visible-v1",
+      "selectedLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "pairsPerLibrary": {
+        "css.escape": 4,
+        "lodash": 440,
+        "@babel/runtime-corejs3": 4,
+        "js-file-download": 2,
+        "prop-types": 5,
+        "react-immutable-proptypes": 8,
+        "xml": 24,
+        "zenscroll": 28,
+        "remarkable": 199,
+        "dompurify": 110
+      }
+    }
+  ],
+  "summary": {
+    "groups": {
+      "webpack": {
+        "repositories": 9,
+        "pairs": 13900
+      },
+      "vite": {
+        "repositories": 8,
+        "pairs": 16616
+      },
+      "esbuild": {
+        "repositories": 9,
+        "pairs": 48368
+      }
+    },
+    "selectedCases": 185,
+    "selectedPackageNames": 146,
+    "contributingCases": 180,
+    "contributingPackageNames": 141,
+    "pairCountsPerPackage": {
+      "element-ui": 3964,
+      "core-js": 642,
+      "axios": 441,
+      "vue": 649,
+      "nprogress": 34,
+      "vue-router": 418,
+      "screenfull": 14,
+      "js-cookie": 9,
+      "path-to-regexp": 12,
+      "fuse.js": 109,
+      "classlist.js": 16,
+      "web-animations-js": 64,
+      "rxjs": 1180,
+      "tinymce": 2275,
+      "@swimlane/ngx-charts": 425,
+      "angular2-chartjs": 6,
+      "leaflet": 755,
+      "ngx-echarts": 31,
+      "tslib": 180,
+      "vuex": 134,
+      "es6-promise": 70,
+      "webworkify-webpack": 19,
+      "react-dom": 3328,
+      "react": 236,
+      "next": 1455,
+      "nextra-theme-docs": 20,
+      "nextra": 26,
+      "@better-auth/passkey": 1,
+      "better-auth": 41,
+      "@loadable/component": 3,
+      "store": 36,
+      "validator": 16,
+      "reselect": 3,
+      "react-redux": 16,
+      "date-fns-tz": 24,
+      "react-responsive": 27,
+      "react-monaco-editor": 1,
+      "class-variance-authority": 6,
+      "nuqs": 134,
+      "motion": 309,
+      "classnames": 2,
+      "@supabase/supabase-js": 12,
+      "react-use": 7,
+      "recharts": 88,
+      "mdast-util-from-markdown": 2,
+      "react-markdown": 1,
+      "css.escape": 4,
+      "lodash": 623,
+      "@babel/runtime-corejs3": 4,
+      "js-file-download": 2,
+      "prop-types": 5,
+      "react-immutable-proptypes": 8,
+      "xml": 24,
+      "zenscroll": 28,
+      "remarkable": 199,
+      "dompurify": 268,
+      "pinia": 25,
+      "plausible-tracker": 14,
+      "figue": 20,
+      "naive-ui": 358,
+      "date-fns": 9,
+      "react-router-dom": 25,
+      "react-haiku": 3,
+      "react-icons": 51,
+      "next-themes": 29,
+      "lucide-react": 11,
+      "@hugeicons/react": 3,
+      "framer-motion": 1032,
+      "@radix-ui/react-direction": 4,
+      "@ariakit/react-components": 850,
+      "jotai": 110,
+      "copy-to-clipboard": 3,
+      "@mcp-ui/client": 162,
+      "swr": 81,
+      "web-vitals": 33,
+      "vue-select": 124,
+      "js-yaml": 248,
+      "crypto-js": 133,
+      "vue-i18n": 233,
+      "rsup-progress": 23,
+      "ajv-formats": 28,
+      "sortablejs": 170,
+      "simple-icons": 3467,
+      "@douyinfe/semi-ui": 1806,
+      "@dnd-kit/sortable": 62,
+      "react-i18next": 41,
+      "usehooks-ts": 17,
+      "jsonschema": 106,
+      "oracle-sql-parser": 1532,
+      "lexical": 521,
+      "react-tweet": 71,
+      "@sentry/browser": 60,
+      "idb-keyval": 26,
+      "i18next-browser-languagedetector": 23,
+      "buffer": 266,
+      "process": 31,
+      "@tauri-apps/plugin-dialog": 1,
+      "dioc": 128,
+      "@vueuse/core": 217,
+      "verzod": 3,
+      "workbox-window": 61,
+      "stream-browserify": 8,
+      "util": 280,
+      "@immich/ui": 146,
+      "@formatjs/icu-messageformat-parser": 111,
+      "tailwind-merge": 113,
+      "tailwind-variants": 189,
+      "tabbable": 34,
+      "@tanstack/svelte-query": 35,
+      "svelte-persisted-store": 16,
+      "@futo-org/backups-orchestrator-ui": 6,
+      "media-chrome": 6,
+      "justified-layout": 19,
+      "source-map": 113,
+      "preact": 44,
+      "aphrodite": 84,
+      "pako": 102,
+      "uint8array-json-parser": 3,
+      "protobufjs": 112,
+      "jfrview": 41,
+      "@okikio/native": 160,
+      "@okikio/animate": 263,
+      "@okikio/emitter": 38,
+      "solid-js": 107,
+      "parse-package-name": 2,
+      "@okikio/sharedworker": 15,
+      "monaco-editor": 42085,
+      "esbuild-wasm": 320,
+      "@dprint/formatter": 69,
+      "@primeuix/themes": 19,
+      "chart.js": 2190,
+      "@hotwired/turbo": 869,
+      "@floating-ui/dom": 42,
+      "zone.js": 250,
+      "emoji-flags": 7,
+      "d3-scale": 67,
+      "d3-interpolate": 39,
+      "d3-format": 21,
+      "d3-selection": 104,
+      "d3-transition": 83,
+      "d3-hierarchy": 45
+    },
+    "contributingRepositoriesPerPackage": {
+      "element-ui": 1,
+      "core-js": 2,
+      "axios": 2,
+      "vue": 3,
+      "nprogress": 1,
+      "vue-router": 3,
+      "screenfull": 1,
+      "js-cookie": 1,
+      "path-to-regexp": 1,
+      "fuse.js": 2,
+      "classlist.js": 1,
+      "web-animations-js": 1,
+      "rxjs": 5,
+      "tinymce": 1,
+      "@swimlane/ngx-charts": 1,
+      "angular2-chartjs": 1,
+      "leaflet": 1,
+      "ngx-echarts": 1,
+      "tslib": 7,
+      "vuex": 2,
+      "es6-promise": 1,
+      "webworkify-webpack": 1,
+      "react-dom": 7,
+      "react": 6,
+      "next": 3,
+      "nextra-theme-docs": 1,
+      "nextra": 1,
+      "@better-auth/passkey": 1,
+      "better-auth": 1,
+      "@loadable/component": 1,
+      "store": 1,
+      "validator": 1,
+      "reselect": 1,
+      "react-redux": 1,
+      "date-fns-tz": 1,
+      "react-responsive": 1,
+      "react-monaco-editor": 1,
+      "class-variance-authority": 1,
+      "nuqs": 2,
+      "motion": 1,
+      "classnames": 1,
+      "@supabase/supabase-js": 1,
+      "react-use": 1,
+      "recharts": 1,
+      "mdast-util-from-markdown": 1,
+      "react-markdown": 1,
+      "css.escape": 1,
+      "lodash": 2,
+      "@babel/runtime-corejs3": 1,
+      "js-file-download": 1,
+      "prop-types": 1,
+      "react-immutable-proptypes": 1,
+      "xml": 1,
+      "zenscroll": 1,
+      "remarkable": 1,
+      "dompurify": 3,
+      "pinia": 1,
+      "plausible-tracker": 1,
+      "figue": 1,
+      "naive-ui": 1,
+      "date-fns": 1,
+      "react-router-dom": 1,
+      "react-haiku": 1,
+      "react-icons": 1,
+      "next-themes": 1,
+      "lucide-react": 1,
+      "@hugeicons/react": 1,
+      "framer-motion": 2,
+      "@radix-ui/react-direction": 1,
+      "@ariakit/react-components": 1,
+      "jotai": 1,
+      "copy-to-clipboard": 1,
+      "@mcp-ui/client": 1,
+      "swr": 1,
+      "web-vitals": 1,
+      "vue-select": 1,
+      "js-yaml": 1,
+      "crypto-js": 1,
+      "vue-i18n": 1,
+      "rsup-progress": 1,
+      "ajv-formats": 1,
+      "sortablejs": 1,
+      "simple-icons": 1,
+      "@douyinfe/semi-ui": 1,
+      "@dnd-kit/sortable": 1,
+      "react-i18next": 1,
+      "usehooks-ts": 1,
+      "jsonschema": 1,
+      "oracle-sql-parser": 1,
+      "lexical": 1,
+      "react-tweet": 1,
+      "@sentry/browser": 1,
+      "idb-keyval": 1,
+      "i18next-browser-languagedetector": 1,
+      "buffer": 1,
+      "process": 1,
+      "@tauri-apps/plugin-dialog": 1,
+      "dioc": 1,
+      "@vueuse/core": 1,
+      "verzod": 1,
+      "workbox-window": 2,
+      "stream-browserify": 1,
+      "util": 1,
+      "@immich/ui": 1,
+      "@formatjs/icu-messageformat-parser": 1,
+      "tailwind-merge": 1,
+      "tailwind-variants": 1,
+      "tabbable": 1,
+      "@tanstack/svelte-query": 1,
+      "svelte-persisted-store": 1,
+      "@futo-org/backups-orchestrator-ui": 1,
+      "media-chrome": 1,
+      "justified-layout": 1,
+      "source-map": 1,
+      "preact": 1,
+      "aphrodite": 1,
+      "pako": 1,
+      "uint8array-json-parser": 1,
+      "protobufjs": 1,
+      "jfrview": 1,
+      "@okikio/native": 1,
+      "@okikio/animate": 1,
+      "@okikio/emitter": 1,
+      "solid-js": 1,
+      "parse-package-name": 1,
+      "@okikio/sharedworker": 1,
+      "monaco-editor": 1,
+      "esbuild-wasm": 1,
+      "@dprint/formatter": 1,
+      "@primeuix/themes": 2,
+      "chart.js": 2,
+      "@hotwired/turbo": 1,
+      "@floating-ui/dom": 1,
+      "zone.js": 1,
+      "emoji-flags": 1,
+      "d3-scale": 1,
+      "d3-interpolate": 1,
+      "d3-format": 1,
+      "d3-selection": 1,
+      "d3-transition": 1,
+      "d3-hierarchy": 1
+    },
+    "medianPairsPerRepository": 907.5,
+    "meanPairsPerRepository": 3034.0,
+    "medianPairsPerContributingCase": 49.0,
+    "meanPairsPerContributingCase": 438.24444444444447,
+    "minPairsPerContributingCase": 1,
+    "maxPairsPerContributingCase": 42085
+  },
+  "measurementScope": "Repository-scoped definitions in parseable selected-library source texts from successfully analyzed captured maps. Entirely unrepresented files and rejected assets are outside this inventory.",
+  "partitionRule": "No counterpart; otherwise split-and-combine if outdegree > 1 and any bundled partner has multiple selected source contributors; split-only if only outdegree > 1; combine-only if outdegree = 1 and partner indegree > 1; otherwise unresolved mapping, insufficient positions (<2), or accepted one-to-one.",
+  "literatureSupport": [
+    {
+      "key": "kim2025debun",
+      "url": "https://plrg.korea.ac.kr/assets/data/publication/ase25-park-debun.pdf",
+      "section": "V-A, PDF page 8",
+      "claim": "Website JavaScript collection uses Puppeteer; the paper does not explicitly specify a lazy-loading exclusion."
+    },
+    {
+      "key": "lauinger2017libraries",
+      "url": "https://cbw.sh/static/pdf/lauinger-ndss17.pdf",
+      "section": "Crawl Parameters, PDF page 7",
+      "claim": "Homepage-only visits, scrolling to trigger dynamic content, fixed 60-second visits."
+    },
+    {
+      "key": "stateofjs2025",
+      "url": "https://2025.stateofjs.com/en-US/libraries/build-tools/",
+      "claim": "Usage is the proportion of respondents having used a tool; collection ratios come from the archived selection artifact."
+    }
+  ]
+}

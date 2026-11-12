@@ -1,0 +1,46 @@
+// Candidate-policy continuation on frozen artifacts. GT is read only after recovery.
+import fs from 'node:fs';import path from 'node:path';import {performance} from 'node:perf_hooks';
+import {readJSON as read,writeJSON as write,hash,normalizeConfig,implementationDigest,migrateASTBeforeRanking,recoverFunctions,createModelClient,runDirectory,exportRecovered,summarizeRecovery} from './runtime.mjs';
+import {score} from './evaluate.mjs';import {prepare} from '../rq1-fixed/prepare.mjs';
+const [dataset,key,root,baseline]=process.argv.slice(2),folder=path.join(root,key),run=path.join(folder,'run'),oldFolder=path.join(baseline,key),old=path.join(oldFolder,'run');fs.mkdirSync(run,{recursive:true});
+const started=performance.now(),log=e=>{const v={at:new Date().toISOString(),...e};fs.appendFileSync(path.join(folder,'events.jsonl'),JSON.stringify(v)+'\n');console.log(JSON.stringify(v))};
+const index=read(path.join(dataset,'one-to-one-evaluation-v2.json')),subject=index.subjects.find(s=>s.subject===key);if(!subject)throw Error('Unknown subject');
+const oldRunFile=path.join(old,'run.json'),priorPath=path.join(old,fs.existsSync(path.join(old,'recovery.json'))?'recovery.json':'checkpoint.json');let config,prior=null,source,bundle;
+function linkInput(){const dest=path.join(folder,'input');if(!fs.existsSync(dest))fs.symlinkSync(path.resolve(oldFolder,'input'),dest,'dir')}
+let lastPrint=0;const progress=e=>{write(path.join(folder,'live.json'),{at:new Date().toISOString(),repo:subject.repo,...e,elapsedMs:performance.now()-started},{overwrite:true});if(Date.now()-lastPrint>10000||e.stage!=='recovery'||e.status){log(e);lastPrint=Date.now()}};
+const controller=new AbortController();for(const signal of ['SIGINT','SIGTERM'])process.once(signal,()=>controller.abort(Error('Interrupted; resume saved checkpoint and exact raw responses')));
+const timing={modelCalls:0,embeddingMs:0,validationMs:0};const originalFetch=globalThis.fetch;globalThis.fetch=async(url,options)=>{const t=performance.now(),res=await originalFetch(url,options);let body;try{body=JSON.parse(options?.body||'null')}catch{}if(body?.model){await res.clone().json();const kind=String(url).endsWith('/api/chat')?'validation':'embedding';timing.modelCalls++;timing[kind+'Ms']+=performance.now()-t}return res};
+let lockFd;
+try{
+ if(fs.existsSync(priorPath)&&fs.existsSync(oldRunFile)){
+  const oldRun=read(oldRunFile);if(oldRun.node!==process.version)throw Error('Baseline Node version differs');
+  const oldLock=path.join(old,'.recall.lock');if(fs.existsSync(oldLock)){const pid=read(oldLock).pid;try{process.kill(pid,0);throw Error('Baseline worker still alive')}catch(e){if(e.code!=='ESRCH')throw e}}
+  config=normalizeConfig({...oldRun.config,recovery:{...oldRun.config.recovery,astBeforeRanking:true},models:{...oldRun.config.models,cacheDir:path.join(run,'model-cache')}});
+  if(config.recovery.topK!==3||config.recovery.minSimilarity!==-1||config.recovery.conflictPolicy!=='retain')throw Error('Unexpected baseline recovery policy');
+  const cache=path.join(run,'model-cache');if(!fs.existsSync(cache)){const priorCache=path.join(old,'model-cache');if(fs.existsSync(priorCache))fs.symlinkSync(fs.realpathSync(priorCache),cache,'dir');else fs.mkdirSync(cache)}
+  const artifacts=['source','bundle','anchors','libraries','sourceGraph','bundleGraph','sourceModules','bundleModules','sourceBundler','bundleBundler'];for(const name of artifacts){const src=path.join(old,name+'.json'),dest=path.join(run,name+'.json');if(fs.existsSync(src)&&!fs.existsSync(dest))fs.symlinkSync(path.resolve(src),dest)}
+  source=read(path.join(run,'source.json'));bundle=read(path.join(run,'bundle.json'));linkInput();
+  const checkpoint=path.join(run,'checkpoint.json');
+  if(fs.existsSync(checkpoint)){
+   const savedRun=read(path.join(run,'run.json'));if(savedRun.implementationDigest!==implementationDigest()||hash(savedRun.config)!==hash(config))throw Error('New continuation runtime or settings changed');prior=read(checkpoint);const {checkpointDigest,...state}=prior;if(checkpointDigest!==hash(state))throw Error('Continuation checkpoint checksum mismatch');
+  }else{
+   const saved=read(priorPath);prior=migrateASTBeforeRanking({prior:saved,source,bundle,sourceGraph:read(path.join(run,'sourceGraph.json')),bundleGraph:read(path.join(run,'bundleGraph.json')),models:config.models,configuration:config.recovery,implementation:{prior:oldRun.implementationDigest,next:implementationDigest()}});
+   fs.copyFileSync(priorPath,path.join(folder,'prior-recovery.json'));const oldScore=path.join(old,fs.existsSync(path.join(old,'evaluation-v2.json'))?'evaluation-v2.json':'checkpoint-evaluation-v2.json');if(fs.existsSync(oldScore))fs.copyFileSync(oldScore,path.join(folder,'baseline-evaluation-v2.json'));
+   const priorTiming=path.join(oldFolder,'timing.json');if(fs.existsSync(priorTiming))fs.copyFileSync(priorTiming,path.join(folder,'prior-phase-timing.json'));
+   write(path.join(run,'run.json'),{...oldRun,config,implementationDigest:implementationDigest(),continuation:prior.continuation},{overwrite:true});write(checkpoint,{...prior,checkpointDigest:hash(prior)},{overwrite:true});write(path.join(folder,'continuation.json'),{status:'ready',baseline:oldFolder,baselineFinal:fs.existsSync(path.join(old,'recovery.json')),sourceGraphDigest:prior.graphDigests.source,bundleGraphDigest:prior.graphDigests.bundle,...prior.continuation},{overwrite:true});
+  }
+  lockFd=fs.openSync(path.join(run,'.recall.lock'),'wx');fs.writeSync(lockFd,JSON.stringify({pid:process.pid,createdAt:new Date().toISOString()}));
+  log({stage:'continued',repo:subject.repo,preservedAccepted:prior.promotions.length,priorRounds:prior.continuation.priorRounds});
+  const client=createModelClient(config.models,{signal:controller.signal});
+  const result=await recoverFunctions({source,bundle,sourceGraph:read(path.join(run,'sourceGraph.json')),bundleGraph:read(path.join(run,'bundleGraph.json')),anchors:read(path.join(run,'anchors.json')),libraries:read(path.join(run,'libraries.json')),config:{...config.recovery,models:config.models},resume:prior,models:client,signal:controller.signal,onProgress:progress,onCheckpoint:r=>write(checkpoint,{...r,checkpointDigest:hash(r)},{overwrite:true})});
+  write(path.join(run,'recovery.json'),result,{overwrite:true});write(path.join(run,'recovered-functions.json'),exportRecovered(result,source,bundle),{overwrite:true});write(path.join(run,'summary.json'),summarizeRecovery(result,bundle),{overwrite:true});
+ }else{
+  const input=path.join(folder,'input');let manifests;if(fs.existsSync(path.join(oldFolder,'input/sourceManifest.json'))){linkInput();manifests={sourceManifest:read(path.join(input,'sourceManifest.json')),bundleManifest:read(path.join(input,'bundleManifest.json'))}}else manifests=prepare(dataset,read(path.join(dataset,'one-to-one-evaluation.json')).subjects.find(s=>s.subject===key),input);
+  config=normalizeConfig({recovery:{topK:3,libraryGate:false,conflictPolicy:'retain',astBeforeRanking:true},models:{endpoint:'http://127.0.0.1:11435',astFirst:true,cacheDir:path.join(run,'model-cache')}});
+  await runDirectory({...manifests,output:run,config,resume:fs.existsSync(path.join(run,'run.json')),onProgress:progress,signal:controller.signal});source=read(path.join(run,'source.json'));bundle=read(path.join(run,'bundle.json'));
+ }
+ const result=read(path.join(run,'recovery.json')),gt=read(path.join(dataset,subject.records)),identities=read(path.join(folder,'input/identities.json'));
+ const report=score(gt,identities,source,bundle,result);report.partial=false;report.scoredAt=new Date().toISOString();report.oracleRevision={pairDefinition:index.pairDefinition,recordSHA256:subject.recordsSHA256};report.candidatePolicy=result.candidatePolicy;
+ write(path.join(run,'evaluation-v2.json'),report,{overwrite:true});write(path.join(run,'evaluation.json'),report,{overwrite:true});write(path.join(run,'status.json'),{status:result.status},{overwrite:true});timing.totalWallMs=performance.now()-started;write(path.join(folder,'phase-timing.json'),timing,{overwrite:true});const oldTiming=path.join(folder,'prior-phase-timing.json');const previous=fs.existsSync(oldTiming)?read(oldTiming):{};write(path.join(folder,'timing.json'),{...timing,totalWallMs:(previous.totalWallMs||0)+timing.totalWallMs,continuation:true,priorFile:'prior-phase-timing.json',phaseFile:'phase-timing.json'},{overwrite:true});log({stage:'evaluated',correct:report.correct,gt:report.groundTruthPairs,precision:report.recoveryPrecision,astPreRankingAccepted:result.stats.astPreRankingAccepted||0});
+}catch(e){write(path.join(run,'status.json'),{status:controller.signal.aborted?'interrupted':'failed',error:e.stack},{overwrite:true});log({stage:'failed',error:e.stack});process.exitCode=1}
+finally{if(lockFd!==undefined){fs.closeSync(lockFd);fs.rmSync(path.join(run,'.recall.lock'),{force:true})}}

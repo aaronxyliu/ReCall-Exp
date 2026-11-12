@@ -99,3 +99,8 @@ Thumbs.db
 /migration/*.log
 # Linked experiment inputs remain in the sibling dataset repository
 /experiments/**/sources
+
+# One-off migration snapshots and manuscript editing checks
+/migration/
+/manuscript/data/*-check.json
+/manuscript/data/manuscript-checks.json

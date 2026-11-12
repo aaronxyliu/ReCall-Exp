@@ -1,0 +1,324 @@
+{
+  "recallCommit": "3f4bda86f6a312a22e95808d610ea849395c5e4c",
+  "recallImplementationDigest": "658f667cf3292f6dfa8dad16c479d6f53f93c39c764ee40e1514a620b721a47c",
+  "datasetCommit": "e806c148d468635f4a00824da047065a570f7997",
+  "datasetIndexSHA256": "ce4e4c3251b86000311bec636e0e6a2d4a843c6700dcc0d76d8f6f47677421a3",
+  "node": "v24.15.0",
+  "subjects": [
+    {
+      "subject": "bun/RockwellShah--filekey",
+      "archive": "inputs/bun/RockwellShah--filekey.tar.gz",
+      "sha256": "bfe958fdbe86169b12c362093e4c45684756fbdc912af3027945c024aa78b0ef",
+      "pairs": 480,
+      "records": "bun/RockwellShah--filekey/ground-truth/func-mapping.json",
+      "recordsSHA256": "228731f3fd128acb57dfde34232673b3ab41e70740a7006b083169e0b095de6d",
+      "simulationCorrect": 469
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "archive": "inputs/bun/micahkepe--jsongrep.tar.gz",
+      "sha256": "55c4000c779072e55d54362696a9b912a2f0690ccb4794005c339123ce536796",
+      "pairs": 1208,
+      "records": "bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
+      "recordsSHA256": "5362f1687525e28196aac2bd13e51626d50d75c92632ed9d62507dddabf94a89",
+      "simulationCorrect": 1078
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "archive": "inputs/esbuild/mattlewis92--angular-calendar.tar.gz",
+      "sha256": "ee287b7e5a5897c5a707209d33aa3b60f824d49bf674e6aaf321de62577fb067",
+      "pairs": 37,
+      "records": "esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
+      "recordsSHA256": "3315fad7822eb2180ad96e44eb2dfe7605b8ddea8e3b27d084ff48715772c653",
+      "simulationCorrect": 23
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "archive": "inputs/esbuild/primefaces--primeng.tar.gz",
+      "sha256": "86d397b0cec9297aae79ac79781bd30d24888dcbab873e17c52d02bb1460911b",
+      "pairs": 251,
+      "records": "esbuild/primefaces--primeng/ground-truth/func-mapping.json",
+      "recordsSHA256": "114e16b3585fb862973e6020ffcad7d42bdad7a0f8b0c2eb50a3a77149a86986",
+      "simulationCorrect": 141
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "archive": "inputs/esbuild/primefaces--sakai-ng.tar.gz",
+      "sha256": "0fad8f992a27c0a9f7e77505db30e50ffee78ba4d3bc611c8244077fa6cff354",
+      "pairs": 1309,
+      "records": "esbuild/primefaces--sakai-ng/ground-truth/func-mapping.json",
+      "recordsSHA256": "81a5a91e92fada0d4dc44a265785ff8d2e6ec4d4bcf365e7c4a7781b13f3e8c2",
+      "simulationCorrect": 1199
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "archive": "inputs/esbuild/sissbruecker--linkding.tar.gz",
+      "sha256": "fd254d11e4ccd9ebbeb46e5eb7fc12121f1d881f43db0a1eb8345b714f2ce022",
+      "pairs": 911,
+      "records": "esbuild/sissbruecker--linkding/ground-truth/func-mapping.json",
+      "recordsSHA256": "ced83b7d88085b5cbf17f271cdbc84e623a3619d4594e66f25af5d6342eb16a6",
+      "simulationCorrect": 903
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-charts",
+      "archive": "inputs/esbuild/swimlane--ngx-charts.tar.gz",
+      "sha256": "fd23a45cb5ab06ea125afd277c85f814be21c311afd4cf3c979369af2ab63c9a",
+      "pairs": 2364,
+      "records": "esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
+      "recordsSHA256": "4766a3fb7b0682a5ba85990f85459da9ca376e16fbb2fdf1230eb8e55c07debc",
+      "simulationCorrect": 2180
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "archive": "inputs/esbuild/swimlane--ngx-datatable.tar.gz",
+      "sha256": "085a1bfb54c9fc5e9ffd7ce0d5b3f6759174e62e21f0f799d84d4706d24b0a7e",
+      "pairs": 336,
+      "records": "esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
+      "recordsSHA256": "385a488b478b4d8f0f93e5abd1bc80f841756f37a28e169f970b0e997a14f0d5",
+      "simulationCorrect": 275
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "archive": "inputs/parcel/parcel-bundler--website.tar.gz",
+      "sha256": "939b1e2efd617c3b34ed8397423f95730e435fe2d4fff808846b16ed9c85017d",
+      "pairs": 452,
+      "records": "parcel/parcel-bundler--website/ground-truth/func-mapping.json",
+      "recordsSHA256": "5d94bf53fe13f25bed838111de3f7e7fd4b8793d528e4c38f8e08493d95873ea",
+      "simulationCorrect": 332
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "archive": "inputs/parcel/tensorflow--tfjs.tar.gz",
+      "sha256": "58900d6d3af7a0e075de40b14c2383c22c7f9d29b5667582649235e35c2e6729",
+      "pairs": 2428,
+      "records": "parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
+      "recordsSHA256": "6ee79515a179b5252ca70b2acc0303a078581c5824269e3c2af39ee93cc30cd9",
+      "simulationCorrect": 1879
+    },
+    {
+      "subject": "rollup/daybrush--scenejs",
+      "archive": "inputs/rollup/daybrush--scenejs.tar.gz",
+      "sha256": "8b0fc55738aad05634c62b9ef3531886bf9cbf6fccadfef7f00b685195e9169b",
+      "pairs": 124,
+      "records": "rollup/daybrush--scenejs/ground-truth/func-mapping.json",
+      "recordsSHA256": "bdc040f4b57b8b117210361fdeb0b412817e0971ff60addb2d7ffe98924d673c",
+      "simulationCorrect": 103
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "archive": "inputs/rollup/omnibrain--svguitar.tar.gz",
+      "sha256": "97a7e56903b88f47ae3a3a073bb2c581e8b04091af731c4aaec001f4f13c115e",
+      "pairs": 851,
+      "records": "rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
+      "recordsSHA256": "dace9c15750e757a012abf715aa61c353e7b59ae8ccc5a0ca2fbe438e0853a39",
+      "simulationCorrect": 797
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "archive": "inputs/rollup/vega--vega-lite.tar.gz",
+      "sha256": "dfb4870e9c271038afd336909712dd3c5b6dcdc3835b9f8dfd999c9e67e81069",
+      "pairs": 87,
+      "records": "rollup/vega--vega-lite/ground-truth/func-mapping.json",
+      "recordsSHA256": "ffce2a602044779caa088c0a9f8fa8697cf2519e304a7f7c7f0cfcc7d585ad2e",
+      "simulationCorrect": 86
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "archive": "inputs/turbopack/CalCom--cal.com.tar.gz",
+      "sha256": "4bb737af3c929008d5479579d8e33a5199f16a3dfc97bbe73c06525dfe2b84a1",
+      "pairs": 1620,
+      "records": "turbopack/CalCom--cal.com/ground-truth/func-mapping.json",
+      "recordsSHA256": "56fc47cbdfa2a54123a0fbbb3f8647bfd9400f175e845f29d8f11a175c62790c",
+      "simulationCorrect": 1196
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "archive": "inputs/turbopack/CapSoftware--Cap.tar.gz",
+      "sha256": "b53e940c7dfb7adde78308b92cc798fe71dd202fd159b72838ed94209e5e74d0",
+      "pairs": 1375,
+      "records": "turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
+      "recordsSHA256": "2415582a2e8f5d56515f54bb69dac45e7c5c5993c851c18f4f1bd0a487a88437",
+      "simulationCorrect": 981
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "archive": "inputs/turbopack/DayuanJiang--next-ai-draw-io.tar.gz",
+      "sha256": "50fba8e426699f9e596acb7d7320e6a8bb8a3bd50601b57eeacbb1774cc530b0",
+      "pairs": 1193,
+      "records": "turbopack/DayuanJiang--next-ai-draw-io/ground-truth/func-mapping.json",
+      "recordsSHA256": "1b35cb9235b433c5b213b1e029706efbd733e84c87b021d8824d54292a9e01d6",
+      "simulationCorrect": 963
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "archive": "inputs/turbopack/colinhacks--zod.tar.gz",
+      "sha256": "d317a797f17b2647ce88916283795ba14d4de5424e19a900668ba79ed369d4f6",
+      "pairs": 1970,
+      "records": "turbopack/colinhacks--zod/ground-truth/func-mapping.json",
+      "recordsSHA256": "0fb55a2c702d385ec0dfbc6e3ddd9ebbf4892e002ab84659475a819507b96e81",
+      "simulationCorrect": 1530
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "archive": "inputs/turbopack/shadcn-ui--ui.tar.gz",
+      "sha256": "17aadbc66c3babf322a209d1a9a27c162d37896cbef6b744c0ddfa23fcbd9b0e",
+      "pairs": 1651,
+      "records": "turbopack/shadcn-ui--ui/ground-truth/func-mapping.json",
+      "recordsSHA256": "d88f20ec7600b31fd936420a318c6145ac0730f6a17036ba625648d16cedc3c4",
+      "simulationCorrect": 1157
+    },
+    {
+      "subject": "turbopack/umami-software--umami",
+      "archive": "inputs/turbopack/umami-software--umami.tar.gz",
+      "sha256": "7be523455b78fa9e67b02b7fd2ec59de57cccb6e1d4c807426f486e13f9066b6",
+      "pairs": 796,
+      "records": "turbopack/umami-software--umami/ground-truth/func-mapping.json",
+      "recordsSHA256": "800fea3f625224994e696d499a234d4993ff88ec1d136e7d49bdc0db0e7765c1",
+      "simulationCorrect": 530
+    },
+    {
+      "subject": "vite/CorentinTh--it-tools",
+      "archive": "inputs/vite/CorentinTh--it-tools.tar.gz",
+      "sha256": "1d0e0a4c2934d1f962fc0c648e50ab5e3c5240b8aa841479244fd375691bf50d",
+      "pairs": 2681,
+      "records": "vite/CorentinTh--it-tools/ground-truth/func-mapping.json",
+      "recordsSHA256": "3c88f0b25371c4070cc807e6da4b70e207d2c38f9a8fc99c10432578f4cca063",
+      "simulationCorrect": 2341
+    },
+    {
+      "subject": "vite/DavidHDev--react-bits",
+      "archive": "inputs/vite/DavidHDev--react-bits.tar.gz",
+      "sha256": "f23c1d8c23f020cc6a09b67a25b74aba82a55c70958d6955201f6cc475dba4b4",
+      "pairs": 881,
+      "records": "vite/DavidHDev--react-bits/ground-truth/func-mapping.json",
+      "recordsSHA256": "380e9d6140025dac6dddac3e6ef286c9b753dd1b8e75178c4d4189703092e80d",
+      "simulationCorrect": 785
+    },
+    {
+      "subject": "vite/LibreChat-AI--LibreChat",
+      "archive": "inputs/vite/LibreChat-AI--LibreChat.tar.gz",
+      "sha256": "c523226456d008b24ca69172613159d9db0c34a7a1530b4375f837b6de878799",
+      "pairs": 2188,
+      "records": "vite/LibreChat-AI--LibreChat/ground-truth/func-mapping.json",
+      "recordsSHA256": "6e93af748c5cadbfcd5a1b206eaf18e6c9bb9bfde49a2a505320e896403596b3",
+      "simulationCorrect": 1770
+    },
+    {
+      "subject": "vite/Lissy93--dashy",
+      "archive": "inputs/vite/Lissy93--dashy.tar.gz",
+      "sha256": "80ac103997a3e1b43b2fa35d0d275bfc4fc8e16ca714176ebc5d3600b668544a",
+      "pairs": 2063,
+      "records": "vite/Lissy93--dashy/ground-truth/func-mapping.json",
+      "recordsSHA256": "2b0aa813a19bb0aefb97b89c4f965ab323042f64e9f322150601f8cbdf712659",
+      "simulationCorrect": 1964
+    },
+    {
+      "subject": "vite/drawdb-io--drawdb",
+      "archive": "inputs/vite/drawdb-io--drawdb.tar.gz",
+      "sha256": "9620df571c8070c1cfaaaa4e372de1c869fc79e72c05994a21678733f6bf6aa4",
+      "pairs": 6206,
+      "records": "vite/drawdb-io--drawdb/ground-truth/func-mapping.json",
+      "recordsSHA256": "eac25d03bf6dce8268b87feb23561a79ecf2ee42029a9f431386c3dc701bd079",
+      "simulationCorrect": 5292
+    },
+    {
+      "subject": "vite/excalidraw--excalidraw",
+      "archive": "inputs/vite/excalidraw--excalidraw.tar.gz",
+      "sha256": "528e01b1f115feadc4048fa7aad8440da051fd8b003ee99ada65d9fe2e94f15e",
+      "pairs": 809,
+      "records": "vite/excalidraw--excalidraw/ground-truth/func-mapping.json",
+      "recordsSHA256": "e13f4072a97270291cb0dcb58067c6bf1b2cc9d71a404fda814a153a8e8812eb",
+      "simulationCorrect": 782
+    },
+    {
+      "subject": "vite/hoppscotch--hoppscotch",
+      "archive": "inputs/vite/hoppscotch--hoppscotch.tar.gz",
+      "sha256": "718b318936321a40b7a5424e73894fabdc1135d0b474373955d128ed31b63753",
+      "pairs": 3244,
+      "records": "vite/hoppscotch--hoppscotch/ground-truth/func-mapping.json",
+      "recordsSHA256": "ce844a86c4326c73f73164c86dd52cb482415b364e9961ff568a36d38ce7aa53",
+      "simulationCorrect": 2985
+    },
+    {
+      "subject": "vite/immich-app--immich",
+      "archive": "inputs/vite/immich-app--immich.tar.gz",
+      "sha256": "45216f8f3ee35c06eda7d1ed1c94fb84af1a8b1585d5cacb6fe92d9048f08fe2",
+      "pairs": 1558,
+      "records": "vite/immich-app--immich/ground-truth/func-mapping.json",
+      "recordsSHA256": "838ea1c8c3d918a766424fd7cc2a8b497faf16013008e018d7a136fab6751ef7",
+      "simulationCorrect": 1434
+    },
+    {
+      "subject": "webpack/PanJiaChen--vue-element-admin",
+      "archive": "inputs/webpack/PanJiaChen--vue-element-admin.tar.gz",
+      "sha256": "96c831fd27248890c03a298929b64651db89c5265baaf97acfaee905acdec5b0",
+      "pairs": 5578,
+      "records": "webpack/PanJiaChen--vue-element-admin/ground-truth/func-mapping.json",
+      "recordsSHA256": "60958c9fec4daffc7e1bc3d9781ef9b95bb6a92740764d9db30e364a6ac0418f",
+      "simulationCorrect": 4983
+    },
+    {
+      "subject": "webpack/akveo--ngx-admin",
+      "archive": "inputs/webpack/akveo--ngx-admin.tar.gz",
+      "sha256": "8c6d441d99c5f836b9e7dcad24d7cce047f02db7822d26c7ce68a1cd1dc81baa",
+      "pairs": 5838,
+      "records": "webpack/akveo--ngx-admin/ground-truth/func-mapping.json",
+      "recordsSHA256": "a71e9fc4c81940bbd69b4a60c318a3153e7babc2502dd7289d967b953e4ae12b",
+      "simulationCorrect": 5491
+    },
+    {
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "archive": "inputs/webpack/bailicangdu--vue2-elm.tar.gz",
+      "sha256": "db600e9e58bd8f009614df53cc6f6191e084cc952a5845a1aae9893a9f98c741",
+      "pairs": 492,
+      "records": "webpack/bailicangdu--vue2-elm/ground-truth/func-mapping.json",
+      "recordsSHA256": "c2111ae7441c96715283529202bfcd5e283f5e2047b6d4c4d94a9c508dce6323",
+      "simulationCorrect": 489
+    },
+    {
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "archive": "inputs/webpack/dair-ai--Prompt-Engineering-Guide.tar.gz",
+      "sha256": "9fd9bd8847166936fd574670f4899d2105c41be432439bf90af9c4fa4f7705f0",
+      "pairs": 1427,
+      "records": "webpack/dair-ai--Prompt-Engineering-Guide/ground-truth/func-mapping.json",
+      "recordsSHA256": "68e5709df9905e7441eb912dd181380994b1178cbdbd2c5a8f13510435903c0e",
+      "simulationCorrect": 1135
+    },
+    {
+      "subject": "webpack/dokploy--dokploy",
+      "archive": "inputs/webpack/dokploy--dokploy.tar.gz",
+      "sha256": "d9ba2b876a0fc6ad545ab663d26cabf9c1d8cf8f1d9ea3c8542b55ccbecb6d84",
+      "pairs": 780,
+      "records": "webpack/dokploy--dokploy/ground-truth/func-mapping.json",
+      "recordsSHA256": "e6839fc89732e1d743f24c940c20d3e62af6bb1a82c830c07deb9ebf06f694a2",
+      "simulationCorrect": 619
+    },
+    {
+      "subject": "webpack/freeCodeCamp--freeCodeCamp",
+      "archive": "inputs/webpack/freeCodeCamp--freeCodeCamp.tar.gz",
+      "sha256": "95c475dcca7e63e89046efcdc219f3b6bf56a4eb121142e9f016f34ce684c776",
+      "pairs": 852,
+      "records": "webpack/freeCodeCamp--freeCodeCamp/ground-truth/func-mapping.json",
+      "recordsSHA256": "d7018bfe3682b98bcc2fe5d0437b4d5c66e3340320270a6f404f36a7368bce29",
+      "simulationCorrect": 773
+    },
+    {
+      "subject": "webpack/supabase--supabase",
+      "archive": "inputs/webpack/supabase--supabase.tar.gz",
+      "sha256": "b9acad001be0e1b0364cbecfbec4c097aa05e1781eda2f8c07fdd24f43fbfbd3",
+      "pairs": 1358,
+      "records": "webpack/supabase--supabase/ground-truth/func-mapping.json",
+      "recordsSHA256": "5b71025311cfafb533e2ca53421dded2f4a49526ebdff0235677c56d1be59f4a",
+      "simulationCorrect": 1139
+    },
+    {
+      "subject": "webpack/swagger-api--swagger-ui",
+      "archive": "inputs/webpack/swagger-api--swagger-ui.tar.gz",
+      "sha256": "4f5a70615d81729ecd00062fc661ced1d4a00c2f9e9237a4f468977774a344d9",
+      "pairs": 2730,
+      "records": "webpack/swagger-api--swagger-ui/ground-truth/func-mapping.json",
+      "recordsSHA256": "3b101604673c707135bd7f48236f55c967813e722214d74048bd13a90859c56c",
+      "simulationCorrect": 2455
+    }
+  ]
+}

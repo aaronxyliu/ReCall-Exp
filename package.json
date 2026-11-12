@@ -11,6 +11,7 @@
     "test": "node --test scripts/jquery/analysis.test.mjs scripts/jquery/validator-policy.test.mjs scripts/jquery/variable-mapping-policy.test.mjs scripts/jquery/promotion-policy.test.mjs"
   },
   "dependencies": {
+    "@babel/parser": "7.28.5",
     "@rollup/plugin-node-resolve": "16.0.1",
     "esbuild": "0.25.9",
     "jquery": "4.0.0",

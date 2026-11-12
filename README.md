@@ -4,6 +4,12 @@ Paper title: **ReCall: Accurate and Scalable Function Recovery for Bundled JavaS
 
 This repository owns experiment drivers, protocols, saved outputs and model caches, frozen baselines, audits, and the manuscript. The sibling `../ReCall` owns reusable tool code; `../ReCall Dataset` owns dataset indexes, local source checkouts, and fixture inputs.
 
+The [ReCall Dataset build progress table](../ReCall%20Dataset/README.md#frontend-repository-builds) tracks the 70 selected projects. Optional local checkouts belong under the dataset repository’s Git-ignored `../ReCall Dataset/builds/` directory.
+
+## Single-repository ground truth
+
+Use the [collection workflow](scripts/function-ground-truth/README.md) to turn an explicit production-library list and hosting README into captured JavaScript, source maps, and one-to-one function records. The entry point is `scripts/function-ground-truth/collect.mjs`; it has no dataset-wide sampling or Docker configuration.
+
 ## Paper
 
 The editable source is `manuscript/main.tex`. Dataset preparation precedes the four RQs: performance, ablation, tradeoff, and practical use. The seven planned experiments are listed in the Roadmap below; the RQ4 practical-use protocol remains to be filled. Existing results and pending evaluations remain explicitly separated.
@@ -14,6 +20,10 @@ tectonic --keep-logs --outdir build main.tex
 ```
 
 The compiled output is `manuscript/build/main.pdf`. Consult `manuscript/README.md` before regenerating tables; historical generators can overwrite newer manuscript prose.
+
+## Current 26-repository RQ1 run
+
+The [RQ1 protocol](experiments/rq1/PROTOCOL.md) defines recovery, oracle scoring, timing, and live progress. The current 26-repository configuration uses Qwen 3.5 27B, AST-first validation, no library anchor gate, and [retained conflicting matches](experiments/rq1/MULTI-MATCH.md). Candidates are checked in rank order (AST, then Qwen), stopping at the first acceptance and skipping matched targets. Its output directory is `results/rq1-autodl-first-accept-26/`; earlier default/baseline runs remain separate. See the [AutoDL driver guide](experiments/rq1/AUTODL-DRIVER.md) for remote execution, preserved checkpoints/caches, and tmux operation. `scripts/rq1/report.py` generates the live summary on the execution host. Current scoring uses the [cohort-wide v2 oracle](../ReCall%20Dataset/bundling-dataset/GROUND-TRUTH-V2.md), including 654 FreeCodeCamp pairs and 82,836 pairs overall. The original input index stays frozen for checkpoint compatibility; `scripts/rq1/rescore-revision.mjs` independently updates evaluation labels without rerunning inference.
 
 ## Roadmap
 
@@ -49,6 +59,6 @@ The `results/`, `baselines/`, and `archive/` trees remain on disk and are Git-ig
 
 ## Migration and preserved documentation
 
-`migration/layout-migration.json` records ownership moves and unchanged runtime hashes. `migration/verification.json` records repository, link, test, and evidence checks. The pre-migration project README and manuscript title/PDF are preserved there. `RESEARCH_GUIDELINE.md`, `JUNJIE_GUIDE.md`, `TODO.md`, and historical documents remain available; their old terminology and paths describe earlier work rather than a new instruction to rerun it.
+Historical migration snapshots and one-off manuscript revision checks are retained locally under the ignored `archive/2026-11-07-tracked-intermediates/` directory and in Git history. Track reusable scripts, protocols, and evidence; keep temporary checks, build products, and local run outputs ignored.
 
 No models, application builds, or recovery experiments are run by this reorganization.

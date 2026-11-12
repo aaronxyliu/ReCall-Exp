@@ -1,0 +1,773 @@
+{
+  "status": "stopped",
+  "rows": [
+    {
+      "subject": "bun/RockwellShah--filekey",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.6,
+            "anchors": 0.6,
+            "sourceBundler": 0.6,
+            "bundleBundler": 0.7,
+            "sourceModules": 0.9,
+            "bundleModules": 1.1,
+            "sourceGraph": 1.7,
+            "bundleGraph": 1.7,
+            "recovery": 1.8,
+            "finished": 985.3
+          },
+          "lastEventSeconds": 985.3,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.5,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.1,
+            "bundleBundler": 0.2,
+            "sourceModules": 0.2,
+            "bundleModules": 0.6,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.1,
+            "recovery": 983.5
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 985.343807375,
+      "recoveryRecordedSeconds": 983.470411708,
+      "modelApiRecordedSeconds": 975.3901478340008,
+      "freshValidationRequests": 344,
+      "freshEmbeddingRequests": 376
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.6,
+            "anchors": 0.6,
+            "sourceBundler": 0.7,
+            "bundleBundler": 0.8,
+            "sourceModules": 1.0,
+            "bundleModules": 1.4,
+            "sourceGraph": 1.7,
+            "bundleGraph": 1.8,
+            "recovery": 1.8,
+            "finished": 647.9
+          },
+          "lastEventSeconds": 647.9,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.5,
+            "libraries": 0.0,
+            "anchors": 0.1,
+            "sourceBundler": 0.1,
+            "bundleBundler": 0.2,
+            "sourceModules": 0.4,
+            "bundleModules": 0.3,
+            "sourceGraph": 0.1,
+            "bundleGraph": 0.0,
+            "recovery": 646.1
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 647.892048292,
+      "recoveryRecordedSeconds": 646.0214606249999,
+      "modelApiRecordedSeconds": 640.1905290339997,
+      "freshValidationRequests": 116,
+      "freshEmbeddingRequests": 140
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.6,
+            "anchors": 0.6,
+            "sourceBundler": 0.6,
+            "bundleBundler": 0.6,
+            "sourceModules": 0.8,
+            "bundleModules": 0.8,
+            "sourceGraph": 1.5,
+            "bundleGraph": 1.5,
+            "recovery": 1.7,
+            "finished": 34.1
+          },
+          "lastEventSeconds": 34.1,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.5,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.2,
+            "sourceModules": 0.0,
+            "bundleModules": 0.7,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.2,
+            "recovery": 32.4
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 34.114693333,
+      "recoveryRecordedSeconds": 32.409275,
+      "modelApiRecordedSeconds": 31.906622752999997,
+      "freshValidationRequests": 18,
+      "freshEmbeddingRequests": 14
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.4,
+            "anchors": 1.4,
+            "sourceBundler": 1.4,
+            "bundleBundler": 1.5,
+            "sourceModules": 2.0,
+            "bundleModules": 2.2,
+            "sourceGraph": 3.8,
+            "bundleGraph": 3.8,
+            "recovery": 4.2
+          },
+          "lastEventSeconds": 563.0,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.3,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.1,
+            "bundleBundler": 0.5,
+            "sourceModules": 0.2,
+            "bundleModules": 1.6,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.4
+          },
+          "openStage": "recovery",
+          "openStageObservedSeconds": 558.8
+        },
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.3,
+            "anchors": 1.3,
+            "sourceBundler": 1.3,
+            "bundleBundler": 1.3,
+            "sourceModules": 1.3,
+            "bundleModules": 1.3,
+            "sourceGraph": 1.3,
+            "bundleGraph": 1.3,
+            "recovery": 1.3,
+            "finished": 136.9
+          },
+          "lastEventSeconds": 136.9,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.2,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.0,
+            "sourceModules": 0.0,
+            "bundleModules": 0.0,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.0,
+            "recovery": 135.6
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 136.884390666,
+      "recoveryRecordedSeconds": 626.329688166,
+      "modelApiRecordedSeconds": 617.6459950569997,
+      "freshValidationRequests": 345,
+      "freshEmbeddingRequests": 257
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.2,
+            "anchors": 1.2,
+            "sourceBundler": 1.2,
+            "bundleBundler": 1.4,
+            "sourceModules": 1.7,
+            "bundleModules": 2.2,
+            "sourceGraph": 3.4,
+            "bundleGraph": 3.4,
+            "recovery": 3.6,
+            "finished": 1141.2
+          },
+          "lastEventSeconds": 1141.2,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.1,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.2,
+            "bundleBundler": 0.3,
+            "sourceModules": 0.5,
+            "bundleModules": 1.2,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.2,
+            "recovery": 1137.6
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 1141.1603317909999,
+      "recoveryRecordedSeconds": 1137.4807190000001,
+      "modelApiRecordedSeconds": 1124.553159611997,
+      "freshValidationRequests": 571,
+      "freshEmbeddingRequests": 735
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.3,
+            "anchors": 0.3,
+            "sourceBundler": 0.3,
+            "bundleBundler": 0.3,
+            "sourceModules": 0.4,
+            "bundleModules": 0.5,
+            "sourceGraph": 0.6,
+            "bundleGraph": 0.6,
+            "recovery": 0.7,
+            "finished": 573.5
+          },
+          "lastEventSeconds": 573.5,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.2,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.1,
+            "sourceModules": 0.1,
+            "bundleModules": 0.1,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.1,
+            "recovery": 572.8
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 573.4882917919999,
+      "recoveryRecordedSeconds": 572.7850675,
+      "modelApiRecordedSeconds": 566.0137660049994,
+      "freshValidationRequests": 353,
+      "freshEmbeddingRequests": 451
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-charts",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.7,
+            "anchors": 1.7,
+            "sourceBundler": 1.8,
+            "bundleBundler": 1.9,
+            "sourceModules": 2.6,
+            "bundleModules": 3.0,
+            "sourceGraph": 4.7,
+            "bundleGraph": 4.8,
+            "recovery": 5.3,
+            "finished": 1572.5
+          },
+          "lastEventSeconds": 1572.5,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.6,
+            "libraries": 0.0,
+            "anchors": 0.1,
+            "sourceBundler": 0.1,
+            "bundleBundler": 0.7,
+            "sourceModules": 0.4,
+            "bundleModules": 1.7,
+            "sourceGraph": 0.1,
+            "bundleGraph": 0.5,
+            "recovery": 1567.2
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 1572.540962708,
+      "recoveryRecordedSeconds": 1567.174301667,
+      "modelApiRecordedSeconds": 1548.6232626669998,
+      "freshValidationRequests": 467,
+      "freshEmbeddingRequests": 555
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.4,
+            "anchors": 0.5,
+            "sourceBundler": 0.5,
+            "bundleBundler": 0.5,
+            "sourceModules": 0.6,
+            "bundleModules": 0.8,
+            "sourceGraph": 1.3,
+            "bundleGraph": 1.3,
+            "recovery": 1.4,
+            "finished": 610.6
+          },
+          "lastEventSeconds": 610.6,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.3,
+            "libraries": 0.1,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.1,
+            "sourceModules": 0.2,
+            "bundleModules": 0.5,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.1,
+            "recovery": 609.2
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 610.5664863330001,
+      "recoveryRecordedSeconds": 609.177132,
+      "modelApiRecordedSeconds": 603.5260131349997,
+      "freshValidationRequests": 380,
+      "freshEmbeddingRequests": 287
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.2,
+            "anchors": 0.2,
+            "sourceBundler": 0.2,
+            "bundleBundler": 0.2,
+            "sourceModules": 0.2,
+            "bundleModules": 0.3,
+            "sourceGraph": 0.4,
+            "bundleGraph": 0.4,
+            "recovery": 0.4,
+            "finished": 581.0
+          },
+          "lastEventSeconds": 581.0,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.1,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.0,
+            "sourceModules": 0.1,
+            "bundleModules": 0.1,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.0,
+            "recovery": 580.6
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 581.0298713330001,
+      "recoveryRecordedSeconds": 580.595346833,
+      "modelApiRecordedSeconds": 576.3197613869994,
+      "freshValidationRequests": 282,
+      "freshEmbeddingRequests": 231
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.4,
+            "anchors": 1.4,
+            "sourceBundler": 1.5,
+            "bundleBundler": 1.9,
+            "sourceModules": 2.2,
+            "bundleModules": 4.3,
+            "sourceGraph": 5.3,
+            "bundleGraph": 5.3,
+            "recovery": 5.5,
+            "finished": 12042.9
+          },
+          "lastEventSeconds": 12042.9,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.3,
+            "libraries": 0.0,
+            "anchors": 0.1,
+            "sourceBundler": 0.4,
+            "bundleBundler": 0.3,
+            "sourceModules": 2.1,
+            "bundleModules": 1.0,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.2,
+            "recovery": 12037.4
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 12042.872364958,
+      "recoveryRecordedSeconds": 12037.225789458002,
+      "modelApiRecordedSeconds": 11905.834176280969,
+      "freshValidationRequests": 4791,
+      "freshEmbeddingRequests": 3316
+    },
+    {
+      "subject": "rollup/daybrush--scenejs",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.2,
+            "anchors": 0.2,
+            "sourceBundler": 0.2,
+            "bundleBundler": 0.2,
+            "sourceModules": 0.3,
+            "bundleModules": 0.3,
+            "sourceGraph": 0.4,
+            "bundleGraph": 0.4,
+            "recovery": 0.4,
+            "finished": 221.9
+          },
+          "lastEventSeconds": 221.9,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.1,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.1,
+            "sourceModules": 0.0,
+            "bundleModules": 0.1,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.0,
+            "recovery": 221.5
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 221.910429209,
+      "recoveryRecordedSeconds": 221.464771542,
+      "modelApiRecordedSeconds": 219.77399620399996,
+      "freshValidationRequests": 114,
+      "freshEmbeddingRequests": 87
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.3,
+            "anchors": 0.3,
+            "sourceBundler": 0.3,
+            "bundleBundler": 0.4,
+            "sourceModules": 0.4,
+            "bundleModules": 0.7,
+            "sourceGraph": 0.8,
+            "bundleGraph": 0.9,
+            "recovery": 0.9,
+            "finished": 84.3
+          },
+          "lastEventSeconds": 84.3,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.2,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.1,
+            "bundleBundler": 0.0,
+            "sourceModules": 0.3,
+            "bundleModules": 0.1,
+            "sourceGraph": 0.1,
+            "bundleGraph": 0.0,
+            "recovery": 83.4
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 84.24991925,
+      "recoveryRecordedSeconds": 83.357923209,
+      "modelApiRecordedSeconds": 81.88935204299997,
+      "freshValidationRequests": 37,
+      "freshEmbeddingRequests": 54
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 0.8,
+            "anchors": 0.8,
+            "sourceBundler": 0.8,
+            "bundleBundler": 0.8,
+            "sourceModules": 1.2,
+            "bundleModules": 1.3,
+            "sourceGraph": 2.3,
+            "bundleGraph": 2.3,
+            "recovery": 2.5,
+            "finished": 44.2
+          },
+          "lastEventSeconds": 44.2,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 0.7,
+            "libraries": 0.0,
+            "anchors": 0.0,
+            "sourceBundler": 0.0,
+            "bundleBundler": 0.4,
+            "sourceModules": 0.1,
+            "bundleModules": 1.0,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.2,
+            "recovery": 41.7
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 44.241104834000005,
+      "recoveryRecordedSeconds": 41.723823583999994,
+      "modelApiRecordedSeconds": 41.22289574900002,
+      "freshValidationRequests": 13,
+      "freshEmbeddingRequests": 12
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.7,
+            "anchors": 1.8,
+            "sourceBundler": 1.8,
+            "bundleBundler": 2.2,
+            "sourceModules": 2.6,
+            "bundleModules": 3.5,
+            "sourceGraph": 4.9,
+            "bundleGraph": 4.9,
+            "recovery": 5.2,
+            "finished": 6531.0
+          },
+          "lastEventSeconds": 6531.0,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.6,
+            "libraries": 0.1,
+            "anchors": 0.0,
+            "sourceBundler": 0.4,
+            "bundleBundler": 0.4,
+            "sourceModules": 0.9,
+            "bundleModules": 1.4,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.3,
+            "recovery": 6525.8
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 6530.979508666999,
+      "recoveryRecordedSeconds": 6525.6526485409995,
+      "modelApiRecordedSeconds": 6465.217048893959,
+      "freshValidationRequests": 1793,
+      "freshEmbeddingRequests": 1500
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.3,
+            "anchors": 1.4,
+            "sourceBundler": 1.4,
+            "bundleBundler": 1.7,
+            "sourceModules": 2.0,
+            "bundleModules": 3.0,
+            "sourceGraph": 4.1,
+            "bundleGraph": 4.1,
+            "recovery": 4.3,
+            "finished": 5420.1
+          },
+          "lastEventSeconds": 5420.1,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.2,
+            "libraries": 0.1,
+            "anchors": 0.0,
+            "sourceBundler": 0.3,
+            "bundleBundler": 0.3,
+            "sourceModules": 1.0,
+            "bundleModules": 1.1,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.2,
+            "recovery": 5415.8
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 5420.060542667,
+      "recoveryRecordedSeconds": 5415.640218958,
+      "modelApiRecordedSeconds": 5369.073650175999,
+      "freshValidationRequests": 1374,
+      "freshEmbeddingRequests": 1142
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 1.9,
+            "anchors": 1.9,
+            "sourceBundler": 2.0,
+            "bundleBundler": 2.3,
+            "sourceModules": 2.9,
+            "bundleModules": 4.0,
+            "sourceGraph": 5.4,
+            "bundleGraph": 5.5,
+            "recovery": 5.7,
+            "finished": 6742.9
+          },
+          "lastEventSeconds": 6742.9,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.8,
+            "libraries": 0.0,
+            "anchors": 0.1,
+            "sourceBundler": 0.3,
+            "bundleBundler": 0.6,
+            "sourceModules": 1.1,
+            "bundleModules": 1.4,
+            "sourceGraph": 0.1,
+            "bundleGraph": 0.2,
+            "recovery": 6737.2
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 6742.901804249999,
+      "recoveryRecordedSeconds": 6737.053361125,
+      "modelApiRecordedSeconds": 6677.174336886995,
+      "freshValidationRequests": 1604,
+      "freshEmbeddingRequests": 1287
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "status": "completed",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.1,
+            "libraries": 2.0,
+            "anchors": 2.0,
+            "sourceBundler": 2.1,
+            "bundleBundler": 2.3,
+            "sourceModules": 3.0,
+            "bundleModules": 3.9,
+            "sourceGraph": 5.9,
+            "bundleGraph": 5.9,
+            "recovery": 6.3,
+            "finished": 5602.5
+          },
+          "lastEventSeconds": 5602.5,
+          "stageSeconds": {
+            "preflight": 0.1,
+            "inputs": 1.9,
+            "libraries": 0.0,
+            "anchors": 0.1,
+            "sourceBundler": 0.2,
+            "bundleBundler": 0.7,
+            "sourceModules": 0.9,
+            "bundleModules": 2.0,
+            "sourceGraph": 0.0,
+            "bundleGraph": 0.4,
+            "recovery": 5596.2
+          }
+        }
+      ],
+      "workflowLastAttemptSeconds": 5602.514437958001,
+      "recoveryRecordedSeconds": 5596.095517875,
+      "modelApiRecordedSeconds": 5528.936776134977,
+      "freshValidationRequests": 1472,
+      "freshEmbeddingRequests": 1209
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "status": "stopped",
+      "attempts": [
+        {
+          "startsSeconds": {
+            "preflight": 0.0,
+            "inputs": 0.2,
+            "libraries": 13.0,
+            "anchors": 13.4,
+            "sourceBundler": 13.8,
+            "bundleBundler": 14.0,
+            "sourceModules": 20.0,
+            "bundleModules": 21.0,
+            "sourceGraph": 42.4,
+            "bundleGraph": 42.5,
+            "recovery": 44.6
+          },
+          "lastEventSeconds": 249.4,
+          "stageSeconds": {
+            "preflight": 0.2,
+            "inputs": 12.8,
+            "libraries": 0.4,
+            "anchors": 0.4,
+            "sourceBundler": 0.2,
+            "bundleBundler": 6.0,
+            "sourceModules": 1.0,
+            "bundleModules": 21.4,
+            "sourceGraph": 0.1,
+            "bundleGraph": 2.1
+          },
+          "openStage": "recovery",
+          "openStageObservedSeconds": 204.8
+        }
+      ],
+      "workflowLastAttemptSeconds": 274.760082958,
+      "recoveryRecordedSeconds": 137.88988029200002,
+      "modelApiRecordedSeconds": 135.91941359000003,
+      "freshValidationRequests": 36,
+      "freshEmbeddingRequests": 39
+    }
+  ]
+}

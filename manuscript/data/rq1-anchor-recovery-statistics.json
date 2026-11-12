@@ -1,0 +1,40 @@
+{
+  "snapshot": "2026-11-08T05:56:50.030958+00:00",
+  "completedRepositories": 22,
+  "excludedZeroAnchorInstances": 39,
+  "libraryInstances": {
+    "n": 101,
+    "anchor_count_rho": 0.16194501722828822,
+    "anchor_fraction_rho": 0.4465569251570307,
+    "nonanchor_rho": 0.3614611911341267
+  },
+  "libraryInstancesGT20": {
+    "n": 84,
+    "anchor_count_rho": 0.19332069094836224,
+    "anchor_fraction_rho": 0.5269774952969295,
+    "nonanchor_rho": 0.47150112733292965
+  },
+  "repositories": {
+    "n": 20,
+    "anchor_count_rho": 0.021820924160668685,
+    "anchor_fraction_rho": 0.42045884883916657,
+    "nonanchor_rho": 0.32117339616158164
+  },
+  "allIncludingZero": {
+    "n": 140,
+    "anchor_count_rho": 0.6351285836872028,
+    "anchor_fraction_rho": 0.7458690141939391,
+    "nonanchor_rho": 0.7018280598381972
+  },
+  "repositoryClusterBootstrap95CI": [
+    [
+      0.2503427591857694,
+      0.6071543245712784
+    ],
+    [
+      0.16474424851998565,
+      0.5167213383425406
+    ]
+  ],
+  "partialRankCorrelationControllingGTSize": 0.4344977229548641
+}

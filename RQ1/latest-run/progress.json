@@ -1,0 +1,389 @@
+{
+  "status": "stopped",
+  "updatedAt": "2026-11-12T09:46:17+08:00",
+  "pid": 2168,
+  "datasetIndexSHA256": "ce4e4c3251b86000311bec636e0e6a2d4a843c6700dcc0d76d8f6f47677421a3",
+  "implementationDigest": "658f667cf3292f6dfa8dad16c479d6f53f93c39c764ee40e1514a620b721a47c",
+  "pooledCompleted": {
+    "repositories": 17,
+    "pairs": 16996,
+    "simulationCorrect": 14135,
+    "realCorrect": 13689,
+    "simulationRecovery": 0.83166627441751,
+    "realRecovery": 0.8054248058366674,
+    "gapPercentagePoints": 2.6241468580842553
+  },
+  "commit": "3f4bda86f6a312a22e95808d610ea849395c5e4c",
+  "timingMatchedCompleted": {
+    "repositories": 9,
+    "previousRecoverySeconds": 10856.982099997,
+    "newRecoverySeconds": 6755.443402499,
+    "speedup": 1.6071457420516235,
+    "previousValidationRequests": 4857,
+    "newValidationRequests": 2876,
+    "previousCorrect": 6470,
+    "newCorrect": 6500,
+    "pairs": 7348
+  },
+  "rows": [
+    {
+      "subject": "bun/RockwellShah--filekey",
+      "pairs": 480,
+      "simulationCorrect": 469,
+      "status": "completed",
+      "realCorrect": 463,
+      "realPrecision": 0.9893162393162394,
+      "recoverySeconds": 983.470411708,
+      "validationRequests": 344,
+      "embeddingRequests": 376,
+      "relationshipCandidatesPruned": 2556,
+      "relationshipQueriesPruned": 38,
+      "previousCorrect": 457,
+      "previousRecoverySeconds": 1627.957731375,
+      "previousValidationRequests": 510
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "pairs": 1208,
+      "simulationCorrect": 1078,
+      "status": "completed",
+      "realCorrect": 1076,
+      "realPrecision": 0.8922056384742952,
+      "recoverySeconds": 646.0214606249999,
+      "validationRequests": 116,
+      "embeddingRequests": 140,
+      "relationshipCandidatesPruned": 1924,
+      "relationshipQueriesPruned": 26,
+      "previousCorrect": 1074,
+      "previousRecoverySeconds": 1159.126360666,
+      "previousValidationRequests": 247
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "pairs": 37,
+      "simulationCorrect": 23,
+      "status": "completed",
+      "realCorrect": 23,
+      "realPrecision": 1,
+      "recoverySeconds": 32.409275,
+      "validationRequests": 18,
+      "embeddingRequests": 14,
+      "relationshipCandidatesPruned": 85,
+      "relationshipQueriesPruned": 2,
+      "previousCorrect": 23,
+      "previousRecoverySeconds": 56.119055083,
+      "previousValidationRequests": 33
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "pairs": 251,
+      "simulationCorrect": 141,
+      "status": "completed",
+      "checkpoint": "esbuild/primefaces--primeng/checkpoint.json.gz",
+      "realCorrect": 148,
+      "realPrecision": 0.9932885906040269,
+      "recoverySeconds": 626.329688166,
+      "validationRequests": 345,
+      "embeddingRequests": 257,
+      "relationshipCandidatesPruned": 1796,
+      "relationshipQueriesPruned": 235,
+      "previousCorrect": 148,
+      "previousRecoverySeconds": 1460.600769083,
+      "previousValidationRequests": 854
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "pairs": 1309,
+      "simulationCorrect": 1199,
+      "status": "completed",
+      "realCorrect": 1186,
+      "realPrecision": 0.9924686192468619,
+      "recoverySeconds": 1137.4807190000001,
+      "validationRequests": 571,
+      "embeddingRequests": 735,
+      "relationshipCandidatesPruned": 5464,
+      "relationshipQueriesPruned": 43,
+      "previousCorrect": 1182,
+      "previousRecoverySeconds": 1422.133117541,
+      "previousValidationRequests": 776
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "pairs": 911,
+      "simulationCorrect": 903,
+      "status": "completed",
+      "realCorrect": 887,
+      "realPrecision": 0.9921700223713646,
+      "recoverySeconds": 572.7850675,
+      "validationRequests": 353,
+      "embeddingRequests": 451,
+      "relationshipCandidatesPruned": 2693,
+      "relationshipQueriesPruned": 6,
+      "previousCorrect": 885,
+      "previousRecoverySeconds": 664.470445625,
+      "previousValidationRequests": 394
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-charts",
+      "pairs": 2364,
+      "simulationCorrect": 2180,
+      "status": "completed",
+      "realCorrect": 2143,
+      "realPrecision": 0.9648806843764071,
+      "recoverySeconds": 1567.174301667,
+      "validationRequests": 467,
+      "embeddingRequests": 555,
+      "relationshipCandidatesPruned": 4721,
+      "relationshipQueriesPruned": 157,
+      "previousCorrect": 2136,
+      "previousRecoverySeconds": 2636.3580708330005,
+      "previousValidationRequests": 1008
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "pairs": 336,
+      "simulationCorrect": 275,
+      "status": "completed",
+      "realCorrect": 260,
+      "realPrecision": 0.9923664122137404,
+      "recoverySeconds": 609.177132,
+      "validationRequests": 380,
+      "embeddingRequests": 287,
+      "relationshipCandidatesPruned": 3365,
+      "relationshipQueriesPruned": 94,
+      "previousCorrect": 253,
+      "previousRecoverySeconds": 1039.439468875,
+      "previousValidationRequests": 659
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "pairs": 452,
+      "simulationCorrect": 332,
+      "status": "completed",
+      "realCorrect": 314,
+      "realPrecision": 0.9515151515151515,
+      "recoverySeconds": 580.595346833,
+      "validationRequests": 282,
+      "embeddingRequests": 231,
+      "relationshipCandidatesPruned": 2354,
+      "relationshipQueriesPruned": 6,
+      "previousCorrect": 312,
+      "previousRecoverySeconds": 790.7770809159999,
+      "previousValidationRequests": 376
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "pairs": 2428,
+      "simulationCorrect": 1879,
+      "status": "completed",
+      "realCorrect": 1851,
+      "realPrecision": 0.9343765774861181,
+      "recoverySeconds": 12037.225789458002,
+      "validationRequests": 4791,
+      "embeddingRequests": 3316,
+      "relationshipCandidatesPruned": 148737,
+      "relationshipQueriesPruned": 1581
+    },
+    {
+      "subject": "rollup/daybrush--scenejs",
+      "pairs": 124,
+      "simulationCorrect": 103,
+      "status": "completed",
+      "realCorrect": 111,
+      "realPrecision": 0.9736842105263158,
+      "recoverySeconds": 221.464771542,
+      "validationRequests": 114,
+      "embeddingRequests": 87,
+      "relationshipCandidatesPruned": 1336,
+      "relationshipQueriesPruned": 97
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "pairs": 851,
+      "simulationCorrect": 797,
+      "status": "completed",
+      "realCorrect": 797,
+      "realPrecision": 0.9672330097087378,
+      "recoverySeconds": 83.357923209,
+      "validationRequests": 37,
+      "embeddingRequests": 54,
+      "relationshipCandidatesPruned": 291,
+      "relationshipQueriesPruned": 23
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "pairs": 87,
+      "simulationCorrect": 86,
+      "status": "completed",
+      "realCorrect": 86,
+      "realPrecision": 0.9885057471264368,
+      "recoverySeconds": 41.723823583999994,
+      "validationRequests": 13,
+      "embeddingRequests": 12,
+      "relationshipCandidatesPruned": 157,
+      "relationshipQueriesPruned": 5
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "pairs": 1620,
+      "simulationCorrect": 1196,
+      "status": "completed",
+      "realCorrect": 1070,
+      "realPrecision": 0.970081595648232,
+      "recoverySeconds": 6525.6526485409995,
+      "validationRequests": 1793,
+      "embeddingRequests": 1500,
+      "relationshipCandidatesPruned": 21027,
+      "relationshipQueriesPruned": 1054
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "pairs": 1375,
+      "simulationCorrect": 981,
+      "status": "completed",
+      "realCorrect": 957,
+      "realPrecision": 0.9735503560528993,
+      "recoverySeconds": 5415.640218958,
+      "validationRequests": 1374,
+      "embeddingRequests": 1142,
+      "relationshipCandidatesPruned": 14609,
+      "relationshipQueriesPruned": 678
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "pairs": 1193,
+      "simulationCorrect": 963,
+      "status": "completed",
+      "realCorrect": 940,
+      "realPrecision": 0.9791666666666666,
+      "recoverySeconds": 6737.053361125,
+      "validationRequests": 1604,
+      "embeddingRequests": 1287,
+      "relationshipCandidatesPruned": 18161,
+      "relationshipQueriesPruned": 769
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "pairs": 1970,
+      "simulationCorrect": 1530,
+      "status": "completed",
+      "realCorrect": 1377,
+      "realPrecision": 0.9690358902181563,
+      "recoverySeconds": 5596.095517875,
+      "validationRequests": 1472,
+      "embeddingRequests": 1209,
+      "relationshipCandidatesPruned": 20730,
+      "relationshipQueriesPruned": 1614
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "pairs": 1651,
+      "simulationCorrect": 1157,
+      "status": "stopped",
+      "checkpoint": "turbopack/shadcn-ui--ui/checkpoint.json.gz"
+    },
+    {
+      "subject": "turbopack/umami-software--umami",
+      "pairs": 796,
+      "simulationCorrect": 530,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/CorentinTh--it-tools",
+      "pairs": 2681,
+      "simulationCorrect": 2341,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/DavidHDev--react-bits",
+      "pairs": 881,
+      "simulationCorrect": 785,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/LibreChat-AI--LibreChat",
+      "pairs": 2188,
+      "simulationCorrect": 1770,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/Lissy93--dashy",
+      "pairs": 2063,
+      "simulationCorrect": 1964,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/drawdb-io--drawdb",
+      "pairs": 6206,
+      "simulationCorrect": 5292,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/excalidraw--excalidraw",
+      "pairs": 809,
+      "simulationCorrect": 782,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/hoppscotch--hoppscotch",
+      "pairs": 3244,
+      "simulationCorrect": 2985,
+      "status": "queued"
+    },
+    {
+      "subject": "vite/immich-app--immich",
+      "pairs": 1558,
+      "simulationCorrect": 1434,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/PanJiaChen--vue-element-admin",
+      "pairs": 5578,
+      "simulationCorrect": 4983,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/akveo--ngx-admin",
+      "pairs": 5838,
+      "simulationCorrect": 5491,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "pairs": 492,
+      "simulationCorrect": 489,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "pairs": 1427,
+      "simulationCorrect": 1135,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/dokploy--dokploy",
+      "pairs": 780,
+      "simulationCorrect": 619,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/freeCodeCamp--freeCodeCamp",
+      "pairs": 852,
+      "simulationCorrect": 773,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/supabase--supabase",
+      "pairs": 1358,
+      "simulationCorrect": 1139,
+      "status": "queued"
+    },
+    {
+      "subject": "webpack/swagger-api--swagger-ui",
+      "pairs": 2730,
+      "simulationCorrect": 2455,
+      "status": "queued"
+    }
+  ],
+  "stoppedAt": "2026-11-12T09:46:17+08:00"
+}
