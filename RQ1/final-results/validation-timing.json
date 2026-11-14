@@ -1,0 +1,258 @@
+{
+  "progressUpdatedAt": "2026-11-14T03:12:48.168Z",
+  "method": "Qwen compute time is Ollama prompt evaluation plus token generation. It excludes queueing, model loading, transport, embeddings, and exploration. Wall-clock progress is recorded separately. Rebuilt traces include reused judgments and can omit some targeted rechecks.",
+  "repositories": 35,
+  "totals": {
+    "traceRequests": 27051,
+    "traceModelSeconds": 34305.596718215995,
+    "revisedRequests": 2348,
+    "revisedModelSeconds": 2603.110230918
+  },
+  "rows": [
+    {
+      "subject": "bun/RockwellShah--filekey",
+      "traceRequests": 302,
+      "traceModelSeconds": 395.789014993,
+      "revisedRequests": 6,
+      "revisedModelSeconds": 5.853401
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "traceRequests": 38,
+      "traceModelSeconds": 48.66202,
+      "revisedRequests": 2,
+      "revisedModelSeconds": 2.094257
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "traceRequests": 16,
+      "traceModelSeconds": 20.432921,
+      "revisedRequests": 0,
+      "revisedModelSeconds": 0.0
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "traceRequests": 120,
+      "traceModelSeconds": 141.363631997,
+      "revisedRequests": 2,
+      "revisedModelSeconds": 1.84671
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "traceRequests": 399,
+      "traceModelSeconds": 505.347392996,
+      "revisedRequests": 13,
+      "revisedModelSeconds": 11.745224998
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "traceRequests": 298,
+      "traceModelSeconds": 357.64800199,
+      "revisedRequests": 32,
+      "revisedModelSeconds": 26.691422998
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-charts",
+      "traceRequests": 263,
+      "traceModelSeconds": 325.970571998,
+      "revisedRequests": 35,
+      "revisedModelSeconds": 38.368419
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "traceRequests": 174,
+      "traceModelSeconds": 205.406760992,
+      "revisedRequests": 18,
+      "revisedModelSeconds": 20.117078997
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "traceRequests": 301,
+      "traceModelSeconds": 349.947059994,
+      "revisedRequests": 23,
+      "revisedModelSeconds": 22.977321999
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "traceRequests": 2901,
+      "traceModelSeconds": 3714.706720902,
+      "revisedRequests": 239,
+      "revisedModelSeconds": 257.503124994
+    },
+    {
+      "subject": "rollup/daybrush--scenejs",
+      "traceRequests": 73,
+      "traceModelSeconds": 81.951815999,
+      "revisedRequests": 0,
+      "revisedModelSeconds": 0.0
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "traceRequests": 5,
+      "traceModelSeconds": 5.161006,
+      "revisedRequests": 0,
+      "revisedModelSeconds": 0.0
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "traceRequests": 0,
+      "traceModelSeconds": 0.0,
+      "revisedRequests": 0,
+      "revisedModelSeconds": 0.0
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "traceRequests": 1374,
+      "traceModelSeconds": 1710.946859973,
+      "revisedRequests": 98,
+      "revisedModelSeconds": 118.484726997
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "traceRequests": 1124,
+      "traceModelSeconds": 1429.136239963,
+      "revisedRequests": 81,
+      "revisedModelSeconds": 98.298116993
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "traceRequests": 1382,
+      "traceModelSeconds": 1718.501920969,
+      "revisedRequests": 49,
+      "revisedModelSeconds": 51.596611999
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "traceRequests": 1136,
+      "traceModelSeconds": 1404.338806973,
+      "revisedRequests": 144,
+      "revisedModelSeconds": 168.955415996
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "traceRequests": 1782,
+      "traceModelSeconds": 2262.509228966,
+      "revisedRequests": 113,
+      "revisedModelSeconds": 131.418174998
+    },
+    {
+      "subject": "turbopack/umami-software--umami",
+      "traceRequests": 797,
+      "traceModelSeconds": 961.42408098,
+      "revisedRequests": 15,
+      "revisedModelSeconds": 14.671631
+    },
+    {
+      "subject": "vite/CorentinTh--it-tools",
+      "traceRequests": 979,
+      "traceModelSeconds": 1149.230776977,
+      "revisedRequests": 155,
+      "revisedModelSeconds": 170.15324699
+    },
+    {
+      "subject": "vite/DavidHDev--react-bits",
+      "traceRequests": 100,
+      "traceModelSeconds": 129.562523,
+      "revisedRequests": 6,
+      "revisedModelSeconds": 5.390603
+    },
+    {
+      "subject": "vite/LibreChat-AI--LibreChat",
+      "traceRequests": 774,
+      "traceModelSeconds": 945.060759973,
+      "revisedRequests": 83,
+      "revisedModelSeconds": 88.601791998
+    },
+    {
+      "subject": "vite/Lissy93--dashy",
+      "traceRequests": 758,
+      "traceModelSeconds": 920.614244983,
+      "revisedRequests": 144,
+      "revisedModelSeconds": 157.324897998
+    },
+    {
+      "subject": "vite/drawdb-io--drawdb",
+      "traceRequests": 2665,
+      "traceModelSeconds": 3355.527964938,
+      "revisedRequests": 147,
+      "revisedModelSeconds": 158.081456994
+    },
+    {
+      "subject": "vite/excalidraw--excalidraw",
+      "traceRequests": 113,
+      "traceModelSeconds": 150.504337998,
+      "revisedRequests": 5,
+      "revisedModelSeconds": 4.721234
+    },
+    {
+      "subject": "vite/hoppscotch--hoppscotch",
+      "traceRequests": 1259,
+      "traceModelSeconds": 1620.548486963,
+      "revisedRequests": 134,
+      "revisedModelSeconds": 142.586413992
+    },
+    {
+      "subject": "vite/immich-app--immich",
+      "traceRequests": 511,
+      "traceModelSeconds": 671.506186983,
+      "revisedRequests": 61,
+      "revisedModelSeconds": 67.307882997
+    },
+    {
+      "subject": "webpack/PanJiaChen--vue-element-admin",
+      "traceRequests": 435,
+      "traceModelSeconds": 512.07414599,
+      "revisedRequests": 172,
+      "revisedModelSeconds": 187.381661998
+    },
+    {
+      "subject": "webpack/akveo--ngx-admin",
+      "traceRequests": 1341,
+      "traceModelSeconds": 1718.786787948,
+      "revisedRequests": 223,
+      "revisedModelSeconds": 245.379150992
+    },
+    {
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "traceRequests": 113,
+      "traceModelSeconds": 146.157037998,
+      "revisedRequests": 16,
+      "revisedModelSeconds": 18.920583
+    },
+    {
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "traceRequests": 735,
+      "traceModelSeconds": 975.353114975,
+      "revisedRequests": 107,
+      "revisedModelSeconds": 130.020254997
+    },
+    {
+      "subject": "webpack/dokploy--dokploy",
+      "traceRequests": 2196,
+      "traceModelSeconds": 3107.837679903,
+      "revisedRequests": 31,
+      "revisedModelSeconds": 39.153949999
+    },
+    {
+      "subject": "webpack/freeCodeCamp--freeCodeCamp",
+      "traceRequests": 442,
+      "traceModelSeconds": 549.635214984,
+      "revisedRequests": 24,
+      "revisedModelSeconds": 24.069879
+    },
+    {
+      "subject": "webpack/supabase--supabase",
+      "traceRequests": 1337,
+      "traceModelSeconds": 1750.671011954,
+      "revisedRequests": 117,
+      "revisedModelSeconds": 134.786013996
+    },
+    {
+      "subject": "webpack/swagger-api--swagger-ui",
+      "traceRequests": 808,
+      "traceModelSeconds": 963.282385964,
+      "revisedRequests": 53,
+      "revisedModelSeconds": 58.609569998
+    }
+  ]
+}

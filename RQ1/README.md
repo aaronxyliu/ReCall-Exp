@@ -1,8 +1,10 @@
 # RQ1: Real validation on simulation-aligned inputs
 
-The archived run completed **17 of 35 repositories** before it was stopped on **November 12, 2026 at 09:46 China time**. It recovered **13,689/16,996 pairs (80.54%)**. Simulation recovered **14,135/16,996 (83.17%)** on the same repositories, a gap of **2.62 percentage points**. shadcn/ui stopped in round 1, with 17 more repositories queued.
+The **final RQ1 results** are from the completed AutoDL recheck across all **35 repositories**. ReCall recovered **49,867 of 58,128 pairs (85.79%)** with **98.69% assessed precision**. The original AutoDL run recovered 49,264 pairs (84.75%), and simulation recovered 50,259 (86.46%).
 
-[Run progress](latest-run/PROGRESS.md) · [Stage timings](latest-run/STAGE-TIMINGS.md) · [Saved results](latest-run/)
+The AutoDL recheck used ground truth to select previously rejected correct pairs for a second validation. Recovery then ran from the original anchors, reusing other historical judgments and applying the revised prompt to newly reached pairs. The final traces used 27,051 distinct Qwen judgments. See the [recheck protocol](final-results/protocol.json) for provenance.
+
+[Final results](final-results/PROGRESS.md) · [Validation timing](final-results/VALIDATION-TIMING.md) · [Validation errors](Validation%20Falses/) · [Historical local run](latest-run/PROGRESS.md)
 
 ## Quick start
 
@@ -65,7 +67,7 @@ The runner processes the repositories sequentially. Use a fresh output directory
 |---|---|
 | Real recovery | Sum `correctTargets` and `denominator` in the completed subjects’ `score.json` files, then divide the totals. |
 | Simulation recovery | Sum `simulationCorrect` for those same subjects and divide by the same denominator. [Input manifest](manifest.json) |
-| Recovery time and fresh validation requests | Read `stats.elapsedMs` and `stats.model.validationRequests` in each `run/recovery.json`. |
+| Recovery time and fresh validation requests | Use the [final validation timing report](final-results/VALIDATION-TIMING.md) for Qwen compute time, which excludes Ollama queueing. For fresh reproduction runs, `stats.elapsedMs` records wall-clock recovery time. |
 | Individual stages and retries | Read the CLI stage timings at 0.1-second resolution. The JSON also records recovery and model API time. [Stage timings](latest-run/STAGE-TIMINGS.md) |
 
 Timing varies with hardware, serving load, and model caches. The archived run includes resumed attempts, which have separate stage timing records.
@@ -73,5 +75,6 @@ Timing varies with hardware, serving load, and model caches. The archived run in
 ## What is saved here
 
 - [Input archives](inputs/) contain the exact collection-aligned source and bundle bytes. The runner resolves archived paths locally and uses ground truth only for scoring after recovery.
-- [Latest run](latest-run/) contains completed recovery traces, recovered-function mappings, comparisons, resolved configurations, and worker logs. It also contains the interrupted shadcn/ui checkpoint.
+- [Final results](final-results/) contain the pooled report, per-repository scores and recovered mappings, and Qwen compute timing.
+- [Historical local run](latest-run/) contains completed recovery traces, recovered-function mappings, comparisons, resolved configurations, and worker logs. It also contains the interrupted shadcn/ui checkpoint.
 - The checkpoint and saved configurations reference the original machine’s paths. Use the original local run directory and caches for a compatible resume. The commands above reproduce the experiment from fresh inputs. Model weights, response caches, and generated working directories are kept locally.

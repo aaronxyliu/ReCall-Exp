@@ -2,6 +2,75 @@
 \label{sec:graph-details}
 This appendix records the adapter cases and solver bounds summarized in Section~\ref{sec:graph-construction}. These mechanisms resolve relationships in supplied code; they do not discover or download missing chunks.
 
+\subsection{Construction procedure and common operations}
+\begin{algorithm}[htbp]
+\caption{Constructing graphs for neighborhood search}
+\label{alg:graphs}
+\begin{algorithmic}[1]
+\Require Reference files $F_s$, supplied bundled files $F_b$, matching inventories $S,B$
+\Ensure Reference graph $G_s$ and bundled graph $G_b$
+\ForAll{$x\in\{s,b\}$}
+  \State $U\gets\operatorname{CollectLocalContext}(F_x)$
+  \State Parse $U$ and bind identifiers to lexical declarations
+  \State $\mathcal{M},K\gets\emptyset$ \Comment{module records and value constraints}
+  \ForAll{units $u\in U$}
+    \State Normalize aliases, constant keys, and registry addresses
+    \State $\mathcal{M}\gets\mathcal{M}\cup\operatorname{RecognizeModules}(u)$
+    \State Add ordinary binding, field, and return constraints to $K$
+    \State Add adapter constraints for imports and exports to $K$
+  \EndFor
+  \State $V\gets\operatorname{SolveToFixedPoint}(K,\mathcal{M})$ within analysis limits
+  \State $E\gets\operatorname{FunctionRelations}(U,V)$
+  \State Add direct containment and same-parent sibling edges to $E$
+  \State Project nodes and relationships to the matching inventory $S$ or $B$
+  \State $G_x\gets(\operatorname{MatchingFunctionNodes}(F_x),E)$
+\EndFor
+\State \Return $G_s,G_b$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{table}[htbp]
+\caption{Representative operations in the common module/value model.}
+\label{tab:module-operations}
+\centering\small
+\begin{tabular}{@{}p{.29\linewidth}p{.65\linewidth}@{}}
+\toprule
+Operation & Modeled effect\\
+\midrule
+Factory registration & Allocate a module record under its scoped registry and ID; bind module/exports/loader parameter roles.\\
+\addlinespace
+Export assignment & Replace the modeled export value for \texttt{module.exports}, or populate a property for \texttt{exports.name}.\\
+\addlinespace
+Export getter & Transfer the getter's returned value to the published property.\\
+\addlinespace
+Constant-ID load or import & Transfer the selected module's export or namespace value to the importing binding.\\
+\addlinespace
+Call through a resolved value & Emit a relationship from the enclosing function to the modeled function target.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Bundler mechanisms normalized into the shared module/value model.}
+\label{tab:bundler-mechanisms}
+\centering\small
+\begin{tabular}{@{}p{.19\linewidth}p{.34\linewidth}p{.39\linewidth}@{}}
+\toprule
+Family & Emitted relationship & Resolution strategy\\
+\midrule
+webpack/Rspack & Factory tables, scoped loaders, registered chunks & Bind module/exports/require roles; resolve constant IDs and export getters.\\
+\addlinespace
+esbuild/Rollup & Flattened bindings and ESM chunk imports & Follow lexical declarations and ESM namespaces; summarize retained CJS/interop helpers.\\
+\addlinespace
+Rolldown & ESM links, lazy CJS factories, shared runtime helpers & Allocate exports per lazy factory; interpret thunk results and getter namespaces.\\
+\addlinespace
+Turbopack & ID/factory registrations and context APIs & Resolve require/namespace operations and published export bindings.\\
+\addlinespace
+Parcel & Scope-hoisted code or loader-specific registrations & Resolve lexical links and loader-scoped factory exports; model default interop.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Adapter mechanisms}
 \paragraph{webpack and Rspack.}
 The main loader selects a factory from a module table and supplies module, exports, and loader arguments. We recognize this calling convention in object and sparse-array tables, including aliased tables, immediate bootstrap arguments, and factory invocations using \texttt{.call}. Additional chunks can contribute factories through legacy JSONP callbacks, global array-push registries, or CommonJS/ESM table exports. Normalized registry paths and table-installation writes associate these chunks with the proper loader. Rspack uses compatible module operations but permits different output and registration configurations~\cite{webpackManifest,rspackOutput}. We therefore recover argument and registry roles rather than requiring one fixed webpack template or global name. Getter-map exports and the older single-property getter form both feed the shared export model.
@@ -21,3 +90,13 @@ Parcel can concatenate modules into lexical scopes or retain registered factorie
 \subsection{Solver bounds}
 Worklists are indexed by dependent slots, and module lookup uses a registry/ID index. Aliases and registry paths are normalized by bounded worklists rather than recursive expansion. The prototype bounds value sets at 64 alternatives, inspects at most 512 AST nodes when summarizing a helper, and stops explicitly at a 50-million-event budget. These bounds control difficult inputs; they do not imply complete recovery or a linear-time complexity bound.
 
+
+\subsection{Recovery implementation settings}
+\label{sec:recovery-implementation}
+These settings describe the current defaults; Appendix~\ref{sec:detailed-settings} records the settings of the completed model experiments. All supplied reference libraries are admitted by default; an optional anchor-count gate restricts that pool. Reference distributions retain version, browser/ESM/CommonJS variant, integrity metadata, and file hashes~\cite{npmpack}.
+
+\paragraph{Minified reference representations.}
+ReCall minifies each reference function $s$ to obtain $m(s)$ before embedding. This representation reduces syntactic differences caused by identifier renaming and compact expressions, while retaining the original function for validation and reporting. Terser compresses the function within a temporary top-level constant; the resulting root function is extracted by its AST range and the wrapper removed. Compression uses two passes and local identifier mangling, with top-level optimization and mangling disabled. External names remain unchanged because enclosing declarations are unavailable. Isolated minification is a comparison aid, not a reconstruction of the full bundling context.
+
+
+The default embedding and validation models are \texttt{qwen3-embedding:0.6b} and \texttt{qwen3.5:27b}. Expansion excludes functions longer than 18,000 JavaScript string code units before embedding, although they may obtain POG matches. Admitted bodies are not silently truncated, and minification failures remain explicit. Validation uses temperature zero, seed 42, a 16,384-token context setting, and a 384-token output cap, with thinking disabled. Responses are whitespace-trimmed and parsed strictly as uppercase \texttt{T}/\texttt{F}; other outputs never count as acceptance. Request failure can interrupt a run. Exact requests are cached with model digests and request settings, and checkpoints preserve progress. The default round limit is 1,000, with no validation-call budget.

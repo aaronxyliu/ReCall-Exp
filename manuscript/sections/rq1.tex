@@ -1,6 +1,47 @@
-\subsection{RQ1: Performance}
+\subsection{RQ1: How does ReCall perform across applications, bundlers, and libraries?}
 \label{sec:rq1}
-\textit{How does ReCall perform across local builds from different bundlers, libraries, and frameworks, and how are function transformations related to library recovery rate?} We measure correct recovery, assessed identity precision, wrong and unassessed mappings, and computational cost using the units in Section~\ref{sec:identity-measurements}. The three planned experiments separately characterize bundler coverage, library/framework coverage, and split, combine, and remove transformations.
+
+
+
+\subsubsection{Data Collection}
+\label{sec:data-collection}
+
+To evaluate how much functions can be correctly recovered by ReCall, we utilize the open-source web applicatons collected
+from Github as the subject of our experiments. In this way we can easily get the loaded library source code, and use source map
+to build the ground truth mapping between the bundled functions and the source functions. 
+
+For the Github repository selection, we first refer to the technique report about the popular bundlers used in the wild~\footnote{State of JS build tools survey: \url{https://2025.stateofjs.com/en-US/libraries/build-tools/}}. 
+According to the usage data from the survery, we select the top seven most used bundlers: Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun.
+We search on the Github for web applications types of repository that using one of the above bundlers, and select from high star to low star.
+We require the repository must have an openable frontend web page to be a valid web application, and must have at least 5 production libraries.
+Finally, we get 35 repositories meeting our requirements.
+For each of them, we randomly select at most 10 libraries from the production libraries collected from the config files, and collect 282 libraries in total. And ajust their setup config to
+enable the source map during the build process. After that, we manually setup each repository to make sure their front-end page can be correctly opened.
+We intercept the javascript files loaded by the home page as previous work did (CITE LATER), and do not consider the lazy loading files.
+And we retrieve the source map from the build output.
+
+Build process may change the boundary of the functions, and we classified into four groups:
+combine, split, remove, and addition. These four groups of transformations will b
+
+
+\begin{table}[htbp]
+\caption{Stage-level outcomes pooled across 35 repositories. TP, FP, FN, and TN denote true positives, false positives, false negatives, and true negatives, respectively.}
+\label{tab:rq1-stage-accuracy}
+\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Stage & TP & FP & FN & TN & Precision & Recall \\
+\midrule
+POG & 6,643 & 9 & 2,811 & --- & 99.86\% & 70.27\% \\
+AST match & 34,080 & 279 & 10,914 & 347,553 & 99.19\% & 75.74\% \\
+Qwen & 9,144 & 373 & 1,421 & 7,144 & 96.08\% & 86.55\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:rq1-stage-accuracy} reports assessed precision as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ and stage recall as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$. POG recall uses the 9,454 ground-truth pairs in which both functions have a POG fingerprint and at least ten own-body property-operation occurrences. Of these, 7,212 had equal fingerprints, 6,738 appeared in the raw anchor list, and 6,643 were retained by one-to-one allocation. POG uses fingerprint lookup and produces no explicit negative comparisons, so its TN count is undefined under this protocol.
+
+AST and Qwen counts use distinct examined pairs within each repository. AST counts come from a local replay that logged every AST comparison and reproduced the final recovery trace using archived model responses. Qwen counts use pairs with binary verdicts in that trace. A pair examined more than once within a stage counts as positive if that stage accepted it. Stage recall uses only ground-truth-positive pairs eligible for POG, examined by AST, or given a binary Qwen verdict, respectively. A pair may enter more than one stage denominator. Ground-truth-unassessed pairs are excluded from the table.
 
 \subsubsection{Completed evidence: jQuery model recovery}
 These completed results use the known-version jQuery fixture and original local graph (Section~\ref{sec:model-fixture}). All three builds reach a fixed point.

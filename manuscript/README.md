@@ -6,8 +6,8 @@ The recovery method takes supplied JavaScript files and candidate reference libr
 
 - `sections/introduction.tex`: motivation, prior-work gap, central insight, three contributions, and a bounded summary of completed evidence.
 - `sections/background.tex`: bundling terminology, function-recovery challenges, and evidence-qualified discussion of DEBUN and D-Bundlr. The POG size-eligibility rate remains `[TBD%]` pending the experiment, including its numerator, denominator, and cohort.
-- `sections/approach.tex`: six-part recovery method, full workflow, and an explicitly illustrative running example; general definitions and prior-work limitations are centralized in Background.
-- `sections/approach-details.tex`: detailed bundler adapters and solver bounds, preserved from the preceding Approach.
+- `sections/approach.tex`: four-part recovery method (overview, anchors, function relation graphs, and neighborhood-guided semantic recovery), full website-oriented workflow, and an explicitly illustrative running example; general definitions and prior-work limitations are centralized in Background.
+- `sections/approach-details.tex`: graph construction algorithm, module-operation and adapter tables, solver bounds, and current recovery implementation settings.
 - `sections/datasets.tex`: completed model fixture and graph cohorts, identity labels/denominators, and planned local verification inputs. Primary recovery uses fixed, versioned references; the practical-use dataset remains undefined.
 - `sections/experiment.tex`: evaluation roadmap and the Data collection subsection before RQ1.
 - `sections/data-collection.tex`: repository/tool/library selection, bounded browser capture, reciprocal function oracle, transformation patterns, and the 26-repository snapshot. `data/collection-evidence.json` records the recomputed counts and per-library pair totals.

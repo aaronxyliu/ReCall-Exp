@@ -1,0 +1,28 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tectonic",
+      "command": "/opt/homebrew/bin/tectonic",
+      "args": [
+        "--synctex",
+        "--keep-logs",
+        "--keep-intermediates",
+        "--outdir",
+        "%OUTDIR%",
+        "%DOC_EXT%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Tectonic",
+      "tools": [
+        "tectonic"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.view.pdf.viewer": "tab"
+}
