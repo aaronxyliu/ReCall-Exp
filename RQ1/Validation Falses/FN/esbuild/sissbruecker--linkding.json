@@ -1,1 +1,1967 @@
-[{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:22917:23009","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:11836:11867","groundTruth":"T","input":"{\"source_function\":\"constructor(size, toCacheKey = identity) {\\n    this.size = size;\\n    this.#toCacheKey = toCacheKey;\\n  }\",\"minified_source_function\":\"constructor(size,toCacheKey=identity){this.size=size,this.#toCacheKey=toCacheKey}\",\"bundled_function\":\"constructor(e,t=tr){this.size=e,this.#e=t}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"a2cebe7bf23fb1e48e7508e6547e34892d1109185d593d584e5e9d690efdee90","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:01:42.790518781Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":2881567954,"load_duration":1434920,"prompt_eval_count":1055,"prompt_eval_cached_count":934,"prompt_eval_duration":810898000,"eval_count":2,"eval_duration":65986999},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0001"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23016:23076","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:11870:11907","groundTruth":"T","input":"{\"source_function\":\"has(key) {\\n    return this.#toCacheKey(key) in this.entries\\n  }\",\"minified_source_function\":\"has(key){return this.#toCacheKey(key)in this.entries}\",\"bundled_function\":\"has(e){return this.#e(e)in this.entries}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"7ef6b71b7b616cd4f0fc98606b09e9c98094555f52f38a2d77339e34fae0636f","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:02:01.714718778Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":18920104645,"load_duration":1143306,"prompt_eval_count":1036,"prompt_eval_cached_count":934,"prompt_eval_duration":832085000,"eval_count":2,"eval_duration":27246000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0002"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:46996:47214","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:25778:25884","groundTruth":"T","input":"{\"source_function\":\"enteringBardo(currentPermanentElement) {\\n    if (this.#activeElement) return\\n\\n    if (currentPermanentElement.contains(this.currentSnapshot.activeElement)) {\\n      this.#activeElement = this.currentSnapshot.activeElement;\\n    }\\n  }\",\"minified_source_function\":\"enteringBardo(currentPermanentElement){this.#activeElement||currentPermanentElement.contains(this.currentSnapshot.activeElement)&&(this.#activeElement=this.currentSnapshot.activeElement)}\",\"bundled_function\":\"enteringBardo(e){this.#e||e.contains(this.currentSnapshot.activeElement)&&(this.#e=this.currentSnapshot.activeElement)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"7d0bfd616cfac222843e2e9395d0e21c1c4eaeb38a93e3a01b29c5417f8d2619","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:02:11.686124781Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":9905111754,"load_duration":2756534,"prompt_eval_count":1102,"prompt_eval_cached_count":934,"prompt_eval_duration":754371000,"eval_count":2,"eval_duration":79317000},"targetedRecheck":true,"traceRounds":[1,2,3,4]}],"id":"esbuild/sissbruecker--linkding/FN-0003"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:69992:70596","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:30275:30448","groundTruth":"T","input":"{\"source_function\":\"function moveBeforeById(parentNode, id, after, ctx) {\\n      const target =\\n        /** @type {Element} - will always be found */\\n        (\\n          // ctx.target.id unsafe because of form input shadowing\\n          // ctx.target could be a document fragment which doesn't have `getAttribute`\\n          (ctx.target.getAttribute?.(\\\"id\\\") === id && ctx.target) ||\\n            ctx.target.querySelector(`[id=\\\"${id}\\\"]`) ||\\n            ctx.pantry.querySelector(`[id=\\\"${id}\\\"]`)\\n        );\\n      removeElementFromAncestorsIdMaps(target, ctx);\\n      moveBefore(parentNode, target, after);\\n      return target;\\n    }\",\"minified_source_function\":\"function(e,t,r,o){const n=o.target.getAttribute?.(\\\"id\\\")===t&&o.target||o.target.querySelector(`[id=\\\"${t}\\\"]`)||o.pantry.querySelector(`[id=\\\"${t}\\\"]`);return removeElementFromAncestorsIdMaps(n,o),moveBefore(e,n,r),n}\",\"bundled_function\":\"function S(h,c,y,b){let C=b.target.getAttribute?.(\\\"id\\\")===c&&b.target||b.target.querySelector(`[id=\\\"${c}\\\"]`)||b.pantry.querySelector(`[id=\\\"${c}\\\"]`);return u(C,b),g(h,C,y),C}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"e8304d30b796ac42eec5a478cdb097f67b4db19dfbe1ab04cf4d8ed22edab1da","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:02:31.186729109Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":19496838065,"load_duration":1580367,"prompt_eval_count":1272,"prompt_eval_cached_count":934,"prompt_eval_duration":856906000,"eval_count":2,"eval_duration":68513000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0004"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:101953:102052","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:37202:37249","groundTruth":"T","input":"{\"source_function\":\"constructor({ beforeNodeMorphed } = {}) {\\n    this.#beforeNodeMorphed = beforeNodeMorphed || (() => true);\\n  }\",\"minified_source_function\":\"constructor({beforeNodeMorphed:beforeNodeMorphed}={}){this.#beforeNodeMorphed=beforeNodeMorphed||(()=>!0)}\",\"bundled_function\":\"constructor({beforeNodeMorphed:e}={}){this.#e=e||(()=>!0)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"49e1520b2537fa42279f17368e2d600885d4626f64d6278b2bad83c17a17ab3d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:02:50.188128014Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":18997355469,"load_duration":1158434,"prompt_eval_count":1077,"prompt_eval_cached_count":934,"prompt_eval_duration":672725000,"eval_count":2,"eval_duration":65055000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0005"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:127952:128027","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:53367:53393","groundTruth":"T","input":"{\"source_function\":\"shouldInterceptLinkClick(element, _location, _event) {\\n    return this.#shouldRedirect(element)\\n  }\",\"minified_source_function\":\"shouldInterceptLinkClick(element,_location,_event){return this.#shouldRedirect(element)}\",\"bundled_function\":\"shouldInterceptLinkClick(e,t,i){return this.#t(e)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"708fd4e20849396231c6b780125d1ac8d2771ff5ed56cc0f4fe693b2646b78b7","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:03:00.694180556Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":10494815311,"load_duration":1610301,"prompt_eval_count":1047,"prompt_eval_cached_count":934,"prompt_eval_duration":807745000,"eval_count":2,"eval_duration":72530000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0006"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:136604:136964","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:57853:58054","groundTruth":"T","input":"{\"source_function\":\"(link) => {\\n  if (link.getAttribute(\\\"data-turbo-prefetch\\\") === \\\"false\\\") return true\\n  if (link.getAttribute(\\\"data-turbo\\\") === \\\"false\\\") return true\\n\\n  const turboPrefetchParent = findClosestRecursively(link, \\\"[data-turbo-prefetch]\\\");\\n  if (turboPrefetchParent && turboPrefetchParent.getAttribute(\\\"data-turbo-prefetch\\\") === \\\"false\\\") return true\\n\\n  return false\\n}\",\"minified_source_function\":\"t=>{if(\\\"false\\\"===t.getAttribute(\\\"data-turbo-prefetch\\\"))return!0;if(\\\"false\\\"===t.getAttribute(\\\"data-turbo\\\"))return!0;const e=findClosestRecursively(t,\\\"[data-turbo-prefetch]\\\");return!(!e||\\\"false\\\"!==e.getAttribute(\\\"data-turbo-prefetch\\\"))}\",\"bundled_function\":\"s=>{if(s.getAttribute(\\\"data-turbo-prefetch\\\")===\\\"false\\\"||s.getAttribute(\\\"data-turbo\\\")===\\\"false\\\")return!0;let e=ke(s,\\\"[data-turbo-prefetch]\\\");return!!(e&&e.getAttribute(\\\"data-turbo-prefetch\\\")===\\\"false\\\")}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"3d0c8bb2cbc44768764b55a00f83da20e7d02ef1983e20000ed710ced492cd91","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:03:25.086680613Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":24389625407,"load_duration":882580,"prompt_eval_count":1252,"prompt_eval_cached_count":934,"prompt_eval_duration":785383000,"eval_count":2,"eval_duration":74983000},"targetedRecheck":true,"traceRounds":[1,2,3,4]}],"id":"esbuild/sissbruecker--linkding/FN-0007"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:164701:164829","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:73879:73945","groundTruth":"T","input":"{\"source_function\":\"set pageRefreshDebouncePeriod(value) {\\n    this.refresh = debounce(this.debouncedRefresh.bind(this), value);\\n    this.#pageRefreshDebouncePeriod = value;\\n  }\",\"minified_source_function\":\"set pageRefreshDebouncePeriod(value){this.refresh=debounce(this.debouncedRefresh.bind(this),value),this.#pageRefreshDebouncePeriod=value}\",\"bundled_function\":\"set pageRefreshDebouncePeriod(e){this.refresh=Un(this.debouncedRefresh.bind(this),e),this.#e=e}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"b82479f28f76f9ea04685d53fc86781d774845cbc8e5080d5aef1bac14f5a7b9","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:03:46.893563723Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":21802538788,"load_duration":2225748,"prompt_eval_count":1084,"prompt_eval_cached_count":934,"prompt_eval_duration":720294000,"eval_count":2,"eval_duration":66721999},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0008"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:181944:182064","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:81917:81979","groundTruth":"T","input":"{\"source_function\":\"elementAppearedInViewport(element) {\\n    this.proposeVisitIfNavigatedWithAction(element, getVisitAction(element));\\n    this.#loadSourceURL();\\n  }\",\"minified_source_function\":\"elementAppearedInViewport(element){this.proposeVisitIfNavigatedWithAction(element,getVisitAction(element)),this.#loadSourceURL()}\",\"bundled_function\":\"elementAppearedInViewport(e){this.proposeVisitIfNavigatedWithAction(e,fe(e)),this.#i()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"da46784f7e097cb1dcd507c27e3a4f33af79ceb51f4636e9a462c7db0f46f1bc","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:03:56.786866819Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":9889240309,"load_duration":891210,"prompt_eval_count":1080,"prompt_eval_cached_count":934,"prompt_eval_duration":753792000,"eval_count":2,"eval_duration":68062000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0009"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183646:183743","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82780:82823","groundTruth":"T","input":"{\"source_function\":\"async requestSucceededWithResponse(request, response) {\\n    await this.loadResponse(response);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"async requestSucceededWithResponse(request,response){await this.loadResponse(response),this.#resolveVisitPromise()}\",\"bundled_function\":\"async requestSucceededWithResponse(e,t){await this.loadResponse(t),this.#t()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"81bd240ab528fe8d9426aa6bebfaefe3e50e59d002d463701b77ef42178b10b2","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:04:07.093737517Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":10302911471,"load_duration":1241075,"prompt_eval_count":1059,"prompt_eval_cached_count":934,"prompt_eval_duration":726537000,"eval_count":2,"eval_duration":67421000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0010"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183778:183875","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82854:82897","groundTruth":"T","input":"{\"source_function\":\"async requestFailedWithResponse(request, response) {\\n    await this.loadResponse(response);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"async requestFailedWithResponse(request,response){await this.loadResponse(response),this.#resolveVisitPromise()}\",\"bundled_function\":\"async requestFailedWithResponse(e,t){await this.loadResponse(t),this.#t()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"988c52a71290b130d34f47934d3100266d5526db200f77660fbcc1f5a6c2221e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:04:18.986529871Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":11889845568,"load_duration":1148396,"prompt_eval_count":1056,"prompt_eval_cached_count":934,"prompt_eval_duration":742178000,"eval_count":2,"eval_duration":62550000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0011"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:184099:184188","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:83001:83036","groundTruth":"T","input":"{\"source_function\":\"formSubmissionStarted({ formElement }) {\\n    markAsBusy(formElement, this.#findFrameElement(formElement));\\n  }\",\"minified_source_function\":\"formSubmissionStarted({formElement:formElement}){markAsBusy(formElement,this.#findFrameElement(formElement))}\",\"bundled_function\":\"formSubmissionStarted({formElement:e}){ct(e,this.#r(e))}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"97bc6b72941e07fe0d70d2a0730562ef7be778031fe5a81a0a098d776d861904","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:04:31.786286658Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":12796390527,"load_duration":1018513,"prompt_eval_count":1058,"prompt_eval_cached_count":934,"prompt_eval_duration":814326000,"eval_count":2,"eval_duration":69330000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0012"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:184866:184959","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:83407:83442","groundTruth":"T","input":"{\"source_function\":\"formSubmissionFinished({ formElement }) {\\n    clearBusyState(formElement, this.#findFrameElement(formElement));\\n  }\",\"minified_source_function\":\"formSubmissionFinished({formElement:formElement}){clearBusyState(formElement,this.#findFrameElement(formElement))}\",\"bundled_function\":\"formSubmissionFinished({formElement:e}){ht(e,this.#r(e))}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"fb8a387b07f34b9060c80e139ddb4fecad4d40dd5f515ebf1b8836e1bc1d9817","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:04:53.585817082Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":21796219965,"load_duration":1697097,"prompt_eval_count":1058,"prompt_eval_cached_count":934,"prompt_eval_duration":842899000,"eval_count":2,"eval_duration":73330000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0013"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:b074d391992a361f4954cddd02c706df7d17f72bf082da76d124a8d722d3075f:2237:2469","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:124536:124657","groundTruth":"T","input":"{\"source_function\":\"function getVisualOffsets(element) {\\n  const win = getWindow(element);\\n  if (!isWebKit() || !win.visualViewport) {\\n    return noOffsets;\\n  }\\n  return {\\n    x: win.visualViewport.offsetLeft,\\n    y: win.visualViewport.offsetTop\\n  };\\n}\",\"minified_source_function\":\"function(t){const e=getWindow(t);return isWebKit()&&e.visualViewport?{x:e.visualViewport.offsetLeft,y:e.visualViewport.offsetTop}:noOffsets}\",\"bundled_function\":\"function yn(s){let e=F(s);return!Ot()||!e.visualViewport?To:{x:e.visualViewport.offsetLeft,y:e.visualViewport.offsetTop}}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"fab469cd73923ebb7ce8d0425e52569462ef9a0f752a2b25d008adc66194b909","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:05:15.386003411Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":21796681718,"load_duration":2449494,"prompt_eval_count":1121,"prompt_eval_cached_count":934,"prompt_eval_duration":782759000,"eval_count":2,"eval_duration":72510000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"esbuild/sissbruecker--linkding/FN-0014"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:b074d391992a361f4954cddd02c706df7d17f72bf082da76d124a8d722d3075f:10662:10993","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:127159:127251","groundTruth":"T","input":"{\"source_function\":\"function hasFixedPositionAncestor(element, stopNode) {\\n  const parentNode = getParentNode(element);\\n  if (parentNode === stopNode || !isElement(parentNode) || isLastTraversableNode(parentNode)) {\\n    return false;\\n  }\\n  return getComputedStyle$1(parentNode).position === 'fixed' || hasFixedPositionAncestor(parentNode, stopNode);\\n}\",\"minified_source_function\":\"function e(t,n){const o=getParentNode(t);return!(o===n||!isElement(o)||isLastTraversableNode(o))&&(\\\"fixed\\\"===getComputedStyle$1(o).position||e(o,n))}\",\"bundled_function\":\"function Sn(s,e){let t=ee(s);return t===e||!B(t)||Ee(t)?!1:D(t).position===\\\"fixed\\\"||Sn(t,e)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"2c9b6584106f50f1b068f7902b139d2029d94cb0b39eb541d78579b37a4253c4","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:05:34.586781815Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":19196629780,"load_duration":1689264,"prompt_eval_count":1158,"prompt_eval_cached_count":934,"prompt_eval_duration":728749000,"eval_count":2,"eval_duration":67687000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0015"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:11895:11930","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:5770:5788","groundTruth":"T","input":"{\"source_function\":\"get submitter() {\\n    return this.#submitter\\n  }\",\"minified_source_function\":\"get submitter(){return this.#submitter}\",\"bundled_function\":\"get submitter(){return this.#e}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"4b6d85bf7e75503fe1bbb91a4afe32ecde989a3999bb5b324b09ac172a0adcb2","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:05:54.68675352Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":20096384718,"load_duration":1083429,"prompt_eval_count":1022,"prompt_eval_cached_count":934,"prompt_eval_duration":641308000,"eval_count":2,"eval_duration":70572000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0016"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:11947:12009","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:5801:5822","groundTruth":"T","input":"{\"source_function\":\"set submitter(value) {\\n    this.#submitter = submitter[value] || value;\\n  }\",\"minified_source_function\":\"set submitter(value){this.#submitter=submitter[value]||value}\",\"bundled_function\":\"set submitter(e){this.#e=zn[e]||e}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"3aecda4b95e4939e94c489e5ec9012c1e96fca99e5bde3ba873b5b0614b86e3c","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:06:17.185968241Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":22495580589,"load_duration":1433053,"prompt_eval_count":1043,"prompt_eval_cached_count":934,"prompt_eval_duration":833209000,"eval_count":2,"eval_duration":76902000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0017"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23413:23471","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:12086:12122","groundTruth":"T","input":"{\"source_function\":\"read(key) {\\n    return this.entries[this.#toCacheKey(key)]\\n  }\",\"minified_source_function\":\"read(key){return this.entries[this.#toCacheKey(key)]}\",\"bundled_function\":\"read(e){return this.entries[this.#e(e)]}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"306a5dab6b34c710f63a5e880f36dac26cdf59e643bea35cb175efec69c18565","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:06:27.587082922Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":10397022534,"load_duration":808078,"prompt_eval_count":1034,"prompt_eval_cached_count":934,"prompt_eval_duration":778414000,"eval_count":2,"eval_duration":73516000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0018"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23556:23735","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:12165:12270","groundTruth":"T","input":"{\"source_function\":\"touch(key) {\\n    key = this.#toCacheKey(key);\\n    const index = this.keys.indexOf(key);\\n    if (index > -1) this.keys.splice(index, 1);\\n    this.keys.unshift(key);\\n    this.trim();\\n  }\",\"minified_source_function\":\"touch(key){key=this.#toCacheKey(key);const index=this.keys.indexOf(key);index>-1&&this.keys.splice(index,1),this.keys.unshift(key),this.trim()}\",\"bundled_function\":\"touch(e){e=this.#e(e);let t=this.keys.indexOf(e);t>-1&&this.keys.splice(t,1),this.keys.unshift(e),this.trim()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"a6d04744f7092e1fd96f7fb7fed08d8975c930263fbd529ebccd5dd3bb66e189","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:06:51.912539829Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":13919701411,"load_duration":1487484,"prompt_eval_count":1118,"prompt_eval_cached_count":934,"prompt_eval_duration":857606000,"eval_count":2,"eval_duration":26983000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0019"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:128270:128458","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:53494:53566","groundTruth":"T","input":"{\"source_function\":\"willSubmitForm(element, submitter) {\\n    return (\\n      element.closest(\\\"turbo-frame\\\") == null &&\\n      this.#shouldSubmit(element, submitter) &&\\n      this.#shouldRedirect(element, submitter)\\n    )\\n  }\",\"minified_source_function\":\"willSubmitForm(element,submitter){return null==element.closest(\\\"turbo-frame\\\")&&this.#shouldSubmit(element,submitter)&&this.#shouldRedirect(element,submitter)}\",\"bundled_function\":\"willSubmitForm(e,t){return e.closest(\\\"turbo-frame\\\")==null&&this.#e(e,t)&&this.#t(e,t)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"42db43c403c6f65b4f22bae8d31a40fb224916a964b11355821f767a432dab42","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:07:28.695735837Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":14304972759,"load_duration":1342703,"prompt_eval_count":1111,"prompt_eval_cached_count":934,"prompt_eval_duration":831118000,"eval_count":2,"eval_duration":73222000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0020"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:150536:150597","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:65113:65149","groundTruth":"T","input":"{\"source_function\":\"async prepareToRender() {\\n    this.#setLanguage();\\n    await this.mergeHead();\\n  }\",\"minified_source_function\":\"async prepareToRender(){this.#setLanguage(),await this.mergeHead()}\",\"bundled_function\":\"async prepareToRender(){this.#e(),await this.mergeHead()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"365b8c3623561884867635b497a45c165fe1a9515c3e7a2773a36e6f6f1a79d4","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:07:48.186120579Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":19486695884,"load_duration":1586835,"prompt_eval_count":1042,"prompt_eval_cached_count":934,"prompt_eval_duration":765367000,"eval_count":2,"eval_duration":67329000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0021"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160088:160127","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70853:70868","groundTruth":"T","input":"{\"source_function\":\"resetCacheControl() {\\n    this.#setCacheControl(\\\"\\\");\\n  }\",\"minified_source_function\":\"resetCacheControl(){this.#setCacheControl(\\\"\\\")}\",\"bundled_function\":\"resetCacheControl(){this.#e(\\\"\\\")}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"295a7d17069e4e1385e6a241fb34881b02a66cb24c3c48161d999c3378284495","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:08:07.986830183Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":19797869998,"load_duration":1505219,"prompt_eval_count":1029,"prompt_eval_cached_count":934,"prompt_eval_duration":737794000,"eval_count":2,"eval_duration":63146000},"targetedRecheck":true,"traceRounds":[2]}],"id":"esbuild/sissbruecker--linkding/FN-0022"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160150:160197","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70887:70910","groundTruth":"T","input":"{\"source_function\":\"exemptPageFromCache() {\\n    this.#setCacheControl(\\\"no-cache\\\");\\n  }\",\"minified_source_function\":\"exemptPageFromCache(){this.#setCacheControl(\\\"no-cache\\\")}\",\"bundled_function\":\"exemptPageFromCache(){this.#e(\\\"no-cache\\\")}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"b4e7edc41f4a56649764264611d218f7544588c0a0a41a341e0e36702e0d1cd4","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:08:15.886419317Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":7895235019,"load_duration":1319596,"prompt_eval_count":1041,"prompt_eval_cached_count":934,"prompt_eval_duration":755930000,"eval_count":2,"eval_duration":74269000},"targetedRecheck":true,"traceRounds":[2]}],"id":"esbuild/sissbruecker--linkding/FN-0023"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160222:160271","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70931:70956","groundTruth":"T","input":"{\"source_function\":\"exemptPageFromPreview() {\\n    this.#setCacheControl(\\\"no-preview\\\");\\n  }\",\"minified_source_function\":\"exemptPageFromPreview(){this.#setCacheControl(\\\"no-preview\\\")}\",\"bundled_function\":\"exemptPageFromPreview(){this.#e(\\\"no-preview\\\")}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"fdd3308f79282c4cf1e9e0c7e65a564c56067e29d47641ecfdaebe1b738de12b","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:08:25.588934221Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":9699136606,"load_duration":939276,"prompt_eval_count":1041,"prompt_eval_cached_count":934,"prompt_eval_duration":678365000,"eval_count":2,"eval_duration":60963000},"targetedRecheck":true,"traceRounds":[2]}],"id":"esbuild/sissbruecker--linkding/FN-0024"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:182539:182608","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82194:82213","groundTruth":"T","input":"{\"source_function\":\"linkClickIntercepted(element, location) {\\n    this.#navigateFrame(element, location);\\n  }\",\"minified_source_function\":\"linkClickIntercepted(element,location){this.#navigateFrame(element,location)}\",\"bundled_function\":\"linkClickIntercepted(e,t){this.#f(e,t)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"0095bf69c7cc75c8262d7ed699ada15834b88f6e36c92218edccd5725e179ccd","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:08:35.682031738Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":10088655111,"load_duration":770759,"prompt_eval_count":1042,"prompt_eval_cached_count":934,"prompt_eval_duration":710767000,"eval_count":2,"eval_duration":75776000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0025"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183893:183974","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82911:82944","groundTruth":"T","input":"{\"source_function\":\"requestErrored(request, error) {\\n    console.error(error);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"requestErrored(request,error){console.error(error),this.#resolveVisitPromise()}\",\"bundled_function\":\"requestErrored(e,t){console.error(t),this.#t()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"2e1fa0337ae7737f96e58f2429798f2ee44b1d08944b7ea17c58054f9514a1c8","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:08:55.287018536Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":10497605920,"load_duration":1482742,"prompt_eval_count":1044,"prompt_eval_cached_count":934,"prompt_eval_duration":750579000,"eval_count":2,"eval_duration":69413000},"targetedRecheck":true,"traceRounds":[2]}],"id":"esbuild/sissbruecker--linkding/FN-0026"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:192929:192989","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:87521:87562","groundTruth":"T","input":"{\"source_function\":\"get isActive() {\\n    return this.element.isActive && this.#connected\\n  }\",\"minified_source_function\":\"get isActive(){return this.element.isActive&&this.#connected}\",\"bundled_function\":\"get isActive(){return this.element.isActive&&this.#s}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"34f015355b1fe72042c75d55cae77f67ddd24dd67d4e863376194463e4fd6c42","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:09:11.681284952Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":16389951142,"load_duration":1451856,"prompt_eval_count":1029,"prompt_eval_cached_count":934,"prompt_eval_duration":713205000,"eval_count":2,"eval_duration":27123000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"esbuild/sissbruecker--linkding/FN-0027"},{"subject":"esbuild/sissbruecker--linkding","sourceId":"reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:108890:109084","bundleId":"<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:41392:41464","groundTruth":"T","input":"{\"source_function\":\"(result, outerHTML) => {\\n      const {\\n        elements: [element]\\n      } = this.detailsByOuterHTML[outerHTML];\\n      return elementIsMetaElementWithName(element, name) ? element : result\\n    }\",\"minified_source_function\":\"(e,t)=>{const{elements:[n]}=this.detailsByOuterHTML[t];return elementIsMetaElementWithName(n,name)?n:e}\",\"bundled_function\":\"(t,i)=>{let{elements:[n]}=this.detailsByOuterHTML[i];return Er(n,e)?n:t}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"5cfeb4658242c8f5f7ebcebb6b5736e400bb99985a0025667e36f988063958e4","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:09:20.285874492Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":8600087511,"load_duration":1555487,"prompt_eval_count":1098,"prompt_eval_cached_count":934,"prompt_eval_duration":769391000,"eval_count":2,"eval_duration":68389000},"targetedRecheck":true,"traceRounds":[3,4]}],"id":"esbuild/sissbruecker--linkding/FN-0028"}]
+[
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:22917:23009",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:11836:11867",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"constructor(size, toCacheKey = identity) {\\n    this.size = size;\\n    this.#toCacheKey = toCacheKey;\\n  }\",\"minified_source_function\":\"constructor(size,toCacheKey=identity){this.size=size,this.#toCacheKey=toCacheKey}\",\"bundled_function\":\"constructor(e,t=tr){this.size=e,this.#e=t}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "a2cebe7bf23fb1e48e7508e6547e34892d1109185d593d584e5e9d690efdee90",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:01:42.790518781Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2881567954,
+          "load_duration": 1434920,
+          "prompt_eval_count": 1055,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 810898000,
+          "eval_count": 2,
+          "eval_duration": 65986999
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0001",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical mismatch in private field naming.\n\n1.  **Private Field Mismatch**:\n    *   **Source**: Assigns `toCacheKey` to the private field `this.#toCacheKey`.\n    *   **Bundled**: Assigns the parameter `t` (mapped from `toCacheKey`) to the private field `this.#e`.\n    *   In JavaScript, private fields are identified by their exact name. `#toCacheKey` and `#e` are distinct identifiers. Unless there is a specific build step that renames private fields consistently across the entire module (which is not evident here as the source uses `#toCacheKey`), accessing `this.#e` in the bundled version will fail to access the intended data structure defined by the source's `#toCacheKey`, or vice versa.\n\n2.  **Parameter Mapping**:\n    *   `size` maps to `e`.\n    *   `toCacheKey` maps to `t`.\n    *   `identity` maps to `tr`.\n    *   While the parameter logic (`this.size = e`) is correct, the private field assignment breaks equivalence.\n\nThe transformation of `#toCacheKey` to `#e` without a corresponding rename in the source context (or evidence that `#e` is an alias for `#toCacheKey` in this specific build) indicates a semantic difference where the bundled code operates on a different private property than the source.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:29:39.98650847Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical mismatch in private field naming.\n\n1.  **Private Field Mismatch**:\n    *   **Source**: Assigns `toCacheKey` to the private field `this.#toCacheKey`.\n    *   **Bundled**: Assigns the parameter `t` (mapped from `toCacheKey`) to the private field `this.#e`.\n    *   In JavaScript, private fields are identified by their exact name. `#toCacheKey` and `#e` are distinct identifiers. Unless there is a specific build step that renames private fields consistently across the entire module (which is not evident here as the source uses `#toCacheKey`), accessing `this.#e` in the bundled version will fail to access the intended data structure defined by the source's `#toCacheKey`, or vice versa.\n\n2.  **Parameter Mapping**:\n    *   `size` maps to `e`.\n    *   `toCacheKey` maps to `t`.\n    *   `identity` maps to `tr`.\n    *   While the parameter logic (`this.size = e`) is correct, the private field assignment breaks equivalence.\n\nThe transformation of `#toCacheKey` to `#e` without a corresponding rename in the source context (or evidence that `#e` is an alias for `#toCacheKey` in this specific build) indicates a semantic difference where the bundled code operates on a different private property than the source."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 13997050413,
+        "load_duration": 1204922,
+        "prompt_eval_count": 1085,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 915710000,
+        "eval_count": 327,
+        "eval_duration": 13063785000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23016:23076",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:11870:11907",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"has(key) {\\n    return this.#toCacheKey(key) in this.entries\\n  }\",\"minified_source_function\":\"has(key){return this.#toCacheKey(key)in this.entries}\",\"bundled_function\":\"has(e){return this.#e(e)in this.entries}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "7ef6b71b7b616cd4f0fc98606b09e9c98094555f52f38a2d77339e34fae0636f",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:02:01.714718778Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 18920104645,
+          "load_duration": 1143306,
+          "prompt_eval_count": 1036,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 832085000,
+          "eval_count": 2,
+          "eval_duration": 27246000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0002",
+    "explain": "The bundled function is not semantically equivalent to the source function because it renames the private method `#toCacheKey` to `#e`. In JavaScript, private fields and methods (prefixed with `#`) are lexically scoped to their class definition. The identifier `#e` in the bundled function refers to a different private member than `#toCacheKey` in the source function. Unless the bundler also renamed the method declaration from `#toCacheKey` to `#e` within the same class scope (which is not visible here), the bundled code will either throw a `SyntaxError` (if `#e` is undefined) or call a completely different method, breaking the logic. The parameter renaming (`key` → `e`) is valid, but the private member renaming without corresponding declaration changes makes them non-equivalent.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:29:48.886330804Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it renames the private method `#toCacheKey` to `#e`. In JavaScript, private fields and methods (prefixed with `#`) are lexically scoped to their class definition. The identifier `#e` in the bundled function refers to a different private member than `#toCacheKey` in the source function. Unless the bundler also renamed the method declaration from `#toCacheKey` to `#e` within the same class scope (which is not visible here), the bundled code will either throw a `SyntaxError` (if `#e` is undefined) or call a completely different method, breaking the logic. The parameter renaming (`key` → `e`) is valid, but the private member renaming without corresponding declaration changes makes them non-equivalent."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8895820212,
+        "load_duration": 1707127,
+        "prompt_eval_count": 1066,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 816986000,
+        "eval_count": 176,
+        "eval_duration": 8056926000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:46996:47214",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:25778:25884",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"enteringBardo(currentPermanentElement) {\\n    if (this.#activeElement) return\\n\\n    if (currentPermanentElement.contains(this.currentSnapshot.activeElement)) {\\n      this.#activeElement = this.currentSnapshot.activeElement;\\n    }\\n  }\",\"minified_source_function\":\"enteringBardo(currentPermanentElement){this.#activeElement||currentPermanentElement.contains(this.currentSnapshot.activeElement)&&(this.#activeElement=this.currentSnapshot.activeElement)}\",\"bundled_function\":\"enteringBardo(e){this.#e||e.contains(this.currentSnapshot.activeElement)&&(this.#e=this.currentSnapshot.activeElement)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "7d0bfd616cfac222843e2e9395d0e21c1c4eaeb38a93e3a01b29c5417f8d2619",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:02:11.686124781Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 9905111754,
+          "load_duration": 2756534,
+          "prompt_eval_count": 1102,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 754371000,
+          "eval_count": 2,
+          "eval_duration": 79317000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0003",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a mismatch in private field names.\n\n1.  **Source Function**: Uses the private field `#activeElement` for both the check (`if (this.#activeElement)`) and the assignment (`this.#activeElement = ...`).\n2.  **Bundled Function**: Uses the private field `#e` for both the check (`this.#e`) and the assignment (`this.#e = ...`).\n\nWhile the logic structure (converting the `if` statements to a short-circuit expression) is correct, the identifier `#e` in the bundled function does not correspond to `#activeElement` in the source. In JavaScript, private fields are lexically scoped and distinct; `#e` and `#activeElement` refer to completely different properties on the object instance. Unless there is an external context where `#e` is an alias for `#activeElement` (which is impossible for private fields as they cannot be aliased or renamed without changing the class definition), accessing a non-existent private field `#e` will throw a `TypeError`, whereas the source function accesses `#activeElement`.\n\nTherefore, the functions are not equivalent.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:30:00.410406413Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a mismatch in private field names.\n\n1.  **Source Function**: Uses the private field `#activeElement` for both the check (`if (this.#activeElement)`) and the assignment (`this.#activeElement = ...`).\n2.  **Bundled Function**: Uses the private field `#e` for both the check (`this.#e`) and the assignment (`this.#e = ...`).\n\nWhile the logic structure (converting the `if` statements to a short-circuit expression) is correct, the identifier `#e` in the bundled function does not correspond to `#activeElement` in the source. In JavaScript, private fields are lexically scoped and distinct; `#e` and `#activeElement` refer to completely different properties on the object instance. Unless there is an external context where `#e` is an alias for `#activeElement` (which is impossible for private fields as they cannot be aliased or renamed without changing the class definition), accessing a non-existent private field `#e` will throw a `TypeError`, whereas the source function accesses `#activeElement`.\n\nTherefore, the functions are not equivalent."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 11520381183,
+        "load_duration": 1496156,
+        "prompt_eval_count": 1132,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1380341000,
+        "eval_count": 258,
+        "eval_duration": 10124170000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:69992:70596",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:30275:30448",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function moveBeforeById(parentNode, id, after, ctx) {\\n      const target =\\n        /** @type {Element} - will always be found */\\n        (\\n          // ctx.target.id unsafe because of form input shadowing\\n          // ctx.target could be a document fragment which doesn't have `getAttribute`\\n          (ctx.target.getAttribute?.(\\\"id\\\") === id && ctx.target) ||\\n            ctx.target.querySelector(`[id=\\\"${id}\\\"]`) ||\\n            ctx.pantry.querySelector(`[id=\\\"${id}\\\"]`)\\n        );\\n      removeElementFromAncestorsIdMaps(target, ctx);\\n      moveBefore(parentNode, target, after);\\n      return target;\\n    }\",\"minified_source_function\":\"function(e,t,r,o){const n=o.target.getAttribute?.(\\\"id\\\")===t&&o.target||o.target.querySelector(`[id=\\\"${t}\\\"]`)||o.pantry.querySelector(`[id=\\\"${t}\\\"]`);return removeElementFromAncestorsIdMaps(n,o),moveBefore(e,n,r),n}\",\"bundled_function\":\"function S(h,c,y,b){let C=b.target.getAttribute?.(\\\"id\\\")===c&&b.target||b.target.querySelector(`[id=\\\"${c}\\\"]`)||b.pantry.querySelector(`[id=\\\"${c}\\\"]`);return u(C,b),g(h,C,y),C}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "e8304d30b796ac42eec5a478cdb097f67b4db19dfbe1ab04cf4d8ed22edab1da",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:02:31.186729109Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 19496838065,
+          "load_duration": 1580367,
+          "prompt_eval_count": 1272,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 856906000,
+          "eval_count": 2,
+          "eval_duration": 68513000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0004",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:30:09.209439096Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The parameter mapping is: `h`→`parentNode`, `c`→`id`, `y`→`after`, `b`→`ctx`. The local variable `C` corresponds to `target`. The logic for finding the target element using optional chaining (`?.`) and logical OR (`||`) is identical. The function calls `u(C,b)` and `g(h,C,y)` correspond to `removeElementFromAncestorsIdMaps(n,o)` and `moveBefore(e,n,r)` respectively, assuming `u` and `g` are the renamed external bindings for those functions in the bundled context. The return value `C` matches `target`. The only difference is variable renaming and the use of `let` instead of `const`, which does not affect semantics here as the variable is not reassigned."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8794323417,
+        "load_duration": 1722518,
+        "prompt_eval_count": 1302,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1106717000,
+        "eval_count": 183,
+        "eval_duration": 7603244000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:101953:102052",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:37202:37249",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"constructor({ beforeNodeMorphed } = {}) {\\n    this.#beforeNodeMorphed = beforeNodeMorphed || (() => true);\\n  }\",\"minified_source_function\":\"constructor({beforeNodeMorphed:beforeNodeMorphed}={}){this.#beforeNodeMorphed=beforeNodeMorphed||(()=>!0)}\",\"bundled_function\":\"constructor({beforeNodeMorphed:e}={}){this.#e=e||(()=>!0)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "49e1520b2537fa42279f17368e2d600885d4626f64d6278b2bad83c17a17ab3d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:02:50.188128014Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 18997355469,
+          "load_duration": 1158434,
+          "prompt_eval_count": 1077,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 672725000,
+          "eval_count": 2,
+          "eval_duration": 65055000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0005",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical error in mapping the private field name.\n\n1.  **Source Function**: Assigns the result of `beforeNodeMorphed || (() => true)` to the private field `this.#beforeNodeMorphed`.\n2.  **Bundled Function**: Assigns the result of `e || (() => !0)` (where `e` is the mapped parameter) to the private field `this.#e`.\n\nWhile the logic for the default value (`(() => true)` vs `(() => !0)`) and the parameter destructuring are equivalent transformations, the **private field identifier** has been incorrectly renamed from `#beforeNodeMorphed` to `#e`. In JavaScript, private fields are lexically scoped to their class definition; renaming the field name changes which property is being accessed/modified. Unless the entire class was consistently renamed (which cannot be verified here and is unlikely given the specific parameter rename pattern), this represents a semantic difference where the bundled code writes to a different internal state than the source code.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:30:19.787442571Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical error in mapping the private field name.\n\n1.  **Source Function**: Assigns the result of `beforeNodeMorphed || (() => true)` to the private field `this.#beforeNodeMorphed`.\n2.  **Bundled Function**: Assigns the result of `e || (() => !0)` (where `e` is the mapped parameter) to the private field `this.#e`.\n\nWhile the logic for the default value (`(() => true)` vs `(() => !0)`) and the parameter destructuring are equivalent transformations, the **private field identifier** has been incorrectly renamed from `#beforeNodeMorphed` to `#e`. In JavaScript, private fields are lexically scoped to their class definition; renaming the field name changes which property is being accessed/modified. Unless the entire class was consistently renamed (which cannot be verified here and is unlikely given the specific parameter rename pattern), this represents a semantic difference where the bundled code writes to a different internal state than the source code."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10574686318,
+        "load_duration": 1407170,
+        "prompt_eval_count": 1107,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 890562000,
+        "eval_count": 232,
+        "eval_duration": 9663199000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:127952:128027",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:53367:53393",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"shouldInterceptLinkClick(element, _location, _event) {\\n    return this.#shouldRedirect(element)\\n  }\",\"minified_source_function\":\"shouldInterceptLinkClick(element,_location,_event){return this.#shouldRedirect(element)}\",\"bundled_function\":\"shouldInterceptLinkClick(e,t,i){return this.#t(e)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "708fd4e20849396231c6b780125d1ac8d2771ff5ed56cc0f4fe693b2646b78b7",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:03:00.694180556Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10494815311,
+          "load_duration": 1610301,
+          "prompt_eval_count": 1047,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 807745000,
+          "eval_count": 2,
+          "eval_duration": 72530000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0006",
+    "explain": "The bundled function is **not** semantically equivalent to the source function. While the parameter mapping (`element` → `e`, `_location` → `t`, `_event` → `i`) and the argument passing logic are consistent, the method call differs significantly:\n- Source calls `this.#shouldRedirect(element)`.\n- Bundled calls `this.#t(e)`.\n\nIn JavaScript, private fields/methods (denoted by `#`) must have identical names to be valid references. The source function explicitly invokes a private method named `#shouldRedirect`, whereas the bundled function invokes a private method named `#t`. Unless `#t` is an alias for `#shouldRedirect` in the specific class context (which cannot be assumed from the provided snippets), these are calls to different methods, resulting in different behavior or a runtime error if `#t` does not exist. The minified source function confirms the original method name was `#shouldRedirect`, making the change to `#t` in the bundled version a semantic difference rather than a simple renaming of local variables.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:30:30.411214053Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function. While the parameter mapping (`element` → `e`, `_location` → `t`, `_event` → `i`) and the argument passing logic are consistent, the method call differs significantly:\n- Source calls `this.#shouldRedirect(element)`.\n- Bundled calls `this.#t(e)`.\n\nIn JavaScript, private fields/methods (denoted by `#`) must have identical names to be valid references. The source function explicitly invokes a private method named `#shouldRedirect`, whereas the bundled function invokes a private method named `#t`. Unless `#t` is an alias for `#shouldRedirect` in the specific class context (which cannot be assumed from the provided snippets), these are calls to different methods, resulting in different behavior or a runtime error if `#t` does not exist. The minified source function confirms the original method name was `#shouldRedirect`, making the change to `#t` in the bundled version a semantic difference rather than a simple renaming of local variables."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10619009125,
+        "load_duration": 1962711,
+        "prompt_eval_count": 1077,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1176234000,
+        "eval_count": 225,
+        "eval_duration": 9422818000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:136604:136964",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:57853:58054",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"(link) => {\\n  if (link.getAttribute(\\\"data-turbo-prefetch\\\") === \\\"false\\\") return true\\n  if (link.getAttribute(\\\"data-turbo\\\") === \\\"false\\\") return true\\n\\n  const turboPrefetchParent = findClosestRecursively(link, \\\"[data-turbo-prefetch]\\\");\\n  if (turboPrefetchParent && turboPrefetchParent.getAttribute(\\\"data-turbo-prefetch\\\") === \\\"false\\\") return true\\n\\n  return false\\n}\",\"minified_source_function\":\"t=>{if(\\\"false\\\"===t.getAttribute(\\\"data-turbo-prefetch\\\"))return!0;if(\\\"false\\\"===t.getAttribute(\\\"data-turbo\\\"))return!0;const e=findClosestRecursively(t,\\\"[data-turbo-prefetch]\\\");return!(!e||\\\"false\\\"!==e.getAttribute(\\\"data-turbo-prefetch\\\"))}\",\"bundled_function\":\"s=>{if(s.getAttribute(\\\"data-turbo-prefetch\\\")===\\\"false\\\"||s.getAttribute(\\\"data-turbo\\\")===\\\"false\\\")return!0;let e=ke(s,\\\"[data-turbo-prefetch]\\\");return!!(e&&e.getAttribute(\\\"data-turbo-prefetch\\\")===\\\"false\\\")}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "3d0c8bb2cbc44768764b55a00f83da20e7d02ef1983e20000ed710ced492cd91",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:03:25.086680613Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 24389625407,
+          "load_duration": 882580,
+          "prompt_eval_count": 1252,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 785383000,
+          "eval_count": 2,
+          "eval_duration": 74983000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0007",
+    "explain": "The bundled function is **not** semantically equivalent to the source function.\n\n**Reasoning:**\n1.  **Logic Inversion**:\n    *   The **source function** returns `true` if a parent element with `data-turbo-prefetch=\"false\"` is found, and returns `false` otherwise (default).\n        *   Logic: `if (parent && parent.attr === \"false\") return true; else return false;`\n    *   The **bundled function** returns `true` if the condition `(e && e.getAttribute(...) === \"false\")` is truthy. However, it wraps this in `!!`, which just coerces to boolean, but critically, the source logic implies that finding such a parent makes the link *valid* (returns true), while the bundled function's structure suggests it might be checking for the *presence* of the attribute to return true, but let's look closer at the actual flow.\n    *   Wait, let's re-evaluate the specific lines:\n        *   Source: `if (turboPrefetchParent && turboPrefetchParent.getAttribute(...) === \"false\") return true; return false;` -> Returns `true` if parent is found with \"false\", else `false`.\n        *   Bundled: `return !! (e && e.getAttribute(...) === \"false\");` -> This returns `true` if `e` exists and has the attribute \"false\", otherwise `false`.\n    *   Actually, looking at the first two conditions:\n        *   Source: Checks `link` attributes. If either is \"false\", return `true`.\n        *   Bundled: Checks `s.getAttribute(...) === \"false\" || s.getAttribute(...) === \"false\"`. This matches the source logic for the first part (returns `true` if either is",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:30:46.809714375Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function.\n\n**Reasoning:**\n1.  **Logic Inversion**:\n    *   The **source function** returns `true` if a parent element with `data-turbo-prefetch=\"false\"` is found, and returns `false` otherwise (default).\n        *   Logic: `if (parent && parent.attr === \"false\") return true; else return false;`\n    *   The **bundled function** returns `true` if the condition `(e && e.getAttribute(...) === \"false\")` is truthy. However, it wraps this in `!!`, which just coerces to boolean, but critically, the source logic implies that finding such a parent makes the link *valid* (returns true), while the bundled function's structure suggests it might be checking for the *presence* of the attribute to return true, but let's look closer at the actual flow.\n    *   Wait, let's re-evaluate the specific lines:\n        *   Source: `if (turboPrefetchParent && turboPrefetchParent.getAttribute(...) === \"false\") return true; return false;` -> Returns `true` if parent is found with \"false\", else `false`.\n        *   Bundled: `return !! (e && e.getAttribute(...) === \"false\");` -> This returns `true` if `e` exists and has the attribute \"false\", otherwise `false`.\n    *   Actually, looking at the first two conditions:\n        *   Source: Checks `link` attributes. If either is \"false\", return `true`.\n        *   Bundled: Checks `s.getAttribute(...) === \"false\" || s.getAttribute(...) === \"false\"`. This matches the source logic for the first part (returns `true` if either is"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 16394296334,
+        "load_duration": 1228934,
+        "prompt_eval_count": 1282,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 961780000,
+        "eval_count": 384,
+        "eval_duration": 15414942000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:164701:164829",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:73879:73945",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"set pageRefreshDebouncePeriod(value) {\\n    this.refresh = debounce(this.debouncedRefresh.bind(this), value);\\n    this.#pageRefreshDebouncePeriod = value;\\n  }\",\"minified_source_function\":\"set pageRefreshDebouncePeriod(value){this.refresh=debounce(this.debouncedRefresh.bind(this),value),this.#pageRefreshDebouncePeriod=value}\",\"bundled_function\":\"set pageRefreshDebouncePeriod(e){this.refresh=Un(this.debouncedRefresh.bind(this),e),this.#e=e}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "b82479f28f76f9ea04685d53fc86781d774845cbc8e5080d5aef1bac14f5a7b9",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:03:46.893563723Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 21802538788,
+          "load_duration": 2225748,
+          "prompt_eval_count": 1084,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 720294000,
+          "eval_count": 2,
+          "eval_duration": 66721999
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0008",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical mismatch in the assignment of the private field.\n\n1.  **Parameter Mapping**: The parameter `value` in the source maps to `e` in the bundled function. This is consistent.\n2.  **External Binding Mapping**: The external function `debounce` in the source maps to `Un` in the bundled function. This is a valid renaming allowed by bundling.\n3.  **Private Field Mismatch**:\n    *   **Source**: Assigns the value to the private field `this.#pageRefreshDebouncePeriod`.\n    *   **Bundled**: Assigns the value to `this.#e`.\n    *   **Analysis**: Private fields (denoted by `#`) are lexically scoped and unique to their class definition. The name `#e` is not a valid renaming of `#pageRefreshDebouncePeriod` unless the bundler also renamed the field declaration in the class body, which is not indicated here. In standard JavaScript semantics, `this.#e` refers to a completely different private field than `this.#pageRefreshDebouncePeriod`. Assigning to the wrong private field breaks the intended state management of the object.\n\nTherefore, the functions are not equivalent because they modify different internal states.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:00.408315557Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical mismatch in the assignment of the private field.\n\n1.  **Parameter Mapping**: The parameter `value` in the source maps to `e` in the bundled function. This is consistent.\n2.  **External Binding Mapping**: The external function `debounce` in the source maps to `Un` in the bundled function. This is a valid renaming allowed by bundling.\n3.  **Private Field Mismatch**:\n    *   **Source**: Assigns the value to the private field `this.#pageRefreshDebouncePeriod`.\n    *   **Bundled**: Assigns the value to `this.#e`.\n    *   **Analysis**: Private fields (denoted by `#`) are lexically scoped and unique to their class definition. The name `#e` is not a valid renaming of `#pageRefreshDebouncePeriod` unless the bundler also renamed the field declaration in the class body, which is not indicated here. In standard JavaScript semantics, `this.#e` refers to a completely different private field than `this.#pageRefreshDebouncePeriod`. Assigning to the wrong private field breaks the intended state management of the object.\n\nTherefore, the functions are not equivalent because they modify different internal states."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 13595181495,
+        "load_duration": 1122309,
+        "prompt_eval_count": 1114,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1031422000,
+        "eval_count": 277,
+        "eval_duration": 12486578000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:181944:182064",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:81917:81979",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"elementAppearedInViewport(element) {\\n    this.proposeVisitIfNavigatedWithAction(element, getVisitAction(element));\\n    this.#loadSourceURL();\\n  }\",\"minified_source_function\":\"elementAppearedInViewport(element){this.proposeVisitIfNavigatedWithAction(element,getVisitAction(element)),this.#loadSourceURL()}\",\"bundled_function\":\"elementAppearedInViewport(e){this.proposeVisitIfNavigatedWithAction(e,fe(e)),this.#i()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "da46784f7e097cb1dcd507c27e3a4f33af79ceb51f4636e9a462c7db0f46f1bc",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:03:56.786866819Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 9889240309,
+          "load_duration": 891210,
+          "prompt_eval_count": 1080,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 753792000,
+          "eval_count": 2,
+          "eval_duration": 68062000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0009",
+    "explain": "The bundled function is not semantically equivalent to the source function because it renames external dependencies without providing a corresponding mapping in the context. Specifically:\n1.  **`getVisitAction` vs `fe`**: The source calls `getVisitAction(element)`, while the bundled version calls `fe(e)`. While `e` maps to `element`, `fe` is an undefined alias for `getVisitAction` in this isolated context. Without evidence that `fe` is a valid minified or renamed binding of `getVisitAction`, this represents a potential breakage where the wrong function (or no function) is called.\n2.  **`#loadSourceURL` vs `#i`**: The source calls the private method `this.#loadSourceURL()`. The bundled version calls `this.#i()`. Private fields/methods in JavaScript are identified by their exact name. Unless `#i` is explicitly defined as an alias for `#loadSourceURL` (which is not standard behavior and not indicated here), this call will throw a `TypeError` or fail to execute the intended logic, as `#i` does not exist on the prototype or instance in the original source context.\n\nThe transformation from `getVisitAction` to `fe` and `#loadSourceURL` to `#i` suggests an incomplete bundling process where external references were renamed but private identifiers (which cannot be safely renamed by standard minifiers without full class context) were incorrectly altered or the provided snippet is missing the necessary class definition updates.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:14.911003761Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it renames external dependencies without providing a corresponding mapping in the context. Specifically:\n1.  **`getVisitAction` vs `fe`**: The source calls `getVisitAction(element)`, while the bundled version calls `fe(e)`. While `e` maps to `element`, `fe` is an undefined alias for `getVisitAction` in this isolated context. Without evidence that `fe` is a valid minified or renamed binding of `getVisitAction`, this represents a potential breakage where the wrong function (or no function) is called.\n2.  **`#loadSourceURL` vs `#i`**: The source calls the private method `this.#loadSourceURL()`. The bundled version calls `this.#i()`. Private fields/methods in JavaScript are identified by their exact name. Unless `#i` is explicitly defined as an alias for `#loadSourceURL` (which is not standard behavior and not indicated here), this call will throw a `TypeError` or fail to execute the intended logic, as `#i` does not exist on the prototype or instance in the original source context.\n\nThe transformation from `getVisitAction` to `fe` and `#loadSourceURL` to `#i` suggests an incomplete bundling process where external references were renamed but private identifiers (which cannot be safely renamed by standard minifiers without full class context) were incorrectly altered or the provided snippet is missing the necessary class definition updates."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 14498759538,
+        "load_duration": 1181464,
+        "prompt_eval_count": 1110,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 858131000,
+        "eval_count": 319,
+        "eval_duration": 13607636000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183646:183743",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82780:82823",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"async requestSucceededWithResponse(request, response) {\\n    await this.loadResponse(response);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"async requestSucceededWithResponse(request,response){await this.loadResponse(response),this.#resolveVisitPromise()}\",\"bundled_function\":\"async requestSucceededWithResponse(e,t){await this.loadResponse(t),this.#t()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "81bd240ab528fe8d9426aa6bebfaefe3e50e59d002d463701b77ef42178b10b2",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:04:07.093737517Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10302911471,
+          "load_duration": 1241075,
+          "prompt_eval_count": 1059,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 726537000,
+          "eval_count": 2,
+          "eval_duration": 67421000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0010",
+    "explain": "The bundled function is **not** semantically equivalent to the source function. While the parameter renaming (`request` → `e`, `response` → `t`) and the transformation of the statement sequence into a comma expression are valid minification steps, the method call `this.#resolveVisitPromise()` in the source is replaced by `this.#t()` in the bundled version.\n\nIn JavaScript, private fields/methods (denoted by `#`) are lexically scoped to their class definition and cannot be renamed arbitrarily without breaking the binding unless the entire class structure is transformed consistently. The symbol `#t` does not correspond to `#resolveVisitPromise` based on standard minification patterns for private members (which usually preserve the name or map it via a consistent lookup table if the whole file is processed). Without evidence that `#t` is an alias for `#resolveVisitPromise` in this specific context, this represents a clear semantic difference where the bundled function attempts to call a different (likely non-existent) private method.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:24.688393326Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function. While the parameter renaming (`request` → `e`, `response` → `t`) and the transformation of the statement sequence into a comma expression are valid minification steps, the method call `this.#resolveVisitPromise()` in the source is replaced by `this.#t()` in the bundled version.\n\nIn JavaScript, private fields/methods (denoted by `#`) are lexically scoped to their class definition and cannot be renamed arbitrarily without breaking the binding unless the entire class structure is transformed consistently. The symbol `#t` does not correspond to `#resolveVisitPromise` based on standard minification patterns for private members (which usually preserve the name or map it via a consistent lookup table if the whole file is processed). Without evidence that `#t` is an alias for `#resolveVisitPromise` in this specific context, this represents a clear semantic difference where the bundled function attempts to call a different (likely non-existent) private method."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 9774495948,
+        "load_duration": 1256958,
+        "prompt_eval_count": 1089,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 953236000,
+        "eval_count": 211,
+        "eval_duration": 8802232000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183778:183875",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82854:82897",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"async requestFailedWithResponse(request, response) {\\n    await this.loadResponse(response);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"async requestFailedWithResponse(request,response){await this.loadResponse(response),this.#resolveVisitPromise()}\",\"bundled_function\":\"async requestFailedWithResponse(e,t){await this.loadResponse(t),this.#t()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "988c52a71290b130d34f47934d3100266d5526db200f77660fbcc1f5a6c2221e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:04:18.986529871Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 11889845568,
+          "load_duration": 1148396,
+          "prompt_eval_count": 1056,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 742178000,
+          "eval_count": 2,
+          "eval_duration": 62550000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0011",
+    "explain": "The bundled function is not semantically equivalent to the source function because it replaces the private method call `this.#resolveVisitPromise()` with `this.#t()`. While parameter renaming (`request` → `e`, `response` → `t`) is a standard bundling transformation, the replacement of the specific private field/method name `#resolveVisitPromise` with `#t` indicates that either:\n1. The bundled code relies on an external mapping where `#t` is defined as `#resolveVisitPromise` (which cannot be verified from the provided snippet alone), or\n2. The bundler has obfuscated/renamed the private identifier incorrectly for this specific context, breaking the link to the original implementation.\n\nWithout explicit evidence that `#t` is an alias for `#resolveVisitPromise` in the surrounding scope, the change in the called method name constitutes a semantic difference.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:33.309448467Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it replaces the private method call `this.#resolveVisitPromise()` with `this.#t()`. While parameter renaming (`request` → `e`, `response` → `t`) is a standard bundling transformation, the replacement of the specific private field/method name `#resolveVisitPromise` with `#t` indicates that either:\n1. The bundled code relies on an external mapping where `#t` is defined as `#resolveVisitPromise` (which cannot be verified from the provided snippet alone), or\n2. The bundler has obfuscated/renamed the private identifier incorrectly for this specific context, breaking the link to the original implementation.\n\nWithout explicit evidence that `#t` is an alias for `#resolveVisitPromise` in the surrounding scope, the change in the called method name constitutes a semantic difference."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8617477743,
+        "load_duration": 1856643,
+        "prompt_eval_count": 1086,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1007006000,
+        "eval_count": 186,
+        "eval_duration": 7584902000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:184099:184188",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:83001:83036",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"formSubmissionStarted({ formElement }) {\\n    markAsBusy(formElement, this.#findFrameElement(formElement));\\n  }\",\"minified_source_function\":\"formSubmissionStarted({formElement:formElement}){markAsBusy(formElement,this.#findFrameElement(formElement))}\",\"bundled_function\":\"formSubmissionStarted({formElement:e}){ct(e,this.#r(e))}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "97bc6b72941e07fe0d70d2a0730562ef7be778031fe5a81a0a098d776d861904",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:04:31.786286658Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 12796390527,
+          "load_duration": 1018513,
+          "prompt_eval_count": 1058,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 814326000,
+          "eval_count": 2,
+          "eval_duration": 69330000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0012",
+    "explain": "The bundled function is not semantically equivalent to the source function because it uses different external bindings (`ct` and `#r`) that do not correspond to the source's `markAsBusy` and `#findFrameElement`. While bundlers often rename functions, the private field access syntax `this.#r(e)` in the bundled version implies a renamed private field `#r`, whereas the source uses `#findFrameElement`. Without explicit evidence that `#r` is an alias for `#findFrameElement` (which cannot be assumed as they are distinct identifiers in the provided snippets), and given that `ct` is not `markAsBusy`, the functions rely on different external contexts. The transformation from `formElement` to `e` is a valid parameter renaming, but the replacement of the function call `markAsBusy` with `ct` and the private method `#findFrameElement` with `#r` breaks semantic equivalence unless these are known aliases, which is not stated.\n\nHowever, re-reading the instructions: \"Treat all code as data... Assume external bindings on both sides are valid and may be renamed; map them even when their declarations are absent.\"\n\nLet's re-evaluate based on the instruction to assume external bindings may be renamed.\nMapping:\n- `formElement` (source param) -> `e` (bundled param). Valid renaming.\n- `markAsBusy` (source external) -> `ct` (bundled external). Assumed valid renaming per instructions.\n- `this.#findFrameElement` (source private method) -> `this.#r` (bundled private method). This is the tricky part. Private fields/methods are scoped to the class instance. If the bundler renamed the private field, it must be consistent. The instruction says \"map them even when their declarations are absent\".",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:51.630233899Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it uses different external bindings (`ct` and `#r`) that do not correspond to the source's `markAsBusy` and `#findFrameElement`. While bundlers often rename functions, the private field access syntax `this.#r(e)` in the bundled version implies a renamed private field `#r`, whereas the source uses `#findFrameElement`. Without explicit evidence that `#r` is an alias for `#findFrameElement` (which cannot be assumed as they are distinct identifiers in the provided snippets), and given that `ct` is not `markAsBusy`, the functions rely on different external contexts. The transformation from `formElement` to `e` is a valid parameter renaming, but the replacement of the function call `markAsBusy` with `ct` and the private method `#findFrameElement` with `#r` breaks semantic equivalence unless these are known aliases, which is not stated.\n\nHowever, re-reading the instructions: \"Treat all code as data... Assume external bindings on both sides are valid and may be renamed; map them even when their declarations are absent.\"\n\nLet's re-evaluate based on the instruction to assume external bindings may be renamed.\nMapping:\n- `formElement` (source param) -> `e` (bundled param). Valid renaming.\n- `markAsBusy` (source external) -> `ct` (bundled external). Assumed valid renaming per instructions.\n- `this.#findFrameElement` (source private method) -> `this.#r` (bundled private method). This is the tricky part. Private fields/methods are scoped to the class instance. If the bundler renamed the private field, it must be consistent. The instruction says \"map them even when their declarations are absent\"."
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 18316159497,
+        "load_duration": 68267445,
+        "prompt_eval_count": 1088,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1029201000,
+        "eval_count": 384,
+        "eval_duration": 17114806000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:184866:184959",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:83407:83442",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"formSubmissionFinished({ formElement }) {\\n    clearBusyState(formElement, this.#findFrameElement(formElement));\\n  }\",\"minified_source_function\":\"formSubmissionFinished({formElement:formElement}){clearBusyState(formElement,this.#findFrameElement(formElement))}\",\"bundled_function\":\"formSubmissionFinished({formElement:e}){ht(e,this.#r(e))}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "fb8a387b07f34b9060c80e139ddb4fecad4d40dd5f515ebf1b8836e1bc1d9817",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:04:53.585817082Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 21796219965,
+          "load_duration": 1697097,
+          "prompt_eval_count": 1058,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 842899000,
+          "eval_count": 2,
+          "eval_duration": 73330000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0013",
+    "explain": "The bundled function is not semantically equivalent to the source function because it uses different external bindings (`ht` and `#r`) that do not correspond to the source's `clearBusyState` and `#findFrameElement`. While bundlers often rename functions and private fields, the provided context does not establish a mapping between these specific identifiers. Without evidence that `ht` is an alias for `clearBusyState` and `#r` is an alias for `#findFrameElement`, we must treat them as distinct, unverified external dependencies, leading to a failure in semantic equivalence verification.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:31:59.008720626Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it uses different external bindings (`ht` and `#r`) that do not correspond to the source's `clearBusyState` and `#findFrameElement`. While bundlers often rename functions and private fields, the provided context does not establish a mapping between these specific identifiers. Without evidence that `ht` is an alias for `clearBusyState` and `#r` is an alias for `#findFrameElement`, we must treat them as distinct, unverified external dependencies, leading to a failure in semantic equivalence verification."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7323751197,
+        "load_duration": 1418262,
+        "prompt_eval_count": 1088,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1199533000,
+        "eval_count": 123,
+        "eval_duration": 6104134000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:b074d391992a361f4954cddd02c706df7d17f72bf082da76d124a8d722d3075f:2237:2469",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:124536:124657",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function getVisualOffsets(element) {\\n  const win = getWindow(element);\\n  if (!isWebKit() || !win.visualViewport) {\\n    return noOffsets;\\n  }\\n  return {\\n    x: win.visualViewport.offsetLeft,\\n    y: win.visualViewport.offsetTop\\n  };\\n}\",\"minified_source_function\":\"function(t){const e=getWindow(t);return isWebKit()&&e.visualViewport?{x:e.visualViewport.offsetLeft,y:e.visualViewport.offsetTop}:noOffsets}\",\"bundled_function\":\"function yn(s){let e=F(s);return!Ot()||!e.visualViewport?To:{x:e.visualViewport.offsetLeft,y:e.visualViewport.offsetTop}}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "fab469cd73923ebb7ce8d0425e52569462ef9a0f752a2b25d008adc66194b909",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:05:15.386003411Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 21796681718,
+          "load_duration": 2449494,
+          "prompt_eval_count": 1121,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 782759000,
+          "eval_count": 2,
+          "eval_duration": 72510000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0014",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a logical inversion in the conditional check.\n\n1.  **Source Logic**: The condition `if (!isWebKit() || !win.visualViewport)` returns `noOffsets` if either `isWebKit()` is false OR `visualViewport` is missing. It only returns the offset object if **both** are true (De Morgan's laws: `!(A || B) == !A && !B`, so the return happens when `!(!A || !B)` which is `A && B`).\n    *   Equivalent to: `return isWebKit() && win.visualViewport ? { ... } : noOffsets;`\n\n2.  **Bundled Logic**: The condition `!Ot()||!e.visualViewport` (where `Ot` maps to `isWebKit`) returns `To` (mapped to `noOffsets`) if either is false. However, the ternary operator structure in the bundled function is:\n    *   `return !Ot() || !e.visualViewport ? To : { ... }`\n    *   This means: If (`!isWebKit()` OR `!visualViewport`) is true, return `noOffsets`. Otherwise, return the object.\n\nWait, let me re-evaluate the transformation rules provided.\nSource: `if (!A || !B) return C; return D;`\nThis is equivalent to: `return (!A || !B) ? C : D;`\nWhich is also equivalent to: `return (A && B) ? D : C;`\n\nLet's look at the bundled function again:\n`return !Ot()||!e.visualViewport?To:{x:...}`\nThis translates to: If (`!isWebKit()` OR `!visualViewport`) then return `noOffsets`, else return",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:32:18.487650606Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a logical inversion in the conditional check.\n\n1.  **Source Logic**: The condition `if (!isWebKit() || !win.visualViewport)` returns `noOffsets` if either `isWebKit()` is false OR `visualViewport` is missing. It only returns the offset object if **both** are true (De Morgan's laws: `!(A || B) == !A && !B`, so the return happens when `!(!A || !B)` which is `A && B`).\n    *   Equivalent to: `return isWebKit() && win.visualViewport ? { ... } : noOffsets;`\n\n2.  **Bundled Logic**: The condition `!Ot()||!e.visualViewport` (where `Ot` maps to `isWebKit`) returns `To` (mapped to `noOffsets`) if either is false. However, the ternary operator structure in the bundled function is:\n    *   `return !Ot() || !e.visualViewport ? To : { ... }`\n    *   This means: If (`!isWebKit()` OR `!visualViewport`) is true, return `noOffsets`. Otherwise, return the object.\n\nWait, let me re-evaluate the transformation rules provided.\nSource: `if (!A || !B) return C; return D;`\nThis is equivalent to: `return (!A || !B) ? C : D;`\nWhich is also equivalent to: `return (A && B) ? D : C;`\n\nLet's look at the bundled function again:\n`return !Ot()||!e.visualViewport?To:{x:...}`\nThis translates to: If (`!isWebKit()` OR `!visualViewport`) then return `noOffsets`, else return"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 19444102117,
+        "load_duration": 1951416,
+        "prompt_eval_count": 1151,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 738084000,
+        "eval_count": 384,
+        "eval_duration": 18686255000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:b074d391992a361f4954cddd02c706df7d17f72bf082da76d124a8d722d3075f:10662:10993",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:127159:127251",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function hasFixedPositionAncestor(element, stopNode) {\\n  const parentNode = getParentNode(element);\\n  if (parentNode === stopNode || !isElement(parentNode) || isLastTraversableNode(parentNode)) {\\n    return false;\\n  }\\n  return getComputedStyle$1(parentNode).position === 'fixed' || hasFixedPositionAncestor(parentNode, stopNode);\\n}\",\"minified_source_function\":\"function e(t,n){const o=getParentNode(t);return!(o===n||!isElement(o)||isLastTraversableNode(o))&&(\\\"fixed\\\"===getComputedStyle$1(o).position||e(o,n))}\",\"bundled_function\":\"function Sn(s,e){let t=ee(s);return t===e||!B(t)||Ee(t)?!1:D(t).position===\\\"fixed\\\"||Sn(t,e)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "2c9b6584106f50f1b068f7902b139d2029d94cb0b39eb541d78579b37a4253c4",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:05:34.586781815Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 19196629780,
+          "load_duration": 1689264,
+          "prompt_eval_count": 1158,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 728749000,
+          "eval_count": 2,
+          "eval_duration": 67687000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0015",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:32:37.83321727Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. \n\n**Mapping:**\n- `s` (bundled) ↔ `element` (source)\n- `e` (bundled) ↔ `stopNode` (source)\n- `t` (bundled, assigned via `ee(s)`) ↔ `parentNode` (source, assigned via `getParentNode(element)`)\n- `ee` ↔ `getParentNode`\n- `B` ↔ `isElement`\n- `Ee` ↔ `isLastTraversableNode`\n- `D` ↔ `getComputedStyle$1`\n- `Sn` ↔ `hasFixedPositionAncestor` (recursive call)\n\n**Equivalence Analysis:**\nThe source function uses an explicit `if` statement to return `false` if the condition `(parentNode === stopNode || !isElement(parentNode) || isLastTraversableNode(parentNode))` is true. Otherwise, it returns the result of the logical OR expression checking for fixed position or recursing.\n\nThe bundled function transforms this logic into a single return statement using short-circuit evaluation:\n1. `t===e||!B(t)||Ee(t)` corresponds to the condition in the source's `if`.\n2. The source returns `false` if this condition is true, and evaluates the rest otherwise.\n3. The bundled function uses the pattern `condition ? !1 : expression`, which is equivalent to `!condition && expression` (based on rule #2: `if (!A) B; else C;` logic adapted here). Specifically, `return A ? false : B` is logically equivalent to `return !A && B`.\n   - If the condition (`t===e||...`) is true, `!condition` is false, so the whole expression short-circuits to `false"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 19342432251,
+        "load_duration": 1453424,
+        "prompt_eval_count": 1188,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1209781000,
+        "eval_count": 384,
+        "eval_duration": 18034875000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:11895:11930",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:5770:5788",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"get submitter() {\\n    return this.#submitter\\n  }\",\"minified_source_function\":\"get submitter(){return this.#submitter}\",\"bundled_function\":\"get submitter(){return this.#e}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "4b6d85bf7e75503fe1bbb91a4afe32ecde989a3999bb5b324b09ac172a0adcb2",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:05:54.68675352Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 20096384718,
+          "load_duration": 1083429,
+          "prompt_eval_count": 1022,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 641308000,
+          "eval_count": 2,
+          "eval_duration": 70572000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0016",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:32:43.209436283Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The only difference is the renaming of the private field `#submitter` in the source to `#e` in the bundled version. This is a standard minification/bundling transformation where internal identifiers are shortened or obfuscated while preserving their scope and semantic meaning. Both functions define a getter named `submitter` that returns the value of a private field accessed via `this`."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5373498236,
+        "load_duration": 46179915,
+        "prompt_eval_count": 1052,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1319264000,
+        "eval_count": 92,
+        "eval_duration": 3993228000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:11947:12009",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:5801:5822",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"set submitter(value) {\\n    this.#submitter = submitter[value] || value;\\n  }\",\"minified_source_function\":\"set submitter(value){this.#submitter=submitter[value]||value}\",\"bundled_function\":\"set submitter(e){this.#e=zn[e]||e}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "3aecda4b95e4939e94c489e5ec9012c1e96fca99e5bde3ba873b5b0614b86e3c",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:06:17.185968241Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 22495580589,
+          "load_duration": 1433053,
+          "prompt_eval_count": 1043,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 833209000,
+          "eval_count": 2,
+          "eval_duration": 76902000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0017",
+    "explain": "The bundled function is not semantically equivalent to the source function due to a mismatch in the private field name.\n\n1.  **Source Function**: Assigns to `this.#submitter`. The right-hand side accesses an external variable named `submitter` (likely a map or object) using the argument `value`, falling back to `value` itself.\n2.  **Bundled Function**: Assigns to `this.#e`. It accesses an external variable named `zn` using the argument `e`, falling back to `e`.\n\nWhile the parameter renaming (`value` → `e`) and the external variable renaming (`submitter` → `zn`) are acceptable transformations in bundling, the private field name has changed from `#submitter` to `#e`. In JavaScript, private fields (denoted by `#`) are lexically scoped and their names must match exactly for the code to be semantically equivalent. Changing `#submitter` to `#e` means the bundled function writes to a completely different private property than the source function, breaking equivalence unless `#e` is explicitly defined as an alias for `#submitter` in the surrounding class context (which is not indicated here).",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:32:56.609669326Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function due to a mismatch in the private field name.\n\n1.  **Source Function**: Assigns to `this.#submitter`. The right-hand side accesses an external variable named `submitter` (likely a map or object) using the argument `value`, falling back to `value` itself.\n2.  **Bundled Function**: Assigns to `this.#e`. It accesses an external variable named `zn` using the argument `e`, falling back to `e`.\n\nWhile the parameter renaming (`value` → `e`) and the external variable renaming (`submitter` → `zn`) are acceptable transformations in bundling, the private field name has changed from `#submitter` to `#e`. In JavaScript, private fields (denoted by `#`) are lexically scoped and their names must match exactly for the code to be semantically equivalent. Changing `#submitter` to `#e` means the bundled function writes to a completely different private property than the source function, breaking equivalence unless `#e` is explicitly defined as an alias for `#submitter` in the surrounding class context (which is not indicated here)."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 13397914048,
+        "load_duration": 1405485,
+        "prompt_eval_count": 1073,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1291399000,
+        "eval_count": 253,
+        "eval_duration": 12022071000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23413:23471",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:12086:12122",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"read(key) {\\n    return this.entries[this.#toCacheKey(key)]\\n  }\",\"minified_source_function\":\"read(key){return this.entries[this.#toCacheKey(key)]}\",\"bundled_function\":\"read(e){return this.entries[this.#e(e)]}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "306a5dab6b34c710f63a5e880f36dac26cdf59e643bea35cb175efec69c18565",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:06:27.587082922Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10397022534,
+          "load_duration": 808078,
+          "prompt_eval_count": 1034,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 778414000,
+          "eval_count": 2,
+          "eval_duration": 73516000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0018",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:03.287328216Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The parameter `key` in the source is renamed to `e` in the bundled version, which is a valid transformation. The private method call `this.#toCacheKey(key)` in the source corresponds to `this.#e(e)` in the bundled version; this indicates that the private field/method name `#toCacheKey` was obfuscated or renamed to `#e` during the bundling process. The logic structure (accessing `this.entries` with the result of the private method call) remains identical."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6673690490,
+        "load_duration": 1064090,
+        "prompt_eval_count": 1064,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 796752000,
+        "eval_count": 120,
+        "eval_duration": 5859759000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:23556:23735",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:12165:12270",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"touch(key) {\\n    key = this.#toCacheKey(key);\\n    const index = this.keys.indexOf(key);\\n    if (index > -1) this.keys.splice(index, 1);\\n    this.keys.unshift(key);\\n    this.trim();\\n  }\",\"minified_source_function\":\"touch(key){key=this.#toCacheKey(key);const index=this.keys.indexOf(key);index>-1&&this.keys.splice(index,1),this.keys.unshift(key),this.trim()}\",\"bundled_function\":\"touch(e){e=this.#e(e);let t=this.keys.indexOf(e);t>-1&&this.keys.splice(t,1),this.keys.unshift(e),this.trim()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "a6d04744f7092e1fd96f7fb7fed08d8975c930263fbd529ebccd5dd3bb66e189",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:06:51.912539829Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 13919701411,
+          "load_duration": 1487484,
+          "prompt_eval_count": 1118,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 857606000,
+          "eval_count": 2,
+          "eval_duration": 26983000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0019",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a mismatch in the external method binding.\n\n1.  **Parameter Mapping**: The parameter `key` in the source maps to `e` in the bundled function.\n2.  **Local Variable Mapping**: The local variable `index` in the source maps to `t` in the bundled function.\n3.  **Logic Equivalence**: The control flow logic (checking if index > -1 and splicing, then unshifting and trimming) is correctly transformed using short-circuit evaluation (`&&`) and comma expressions, matching the `minified_source_function`.\n4.  **Critical Mismatch**: The source function calls `this.#toCacheKey(key)`, which invokes a private method named `#toCacheKey`. The bundled function calls `this.#e(e)`, invoking a private method named `#e`. Since private fields/methods in JavaScript are uniquely identified by their names within the class scope, `#toCacheKey` and `#e` refer to different (or non-existent) methods. Unless `#e` is an alias for `#toCacheKey` defined elsewhere (which cannot be assumed), this represents a semantic difference where the bundled function attempts to call a method that likely does not exist or performs a different operation than intended.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:16.885763431Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a mismatch in the external method binding.\n\n1.  **Parameter Mapping**: The parameter `key` in the source maps to `e` in the bundled function.\n2.  **Local Variable Mapping**: The local variable `index` in the source maps to `t` in the bundled function.\n3.  **Logic Equivalence**: The control flow logic (checking if index > -1 and splicing, then unshifting and trimming) is correctly transformed using short-circuit evaluation (`&&`) and comma expressions, matching the `minified_source_function`.\n4.  **Critical Mismatch**: The source function calls `this.#toCacheKey(key)`, which invokes a private method named `#toCacheKey`. The bundled function calls `this.#e(e)`, invoking a private method named `#e`. Since private fields/methods in JavaScript are uniquely identified by their names within the class scope, `#toCacheKey` and `#e` refer to different (or non-existent) methods. Unless `#e` is an alias for `#toCacheKey` defined elsewhere (which cannot be assumed), this represents a semantic difference where the bundled function attempts to call a method that likely does not exist or performs a different operation than intended."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 13588798424,
+        "load_duration": 1463077,
+        "prompt_eval_count": 1148,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1326576000,
+        "eval_count": 278,
+        "eval_duration": 12165070000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:128270:128458",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:53494:53566",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"willSubmitForm(element, submitter) {\\n    return (\\n      element.closest(\\\"turbo-frame\\\") == null &&\\n      this.#shouldSubmit(element, submitter) &&\\n      this.#shouldRedirect(element, submitter)\\n    )\\n  }\",\"minified_source_function\":\"willSubmitForm(element,submitter){return null==element.closest(\\\"turbo-frame\\\")&&this.#shouldSubmit(element,submitter)&&this.#shouldRedirect(element,submitter)}\",\"bundled_function\":\"willSubmitForm(e,t){return e.closest(\\\"turbo-frame\\\")==null&&this.#e(e,t)&&this.#t(e,t)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "42db43c403c6f65b4f22bae8d31a40fb224916a964b11355821f767a432dab42",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:07:28.695735837Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 14304972759,
+          "load_duration": 1342703,
+          "prompt_eval_count": 1111,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 831118000,
+          "eval_count": 2,
+          "eval_duration": 73222000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0020",
+    "explain": "The bundled function is **not** semantically equivalent to the source function because it renames the private methods `#shouldSubmit` and `#shouldRedirect` to `#e` and `#t`. In JavaScript, private fields and methods (denoted by `#`) are lexically scoped to their defining class. Renaming them in a bundled output without providing corresponding renamed definitions in the same scope breaks the code, as `this.#e` and `this.#t` will not exist if the class body was not also transformed to define these new names. Unlike public methods or variables which can be safely renamed during minification/bundling if all references are updated consistently, private members require the entire class definition to be transformed together. Since the provided snippet only shows the method body and assumes external bindings are valid but potentially renamed, the specific renaming of private identifiers without evidence of a corresponding class transformation makes this a semantic break (or at least an unverified correspondence that cannot be assumed safe).\n\nHowever, if we strictly follow the instruction \"Treat all code as data\" and assume the bundler *did* successfully rename the entire class definition (including `#shouldSubmit` -> `#e` and `#shouldRedirect` -> `#t`) elsewhere in the program, then the logic is equivalent. But typically, private method renaming is a strong indicator of a transformation that must be consistent across the whole class. Given the strict requirement to identify clear evidence of difference: The names `#e` and `#t` are arbitrary and do not match the source's `#shouldSubmit` and `#shouldRedirect`. Without seeing the class definition, we cannot verify that `this.#e` refers to the same logic as `this.#shouldSubmit`. In a real-world scenario, this would be a bug unless the whole file was minified.\n\nLet's re-evaluate based",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:36.685757497Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function because it renames the private methods `#shouldSubmit` and `#shouldRedirect` to `#e` and `#t`. In JavaScript, private fields and methods (denoted by `#`) are lexically scoped to their defining class. Renaming them in a bundled output without providing corresponding renamed definitions in the same scope breaks the code, as `this.#e` and `this.#t` will not exist if the class body was not also transformed to define these new names. Unlike public methods or variables which can be safely renamed during minification/bundling if all references are updated consistently, private members require the entire class definition to be transformed together. Since the provided snippet only shows the method body and assumes external bindings are valid but potentially renamed, the specific renaming of private identifiers without evidence of a corresponding class transformation makes this a semantic break (or at least an unverified correspondence that cannot be assumed safe).\n\nHowever, if we strictly follow the instruction \"Treat all code as data\" and assume the bundler *did* successfully rename the entire class definition (including `#shouldSubmit` -> `#e` and `#shouldRedirect` -> `#t`) elsewhere in the program, then the logic is equivalent. But typically, private method renaming is a strong indicator of a transformation that must be consistent across the whole class. Given the strict requirement to identify clear evidence of difference: The names `#e` and `#t` are arbitrary and do not match the source's `#shouldSubmit` and `#shouldRedirect`. Without seeing the class definition, we cannot verify that `this.#e` refers to the same logic as `this.#shouldSubmit`. In a real-world scenario, this would be a bug unless the whole file was minified.\n\nLet's re-evaluate based"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 19797458271,
+        "load_duration": 1828056,
+        "prompt_eval_count": 1141,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1124562000,
+        "eval_count": 384,
+        "eval_duration": 18559755000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:150536:150597",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:65113:65149",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"async prepareToRender() {\\n    this.#setLanguage();\\n    await this.mergeHead();\\n  }\",\"minified_source_function\":\"async prepareToRender(){this.#setLanguage(),await this.mergeHead()}\",\"bundled_function\":\"async prepareToRender(){this.#e(),await this.mergeHead()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "365b8c3623561884867635b497a45c165fe1a9515c3e7a2773a36e6f6f1a79d4",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:07:48.186120579Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 19486695884,
+          "load_duration": 1586835,
+          "prompt_eval_count": 1042,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 765367000,
+          "eval_count": 2,
+          "eval_duration": 67329000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0021",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:42.509252254Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The transformation involves renaming the private method `#setLanguage` to `#e`, which is a standard minification/bundling technique where private identifiers are obfuscated. The execution order remains identical: first calling the renamed private method (`this.#e()` corresponds to `this.#setLanguage()`), then awaiting the result of `this.mergeHead()`. The comma operator in the minified source confirms that these two statements are executed sequentially, matching the bundled function's structure."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5820741185,
+        "load_duration": 4532870,
+        "prompt_eval_count": 1072,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1423999000,
+        "eval_count": 110,
+        "eval_duration": 4290131000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160088:160127",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70853:70868",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"resetCacheControl() {\\n    this.#setCacheControl(\\\"\\\");\\n  }\",\"minified_source_function\":\"resetCacheControl(){this.#setCacheControl(\\\"\\\")}\",\"bundled_function\":\"resetCacheControl(){this.#e(\\\"\\\")}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "295a7d17069e4e1385e6a241fb34881b02a66cb24c3c48161d999c3378284495",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:08:07.986830183Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 19797869998,
+          "load_duration": 1505219,
+          "prompt_eval_count": 1029,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 737794000,
+          "eval_count": 2,
+          "eval_duration": 63146000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0022",
+    "explain": "The bundled function calls `this.#e(\"\")`, while the source function calls `this.#setCacheControl(\"\")`. Although `#e` is likely a minified version of `#setCacheControl`, private fields in JavaScript are identified by their exact name. Without explicit evidence that `#e` and `#setCacheControl` refer to the same private field (which cannot be assumed just because they look like minified counterparts), the bundled function attempts to access a different private field than the source. This would result in a `TypeError` at runtime if `#e` is not defined on the prototype or instance, making them semantically different.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:49.488420783Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function calls `this.#e(\"\")`, while the source function calls `this.#setCacheControl(\"\")`. Although `#e` is likely a minified version of `#setCacheControl`, private fields in JavaScript are identified by their exact name. Without explicit evidence that `#e` and `#setCacheControl` refer to the same private field (which cannot be assumed just because they look like minified counterparts), the bundled function attempts to access a different private field than the source. This would result in a `TypeError` at runtime if `#e` is not defined on the prototype or instance, making them semantically different."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6976079903,
+        "load_duration": 1145858,
+        "prompt_eval_count": 1059,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1117191000,
+        "eval_count": 134,
+        "eval_duration": 5777249000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160150:160197",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70887:70910",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"exemptPageFromCache() {\\n    this.#setCacheControl(\\\"no-cache\\\");\\n  }\",\"minified_source_function\":\"exemptPageFromCache(){this.#setCacheControl(\\\"no-cache\\\")}\",\"bundled_function\":\"exemptPageFromCache(){this.#e(\\\"no-cache\\\")}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "b4e7edc41f4a56649764264611d218f7544588c0a0a41a341e0e36702e0d1cd4",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:08:15.886419317Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 7895235019,
+          "load_duration": 1319596,
+          "prompt_eval_count": 1041,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 755930000,
+          "eval_count": 2,
+          "eval_duration": 74269000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0023",
+    "explain": "The bundled function is not semantically equivalent to the source function because it calls a different private method. The source function invokes `this.#setCacheControl(\"no-cache\")`, while the bundled function invokes `this.#e(\"no-cache\")`. In JavaScript, private fields and methods (denoted by `#`) are distinct identifiers; `#setCacheControl` and `#e` refer to completely different members of the class. Unless there is explicit evidence that `#e` is an alias or a renamed version of `#setCacheControl` within the same class scope (which cannot be assumed from the provided snippets alone), these functions perform different operations. The minified source function confirms the original method name was `#setCacheControl`, making the change to `#e` in the bundled version a semantic difference rather than a valid renaming transformation.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:33:59.388429193Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it calls a different private method. The source function invokes `this.#setCacheControl(\"no-cache\")`, while the bundled function invokes `this.#e(\"no-cache\")`. In JavaScript, private fields and methods (denoted by `#`) are distinct identifiers; `#setCacheControl` and `#e` refer to completely different members of the class. Unless there is explicit evidence that `#e` is an alias or a renamed version of `#setCacheControl` within the same class scope (which cannot be assumed from the provided snippets alone), these functions perform different operations. The minified source function confirms the original method name was `#setCacheControl`, making the change to `#e` in the bundled version a semantic difference rather than a valid renaming transformation."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 9895457335,
+        "load_duration": 4126096,
+        "prompt_eval_count": 1071,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1248613000,
+        "eval_count": 175,
+        "eval_duration": 8557837000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:160222:160271",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:70931:70956",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"exemptPageFromPreview() {\\n    this.#setCacheControl(\\\"no-preview\\\");\\n  }\",\"minified_source_function\":\"exemptPageFromPreview(){this.#setCacheControl(\\\"no-preview\\\")}\",\"bundled_function\":\"exemptPageFromPreview(){this.#e(\\\"no-preview\\\")}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "fdd3308f79282c4cf1e9e0c7e65a564c56067e29d47641ecfdaebe1b738de12b",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:08:25.588934221Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 9699136606,
+          "load_duration": 939276,
+          "prompt_eval_count": 1041,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 678365000,
+          "eval_count": 2,
+          "eval_duration": 60963000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0024",
+    "explain": "The bundled function calls `this.#e(\"no-preview\")`, while the source function calls `this.#setCacheControl(\"no-preview\")`. Although `#e` is likely a minified version of `#setCacheControl`, the provided context does not establish this mapping. In JavaScript, private fields (indicated by `#`) are distinct identifiers; `#e` and `#setCacheControl` refer to different private members unless explicitly defined as such in the class body, which is not visible here. Without evidence that `#e` is an alias or minified name for `#setCacheControl` within the same scope, the functions are not semantically equivalent because they invoke different private methods.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:34:07.188037898Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function calls `this.#e(\"no-preview\")`, while the source function calls `this.#setCacheControl(\"no-preview\")`. Although `#e` is likely a minified version of `#setCacheControl`, the provided context does not establish this mapping. In JavaScript, private fields (indicated by `#`) are distinct identifiers; `#e` and `#setCacheControl` refer to different private members unless explicitly defined as such in the class body, which is not visible here. Without evidence that `#e` is an alias or minified name for `#setCacheControl` within the same scope, the functions are not semantically equivalent because they invoke different private methods."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7795307306,
+        "load_duration": 1046409,
+        "prompt_eval_count": 1071,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 809729000,
+        "eval_count": 147,
+        "eval_duration": 6969154000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:182539:182608",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82194:82213",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"linkClickIntercepted(element, location) {\\n    this.#navigateFrame(element, location);\\n  }\",\"minified_source_function\":\"linkClickIntercepted(element,location){this.#navigateFrame(element,location)}\",\"bundled_function\":\"linkClickIntercepted(e,t){this.#f(e,t)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "0095bf69c7cc75c8262d7ed699ada15834b88f6e36c92218edccd5725e179ccd",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:08:35.682031738Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10088655111,
+          "load_duration": 770759,
+          "prompt_eval_count": 1042,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 710767000,
+          "eval_count": 2,
+          "eval_duration": 75776000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0025",
+    "explain": "The bundled function is not semantically equivalent to the source function because it calls a different private method. The source function invokes `this.#navigateFrame`, while the bundled function invokes `this.#f`. In JavaScript, private fields and methods (denoted by `#`) are uniquely identified by their names within the class scope; `#navigateFrame` and `#f` refer to distinct, unrelated bindings unless explicitly aliased in the surrounding code (which is not provided). Therefore, the bundled function attempts to call a method that does not exist in the original source's context, leading to a runtime error or incorrect behavior.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:34:14.386223425Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it calls a different private method. The source function invokes `this.#navigateFrame`, while the bundled function invokes `this.#f`. In JavaScript, private fields and methods (denoted by `#`) are uniquely identified by their names within the class scope; `#navigateFrame` and `#f` refer to distinct, unrelated bindings unless explicitly aliased in the surrounding code (which is not provided). Therefore, the bundled function attempts to call a method that does not exist in the original source's context, leading to a runtime error or incorrect behavior."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7194692554,
+        "load_duration": 1436900,
+        "prompt_eval_count": 1072,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 816792000,
+        "eval_count": 128,
+        "eval_duration": 6360095000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:183893:183974",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:82911:82944",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"requestErrored(request, error) {\\n    console.error(error);\\n    this.#resolveVisitPromise();\\n  }\",\"minified_source_function\":\"requestErrored(request,error){console.error(error),this.#resolveVisitPromise()}\",\"bundled_function\":\"requestErrored(e,t){console.error(t),this.#t()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "2e1fa0337ae7737f96e58f2429798f2ee44b1d08944b7ea17c58054f9514a1c8",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:08:55.287018536Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10497605920,
+          "load_duration": 1482742,
+          "prompt_eval_count": 1044,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 750579000,
+          "eval_count": 2,
+          "eval_duration": 69413000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0026",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:34:22.910707348Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The parameter names `request` and `error` are renamed to `e` and `t`, which is a standard minification/bundling transformation. The statement sequence `console.error(error); this.#resolveVisitPromise();` in the source is transformed into a comma expression `console.error(t),this.#t()` in the bundled version, which preserves the evaluation order and side effects as per rule #1. The private method call `#resolveVisitPromise` is renamed to `#t`, which is consistent with bundler obfuscation of private identifiers while maintaining the same logical operation on the same `this` context."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8515788540,
+        "load_duration": 2968252,
+        "prompt_eval_count": 1074,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 1417277000,
+        "eval_count": 141,
+        "eval_duration": 7011281000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:192929:192989",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:87521:87562",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"get isActive() {\\n    return this.element.isActive && this.#connected\\n  }\",\"minified_source_function\":\"get isActive(){return this.element.isActive&&this.#connected}\",\"bundled_function\":\"get isActive(){return this.element.isActive&&this.#s}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "34f015355b1fe72042c75d55cae77f67ddd24dd67d4e863376194463e4fd6c42",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:09:11.681284952Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 16389951142,
+          "load_duration": 1451856,
+          "prompt_eval_count": 1029,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 713205000,
+          "eval_count": 2,
+          "eval_duration": 27123000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0027",
+    "explain": "The bundled function is not semantically equivalent to the source function because it references a different private field. The source function accesses `this.#connected`, while the bundled function accesses `this.#s`. In JavaScript, private fields (denoted by `#`) are lexically scoped and unique to their declaration; `#connected` and `#s` refer to distinct properties unless explicitly aliased or renamed in a way that preserves the binding, which is not evident here. The minified source confirms the original field name is `#connected`, making the change to `#s` a semantic difference rather than a valid renaming transformation.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:34:29.204917803Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\nThe bundled function is not semantically equivalent to the source function because it references a different private field. The source function accesses `this.#connected`, while the bundled function accesses `this.#s`. In JavaScript, private fields (denoted by `#`) are lexically scoped and unique to their declaration; `#connected` and `#s` refer to distinct properties unless explicitly aliased or renamed in a way that preserves the binding, which is not evident here. The minified source confirms the original field name is `#connected`, making the change to `#s` a semantic difference rather than a valid renaming transformation."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6291589109,
+        "load_duration": 1231443,
+        "prompt_eval_count": 1059,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 842234000,
+        "eval_count": 129,
+        "eval_duration": 5419026000
+      }
+    }
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "sourceId": "reference:70bc1ef4695562cfcf11a4d52d9c069149e710f6f2708d81e7b43469372957e0:108890:109084",
+    "bundleId": "<local>/static/bundle.js?v=1.47.0#bd4869b67d89d4b8e96861c99a4ba9065b8c3833676b2e492701237dbe0925da:41392:41464",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"(result, outerHTML) => {\\n      const {\\n        elements: [element]\\n      } = this.detailsByOuterHTML[outerHTML];\\n      return elementIsMetaElementWithName(element, name) ? element : result\\n    }\",\"minified_source_function\":\"(e,t)=>{const{elements:[n]}=this.detailsByOuterHTML[t];return elementIsMetaElementWithName(n,name)?n:e}\",\"bundled_function\":\"(t,i)=>{let{elements:[n]}=this.detailsByOuterHTML[i];return Er(n,e)?n:t}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "5cfeb4658242c8f5f7ebcebb6b5736e400bb99985a0025667e36f988063958e4",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:09:20.285874492Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 8600087511,
+          "load_duration": 1555487,
+          "prompt_eval_count": 1098,
+          "prompt_eval_cached_count": 934,
+          "prompt_eval_duration": 769391000,
+          "eval_count": 2,
+          "eval_duration": 68389000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          3,
+          4
+        ]
+      }
+    ],
+    "id": "esbuild/sissbruecker--linkding/FN-0028",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a mismatch in external variable bindings.\n\n1.  **Parameter Mapping**:\n    *   Source: `(result, outerHTML)` maps to Bundled `(t, i)`.\n        *   `result` $\\leftrightarrow$ `t`\n        *   `outerHTML` $\\leftrightarrow$ `i`\n    *   Destructuring: `const { elements: [element] } = ...` maps to `let { elements: [n] } = ...`.\n        *   `element` $\\leftrightarrow$ `n`\n\n2.  **External Variable Mismatch**:\n    *   The source function calls `elementIsMetaElementWithName(element, name)`. It relies on an external variable named `name`.\n    *   The bundled function calls `Er(n, e)`. Here, `Er` likely corresponds to `elementIsMetaElementWithName`, and `n` corresponds to `element`. However, the second argument is `e`.\n    *   In the source function, there is no parameter or local variable named `e`. The variable `name` is used.\n    *   Unless `e` in the bundled scope is guaranteed to be identical to `name` (which cannot be inferred from the provided code snippets as they are distinct identifiers), the functions operate on different inputs for the predicate check. The source uses `name`, while the bundled version uses `e`.\n\n3.  **Conclusion**:\n    *   Source logic: Check if `element` matches `name`.\n    *   Bundled logic: Check if `n` (element) matches `e`.\n    *   Since `name` and `e` are different identifiers with no established mapping in the provided context, the functions are not equivalent.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:34:48.781932934Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a mismatch in external variable bindings.\n\n1.  **Parameter Mapping**:\n    *   Source: `(result, outerHTML)` maps to Bundled `(t, i)`.\n        *   `result` $\\leftrightarrow$ `t`\n        *   `outerHTML` $\\leftrightarrow$ `i`\n    *   Destructuring: `const { elements: [element] } = ...` maps to `let { elements: [n] } = ...`.\n        *   `element` $\\leftrightarrow$ `n`\n\n2.  **External Variable Mismatch**:\n    *   The source function calls `elementIsMetaElementWithName(element, name)`. It relies on an external variable named `name`.\n    *   The bundled function calls `Er(n, e)`. Here, `Er` likely corresponds to `elementIsMetaElementWithName`, and `n` corresponds to `element`. However, the second argument is `e`.\n    *   In the source function, there is no parameter or local variable named `e`. The variable `name` is used.\n    *   Unless `e` in the bundled scope is guaranteed to be identical to `name` (which cannot be inferred from the provided code snippets as they are distinct identifiers), the functions operate on different inputs for the predicate check. The source uses `name`, while the bundled version uses `e`.\n\n3.  **Conclusion**:\n    *   Source logic: Check if `element` matches `name`.\n    *   Bundled logic: Check if `n` (element) matches `e`.\n    *   Since `name` and `e` are different identifiers with no established mapping in the provided context, the functions are not equivalent."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 19572878188,
+        "load_duration": 1425842,
+        "prompt_eval_count": 1128,
+        "prompt_eval_cached_count": 964,
+        "prompt_eval_duration": 896020000,
+        "eval_count": 380,
+        "eval_duration": 18562517000
+      }
+    }
+  }
+]

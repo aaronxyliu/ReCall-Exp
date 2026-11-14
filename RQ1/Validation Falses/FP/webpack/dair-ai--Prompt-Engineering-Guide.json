@@ -1,1 +1,530 @@
-[{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:e3e49fdc93e6cd46df4a2d2529f37696109f95f6875f6011ad8c1a14fde4eec7:31518:31712","bundleId":"<local>/_next/static/chunks/framework-6b2b809263269e24.js#3b1573816ebc164ad193e8fc3df4098c928464a226517ea8cd0f3ab4eaf6faf2:35600:39770","groundTruth":"F","input":"{\"source_function\":\"function je(a,b){switch(a){case \\\"compositionend\\\":return he(b);case \\\"keypress\\\":if(32!==b.which)return null;fe=!0;return ee;case \\\"textInput\\\":return a=b.data,a===ee&&fe?null:a;default:return null}}\",\"minified_source_function\":\"function(e,n){switch(e){case\\\"compositionend\\\":return he(n);case\\\"keypress\\\":return 32!==n.which?null:(fe=!0,ee);case\\\"textInput\\\":return(e=n.data)===ee&&fe?null:e;default:return null}}\",\"bundled_function\":\"function(){var i=o,u=xb(a),s=[];e:{var w=ts.get(n);if(void 0!==w){var x=nC,C=n;switch(n){case\\\"keypress\\\":if(0===od(a))break e;case\\\"keydown\\\":case\\\"keyup\\\":x=nU;break;case\\\"focusin\\\":C=\\\"focus\\\",x=nL;break;case\\\"focusout\\\":C=\\\"blur\\\",x=nL;break;case\\\"beforeblur\\\":case\\\"afterblur\\\":x=nL;break;case\\\"click\\\":if(2===a.button)break e;case\\\"auxclick\\\":case\\\"dblclick\\\":case\\\"mousedown\\\":case\\\"mousemove\\\":case\\\"mouseup\\\":case\\\"mouseout\\\":case\\\"mouseover\\\":case\\\"contextmenu\\\":x=nz;break;case\\\"drag\\\":case\\\"dragend\\\":case\\\"dragenter\\\":case\\\"dragexit\\\":case\\\"dragleave\\\":case\\\"dragover\\\":case\\\"dragstart\\\":case\\\"drop\\\":x=nT;break;case\\\"touchcancel\\\":case\\\"touchend\\\":case\\\"touchmove\\\":case\\\"touchstart\\\":x=nW;break;case tr:case tl:case tu:x=nD;break;case to:x=nB;break;case\\\"scroll\\\":x=nP;break;case\\\"wheel\\\":x=nA;break;case\\\"copy\\\":case\\\"cut\\\":case\\\"paste\\\":x=nR;break;case\\\"gotpointercapture\\\":case\\\"lostpointercapture\\\":case\\\"pointercancel\\\":case\\\"pointerdown\\\":case\\\"pointermove\\\":case\\\"pointerout\\\":case\\\"pointerover\\\":case\\\"pointerup\\\":x=nV}var _=0!=(4&t),N=!_&&\\\"scroll\\\"===n,z=_?null!==w?w+\\\"Capture\\\":null:w;_=[];for(var j,L=i;null!==L;){var U=(j=L).stateNode;if(5===j.tag&&null!==U&&(j=U,null!==z&&null!=(U=Kb(L,z))&&_.push(tf(L,U,j))),N)break;L=L.return}0<_.length&&(w=new x(w,C,null,a,u),s.push({event:w,listeners:_}))}}if(0==(7&t)){if(w=\\\"mouseover\\\"===n||\\\"pointerover\\\"===n,x=\\\"mouseout\\\"===n||\\\"pointerout\\\"===n,!(w&&a!==eN&&(C=a.relatedTarget||a.fromElement)&&(Wc(C)||C[tT]))&&(x||w)&&(w=u.window===u?u:(w=u.ownerDocument)?w.defaultView||w.parentWindow:window,x?(C=a.relatedTarget||a.toElement,x=i,null!==(C=C?Wc(C):null)&&(N=Vb(C),C!==N||5!==C.tag&&6!==C.tag)&&(C=null)):(x=null,C=i),x!==C)){if(_=nz,U=\\\"onMouseLeave\\\",z=\\\"onMouseEnter\\\",L=\\\"mouse\\\",(\\\"pointerout\\\"===n||\\\"pointerover\\\"===n)&&(_=nV,U=\\\"onPointerLeave\\\",z=\\\"onPointerEnter\\\",L=\\\"pointer\\\"),N=null==x?w:ue(x),j=null==C?w:ue(C),(w=new _(U,L+\\\"leave\\\",x,a,u)).target=N,w.relatedTarget=j,U=null,Wc(u)===i&&((_=new _(z,L+\\\"enter\\\",C,a,u)).target=j,_.relatedTarget=N,U=_),N=U,x&&C)n:{for(_=x,z=C,L=0,j=_;j;j=vf(j))L++;for(j=0,U=z;U;U=vf(U))j++;for(;0<L-j;)_=vf(_),L--;for(;0<j-L;)z=vf(z),j--;for(;L--;){if(_===z||null!==z&&_===z.alternate)break n;_=vf(_),z=vf(z)}_=null}else _=null;null!==x&&wf(s,w,x,_,!1),null!==C&&null!==N&&wf(s,N,C,_,!0)}e:{if(\\\"select\\\"===(x=(w=i?ue(i):window).nodeName&&w.nodeName.toLowerCase())||\\\"input\\\"===x&&\\\"file\\\"===w.type)var V,B=ve;else if(me(w)){if(n0)B=Fe;else{B=De;var A=Ce}}else(x=w.nodeName)&&\\\"input\\\"===x.toLowerCase()&&(\\\"checkbox\\\"===w.type||\\\"radio\\\"===w.type)&&(B=Ee);if(B&&(B=B(n,i))){ne(s,B,a,u);break e}A&&A(n,w,i),\\\"focusout\\\"===n&&(A=w._wrapperState)&&A.controlled&&\\\"number\\\"===w.type&&cb(w,\\\"number\\\",w.value)}switch(A=i?ue(i):window,n){case\\\"focusin\\\":(me(A)||\\\"true\\\"===A.contentEditable)&&(n8=A,n6=i,n5=null);break;case\\\"focusout\\\":n5=n6=n8=null;break;case\\\"mousedown\\\":n7=!0;break;case\\\"contextmenu\\\":case\\\"mouseup\\\":case\\\"dragend\\\":n7=!1,Ue(s,a,u);break;case\\\"selectionchange\\\":if(n4)break;case\\\"keydown\\\":case\\\"keyup\\\":Ue(s,a,u)}if(nH)n:{switch(n){case\\\"compositionstart\\\":var $=\\\"onCompositionStart\\\";break n;case\\\"compositionend\\\":$=\\\"onCompositionEnd\\\";break n;case\\\"compositionupdate\\\":$=\\\"onCompositionUpdate\\\";break n}$=void 0}else nX?ge(n,a)&&($=\\\"onCompositionEnd\\\"):\\\"keydown\\\"===n&&229===a.keyCode&&($=\\\"onCompositionStart\\\");$&&(nG&&\\\"ko\\\"!==a.locale&&(nX||\\\"onCompositionStart\\\"!==$?\\\"onCompositionEnd\\\"===$&&nX&&(V=nd()):(ny=\\\"value\\\"in(nb=u)?nb.value:nb.textContent,nX=!0)),0<(A=oe(i,$)).length&&($=new nM($,n,null,a,u),s.push({event:$,listeners:A}),V?$.data=V:null!==(V=he(a))&&($.data=V))),(V=nK?function(n,t){switch(n){case\\\"compositionend\\\":return he(t);case\\\"keypress\\\":if(32!==t.which)return null;return nq=!0,\\\" \\\";case\\\"textInput\\\":return\\\" \\\"===(n=t.data)&&nq?null:n;default:return null}}(n,a):function(n,t){if(nX)return\\\"compositionend\\\"===n||!nH&&ge(n,t)?(n=nd(),nk=ny=nb=null,nX=!1,n):null;switch(n){case\\\"paste\\\":default:return null;case\\\"keypress\\\":if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case\\\"compositionend\\\":return nG&&\\\"ko\\\"!==t.locale?null:t.data}}(n,a))&&0<(i=oe(i,\\\"onBeforeInput\\\")).length&&(u=new nM(\\\"onBeforeInput\\\",\\\"beforeinput\\\",null,a,u),s.push({event:u,listeners:i}),u.data=V)}se(s,t)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"21f829f1e0a0408c98ff7ca7a09c2f1d5eb0411e94bef1569d1aae9c80bd88bc","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:37:45.266115445Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1443593343,"load_duration":1908243,"prompt_eval_count":2657,"prompt_eval_cached_count":936,"prompt_eval_duration":1392785000,"eval_count":2,"eval_duration":27811000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0001"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:e3e49fdc93e6cd46df4a2d2529f37696109f95f6875f6011ad8c1a14fde4eec7:113482:113673","bundleId":"<local>/_next/static/chunks/framework-6b2b809263269e24.js#3b1573816ebc164ad193e8fc3df4098c928464a226517ea8cd0f3ab4eaf6faf2:94132:95953","groundTruth":"F","input":"{\"source_function\":\"function Ik(a,b){var c=K;K|=2;var d=Jk();if(Q!==a||Z!==b)uk=null,Kk(a,b);do try{Tk();break}catch(e){Mk(a,e)}while(1);$g();K=c;mk.current=d;if(null!==Y)throw Error(p(261));Q=null;Z=0;return T}\",\"minified_source_function\":\"function(r,n){var t=K;K|=2;var c=Jk();for(Q===r&&Z===n||(uk=null,Kk(r,n));;)try{Tk();break}catch(n){Mk(r,n)}if($g(),K=t,mk.current=c,null!==Y)throw Error(p(261));return Q=null,Z=0,T}\",\"bundled_function\":\"function Gk(n,t){if(lr=-1,la=0,0!=(6&rA))throw Error(p(327));var a=n.callbackNode;if(Hk()&&n.callbackNode!==a)return null;var i=uc(n,n===r$?rQ:0);if(0===i)return null;if(0!=(30&i)||0!=(i&n.expiredLanes)||t)t=Ik(n,i);else{t=i;var u=rA;rA|=2;var o=Jk();for((r$!==n||rQ!==t)&&(r4=null,r3=e$()+500,Kk(n,t));;)try{!function(){for(;null!==rH&&!eB();)Uk(rH)}();break}catch(t){Mk(n,t)}$g(),rV.current=o,rA=u,null!==rH?t=0:(r$=null,rQ=0,t=rq)}if(0!==t){if(2===t&&0!==(u=xc(n))&&(i=u,t=Nk(n,u)),1===t)throw a=rX,Kk(n,0),Ck(n,i),Dk(n,e$()),a;if(6===t)Ck(n,i);else{if(u=n.current.alternate,0==(30&i)&&!function(n){for(var t=n;;){if(16384&t.flags){var a=t.updateQueue;if(null!==a&&null!==(a=a.stores))for(var i=0;i<a.length;i++){var u=a[i],o=u.getSnapshot;u=u.value;try{if(!n3(o(),u))return!1}catch(n){return!1}}}if(a=t.child,16384&t.subtreeFlags&&null!==a)a.return=t,t=a;else{if(t===n)break;for(;null===t.sibling;){if(null===t.return||t.return===n)return!0;t=t.return}t.sibling.return=t.return,t=t.sibling}}return!0}(u)&&(2===(t=Ik(n,i))&&0!==(o=xc(n))&&(i=o,t=Nk(n,o)),1===t))throw a=rX,Kk(n,0),Ck(n,i),Dk(n,e$()),a;switch(n.finishedWork=u,n.finishedLanes=i,t){case 0:case 1:throw Error(p(345));case 2:case 5:Pk(n,r1,r4);break;case 3:if(Ck(n,i),(130023424&i)===i&&10<(t=r2+500-e$())){if(0!==uc(n,0))break;if(((u=n.suspendedLanes)&i)!==i){R(),n.pingedLanes|=n.suspendedLanes&u;break}n.timeoutHandle=tE(Pk.bind(null,n,r1,r4),t);break}Pk(n,r1,r4);break;case 4:if(Ck(n,i),(4194240&i)===i)break;for(u=-1,t=n.eventTimes;0<i;){var s=31-eJ(i);o=1<<s,(s=t[s])>u&&(u=s),i&=~o}if(i=u,10<(i=(120>(i=e$()-i)?120:480>i?480:1080>i?1080:1920>i?1920:3e3>i?3e3:4320>i?4320:1960*rU(i/1960))-i)){n.timeoutHandle=tE(Pk.bind(null,n,r1,r4),i);break}Pk(n,r1,r4);break;default:throw Error(p(329))}}}return Dk(n,e$()),n.callbackNode===a?Gk.bind(null,n):null}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"065289902b38e877d7eec6e8437c9ebe940238fbdcf9657aaaca94a3e163a00d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:39:58.046620707Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":999783549,"load_duration":3055698,"prompt_eval_count":1990,"prompt_eval_cached_count":936,"prompt_eval_duration":950156000,"eval_count":2,"eval_duration":27190000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0002"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:11945:12948","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:65735:67244","groundTruth":"F","input":"{\"source_function\":\"function fetchRetry(url, attempts, options) {\\n    return fetch(url, {\\n        // Cookies are required to be present for Next.js' SSG \\\"Preview Mode\\\".\\n        // Cookies may also be required for `getServerSideProps`.\\n        //\\n        // > `fetch` won’t send cookies, unless you set the credentials init\\n        // > option.\\n        // https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch\\n        //\\n        // > For maximum browser compatibility when it comes to sending &\\n        // > receiving cookies, always supply the `credentials: 'same-origin'`\\n        // > option instead of relying on the default.\\n        // https://github.com/github/fetch#caveats\\n        credentials: \\\"same-origin\\\",\\n        method: options.method || \\\"GET\\\",\\n        headers: Object.assign({}, options.headers, {\\n            \\\"x-nextjs-data\\\": \\\"1\\\"\\n        })\\n    }).then((response)=>{\\n        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;\\n    });\\n}\",\"minified_source_function\":\"function e(t,a,n){return fetch(t,{credentials:\\\"same-origin\\\",method:n.method||\\\"GET\\\",headers:Object.assign({},n.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(s=>!s.ok&&a>1&&s.status>=500?e(t,a-1,n):s)}\",\"bundled_function\":\"function fetchNextData(r){var n;let{dataHref:o,inflightCache:l,isPrefetch:u,hasMiddleware:s,isServerRender:d,parseJSON:h,persistCache:g,isBackground:_,unstable_skipClientCache:y}=r,{href:P}=new URL(o,window.location.href),getData=r=>(function fetchRetry(r,n,o){return fetch(r,{credentials:\\\"same-origin\\\",method:o.method||\\\"GET\\\",headers:Object.assign({},o.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(l=>!l.ok&&n>1&&l.status>=500?fetchRetry(r,n-1,o):l)})(o,d?3:1,{headers:Object.assign({},u?{purpose:\\\"prefetch\\\"}:{},u&&s?{\\\"x-middleware-prefetch\\\":\\\"1\\\"}:{}),method:null!=(n=null==r?void 0:r.method)?n:\\\"GET\\\"}).then(n=>n.ok&&(null==r?void 0:r.method)===\\\"HEAD\\\"?{dataHref:o,response:n,text:\\\"\\\",json:{},cacheKey:P}:n.text().then(r=>{if(!n.ok){if(s&&[301,302,307,308].includes(n.status))return{dataHref:o,response:n,text:r,json:{},cacheKey:P};if(404===n.status){var l;if(null==(l=tryToParseAsJSON(r))?void 0:l.notFound)return{dataHref:o,json:{notFound:G},response:n,text:r,cacheKey:P}}let u=Error(\\\"Failed to load static props\\\");throw d||(0,f.markAssetError)(u),u}return{dataHref:o,json:h?tryToParseAsJSON(r):null,response:n,text:r,cacheKey:P}})).then(r=>(g&&\\\"no-cache\\\"!==r.response.headers.get(\\\"x-middleware-cache\\\")||delete l[P],r)).catch(r=>{throw y||delete l[P],(\\\"Failed to fetch\\\"===r.message||\\\"NetworkError when attempting to fetch resource.\\\"===r.message||\\\"Load failed\\\"===r.message)&&(0,f.markAssetError)(r),r});return y&&g?getData({}).then(r=>(l[P]=Promise.resolve(r),r)):void 0!==l[P]?l[P]:l[P]=getData(_?{method:\\\"HEAD\\\"}:{})}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"16a26e01e7df9f397e1e3f9053f09f99007b7881425fe8c9c1beaf858d6cd11d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:45:05.141837018Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1822026040,"load_duration":954297,"prompt_eval_count":1782,"prompt_eval_cached_count":936,"prompt_eval_duration":1540654000,"eval_count":2,"eval_duration":84768000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0003"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:73bdcc94e8c6c874627d5e7278b5f5b6f03e5b537682a5d88648545ce53568d2:700:942","bundleId":"<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:38244:38619","groundTruth":"F","input":"{\"source_function\":\"function runClearTimeout(e){if(n===clearTimeout){return clearTimeout(e)}if((n===defaultClearTimeout||!n)&&clearTimeout){n=clearTimeout;return clearTimeout(e)}try{return n(e)}catch(t){try{return n.call(null,e)}catch(t){return n.call(this,e)}}}\",\"minified_source_function\":\"function(e){if(n===clearTimeout)return clearTimeout(e);if((n===defaultClearTimeout||!n)&&clearTimeout)return n=clearTimeout,clearTimeout(e);try{return n(e)}catch(r){try{return n.call(null,e)}catch(r){return n.call(this,e)}}}\",\"bundled_function\":\"function drainQueue(){if(!H){var n=runTimeout(cleanUpNextTick);H=!0;for(var a=W.length;a;){for(v=W,W=[];++B<a;)v&&v[B].run();B=-1,a=W.length}v=null,H=!1,function(n){if(g===clearTimeout)return clearTimeout(n);if((g===defaultClearTimeout||!g)&&clearTimeout)return g=clearTimeout,clearTimeout(n);try{g(n)}catch(a){try{return g.call(null,n)}catch(a){return g.call(this,n)}}}(n)}}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"29d52d28a080204258cdf349c7d983bb74504afec2acef7251c80e647d675ee5","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:49:30.114039594Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2198003912,"load_duration":979697,"prompt_eval_count":1201,"prompt_eval_cached_count":936,"prompt_eval_duration":2107733000,"eval_count":2,"eval_duration":27155000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0004"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:8ff52e2acdb7c21ffc125903862ab30931076047d12093166644c817ef86458a:3335:3647","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:7854:7954","groundTruth":"F","input":"{\"source_function\":\"(newTag)=>{\\n            for(let k = 0, len = oldTags.length; k < len; k++){\\n                const oldTag = oldTags[k];\\n                if (isEqualNode(oldTag, newTag)) {\\n                    oldTags.splice(k, 1);\\n                    return false;\\n                }\\n            }\\n            return true;\\n        }\",\"minified_source_function\":\"e=>{for(let o=0,l=oldTags.length;o<l;o++){const l=oldTags[o];if(isEqualNode(l,e))return oldTags.splice(o,1),!1}return!0}\",\"bundled_function\":\"r=>{for(let n=0,o=s.length;n<o;n++){let o=s[n];if(isEqualNode(o,r))return s.splice(n,1),!1}return!0}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"a1f6295a017c2bdd7124d695d807e5011328e3c3a9a37e73ee41e1f597b0c5f1","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:52:57.616716431Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1596382154,"load_duration":1380963,"prompt_eval_count":1125,"prompt_eval_cached_count":936,"prompt_eval_duration":1421963000,"eval_count":2,"eval_duration":73231000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0005"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:f6adf1ac0e2ac4eeb12d1ec9b4461ba164abe6165f5f070ba65ab60010ecb714:6149:7219","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:29362:31563","groundTruth":"F","input":"{\"source_function\":\"function getFilesForRoute(assetPrefix, route) {\\n    if (process.env.NODE_ENV === \\\"development\\\") {\\n        const scriptUrl = assetPrefix + \\\"/_next/static/chunks/pages\\\" + encodeURI((0, _getassetpathfromroute.default)(route, \\\".js\\\")) + getAssetQueryString();\\n        return Promise.resolve({\\n            scripts: [\\n                (0, _trustedtypes.__unsafeCreateTrustedScriptURL)(scriptUrl)\\n            ],\\n            // Styles are handled by `style-loader` in development:\\n            css: []\\n        });\\n    }\\n    return getClientBuildManifest().then((manifest)=>{\\n        if (!(route in manifest)) {\\n            throw markAssetError(new Error(\\\"Failed to lookup route: \\\" + route));\\n        }\\n        const allFiles = manifest[route].map((entry)=>assetPrefix + \\\"/_next/\\\" + encodeURI(entry));\\n        return {\\n            scripts: allFiles.filter((v)=>v.endsWith(\\\".js\\\")).map((v)=>(0, _trustedtypes.__unsafeCreateTrustedScriptURL)(v) + getAssetQueryString()),\\n            css: allFiles.filter((v)=>v.endsWith(\\\".css\\\")).map((v)=>v + getAssetQueryString())\\n        };\\n    });\\n}\",\"minified_source_function\":\"function(e,t){if(\\\"development\\\"===process.env.NODE_ENV){const s=e+\\\"/_next/static/chunks/pages\\\"+encodeURI((0,_getassetpathfromroute.default)(t,\\\".js\\\"))+getAssetQueryString();return Promise.resolve({scripts:[(0,_trustedtypes.__unsafeCreateTrustedScriptURL)(s)],css:[]})}return getClientBuildManifest().then(s=>{if(!(t in s))throw markAssetError(new Error(\\\"Failed to lookup route: \\\"+t));const r=s[t].map(t=>e+\\\"/_next/\\\"+encodeURI(t));return{scripts:r.filter(e=>e.endsWith(\\\".js\\\")).map(e=>(0,_trustedtypes.__unsafeCreateTrustedScriptURL)(e)+getAssetQueryString()),css:r.filter(e=>e.endsWith(\\\".css\\\")).map(e=>e+getAssetQueryString())}})}\",\"bundled_function\":\"function createRouteLoader(r){let n=new Map,o=new Map,l=new Map,s=new Map;function maybeExecuteScript(r){{var n;let l=o.get(r.toString());return l||(document.querySelector('script[src^=\\\"'+r+'\\\"]')?Promise.resolve():(o.set(r.toString(),l=new Promise((o,l)=>{(n=document.createElement(\\\"script\\\")).onload=o,n.onerror=()=>l(markAssetError(Error(\\\"Failed to load script: \\\"+r))),n.crossOrigin=void 0,n.src=r,document.body.appendChild(n)})),l))}}function fetchStyleSheet(r){let n=l.get(r);return n||l.set(r,n=fetch(r).then(n=>{if(!n.ok)throw Error(\\\"Failed to load stylesheet: \\\"+r);return n.text().then(n=>({href:r,content:n}))}).catch(r=>{throw markAssetError(r)})),n}return{whenEntrypoint:r=>withFuture(r,n),onEntrypoint(r,o){(o?Promise.resolve().then(()=>o()).then(r=>({component:r&&r.default||r,exports:r}),r=>({error:r})):Promise.resolve(void 0)).then(o=>{let l=n.get(r);l&&\\\"resolve\\\"in l?o&&(n.set(r,o),l.resolve(o)):(o?n.set(r,o):n.delete(r),s.delete(r))})},loadRoute(o,l){return withFuture(o,s,()=>{let u;return resolvePromiseWithTimeout(getFilesForRoute(r,o).then(r=>{let{scripts:l,css:u}=r;return Promise.all([n.has(o)?[]:Promise.all(l.map(maybeExecuteScript)),Promise.all(u.map(fetchStyleSheet))])}).then(r=>this.whenEntrypoint(o).then(n=>({entrypoint:n,styles:r[1]}))),3800,markAssetError(Error(\\\"Route did not complete loading: \\\"+o))).then(r=>{let{entrypoint:n,styles:o}=r,l=Object.assign({styles:o},n);return\\\"error\\\"in n?n:l}).catch(r=>{if(l)throw r;return{error:r}}).finally(()=>null==u?void 0:u())})},prefetch(n){let o;return(o=navigator.connection)&&(o.saveData||/2g/.test(o.effectiveType))?Promise.resolve():getFilesForRoute(r,n).then(r=>Promise.all(d?r.scripts.map(r=>{var n,o,l;return n=r.toString(),o=\\\"script\\\",new Promise((r,u)=>{let s='\\\\n      link[rel=\\\"prefetch\\\"][href^=\\\"'+n+'\\\"],\\\\n      link[rel=\\\"preload\\\"][href^=\\\"'+n+'\\\"],\\\\n      script[src^=\\\"'+n+'\\\"]';if(document.querySelector(s))return r();l=document.createElement(\\\"link\\\"),o&&(l.as=o),l.rel=\\\"prefetch\\\",l.crossOrigin=void 0,l.onload=r,l.onerror=()=>u(markAssetError(Error(\\\"Failed to prefetch: \\\"+n))),l.href=n,document.head.appendChild(l)})}):[])).then(()=>{(0,u.requestIdleCallback)(()=>this.loadRoute(n,!0).catch(()=>{}))}).catch(()=>{})}}}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"0ded41ffde31b9d6e8f9d5405b79d034ac5f0fd0f3f4ae27dbfb4b9c20d20c05","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:54:02.644203614Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1423537363,"load_duration":965495,"prompt_eval_count":2119,"prompt_eval_cached_count":1035,"prompt_eval_duration":1298867000,"eval_count":2,"eval_duration":25793000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0006"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:12802:12944","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:65965:67128","groundTruth":"F","input":"{\"source_function\":\"(response)=>{\\n        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;\\n    }\",\"minified_source_function\":\"t=>!t.ok&&attempts>1&&t.status>=500?fetchRetry(url,attempts-1,options):t\",\"bundled_function\":\"r=>(function fetchRetry(r,n,o){return fetch(r,{credentials:\\\"same-origin\\\",method:o.method||\\\"GET\\\",headers:Object.assign({},o.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(l=>!l.ok&&n>1&&l.status>=500?fetchRetry(r,n-1,o):l)})(o,d?3:1,{headers:Object.assign({},u?{purpose:\\\"prefetch\\\"}:{},u&&s?{\\\"x-middleware-prefetch\\\":\\\"1\\\"}:{}),method:null!=(n=null==r?void 0:r.method)?n:\\\"GET\\\"}).then(n=>n.ok&&(null==r?void 0:r.method)===\\\"HEAD\\\"?{dataHref:o,response:n,text:\\\"\\\",json:{},cacheKey:P}:n.text().then(r=>{if(!n.ok){if(s&&[301,302,307,308].includes(n.status))return{dataHref:o,response:n,text:r,json:{},cacheKey:P};if(404===n.status){var l;if(null==(l=tryToParseAsJSON(r))?void 0:l.notFound)return{dataHref:o,json:{notFound:G},response:n,text:r,cacheKey:P}}let u=Error(\\\"Failed to load static props\\\");throw d||(0,f.markAssetError)(u),u}return{dataHref:o,json:h?tryToParseAsJSON(r):null,response:n,text:r,cacheKey:P}})).then(r=>(g&&\\\"no-cache\\\"!==r.response.headers.get(\\\"x-middleware-cache\\\")||delete l[P],r)).catch(r=>{throw y||delete l[P],(\\\"Failed to fetch\\\"===r.message||\\\"NetworkError when attempting to fetch resource.\\\"===r.message||\\\"Load failed\\\"===r.message)&&(0,f.markAssetError)(r),r})\"}","finalPairPromoted":true,"judgments":[{"requestKey":"b3a246e121cefc461c059174b5bae1657588faf18593599da51e60d316102e68","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:54:43.629142777Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":3511502821,"load_duration":1617475,"prompt_eval_count":1424,"prompt_eval_cached_count":936,"prompt_eval_duration":840142000,"eval_count":2,"eval_duration":78179000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0007"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:7f39f79fe7757b1b7fb9865c96e759fd48cd9a5a5ac893f1231e52841fcab766:5668:5698","bundleId":"<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:202202:202251","groundTruth":"F","input":"{\"source_function\":\"() => useContext2(MenuContext)\",\"minified_source_function\":\"()=>useContext2(MenuContext)\",\"bundled_function\":\"function useConfig(){return(0,ew.useContext)(nX)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"4792be6a1641b84b082dff42f12a9a1d28db4ac517830af86b93e29980008843","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:56:54.017945379Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2987645961,"load_duration":874593,"prompt_eval_count":984,"prompt_eval_cached_count":936,"prompt_eval_duration":663536000,"eval_count":2,"eval_duration":86194000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0008"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:73939:77554","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:84811:87352","groundTruth":"F","input":"{\"source_function\":\"(e)=>{\\n            const { isFirstPopStateEvent } = this;\\n            this.isFirstPopStateEvent = false;\\n            const state = e.state;\\n            if (!state) {\\n                // We get state as undefined for two reasons.\\n                //  1. With older safari (< 8) and older chrome (< 34)\\n                //  2. When the URL changed with #\\n                //\\n                // In the both cases, we don't need to proceed and change the route.\\n                // (as it's already changed)\\n                // But we can simply replace the state with the new changes.\\n                // Actually, for (1) we don't need to nothing. But it's hard to detect that event.\\n                // So, doing the following for (1) does no harm.\\n                const { pathname, query } = this;\\n                this.changeState(\\\"replaceState\\\", (0, _formaturl.formatWithValidation)({\\n                    pathname: (0, _addbasepath.addBasePath)(pathname),\\n                    query\\n                }), (0, _utils.getURL)());\\n                return;\\n            }\\n            // __NA is used to identify if the history entry can be handled by the app-router.\\n            if (state.__NA) {\\n                window.location.reload();\\n                return;\\n            }\\n            if (!state.__N) {\\n                return;\\n            }\\n            // Safari fires popstateevent when reopening the browser.\\n            if (isFirstPopStateEvent && this.locale === state.options.locale && state.as === this.asPath) {\\n                return;\\n            }\\n            let forcedScroll;\\n            const { url, as, options, key } = state;\\n            if (process.env.__NEXT_SCROLL_RESTORATION) {\\n                if (manualScrollRestoration) {\\n                    if (this._key !== key) {\\n                        // Snapshot current scroll position:\\n                        try {\\n                            sessionStorage.setItem(\\\"__next_scroll_\\\" + this._key, JSON.stringify({\\n                                x: self.pageXOffset,\\n                                y: self.pageYOffset\\n                            }));\\n                        } catch (e) {}\\n                        // Restore old scroll position:\\n                        try {\\n                            const v = sessionStorage.getItem(\\\"__next_scroll_\\\" + key);\\n                            forcedScroll = JSON.parse(v);\\n                        } catch (e) {\\n                            forcedScroll = {\\n                                x: 0,\\n                                y: 0\\n                            };\\n                        }\\n                    }\\n                }\\n            }\\n            this._key = key;\\n            const { pathname } = (0, _parserelativeurl.parseRelativeUrl)(url);\\n            // Make sure we don't re-render on initial load,\\n            // can be caused by navigating back from an external site\\n            if (this.isSsr && as === (0, _addbasepath.addBasePath)(this.asPath) && pathname === (0, _addbasepath.addBasePath)(this.pathname)) {\\n                return;\\n            }\\n            // If the downstream application returns falsy, return.\\n            // They will then be responsible for handling the event.\\n            if (this._bps && !this._bps(state)) {\\n                return;\\n            }\\n            this.change(\\\"replaceState\\\", url, as, Object.assign({}, options, {\\n                shallow: options.shallow && this._shallow,\\n                locale: options.locale || this.defaultLocale,\\n                // @ts-ignore internal value not exposed on types\\n                _h: 0\\n            }), forcedScroll);\\n        }\",\"minified_source_function\":\"t=>{const{isFirstPopStateEvent:a}=this;this.isFirstPopStateEvent=!1;const e=t.state;if(!e){const{pathname:t,query:a}=this;return void this.changeState(\\\"replaceState\\\",(0,_formaturl.formatWithValidation)({pathname:(0,_addbasepath.addBasePath)(t),query:a}),(0,_utils.getURL)())}if(e.__NA)return void window.location.reload();if(!e.__N)return;if(a&&this.locale===e.options.locale&&e.as===this.asPath)return;let s;const{url:i,as:o,options:h,key:l}=e;if(process.env.__NEXT_SCROLL_RESTORATION&&manualScrollRestoration&&this._key!==l){try{sessionStorage.setItem(\\\"__next_scroll_\\\"+this._key,JSON.stringify({x:self.pageXOffset,y:self.pageYOffset}))}catch(t){}try{const t=sessionStorage.getItem(\\\"__next_scroll_\\\"+l);s=JSON.parse(t)}catch(t){s={x:0,y:0}}}this._key=l;const{pathname:r}=(0,_parserelativeurl.parseRelativeUrl)(i);this.isSsr&&o===(0,_addbasepath.addBasePath)(this.asPath)&&r===(0,_addbasepath.addBasePath)(this.pathname)||this._bps&&!this._bps(e)||this.change(\\\"replaceState\\\",i,o,Object.assign({},h,{shallow:h.shallow&&this._shallow,locale:h.locale||this.defaultLocale,_h:0}),s)}\",\"bundled_function\":\"constructor(r,n,l,{initialProps:u,pageLoader:f,App:d,wrapApp:h,Component:g,err:_,subscription:y,isFallback:S,locale:R,locales:O,defaultLocale:C,domainLocales:x,isPreview:j}){this.sdc={},this.sbc={},this.isFirstPopStateEvent=!0,this._key=createKey(),this.onPopState=r=>{let n;let{isFirstPopStateEvent:o}=this;this.isFirstPopStateEvent=!1;let l=r.state;if(!l){let{pathname:r,query:n}=this;this.changeState(\\\"replaceState\\\",(0,w.formatWithValidation)({pathname:(0,L.addBasePath)(r),query:n}),(0,P.getURL)());return}if(l.__NA){window.location.reload();return}if(!l.__N||o&&this.locale===l.options.locale&&l.as===this.asPath)return;let{url:u,as:s,options:f,key:d}=l;this._key=d;let{pathname:h}=(0,E.parseRelativeUrl)(u);(!this.isSsr||s!==(0,L.addBasePath)(this.asPath)||h!==(0,L.addBasePath)(this.pathname))&&(!this._bps||this._bps(l))&&this.change(\\\"replaceState\\\",u,s,Object.assign({},f,{shallow:f.shallow&&this._shallow,locale:f.locale||this.defaultLocale,_h:0}),n)};let M=(0,s.removeTrailingSlash)(r);this.components={},\\\"/_error\\\"!==r&&(this.components[M]={Component:g,initial:!0,props:u,err:_,__N_SSG:u&&u.__N_SSG,__N_SSP:u&&u.__N_SSP}),this.components[\\\"/_app\\\"]={Component:d,styleSheets:[]};{let{BloomFilter:r}=o(33335),n={numItems:0,errorRate:.01,numBits:0,numHashes:null,bitArray:[]},l={numItems:0,errorRate:.01,numBits:0,numHashes:null,bitArray:[]};(null==n?void 0:n.numHashes)&&(this._bfl_s=new r(n.numItems,n.errorRate),this._bfl_s.import(n)),(null==l?void 0:l.numHashes)&&(this._bfl_d=new r(l.numItems,l.errorRate),this._bfl_d.import(l))}this.events=Router.events,this.pageLoader=f;let I=(0,b.isDynamicRoute)(r)&&self.__NEXT_DATA__.autoExport;if(this.basePath=\\\"\\\",this.sub=y,this.clc=null,this._wrapApp=h,this.isSsr=!0,this.isLocaleDomain=!1,this.isReady=!!(self.__NEXT_DATA__.gssp||self.__NEXT_DATA__.gip||self.__NEXT_DATA__.isExperimentalCompile||self.__NEXT_DATA__.appGip&&!self.__NEXT_DATA__.gsp||(I||self.location.search,0)),this.locales=O,this.defaultLocale=C,this.domainLocales=x,this.isLocaleDomain=!!(0,A.detectDomainLocale)(x,self.location.hostname),this.state={route:M,pathname:r,query:n,asPath:I?r:l,isPreview:!!j,locale:R,isFallback:S},this._initialMatchesMiddlewarePromise=Promise.resolve(!1),!l.startsWith(\\\"//\\\")){let o={locale:R},u=(0,P.getURL)();this._initialMatchesMiddlewarePromise=matchesMiddleware({router:this,locale:R,asPath:u}).then(s=>(o._shouldResolveHref=l!==r,this.changeState(\\\"replaceState\\\",s?u:(0,w.formatWithValidation)({pathname:(0,L.addBasePath)(r),query:n}),u,o),s))}window.addEventListener(\\\"popstate\\\",this.onPopState)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"209b1df16419e0043166f7cf495370d181447382362872e0144a0d553f9816d4","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:59:46.120037868Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1469339859,"load_duration":1481445,"prompt_eval_count":2883,"prompt_eval_cached_count":1629,"prompt_eval_duration":1307416000,"eval_count":2,"eval_duration":83460000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0009"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:c9856c52788f090d10a89489dc8020bca739564d0ea108c84fea55842221a59e:248:440","bundleId":"<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:123466:123636","groundTruth":"F","input":"{\"source_function\":\"function(){n.r=function(n){if(typeof Symbol!==\\\"undefined\\\"&&Symbol.toStringTag){Object.defineProperty(n,Symbol.toStringTag,{value:\\\"Module\\\"})}Object.defineProperty(n,\\\"__esModule\\\",{value:true})}}\",\"minified_source_function\":\"function(){n.r=function(e){\\\"undefined\\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\\\"Module\\\"}),Object.defineProperty(e,\\\"__esModule\\\",{value:!0})}}\",\"bundled_function\":\"function(r){\\\"undefined\\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:\\\"Module\\\"}),Object.defineProperty(r,\\\"__esModule\\\",{value:!0})}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"e16e3b709f7f4769ccef88bbc03d22afa6fd72e5092262e8c468d527dd2e6978","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T15:59:55.338309106Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1906372073,"load_duration":85347141,"prompt_eval_count":1086,"prompt_eval_cached_count":936,"prompt_eval_duration":1725352000,"eval_count":2,"eval_duration":83504000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0010"},{"subject":"webpack/dair-ai--Prompt-Engineering-Guide","sourceId":"reference:7f39f79fe7757b1b7fb9865c96e759fd48cd9a5a5ac893f1231e52841fcab766:40274:40420","bundleId":"<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:217223:219144","groundTruth":"F","input":"{\"source_function\":\"function Portal(props) {\\n  const mounted = useMounted2();\\n  if (!mounted)\\n    return null;\\n  return createPortal(props.children, document.body);\\n}\",\"minified_source_function\":\"function(e){return useMounted2()?createPortal(e.children,document.body):null}\",\"bundled_function\":\"function Select({options:n,selected:a,onChange:g,title:v,className:j}){let[W,H]=function(n){let a=(0,ew.useRef)(null),g=(0,ew.useRef)(null),v=(0,ew.useRef)(),j=(0,ew.useCallback)(()=>{var j;a.current&&g.current&&(null==(j=v.current)||j.call(v),v.current=tP(a.current,g.current,n).destroy)},[a,g,v,n]);return(0,ew.useMemo)(()=>[n=>{a.current=n,j()},n=>{g.current=n,j()}],[a,g,j])}({strategy:\\\"fixed\\\",placement:\\\"top-start\\\",modifiers:[{name:\\\"offset\\\",options:{offset:[0,10]}},{name:\\\"sameWidth\\\",enabled:!0,fn({state:n}){n.styles.popper.minWidth=`${n.rects.reference.width}px`},phase:\\\"beforeWrite\\\",requires:[\\\"computeStyles\\\"]}]});return(0,e5.jsx)(ny,{value:a,onChange:g,children:({open:g})=>(0,e5.jsxs)(ny.Button,{ref:W,title:v,className:(0,ek.Z)(\\\"nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400\\\",g?\\\"nx-bg-gray-200 nx-text-gray-900 dark:nx-bg-primary-100/10 dark:nx-text-gray-50\\\":\\\"hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50\\\",j),children:[a.name,(0,e5.jsx)(Portal,{children:(0,e5.jsx)(ne,{ref:H,show:g,as:ny.Options,className:\\\"nx-z-20 nx-max-h-64 nx-overflow-auto nx-rounded-md nx-ring-1 nx-ring-black/5 nx-bg-white nx-py-1 nx-text-sm nx-shadow-lg dark:nx-ring-white/20 dark:nx-bg-neutral-800\\\",leave:\\\"nx-transition-opacity\\\",leaveFrom:\\\"nx-opacity-100\\\",leaveTo:\\\"nx-opacity-0\\\",children:n.map(n=>(0,e5.jsxs)(ny.Option,{value:n,className:({active:n})=>(0,ek.Z)(n?\\\"nx-bg-primary-50 nx-text-primary-600 dark:nx-bg-primary-500/10\\\":\\\"nx-text-gray-800 dark:nx-text-gray-100\\\",\\\"nx-relative nx-cursor-pointer nx-whitespace-nowrap nx-py-1.5\\\",\\\"nx-transition-colors ltr:nx-pl-3 ltr:nx-pr-9 rtl:nx-pr-3 rtl:nx-pl-9\\\"),children:[n.name,n.key===a.key&&(0,e5.jsx)(\\\"span\\\",{className:\\\"nx-absolute nx-inset-y-0 nx-flex nx-items-center ltr:nx-right-3 rtl:nx-left-3\\\",children:(0,e5.jsx)(eE.nQ,{})})]},n.key))})})]})})}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"cedf88845851c1d4af7bd8364edfb5dffdd94fd36451e2dc5ddbd7286595382a","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T16:00:23.124885283Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":901965711,"load_duration":1697280,"prompt_eval_count":1705,"prompt_eval_cached_count":936,"prompt_eval_duration":817514000,"eval_count":2,"eval_duration":67528000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/dair-ai--Prompt-Engineering-Guide/FP-0011"}]
+[
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:e3e49fdc93e6cd46df4a2d2529f37696109f95f6875f6011ad8c1a14fde4eec7:31518:31712",
+    "bundleId": "<local>/_next/static/chunks/framework-6b2b809263269e24.js#3b1573816ebc164ad193e8fc3df4098c928464a226517ea8cd0f3ab4eaf6faf2:35600:39770",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function je(a,b){switch(a){case \\\"compositionend\\\":return he(b);case \\\"keypress\\\":if(32!==b.which)return null;fe=!0;return ee;case \\\"textInput\\\":return a=b.data,a===ee&&fe?null:a;default:return null}}\",\"minified_source_function\":\"function(e,n){switch(e){case\\\"compositionend\\\":return he(n);case\\\"keypress\\\":return 32!==n.which?null:(fe=!0,ee);case\\\"textInput\\\":return(e=n.data)===ee&&fe?null:e;default:return null}}\",\"bundled_function\":\"function(){var i=o,u=xb(a),s=[];e:{var w=ts.get(n);if(void 0!==w){var x=nC,C=n;switch(n){case\\\"keypress\\\":if(0===od(a))break e;case\\\"keydown\\\":case\\\"keyup\\\":x=nU;break;case\\\"focusin\\\":C=\\\"focus\\\",x=nL;break;case\\\"focusout\\\":C=\\\"blur\\\",x=nL;break;case\\\"beforeblur\\\":case\\\"afterblur\\\":x=nL;break;case\\\"click\\\":if(2===a.button)break e;case\\\"auxclick\\\":case\\\"dblclick\\\":case\\\"mousedown\\\":case\\\"mousemove\\\":case\\\"mouseup\\\":case\\\"mouseout\\\":case\\\"mouseover\\\":case\\\"contextmenu\\\":x=nz;break;case\\\"drag\\\":case\\\"dragend\\\":case\\\"dragenter\\\":case\\\"dragexit\\\":case\\\"dragleave\\\":case\\\"dragover\\\":case\\\"dragstart\\\":case\\\"drop\\\":x=nT;break;case\\\"touchcancel\\\":case\\\"touchend\\\":case\\\"touchmove\\\":case\\\"touchstart\\\":x=nW;break;case tr:case tl:case tu:x=nD;break;case to:x=nB;break;case\\\"scroll\\\":x=nP;break;case\\\"wheel\\\":x=nA;break;case\\\"copy\\\":case\\\"cut\\\":case\\\"paste\\\":x=nR;break;case\\\"gotpointercapture\\\":case\\\"lostpointercapture\\\":case\\\"pointercancel\\\":case\\\"pointerdown\\\":case\\\"pointermove\\\":case\\\"pointerout\\\":case\\\"pointerover\\\":case\\\"pointerup\\\":x=nV}var _=0!=(4&t),N=!_&&\\\"scroll\\\"===n,z=_?null!==w?w+\\\"Capture\\\":null:w;_=[];for(var j,L=i;null!==L;){var U=(j=L).stateNode;if(5===j.tag&&null!==U&&(j=U,null!==z&&null!=(U=Kb(L,z))&&_.push(tf(L,U,j))),N)break;L=L.return}0<_.length&&(w=new x(w,C,null,a,u),s.push({event:w,listeners:_}))}}if(0==(7&t)){if(w=\\\"mouseover\\\"===n||\\\"pointerover\\\"===n,x=\\\"mouseout\\\"===n||\\\"pointerout\\\"===n,!(w&&a!==eN&&(C=a.relatedTarget||a.fromElement)&&(Wc(C)||C[tT]))&&(x||w)&&(w=u.window===u?u:(w=u.ownerDocument)?w.defaultView||w.parentWindow:window,x?(C=a.relatedTarget||a.toElement,x=i,null!==(C=C?Wc(C):null)&&(N=Vb(C),C!==N||5!==C.tag&&6!==C.tag)&&(C=null)):(x=null,C=i),x!==C)){if(_=nz,U=\\\"onMouseLeave\\\",z=\\\"onMouseEnter\\\",L=\\\"mouse\\\",(\\\"pointerout\\\"===n||\\\"pointerover\\\"===n)&&(_=nV,U=\\\"onPointerLeave\\\",z=\\\"onPointerEnter\\\",L=\\\"pointer\\\"),N=null==x?w:ue(x),j=null==C?w:ue(C),(w=new _(U,L+\\\"leave\\\",x,a,u)).target=N,w.relatedTarget=j,U=null,Wc(u)===i&&((_=new _(z,L+\\\"enter\\\",C,a,u)).target=j,_.relatedTarget=N,U=_),N=U,x&&C)n:{for(_=x,z=C,L=0,j=_;j;j=vf(j))L++;for(j=0,U=z;U;U=vf(U))j++;for(;0<L-j;)_=vf(_),L--;for(;0<j-L;)z=vf(z),j--;for(;L--;){if(_===z||null!==z&&_===z.alternate)break n;_=vf(_),z=vf(z)}_=null}else _=null;null!==x&&wf(s,w,x,_,!1),null!==C&&null!==N&&wf(s,N,C,_,!0)}e:{if(\\\"select\\\"===(x=(w=i?ue(i):window).nodeName&&w.nodeName.toLowerCase())||\\\"input\\\"===x&&\\\"file\\\"===w.type)var V,B=ve;else if(me(w)){if(n0)B=Fe;else{B=De;var A=Ce}}else(x=w.nodeName)&&\\\"input\\\"===x.toLowerCase()&&(\\\"checkbox\\\"===w.type||\\\"radio\\\"===w.type)&&(B=Ee);if(B&&(B=B(n,i))){ne(s,B,a,u);break e}A&&A(n,w,i),\\\"focusout\\\"===n&&(A=w._wrapperState)&&A.controlled&&\\\"number\\\"===w.type&&cb(w,\\\"number\\\",w.value)}switch(A=i?ue(i):window,n){case\\\"focusin\\\":(me(A)||\\\"true\\\"===A.contentEditable)&&(n8=A,n6=i,n5=null);break;case\\\"focusout\\\":n5=n6=n8=null;break;case\\\"mousedown\\\":n7=!0;break;case\\\"contextmenu\\\":case\\\"mouseup\\\":case\\\"dragend\\\":n7=!1,Ue(s,a,u);break;case\\\"selectionchange\\\":if(n4)break;case\\\"keydown\\\":case\\\"keyup\\\":Ue(s,a,u)}if(nH)n:{switch(n){case\\\"compositionstart\\\":var $=\\\"onCompositionStart\\\";break n;case\\\"compositionend\\\":$=\\\"onCompositionEnd\\\";break n;case\\\"compositionupdate\\\":$=\\\"onCompositionUpdate\\\";break n}$=void 0}else nX?ge(n,a)&&($=\\\"onCompositionEnd\\\"):\\\"keydown\\\"===n&&229===a.keyCode&&($=\\\"onCompositionStart\\\");$&&(nG&&\\\"ko\\\"!==a.locale&&(nX||\\\"onCompositionStart\\\"!==$?\\\"onCompositionEnd\\\"===$&&nX&&(V=nd()):(ny=\\\"value\\\"in(nb=u)?nb.value:nb.textContent,nX=!0)),0<(A=oe(i,$)).length&&($=new nM($,n,null,a,u),s.push({event:$,listeners:A}),V?$.data=V:null!==(V=he(a))&&($.data=V))),(V=nK?function(n,t){switch(n){case\\\"compositionend\\\":return he(t);case\\\"keypress\\\":if(32!==t.which)return null;return nq=!0,\\\" \\\";case\\\"textInput\\\":return\\\" \\\"===(n=t.data)&&nq?null:n;default:return null}}(n,a):function(n,t){if(nX)return\\\"compositionend\\\"===n||!nH&&ge(n,t)?(n=nd(),nk=ny=nb=null,nX=!1,n):null;switch(n){case\\\"paste\\\":default:return null;case\\\"keypress\\\":if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case\\\"compositionend\\\":return nG&&\\\"ko\\\"!==t.locale?null:t.data}}(n,a))&&0<(i=oe(i,\\\"onBeforeInput\\\")).length&&(u=new nM(\\\"onBeforeInput\\\",\\\"beforeinput\\\",null,a,u),s.push({event:u,listeners:i}),u.data=V)}se(s,t)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "21f829f1e0a0408c98ff7ca7a09c2f1d5eb0411e94bef1569d1aae9c80bd88bc",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:37:45.266115445Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1443593343,
+          "load_duration": 1908243,
+          "prompt_eval_count": 2657,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1392785000,
+          "eval_count": 2,
+          "eval_duration": 27811000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0001"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:e3e49fdc93e6cd46df4a2d2529f37696109f95f6875f6011ad8c1a14fde4eec7:113482:113673",
+    "bundleId": "<local>/_next/static/chunks/framework-6b2b809263269e24.js#3b1573816ebc164ad193e8fc3df4098c928464a226517ea8cd0f3ab4eaf6faf2:94132:95953",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function Ik(a,b){var c=K;K|=2;var d=Jk();if(Q!==a||Z!==b)uk=null,Kk(a,b);do try{Tk();break}catch(e){Mk(a,e)}while(1);$g();K=c;mk.current=d;if(null!==Y)throw Error(p(261));Q=null;Z=0;return T}\",\"minified_source_function\":\"function(r,n){var t=K;K|=2;var c=Jk();for(Q===r&&Z===n||(uk=null,Kk(r,n));;)try{Tk();break}catch(n){Mk(r,n)}if($g(),K=t,mk.current=c,null!==Y)throw Error(p(261));return Q=null,Z=0,T}\",\"bundled_function\":\"function Gk(n,t){if(lr=-1,la=0,0!=(6&rA))throw Error(p(327));var a=n.callbackNode;if(Hk()&&n.callbackNode!==a)return null;var i=uc(n,n===r$?rQ:0);if(0===i)return null;if(0!=(30&i)||0!=(i&n.expiredLanes)||t)t=Ik(n,i);else{t=i;var u=rA;rA|=2;var o=Jk();for((r$!==n||rQ!==t)&&(r4=null,r3=e$()+500,Kk(n,t));;)try{!function(){for(;null!==rH&&!eB();)Uk(rH)}();break}catch(t){Mk(n,t)}$g(),rV.current=o,rA=u,null!==rH?t=0:(r$=null,rQ=0,t=rq)}if(0!==t){if(2===t&&0!==(u=xc(n))&&(i=u,t=Nk(n,u)),1===t)throw a=rX,Kk(n,0),Ck(n,i),Dk(n,e$()),a;if(6===t)Ck(n,i);else{if(u=n.current.alternate,0==(30&i)&&!function(n){for(var t=n;;){if(16384&t.flags){var a=t.updateQueue;if(null!==a&&null!==(a=a.stores))for(var i=0;i<a.length;i++){var u=a[i],o=u.getSnapshot;u=u.value;try{if(!n3(o(),u))return!1}catch(n){return!1}}}if(a=t.child,16384&t.subtreeFlags&&null!==a)a.return=t,t=a;else{if(t===n)break;for(;null===t.sibling;){if(null===t.return||t.return===n)return!0;t=t.return}t.sibling.return=t.return,t=t.sibling}}return!0}(u)&&(2===(t=Ik(n,i))&&0!==(o=xc(n))&&(i=o,t=Nk(n,o)),1===t))throw a=rX,Kk(n,0),Ck(n,i),Dk(n,e$()),a;switch(n.finishedWork=u,n.finishedLanes=i,t){case 0:case 1:throw Error(p(345));case 2:case 5:Pk(n,r1,r4);break;case 3:if(Ck(n,i),(130023424&i)===i&&10<(t=r2+500-e$())){if(0!==uc(n,0))break;if(((u=n.suspendedLanes)&i)!==i){R(),n.pingedLanes|=n.suspendedLanes&u;break}n.timeoutHandle=tE(Pk.bind(null,n,r1,r4),t);break}Pk(n,r1,r4);break;case 4:if(Ck(n,i),(4194240&i)===i)break;for(u=-1,t=n.eventTimes;0<i;){var s=31-eJ(i);o=1<<s,(s=t[s])>u&&(u=s),i&=~o}if(i=u,10<(i=(120>(i=e$()-i)?120:480>i?480:1080>i?1080:1920>i?1920:3e3>i?3e3:4320>i?4320:1960*rU(i/1960))-i)){n.timeoutHandle=tE(Pk.bind(null,n,r1,r4),i);break}Pk(n,r1,r4);break;default:throw Error(p(329))}}}return Dk(n,e$()),n.callbackNode===a?Gk.bind(null,n):null}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "065289902b38e877d7eec6e8437c9ebe940238fbdcf9657aaaca94a3e163a00d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:39:58.046620707Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 999783549,
+          "load_duration": 3055698,
+          "prompt_eval_count": 1990,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 950156000,
+          "eval_count": 2,
+          "eval_duration": 27190000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0002"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:11945:12948",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:65735:67244",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function fetchRetry(url, attempts, options) {\\n    return fetch(url, {\\n        // Cookies are required to be present for Next.js' SSG \\\"Preview Mode\\\".\\n        // Cookies may also be required for `getServerSideProps`.\\n        //\\n        // > `fetch` won’t send cookies, unless you set the credentials init\\n        // > option.\\n        // https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch\\n        //\\n        // > For maximum browser compatibility when it comes to sending &\\n        // > receiving cookies, always supply the `credentials: 'same-origin'`\\n        // > option instead of relying on the default.\\n        // https://github.com/github/fetch#caveats\\n        credentials: \\\"same-origin\\\",\\n        method: options.method || \\\"GET\\\",\\n        headers: Object.assign({}, options.headers, {\\n            \\\"x-nextjs-data\\\": \\\"1\\\"\\n        })\\n    }).then((response)=>{\\n        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;\\n    });\\n}\",\"minified_source_function\":\"function e(t,a,n){return fetch(t,{credentials:\\\"same-origin\\\",method:n.method||\\\"GET\\\",headers:Object.assign({},n.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(s=>!s.ok&&a>1&&s.status>=500?e(t,a-1,n):s)}\",\"bundled_function\":\"function fetchNextData(r){var n;let{dataHref:o,inflightCache:l,isPrefetch:u,hasMiddleware:s,isServerRender:d,parseJSON:h,persistCache:g,isBackground:_,unstable_skipClientCache:y}=r,{href:P}=new URL(o,window.location.href),getData=r=>(function fetchRetry(r,n,o){return fetch(r,{credentials:\\\"same-origin\\\",method:o.method||\\\"GET\\\",headers:Object.assign({},o.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(l=>!l.ok&&n>1&&l.status>=500?fetchRetry(r,n-1,o):l)})(o,d?3:1,{headers:Object.assign({},u?{purpose:\\\"prefetch\\\"}:{},u&&s?{\\\"x-middleware-prefetch\\\":\\\"1\\\"}:{}),method:null!=(n=null==r?void 0:r.method)?n:\\\"GET\\\"}).then(n=>n.ok&&(null==r?void 0:r.method)===\\\"HEAD\\\"?{dataHref:o,response:n,text:\\\"\\\",json:{},cacheKey:P}:n.text().then(r=>{if(!n.ok){if(s&&[301,302,307,308].includes(n.status))return{dataHref:o,response:n,text:r,json:{},cacheKey:P};if(404===n.status){var l;if(null==(l=tryToParseAsJSON(r))?void 0:l.notFound)return{dataHref:o,json:{notFound:G},response:n,text:r,cacheKey:P}}let u=Error(\\\"Failed to load static props\\\");throw d||(0,f.markAssetError)(u),u}return{dataHref:o,json:h?tryToParseAsJSON(r):null,response:n,text:r,cacheKey:P}})).then(r=>(g&&\\\"no-cache\\\"!==r.response.headers.get(\\\"x-middleware-cache\\\")||delete l[P],r)).catch(r=>{throw y||delete l[P],(\\\"Failed to fetch\\\"===r.message||\\\"NetworkError when attempting to fetch resource.\\\"===r.message||\\\"Load failed\\\"===r.message)&&(0,f.markAssetError)(r),r});return y&&g?getData({}).then(r=>(l[P]=Promise.resolve(r),r)):void 0!==l[P]?l[P]:l[P]=getData(_?{method:\\\"HEAD\\\"}:{})}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "16a26e01e7df9f397e1e3f9053f09f99007b7881425fe8c9c1beaf858d6cd11d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:45:05.141837018Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1822026040,
+          "load_duration": 954297,
+          "prompt_eval_count": 1782,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1540654000,
+          "eval_count": 2,
+          "eval_duration": 84768000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0003"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:73bdcc94e8c6c874627d5e7278b5f5b6f03e5b537682a5d88648545ce53568d2:700:942",
+    "bundleId": "<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:38244:38619",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function runClearTimeout(e){if(n===clearTimeout){return clearTimeout(e)}if((n===defaultClearTimeout||!n)&&clearTimeout){n=clearTimeout;return clearTimeout(e)}try{return n(e)}catch(t){try{return n.call(null,e)}catch(t){return n.call(this,e)}}}\",\"minified_source_function\":\"function(e){if(n===clearTimeout)return clearTimeout(e);if((n===defaultClearTimeout||!n)&&clearTimeout)return n=clearTimeout,clearTimeout(e);try{return n(e)}catch(r){try{return n.call(null,e)}catch(r){return n.call(this,e)}}}\",\"bundled_function\":\"function drainQueue(){if(!H){var n=runTimeout(cleanUpNextTick);H=!0;for(var a=W.length;a;){for(v=W,W=[];++B<a;)v&&v[B].run();B=-1,a=W.length}v=null,H=!1,function(n){if(g===clearTimeout)return clearTimeout(n);if((g===defaultClearTimeout||!g)&&clearTimeout)return g=clearTimeout,clearTimeout(n);try{g(n)}catch(a){try{return g.call(null,n)}catch(a){return g.call(this,n)}}}(n)}}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "29d52d28a080204258cdf349c7d983bb74504afec2acef7251c80e647d675ee5",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:49:30.114039594Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2198003912,
+          "load_duration": 979697,
+          "prompt_eval_count": 1201,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 2107733000,
+          "eval_count": 2,
+          "eval_duration": 27155000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0004"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:8ff52e2acdb7c21ffc125903862ab30931076047d12093166644c817ef86458a:3335:3647",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:7854:7954",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"(newTag)=>{\\n            for(let k = 0, len = oldTags.length; k < len; k++){\\n                const oldTag = oldTags[k];\\n                if (isEqualNode(oldTag, newTag)) {\\n                    oldTags.splice(k, 1);\\n                    return false;\\n                }\\n            }\\n            return true;\\n        }\",\"minified_source_function\":\"e=>{for(let o=0,l=oldTags.length;o<l;o++){const l=oldTags[o];if(isEqualNode(l,e))return oldTags.splice(o,1),!1}return!0}\",\"bundled_function\":\"r=>{for(let n=0,o=s.length;n<o;n++){let o=s[n];if(isEqualNode(o,r))return s.splice(n,1),!1}return!0}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "a1f6295a017c2bdd7124d695d807e5011328e3c3a9a37e73ee41e1f597b0c5f1",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:52:57.616716431Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1596382154,
+          "load_duration": 1380963,
+          "prompt_eval_count": 1125,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1421963000,
+          "eval_count": 2,
+          "eval_duration": 73231000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0005"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:f6adf1ac0e2ac4eeb12d1ec9b4461ba164abe6165f5f070ba65ab60010ecb714:6149:7219",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:29362:31563",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function getFilesForRoute(assetPrefix, route) {\\n    if (process.env.NODE_ENV === \\\"development\\\") {\\n        const scriptUrl = assetPrefix + \\\"/_next/static/chunks/pages\\\" + encodeURI((0, _getassetpathfromroute.default)(route, \\\".js\\\")) + getAssetQueryString();\\n        return Promise.resolve({\\n            scripts: [\\n                (0, _trustedtypes.__unsafeCreateTrustedScriptURL)(scriptUrl)\\n            ],\\n            // Styles are handled by `style-loader` in development:\\n            css: []\\n        });\\n    }\\n    return getClientBuildManifest().then((manifest)=>{\\n        if (!(route in manifest)) {\\n            throw markAssetError(new Error(\\\"Failed to lookup route: \\\" + route));\\n        }\\n        const allFiles = manifest[route].map((entry)=>assetPrefix + \\\"/_next/\\\" + encodeURI(entry));\\n        return {\\n            scripts: allFiles.filter((v)=>v.endsWith(\\\".js\\\")).map((v)=>(0, _trustedtypes.__unsafeCreateTrustedScriptURL)(v) + getAssetQueryString()),\\n            css: allFiles.filter((v)=>v.endsWith(\\\".css\\\")).map((v)=>v + getAssetQueryString())\\n        };\\n    });\\n}\",\"minified_source_function\":\"function(e,t){if(\\\"development\\\"===process.env.NODE_ENV){const s=e+\\\"/_next/static/chunks/pages\\\"+encodeURI((0,_getassetpathfromroute.default)(t,\\\".js\\\"))+getAssetQueryString();return Promise.resolve({scripts:[(0,_trustedtypes.__unsafeCreateTrustedScriptURL)(s)],css:[]})}return getClientBuildManifest().then(s=>{if(!(t in s))throw markAssetError(new Error(\\\"Failed to lookup route: \\\"+t));const r=s[t].map(t=>e+\\\"/_next/\\\"+encodeURI(t));return{scripts:r.filter(e=>e.endsWith(\\\".js\\\")).map(e=>(0,_trustedtypes.__unsafeCreateTrustedScriptURL)(e)+getAssetQueryString()),css:r.filter(e=>e.endsWith(\\\".css\\\")).map(e=>e+getAssetQueryString())}})}\",\"bundled_function\":\"function createRouteLoader(r){let n=new Map,o=new Map,l=new Map,s=new Map;function maybeExecuteScript(r){{var n;let l=o.get(r.toString());return l||(document.querySelector('script[src^=\\\"'+r+'\\\"]')?Promise.resolve():(o.set(r.toString(),l=new Promise((o,l)=>{(n=document.createElement(\\\"script\\\")).onload=o,n.onerror=()=>l(markAssetError(Error(\\\"Failed to load script: \\\"+r))),n.crossOrigin=void 0,n.src=r,document.body.appendChild(n)})),l))}}function fetchStyleSheet(r){let n=l.get(r);return n||l.set(r,n=fetch(r).then(n=>{if(!n.ok)throw Error(\\\"Failed to load stylesheet: \\\"+r);return n.text().then(n=>({href:r,content:n}))}).catch(r=>{throw markAssetError(r)})),n}return{whenEntrypoint:r=>withFuture(r,n),onEntrypoint(r,o){(o?Promise.resolve().then(()=>o()).then(r=>({component:r&&r.default||r,exports:r}),r=>({error:r})):Promise.resolve(void 0)).then(o=>{let l=n.get(r);l&&\\\"resolve\\\"in l?o&&(n.set(r,o),l.resolve(o)):(o?n.set(r,o):n.delete(r),s.delete(r))})},loadRoute(o,l){return withFuture(o,s,()=>{let u;return resolvePromiseWithTimeout(getFilesForRoute(r,o).then(r=>{let{scripts:l,css:u}=r;return Promise.all([n.has(o)?[]:Promise.all(l.map(maybeExecuteScript)),Promise.all(u.map(fetchStyleSheet))])}).then(r=>this.whenEntrypoint(o).then(n=>({entrypoint:n,styles:r[1]}))),3800,markAssetError(Error(\\\"Route did not complete loading: \\\"+o))).then(r=>{let{entrypoint:n,styles:o}=r,l=Object.assign({styles:o},n);return\\\"error\\\"in n?n:l}).catch(r=>{if(l)throw r;return{error:r}}).finally(()=>null==u?void 0:u())})},prefetch(n){let o;return(o=navigator.connection)&&(o.saveData||/2g/.test(o.effectiveType))?Promise.resolve():getFilesForRoute(r,n).then(r=>Promise.all(d?r.scripts.map(r=>{var n,o,l;return n=r.toString(),o=\\\"script\\\",new Promise((r,u)=>{let s='\\\\n      link[rel=\\\"prefetch\\\"][href^=\\\"'+n+'\\\"],\\\\n      link[rel=\\\"preload\\\"][href^=\\\"'+n+'\\\"],\\\\n      script[src^=\\\"'+n+'\\\"]';if(document.querySelector(s))return r();l=document.createElement(\\\"link\\\"),o&&(l.as=o),l.rel=\\\"prefetch\\\",l.crossOrigin=void 0,l.onload=r,l.onerror=()=>u(markAssetError(Error(\\\"Failed to prefetch: \\\"+n))),l.href=n,document.head.appendChild(l)})}):[])).then(()=>{(0,u.requestIdleCallback)(()=>this.loadRoute(n,!0).catch(()=>{}))}).catch(()=>{})}}}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "0ded41ffde31b9d6e8f9d5405b79d034ac5f0fd0f3f4ae27dbfb4b9c20d20c05",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:54:02.644203614Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1423537363,
+          "load_duration": 965495,
+          "prompt_eval_count": 2119,
+          "prompt_eval_cached_count": 1035,
+          "prompt_eval_duration": 1298867000,
+          "eval_count": 2,
+          "eval_duration": 25793000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0006"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:12802:12944",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:65965:67128",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"(response)=>{\\n        return !response.ok && attempts > 1 && response.status >= 500 ? fetchRetry(url, attempts - 1, options) : response;\\n    }\",\"minified_source_function\":\"t=>!t.ok&&attempts>1&&t.status>=500?fetchRetry(url,attempts-1,options):t\",\"bundled_function\":\"r=>(function fetchRetry(r,n,o){return fetch(r,{credentials:\\\"same-origin\\\",method:o.method||\\\"GET\\\",headers:Object.assign({},o.headers,{\\\"x-nextjs-data\\\":\\\"1\\\"})}).then(l=>!l.ok&&n>1&&l.status>=500?fetchRetry(r,n-1,o):l)})(o,d?3:1,{headers:Object.assign({},u?{purpose:\\\"prefetch\\\"}:{},u&&s?{\\\"x-middleware-prefetch\\\":\\\"1\\\"}:{}),method:null!=(n=null==r?void 0:r.method)?n:\\\"GET\\\"}).then(n=>n.ok&&(null==r?void 0:r.method)===\\\"HEAD\\\"?{dataHref:o,response:n,text:\\\"\\\",json:{},cacheKey:P}:n.text().then(r=>{if(!n.ok){if(s&&[301,302,307,308].includes(n.status))return{dataHref:o,response:n,text:r,json:{},cacheKey:P};if(404===n.status){var l;if(null==(l=tryToParseAsJSON(r))?void 0:l.notFound)return{dataHref:o,json:{notFound:G},response:n,text:r,cacheKey:P}}let u=Error(\\\"Failed to load static props\\\");throw d||(0,f.markAssetError)(u),u}return{dataHref:o,json:h?tryToParseAsJSON(r):null,response:n,text:r,cacheKey:P}})).then(r=>(g&&\\\"no-cache\\\"!==r.response.headers.get(\\\"x-middleware-cache\\\")||delete l[P],r)).catch(r=>{throw y||delete l[P],(\\\"Failed to fetch\\\"===r.message||\\\"NetworkError when attempting to fetch resource.\\\"===r.message||\\\"Load failed\\\"===r.message)&&(0,f.markAssetError)(r),r})\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "b3a246e121cefc461c059174b5bae1657588faf18593599da51e60d316102e68",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:54:43.629142777Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 3511502821,
+          "load_duration": 1617475,
+          "prompt_eval_count": 1424,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 840142000,
+          "eval_count": 2,
+          "eval_duration": 78179000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0007"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:7f39f79fe7757b1b7fb9865c96e759fd48cd9a5a5ac893f1231e52841fcab766:5668:5698",
+    "bundleId": "<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:202202:202251",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"() => useContext2(MenuContext)\",\"minified_source_function\":\"()=>useContext2(MenuContext)\",\"bundled_function\":\"function useConfig(){return(0,ew.useContext)(nX)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "4792be6a1641b84b082dff42f12a9a1d28db4ac517830af86b93e29980008843",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:56:54.017945379Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2987645961,
+          "load_duration": 874593,
+          "prompt_eval_count": 984,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 663536000,
+          "eval_count": 2,
+          "eval_duration": 86194000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0008"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:c96284ace71800fbcc2731bc89445dc0831c52dd501d4c44c52e859c3df04dcf:73939:77554",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:84811:87352",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"(e)=>{\\n            const { isFirstPopStateEvent } = this;\\n            this.isFirstPopStateEvent = false;\\n            const state = e.state;\\n            if (!state) {\\n                // We get state as undefined for two reasons.\\n                //  1. With older safari (< 8) and older chrome (< 34)\\n                //  2. When the URL changed with #\\n                //\\n                // In the both cases, we don't need to proceed and change the route.\\n                // (as it's already changed)\\n                // But we can simply replace the state with the new changes.\\n                // Actually, for (1) we don't need to nothing. But it's hard to detect that event.\\n                // So, doing the following for (1) does no harm.\\n                const { pathname, query } = this;\\n                this.changeState(\\\"replaceState\\\", (0, _formaturl.formatWithValidation)({\\n                    pathname: (0, _addbasepath.addBasePath)(pathname),\\n                    query\\n                }), (0, _utils.getURL)());\\n                return;\\n            }\\n            // __NA is used to identify if the history entry can be handled by the app-router.\\n            if (state.__NA) {\\n                window.location.reload();\\n                return;\\n            }\\n            if (!state.__N) {\\n                return;\\n            }\\n            // Safari fires popstateevent when reopening the browser.\\n            if (isFirstPopStateEvent && this.locale === state.options.locale && state.as === this.asPath) {\\n                return;\\n            }\\n            let forcedScroll;\\n            const { url, as, options, key } = state;\\n            if (process.env.__NEXT_SCROLL_RESTORATION) {\\n                if (manualScrollRestoration) {\\n                    if (this._key !== key) {\\n                        // Snapshot current scroll position:\\n                        try {\\n                            sessionStorage.setItem(\\\"__next_scroll_\\\" + this._key, JSON.stringify({\\n                                x: self.pageXOffset,\\n                                y: self.pageYOffset\\n                            }));\\n                        } catch (e) {}\\n                        // Restore old scroll position:\\n                        try {\\n                            const v = sessionStorage.getItem(\\\"__next_scroll_\\\" + key);\\n                            forcedScroll = JSON.parse(v);\\n                        } catch (e) {\\n                            forcedScroll = {\\n                                x: 0,\\n                                y: 0\\n                            };\\n                        }\\n                    }\\n                }\\n            }\\n            this._key = key;\\n            const { pathname } = (0, _parserelativeurl.parseRelativeUrl)(url);\\n            // Make sure we don't re-render on initial load,\\n            // can be caused by navigating back from an external site\\n            if (this.isSsr && as === (0, _addbasepath.addBasePath)(this.asPath) && pathname === (0, _addbasepath.addBasePath)(this.pathname)) {\\n                return;\\n            }\\n            // If the downstream application returns falsy, return.\\n            // They will then be responsible for handling the event.\\n            if (this._bps && !this._bps(state)) {\\n                return;\\n            }\\n            this.change(\\\"replaceState\\\", url, as, Object.assign({}, options, {\\n                shallow: options.shallow && this._shallow,\\n                locale: options.locale || this.defaultLocale,\\n                // @ts-ignore internal value not exposed on types\\n                _h: 0\\n            }), forcedScroll);\\n        }\",\"minified_source_function\":\"t=>{const{isFirstPopStateEvent:a}=this;this.isFirstPopStateEvent=!1;const e=t.state;if(!e){const{pathname:t,query:a}=this;return void this.changeState(\\\"replaceState\\\",(0,_formaturl.formatWithValidation)({pathname:(0,_addbasepath.addBasePath)(t),query:a}),(0,_utils.getURL)())}if(e.__NA)return void window.location.reload();if(!e.__N)return;if(a&&this.locale===e.options.locale&&e.as===this.asPath)return;let s;const{url:i,as:o,options:h,key:l}=e;if(process.env.__NEXT_SCROLL_RESTORATION&&manualScrollRestoration&&this._key!==l){try{sessionStorage.setItem(\\\"__next_scroll_\\\"+this._key,JSON.stringify({x:self.pageXOffset,y:self.pageYOffset}))}catch(t){}try{const t=sessionStorage.getItem(\\\"__next_scroll_\\\"+l);s=JSON.parse(t)}catch(t){s={x:0,y:0}}}this._key=l;const{pathname:r}=(0,_parserelativeurl.parseRelativeUrl)(i);this.isSsr&&o===(0,_addbasepath.addBasePath)(this.asPath)&&r===(0,_addbasepath.addBasePath)(this.pathname)||this._bps&&!this._bps(e)||this.change(\\\"replaceState\\\",i,o,Object.assign({},h,{shallow:h.shallow&&this._shallow,locale:h.locale||this.defaultLocale,_h:0}),s)}\",\"bundled_function\":\"constructor(r,n,l,{initialProps:u,pageLoader:f,App:d,wrapApp:h,Component:g,err:_,subscription:y,isFallback:S,locale:R,locales:O,defaultLocale:C,domainLocales:x,isPreview:j}){this.sdc={},this.sbc={},this.isFirstPopStateEvent=!0,this._key=createKey(),this.onPopState=r=>{let n;let{isFirstPopStateEvent:o}=this;this.isFirstPopStateEvent=!1;let l=r.state;if(!l){let{pathname:r,query:n}=this;this.changeState(\\\"replaceState\\\",(0,w.formatWithValidation)({pathname:(0,L.addBasePath)(r),query:n}),(0,P.getURL)());return}if(l.__NA){window.location.reload();return}if(!l.__N||o&&this.locale===l.options.locale&&l.as===this.asPath)return;let{url:u,as:s,options:f,key:d}=l;this._key=d;let{pathname:h}=(0,E.parseRelativeUrl)(u);(!this.isSsr||s!==(0,L.addBasePath)(this.asPath)||h!==(0,L.addBasePath)(this.pathname))&&(!this._bps||this._bps(l))&&this.change(\\\"replaceState\\\",u,s,Object.assign({},f,{shallow:f.shallow&&this._shallow,locale:f.locale||this.defaultLocale,_h:0}),n)};let M=(0,s.removeTrailingSlash)(r);this.components={},\\\"/_error\\\"!==r&&(this.components[M]={Component:g,initial:!0,props:u,err:_,__N_SSG:u&&u.__N_SSG,__N_SSP:u&&u.__N_SSP}),this.components[\\\"/_app\\\"]={Component:d,styleSheets:[]};{let{BloomFilter:r}=o(33335),n={numItems:0,errorRate:.01,numBits:0,numHashes:null,bitArray:[]},l={numItems:0,errorRate:.01,numBits:0,numHashes:null,bitArray:[]};(null==n?void 0:n.numHashes)&&(this._bfl_s=new r(n.numItems,n.errorRate),this._bfl_s.import(n)),(null==l?void 0:l.numHashes)&&(this._bfl_d=new r(l.numItems,l.errorRate),this._bfl_d.import(l))}this.events=Router.events,this.pageLoader=f;let I=(0,b.isDynamicRoute)(r)&&self.__NEXT_DATA__.autoExport;if(this.basePath=\\\"\\\",this.sub=y,this.clc=null,this._wrapApp=h,this.isSsr=!0,this.isLocaleDomain=!1,this.isReady=!!(self.__NEXT_DATA__.gssp||self.__NEXT_DATA__.gip||self.__NEXT_DATA__.isExperimentalCompile||self.__NEXT_DATA__.appGip&&!self.__NEXT_DATA__.gsp||(I||self.location.search,0)),this.locales=O,this.defaultLocale=C,this.domainLocales=x,this.isLocaleDomain=!!(0,A.detectDomainLocale)(x,self.location.hostname),this.state={route:M,pathname:r,query:n,asPath:I?r:l,isPreview:!!j,locale:R,isFallback:S},this._initialMatchesMiddlewarePromise=Promise.resolve(!1),!l.startsWith(\\\"//\\\")){let o={locale:R},u=(0,P.getURL)();this._initialMatchesMiddlewarePromise=matchesMiddleware({router:this,locale:R,asPath:u}).then(s=>(o._shouldResolveHref=l!==r,this.changeState(\\\"replaceState\\\",s?u:(0,w.formatWithValidation)({pathname:(0,L.addBasePath)(r),query:n}),u,o),s))}window.addEventListener(\\\"popstate\\\",this.onPopState)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "209b1df16419e0043166f7cf495370d181447382362872e0144a0d553f9816d4",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:59:46.120037868Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1469339859,
+          "load_duration": 1481445,
+          "prompt_eval_count": 2883,
+          "prompt_eval_cached_count": 1629,
+          "prompt_eval_duration": 1307416000,
+          "eval_count": 2,
+          "eval_duration": 83460000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0009"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:c9856c52788f090d10a89489dc8020bca739564d0ea108c84fea55842221a59e:248:440",
+    "bundleId": "<local>/_next/static/chunks/main-981993a5591ffe6e.js#83b28faa35ec59caf839d3f95b75369d75f50492bf59736522d561da8ec492d2:123466:123636",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(){n.r=function(n){if(typeof Symbol!==\\\"undefined\\\"&&Symbol.toStringTag){Object.defineProperty(n,Symbol.toStringTag,{value:\\\"Module\\\"})}Object.defineProperty(n,\\\"__esModule\\\",{value:true})}}\",\"minified_source_function\":\"function(){n.r=function(e){\\\"undefined\\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\\\"Module\\\"}),Object.defineProperty(e,\\\"__esModule\\\",{value:!0})}}\",\"bundled_function\":\"function(r){\\\"undefined\\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:\\\"Module\\\"}),Object.defineProperty(r,\\\"__esModule\\\",{value:!0})}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "e16e3b709f7f4769ccef88bbc03d22afa6fd72e5092262e8c468d527dd2e6978",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T15:59:55.338309106Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1906372073,
+          "load_duration": 85347141,
+          "prompt_eval_count": 1086,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1725352000,
+          "eval_count": 2,
+          "eval_duration": 83504000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0010"
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "sourceId": "reference:7f39f79fe7757b1b7fb9865c96e759fd48cd9a5a5ac893f1231e52841fcab766:40274:40420",
+    "bundleId": "<local>/_next/static/chunks/57914-648775cfe1df070f.js#5644f6229182b60eac603f050645b0fd8ac18ff558728db20ce60ea0191fd6f9:217223:219144",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function Portal(props) {\\n  const mounted = useMounted2();\\n  if (!mounted)\\n    return null;\\n  return createPortal(props.children, document.body);\\n}\",\"minified_source_function\":\"function(e){return useMounted2()?createPortal(e.children,document.body):null}\",\"bundled_function\":\"function Select({options:n,selected:a,onChange:g,title:v,className:j}){let[W,H]=function(n){let a=(0,ew.useRef)(null),g=(0,ew.useRef)(null),v=(0,ew.useRef)(),j=(0,ew.useCallback)(()=>{var j;a.current&&g.current&&(null==(j=v.current)||j.call(v),v.current=tP(a.current,g.current,n).destroy)},[a,g,v,n]);return(0,ew.useMemo)(()=>[n=>{a.current=n,j()},n=>{g.current=n,j()}],[a,g,j])}({strategy:\\\"fixed\\\",placement:\\\"top-start\\\",modifiers:[{name:\\\"offset\\\",options:{offset:[0,10]}},{name:\\\"sameWidth\\\",enabled:!0,fn({state:n}){n.styles.popper.minWidth=`${n.rects.reference.width}px`},phase:\\\"beforeWrite\\\",requires:[\\\"computeStyles\\\"]}]});return(0,e5.jsx)(ny,{value:a,onChange:g,children:({open:g})=>(0,e5.jsxs)(ny.Button,{ref:W,title:v,className:(0,ek.Z)(\\\"nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400\\\",g?\\\"nx-bg-gray-200 nx-text-gray-900 dark:nx-bg-primary-100/10 dark:nx-text-gray-50\\\":\\\"hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50\\\",j),children:[a.name,(0,e5.jsx)(Portal,{children:(0,e5.jsx)(ne,{ref:H,show:g,as:ny.Options,className:\\\"nx-z-20 nx-max-h-64 nx-overflow-auto nx-rounded-md nx-ring-1 nx-ring-black/5 nx-bg-white nx-py-1 nx-text-sm nx-shadow-lg dark:nx-ring-white/20 dark:nx-bg-neutral-800\\\",leave:\\\"nx-transition-opacity\\\",leaveFrom:\\\"nx-opacity-100\\\",leaveTo:\\\"nx-opacity-0\\\",children:n.map(n=>(0,e5.jsxs)(ny.Option,{value:n,className:({active:n})=>(0,ek.Z)(n?\\\"nx-bg-primary-50 nx-text-primary-600 dark:nx-bg-primary-500/10\\\":\\\"nx-text-gray-800 dark:nx-text-gray-100\\\",\\\"nx-relative nx-cursor-pointer nx-whitespace-nowrap nx-py-1.5\\\",\\\"nx-transition-colors ltr:nx-pl-3 ltr:nx-pr-9 rtl:nx-pr-3 rtl:nx-pl-9\\\"),children:[n.name,n.key===a.key&&(0,e5.jsx)(\\\"span\\\",{className:\\\"nx-absolute nx-inset-y-0 nx-flex nx-items-center ltr:nx-right-3 rtl:nx-left-3\\\",children:(0,e5.jsx)(eE.nQ,{})})]},n.key))})})]})})}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "cedf88845851c1d4af7bd8364edfb5dffdd94fd36451e2dc5ddbd7286595382a",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T16:00:23.124885283Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 901965711,
+          "load_duration": 1697280,
+          "prompt_eval_count": 1705,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 817514000,
+          "eval_count": 2,
+          "eval_duration": 67528000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/dair-ai--Prompt-Engineering-Guide/FP-0011"
+  }
+]

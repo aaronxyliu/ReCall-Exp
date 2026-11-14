@@ -1,1 +1,290 @@
-[{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:b19302b1f39ddbe0c5790d7faaeeb2b4d78b09dc3adf7e7de4689c5d1fb58ec6:22460:22996","bundleId":"<local>/swagger-ui-standalone-preset.js#e0d0a5d7a4039bbfbeea8ae6c894a1a7733d12af6996041ddbbb7ed71d947b7e:14220:15084","groundTruth":"F","input":"{\"source_function\":\"function hexWrite (buf, string, offset, length) {\\n  offset = Number(offset) || 0\\n  const remaining = buf.length - offset\\n  if (!length) {\\n    length = remaining\\n  } else {\\n    length = Number(length)\\n    if (length > remaining) {\\n      length = remaining\\n    }\\n  }\\n\\n  const strLen = string.length\\n\\n  if (length > strLen / 2) {\\n    length = strLen / 2\\n  }\\n  let i\\n  for (i = 0; i < length; ++i) {\\n    const parsed = parseInt(string.substr(i * 2, 2), 16)\\n    if (numberIsNaN(parsed)) return i\\n    buf[offset + i] = parsed\\n  }\\n  return i\\n}\",\"minified_source_function\":\"function(n,t,e,r){e=Number(e)||0;const s=n.length-e;r?(r=Number(r))>s&&(r=s):r=s;const c=t.length;let o;for(r>c/2&&(r=c/2),o=0;o<r;++o){const r=parseInt(t.substr(2*o,2),16);if(numberIsNaN(r))return o;n[e+o]=r}return o}\",\"bundled_function\":\"function write(t,e,r,n){if(void 0===e)n=\\\"utf8\\\",r=this.length,e=0;else if(void 0===r&&\\\"string\\\"==typeof e)n=e,r=this.length,e=0;else{if(!isFinite(e))throw new Error(\\\"Buffer.write(string, encoding, offset[, length]) is no longer supported\\\");e>>>=0,isFinite(r)?(r>>>=0,void 0===n&&(n=\\\"utf8\\\")):(n=r,r=void 0)}const o=this.length-e;if((void 0===r||r>o)&&(r=o),t.length>0&&(r<0||e<0)||e>this.length)throw new RangeError(\\\"Attempt to write outside buffer bounds\\\");n||(n=\\\"utf8\\\");let i=!1;for(;;)switch(n){case\\\"hex\\\":return hexWrite(this,t,e,r);case\\\"utf8\\\":case\\\"utf-8\\\":return utf8Write(this,t,e,r);case\\\"ascii\\\":case\\\"latin1\\\":case\\\"binary\\\":return asciiWrite(this,t,e,r);case\\\"base64\\\":return base64Write(this,t,e,r);case\\\"ucs2\\\":case\\\"ucs-2\\\":case\\\"utf16le\\\":case\\\"utf-16le\\\":return ucs2Write(this,t,e,r);default:if(i)throw new TypeError(\\\"Unknown encoding: \\\"+n);n=(\\\"\\\"+n).toLowerCase(),i=!0}}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"176dd66f301a3f147613fb0feb9a42fcf15e8e85536bde925fd36ab59996eeb5","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:06:54.053507076Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1685913057,"load_duration":80483068,"prompt_eval_count":1547,"prompt_eval_cached_count":936,"prompt_eval_duration":1415338000,"eval_count":2,"eval_duration":83886000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/swagger-api--swagger-ui/FP-0001"},{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:a7db6456a98b04d50e514552ed57bbffe1fdd62fe2c880116337fa599d400263:22460:22996","bundleId":"<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:14192:15056","groundTruth":"F","input":"{\"source_function\":\"function hexWrite (buf, string, offset, length) {\\n  offset = Number(offset) || 0\\n  const remaining = buf.length - offset\\n  if (!length) {\\n    length = remaining\\n  } else {\\n    length = Number(length)\\n    if (length > remaining) {\\n      length = remaining\\n    }\\n  }\\n\\n  const strLen = string.length\\n\\n  if (length > strLen / 2) {\\n    length = strLen / 2\\n  }\\n  let i\\n  for (i = 0; i < length; ++i) {\\n    const parsed = parseInt(string.substr(i * 2, 2), 16)\\n    if (numberIsNaN(parsed)) return i\\n    buf[offset + i] = parsed\\n  }\\n  return i\\n}\",\"minified_source_function\":\"function(n,t,e,r){e=Number(e)||0;const s=n.length-e;r?(r=Number(r))>s&&(r=s):r=s;const c=t.length;let o;for(r>c/2&&(r=c/2),o=0;o<r;++o){const r=parseInt(t.substr(2*o,2),16);if(numberIsNaN(r))return o;n[e+o]=r}return o}\",\"bundled_function\":\"function write(s,o,i,a){if(void 0===o)a=\\\"utf8\\\",i=this.length,o=0;else if(void 0===i&&\\\"string\\\"==typeof o)a=o,i=this.length,o=0;else{if(!isFinite(o))throw new Error(\\\"Buffer.write(string, encoding, offset[, length]) is no longer supported\\\");o>>>=0,isFinite(i)?(i>>>=0,void 0===a&&(a=\\\"utf8\\\")):(a=i,i=void 0)}const u=this.length-o;if((void 0===i||i>u)&&(i=u),s.length>0&&(i<0||o<0)||o>this.length)throw new RangeError(\\\"Attempt to write outside buffer bounds\\\");a||(a=\\\"utf8\\\");let _=!1;for(;;)switch(a){case\\\"hex\\\":return hexWrite(this,s,o,i);case\\\"utf8\\\":case\\\"utf-8\\\":return utf8Write(this,s,o,i);case\\\"ascii\\\":case\\\"latin1\\\":case\\\"binary\\\":return asciiWrite(this,s,o,i);case\\\"base64\\\":return base64Write(this,s,o,i);case\\\"ucs2\\\":case\\\"ucs-2\\\":case\\\"utf16le\\\":case\\\"utf-16le\\\":return ucs2Write(this,s,o,i);default:if(_)throw new TypeError(\\\"Unknown encoding: \\\"+a);a=(\\\"\\\"+a).toLowerCase(),_=!0}}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"52104e8afc7b2a7b1592a4892ec6f17f5e7df87aa0b0b074d5eb889a26438eea","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:14:03.87719214Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1027346792,"load_duration":1434546,"prompt_eval_count":1546,"prompt_eval_cached_count":936,"prompt_eval_duration":985770000,"eval_count":2,"eval_duration":26112000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/swagger-api--swagger-ui/FP-0002"},{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:b6f5cad1f455fb678009ae6a38cd97fe6242a6ebf4de8e5d662452f4837c3933:39169:39509","bundleId":"<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:1517736:1518406","groundTruth":"F","input":"{\"source_function\":\"function _checkSvgNamespace(tagName, parent, parentTagName) {\\n\\t\\tif (parent.namespaceURI === HTML_NAMESPACE) return tagName === \\\"svg\\\";\\n\\t\\tif (parent.namespaceURI === MATHML_NAMESPACE) return tagName === \\\"svg\\\" && (parentTagName === \\\"annotation-xml\\\" || MATHML_TEXT_INTEGRATION_POINTS[parentTagName]);\\n\\t\\treturn Boolean(ALL_SVG_TAGS[tagName]);\\n\\t}\",\"minified_source_function\":\"function(n,_,a){return _.namespaceURI===HTML_NAMESPACE?\\\"svg\\\"===n:_.namespaceURI===MATHML_NAMESPACE?\\\"svg\\\"===n&&(\\\"annotation-xml\\\"===a||MATHML_TEXT_INTEGRATION_POINTS[a]):Boolean(ALL_SVG_TAGS[n])}\",\"bundled_function\":\"function _checkValidNamespace(s){const o=fe(s),i=nM(pe(s)),a=Y(s);let u,_;return a&&le(a)===VM?(u={namespaceURI:fe(a)},_=nM(pe(a))):(u={namespaceURI:Jt},_=\\\"template\\\"),!!Kt[o]&&(o===Ut?function _checkSvgNamespace(s,o,i){return o.namespaceURI===Wt?\\\"svg\\\"===s:o.namespaceURI===zt?\\\"svg\\\"===s&&(\\\"annotation-xml\\\"===i||Xt[i]):Boolean(lr[s])}(i,u,_):o===zt?function _checkMathMlNamespace(s,o,i){return o.namespaceURI===Wt?\\\"math\\\"===s:o.namespaceURI===Ut?\\\"math\\\"===s&&Zt[i]:Boolean(ur[s])}(i,u,_):o===Wt?function _checkHtmlNamespace(s,o,i){return!(o.namespaceURI===Ut&&!Zt[i])&&!(o.namespaceURI===zt&&!Xt[i])&&!ur[s]&&(er[s]||!lr[s])}(i,u,_):!(\\\"application/xhtml+xml\\\"!==tr||!Kt[o]))}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"5a9c1df963a1bce0fbc909c6fd79caa5fb7e472ecefa1f0ab8f4f2dfe0cd0013","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:20:31.598466861Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1846468823,"load_duration":1529064,"prompt_eval_count":1365,"prompt_eval_cached_count":936,"prompt_eval_duration":1715585000,"eval_count":2,"eval_duration":26495000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/swagger-api--swagger-ui/FP-0003"},{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:b19302b1f39ddbe0c5790d7faaeeb2b4d78b09dc3adf7e7de4689c5d1fb58ec6:52350:52571","bundleId":"<local>/swagger-ui-standalone-preset.js#e0d0a5d7a4039bbfbeea8ae6c894a1a7733d12af6996041ddbbb7ed71d947b7e:27395:27809","groundTruth":"F","input":"{\"source_function\":\"function checkBounds (buf, offset, byteLength) {\\n  validateNumber(offset, 'offset')\\n  if (buf[offset] === undefined || buf[offset + byteLength] === undefined) {\\n    boundsError(offset, buf.length - (byteLength + 1))\\n  }\\n}\",\"minified_source_function\":\"function(o,e,d){validateNumber(e,\\\"offset\\\"),void 0!==o[e]&&void 0!==o[e+d]||boundsError(e,o.length-(d+1))}\",\"bundled_function\":\"function checkIntBI(t,e,r,n,o,i){if(t>r||t<e){const n=\\\"bigint\\\"==typeof e?\\\"n\\\":\\\"\\\";let o;throw o=i>3?0===e||e===BigInt(0)?`>= 0${n} and < 2${n} ** ${8*(i+1)}${n}`:`>= -(2${n} ** ${8*(i+1)-1}${n}) and < 2 ** ${8*(i+1)-1}${n}`:`>= ${e}${n} and <= ${r}${n}`,new u.ERR_OUT_OF_RANGE(\\\"value\\\",o,t)}!function checkBounds(t,e,r){validateNumber(e,\\\"offset\\\"),void 0!==t[e]&&void 0!==t[e+r]||boundsError(e,t.length-(r+1))}(n,o,i)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"acd8f00747ab04b1577d005c1a748cc72593a52666394a2777a1b3f6f695cc8c","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:21:42.952161444Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1789014986,"load_duration":84894247,"prompt_eval_count":1246,"prompt_eval_cached_count":936,"prompt_eval_duration":1529976000,"eval_count":2,"eval_duration":71747000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/swagger-api--swagger-ui/FP-0004"},{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:a7db6456a98b04d50e514552ed57bbffe1fdd62fe2c880116337fa599d400263:52350:52571","bundleId":"<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:27367:27781","groundTruth":"F","input":"{\"source_function\":\"function checkBounds (buf, offset, byteLength) {\\n  validateNumber(offset, 'offset')\\n  if (buf[offset] === undefined || buf[offset + byteLength] === undefined) {\\n    boundsError(offset, buf.length - (byteLength + 1))\\n  }\\n}\",\"minified_source_function\":\"function(o,e,d){validateNumber(e,\\\"offset\\\"),void 0!==o[e]&&void 0!==o[e+d]||boundsError(e,o.length-(d+1))}\",\"bundled_function\":\"function checkIntBI(s,o,i,a,u,_){if(s>i||s<o){const a=\\\"bigint\\\"==typeof o?\\\"n\\\":\\\"\\\";let u;throw u=_>3?0===o||o===BigInt(0)?`>= 0${a} and < 2${a} ** ${8*(_+1)}${a}`:`>= -(2${a} ** ${8*(_+1)-1}${a}) and < 2 ** ${8*(_+1)-1}${a}`:`>= ${o}${a} and <= ${i}${a}`,new C.ERR_OUT_OF_RANGE(\\\"value\\\",u,s)}!function checkBounds(s,o,i){validateNumber(o,\\\"offset\\\"),void 0!==s[o]&&void 0!==s[o+i]||boundsError(o,s.length-(i+1))}(a,u,_)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"30aa31460fdbcfc283d45e8eeae3a196375a8eaccdd64f5aafa56f621ed8453f","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:23:41.079445011Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1008887122,"load_duration":901124,"prompt_eval_count":1246,"prompt_eval_cached_count":936,"prompt_eval_duration":890761000,"eval_count":2,"eval_duration":26689000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/swagger-api--swagger-ui/FP-0005"},{"subject":"webpack/swagger-api--swagger-ui","sourceId":"reference:7135f367ae3ba5e459af4190bd38536b62b09dee0f1ab17933d478fefbc6ba26:8458:8585","bundleId":"<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:233595:234284","groundTruth":"F","input":"{\"source_function\":\"function castCurry(name, func, n) {\\n    return (forceCurry || (config.curry && n > 1))\\n      ? curry(func, n)\\n      : func;\\n  }\",\"minified_source_function\":\"function(r,c,n){return forceCurry||config.curry&&n>1?curry(c,n):c}\",\"bundled_function\":\"function wrap(s,o,i){var u,_=a.aliasToReal[s]||s,w=o,x=Re[_];return x?w=x(o):$&&(a.mutate.array[_]?w=wrapImmutable(o,cloneArray):a.mutate.object[_]?w=wrapImmutable(o,function createCloner(s){return function(o){return s({},o)}}(o)):a.mutate.set[_]&&(w=wrapImmutable(o,cloneByPath))),de(Te,(function(s){return de(a.aryMethod[s],(function(o){if(_==o){var i=a.methodSpread[_],x=i&&i.afterRearg;return u=x?castFixed(_,castRearg(_,w,s),s):castRearg(_,castFixed(_,w,s),s),u=function castCurry(s,o,i){return U||L&&i>1?pe(o,i):o}(0,u=castCap(_,u),s),!1}})),!u})),u||(u=w),u==o&&(u=U?pe(u,1):function(){return o.apply(this,arguments)}),u.convert=createConverter(_,o),u.placeholder=o.placeholder=i,u}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"1b3696240cc1a2e8d9371cb7745b6ac263aedb8fff7b0e3795514459ed25b25d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T18:27:40.37494601Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1307607188,"load_duration":1265262,"prompt_eval_count":1277,"prompt_eval_cached_count":936,"prompt_eval_duration":1214826000,"eval_count":2,"eval_duration":80462000},"targetedRecheck":false,"traceRounds":[6]}],"id":"webpack/swagger-api--swagger-ui/FP-0006"}]
+[
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:b19302b1f39ddbe0c5790d7faaeeb2b4d78b09dc3adf7e7de4689c5d1fb58ec6:22460:22996",
+    "bundleId": "<local>/swagger-ui-standalone-preset.js#e0d0a5d7a4039bbfbeea8ae6c894a1a7733d12af6996041ddbbb7ed71d947b7e:14220:15084",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function hexWrite (buf, string, offset, length) {\\n  offset = Number(offset) || 0\\n  const remaining = buf.length - offset\\n  if (!length) {\\n    length = remaining\\n  } else {\\n    length = Number(length)\\n    if (length > remaining) {\\n      length = remaining\\n    }\\n  }\\n\\n  const strLen = string.length\\n\\n  if (length > strLen / 2) {\\n    length = strLen / 2\\n  }\\n  let i\\n  for (i = 0; i < length; ++i) {\\n    const parsed = parseInt(string.substr(i * 2, 2), 16)\\n    if (numberIsNaN(parsed)) return i\\n    buf[offset + i] = parsed\\n  }\\n  return i\\n}\",\"minified_source_function\":\"function(n,t,e,r){e=Number(e)||0;const s=n.length-e;r?(r=Number(r))>s&&(r=s):r=s;const c=t.length;let o;for(r>c/2&&(r=c/2),o=0;o<r;++o){const r=parseInt(t.substr(2*o,2),16);if(numberIsNaN(r))return o;n[e+o]=r}return o}\",\"bundled_function\":\"function write(t,e,r,n){if(void 0===e)n=\\\"utf8\\\",r=this.length,e=0;else if(void 0===r&&\\\"string\\\"==typeof e)n=e,r=this.length,e=0;else{if(!isFinite(e))throw new Error(\\\"Buffer.write(string, encoding, offset[, length]) is no longer supported\\\");e>>>=0,isFinite(r)?(r>>>=0,void 0===n&&(n=\\\"utf8\\\")):(n=r,r=void 0)}const o=this.length-e;if((void 0===r||r>o)&&(r=o),t.length>0&&(r<0||e<0)||e>this.length)throw new RangeError(\\\"Attempt to write outside buffer bounds\\\");n||(n=\\\"utf8\\\");let i=!1;for(;;)switch(n){case\\\"hex\\\":return hexWrite(this,t,e,r);case\\\"utf8\\\":case\\\"utf-8\\\":return utf8Write(this,t,e,r);case\\\"ascii\\\":case\\\"latin1\\\":case\\\"binary\\\":return asciiWrite(this,t,e,r);case\\\"base64\\\":return base64Write(this,t,e,r);case\\\"ucs2\\\":case\\\"ucs-2\\\":case\\\"utf16le\\\":case\\\"utf-16le\\\":return ucs2Write(this,t,e,r);default:if(i)throw new TypeError(\\\"Unknown encoding: \\\"+n);n=(\\\"\\\"+n).toLowerCase(),i=!0}}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "176dd66f301a3f147613fb0feb9a42fcf15e8e85536bde925fd36ab59996eeb5",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:06:54.053507076Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1685913057,
+          "load_duration": 80483068,
+          "prompt_eval_count": 1547,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1415338000,
+          "eval_count": 2,
+          "eval_duration": 83886000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0001"
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:a7db6456a98b04d50e514552ed57bbffe1fdd62fe2c880116337fa599d400263:22460:22996",
+    "bundleId": "<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:14192:15056",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function hexWrite (buf, string, offset, length) {\\n  offset = Number(offset) || 0\\n  const remaining = buf.length - offset\\n  if (!length) {\\n    length = remaining\\n  } else {\\n    length = Number(length)\\n    if (length > remaining) {\\n      length = remaining\\n    }\\n  }\\n\\n  const strLen = string.length\\n\\n  if (length > strLen / 2) {\\n    length = strLen / 2\\n  }\\n  let i\\n  for (i = 0; i < length; ++i) {\\n    const parsed = parseInt(string.substr(i * 2, 2), 16)\\n    if (numberIsNaN(parsed)) return i\\n    buf[offset + i] = parsed\\n  }\\n  return i\\n}\",\"minified_source_function\":\"function(n,t,e,r){e=Number(e)||0;const s=n.length-e;r?(r=Number(r))>s&&(r=s):r=s;const c=t.length;let o;for(r>c/2&&(r=c/2),o=0;o<r;++o){const r=parseInt(t.substr(2*o,2),16);if(numberIsNaN(r))return o;n[e+o]=r}return o}\",\"bundled_function\":\"function write(s,o,i,a){if(void 0===o)a=\\\"utf8\\\",i=this.length,o=0;else if(void 0===i&&\\\"string\\\"==typeof o)a=o,i=this.length,o=0;else{if(!isFinite(o))throw new Error(\\\"Buffer.write(string, encoding, offset[, length]) is no longer supported\\\");o>>>=0,isFinite(i)?(i>>>=0,void 0===a&&(a=\\\"utf8\\\")):(a=i,i=void 0)}const u=this.length-o;if((void 0===i||i>u)&&(i=u),s.length>0&&(i<0||o<0)||o>this.length)throw new RangeError(\\\"Attempt to write outside buffer bounds\\\");a||(a=\\\"utf8\\\");let _=!1;for(;;)switch(a){case\\\"hex\\\":return hexWrite(this,s,o,i);case\\\"utf8\\\":case\\\"utf-8\\\":return utf8Write(this,s,o,i);case\\\"ascii\\\":case\\\"latin1\\\":case\\\"binary\\\":return asciiWrite(this,s,o,i);case\\\"base64\\\":return base64Write(this,s,o,i);case\\\"ucs2\\\":case\\\"ucs-2\\\":case\\\"utf16le\\\":case\\\"utf-16le\\\":return ucs2Write(this,s,o,i);default:if(_)throw new TypeError(\\\"Unknown encoding: \\\"+a);a=(\\\"\\\"+a).toLowerCase(),_=!0}}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "52104e8afc7b2a7b1592a4892ec6f17f5e7df87aa0b0b074d5eb889a26438eea",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:14:03.87719214Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1027346792,
+          "load_duration": 1434546,
+          "prompt_eval_count": 1546,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 985770000,
+          "eval_count": 2,
+          "eval_duration": 26112000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0002"
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:b6f5cad1f455fb678009ae6a38cd97fe6242a6ebf4de8e5d662452f4837c3933:39169:39509",
+    "bundleId": "<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:1517736:1518406",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function _checkSvgNamespace(tagName, parent, parentTagName) {\\n\\t\\tif (parent.namespaceURI === HTML_NAMESPACE) return tagName === \\\"svg\\\";\\n\\t\\tif (parent.namespaceURI === MATHML_NAMESPACE) return tagName === \\\"svg\\\" && (parentTagName === \\\"annotation-xml\\\" || MATHML_TEXT_INTEGRATION_POINTS[parentTagName]);\\n\\t\\treturn Boolean(ALL_SVG_TAGS[tagName]);\\n\\t}\",\"minified_source_function\":\"function(n,_,a){return _.namespaceURI===HTML_NAMESPACE?\\\"svg\\\"===n:_.namespaceURI===MATHML_NAMESPACE?\\\"svg\\\"===n&&(\\\"annotation-xml\\\"===a||MATHML_TEXT_INTEGRATION_POINTS[a]):Boolean(ALL_SVG_TAGS[n])}\",\"bundled_function\":\"function _checkValidNamespace(s){const o=fe(s),i=nM(pe(s)),a=Y(s);let u,_;return a&&le(a)===VM?(u={namespaceURI:fe(a)},_=nM(pe(a))):(u={namespaceURI:Jt},_=\\\"template\\\"),!!Kt[o]&&(o===Ut?function _checkSvgNamespace(s,o,i){return o.namespaceURI===Wt?\\\"svg\\\"===s:o.namespaceURI===zt?\\\"svg\\\"===s&&(\\\"annotation-xml\\\"===i||Xt[i]):Boolean(lr[s])}(i,u,_):o===zt?function _checkMathMlNamespace(s,o,i){return o.namespaceURI===Wt?\\\"math\\\"===s:o.namespaceURI===Ut?\\\"math\\\"===s&&Zt[i]:Boolean(ur[s])}(i,u,_):o===Wt?function _checkHtmlNamespace(s,o,i){return!(o.namespaceURI===Ut&&!Zt[i])&&!(o.namespaceURI===zt&&!Xt[i])&&!ur[s]&&(er[s]||!lr[s])}(i,u,_):!(\\\"application/xhtml+xml\\\"!==tr||!Kt[o]))}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "5a9c1df963a1bce0fbc909c6fd79caa5fb7e472ecefa1f0ab8f4f2dfe0cd0013",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:20:31.598466861Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1846468823,
+          "load_duration": 1529064,
+          "prompt_eval_count": 1365,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1715585000,
+          "eval_count": 2,
+          "eval_duration": 26495000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0003"
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:b19302b1f39ddbe0c5790d7faaeeb2b4d78b09dc3adf7e7de4689c5d1fb58ec6:52350:52571",
+    "bundleId": "<local>/swagger-ui-standalone-preset.js#e0d0a5d7a4039bbfbeea8ae6c894a1a7733d12af6996041ddbbb7ed71d947b7e:27395:27809",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function checkBounds (buf, offset, byteLength) {\\n  validateNumber(offset, 'offset')\\n  if (buf[offset] === undefined || buf[offset + byteLength] === undefined) {\\n    boundsError(offset, buf.length - (byteLength + 1))\\n  }\\n}\",\"minified_source_function\":\"function(o,e,d){validateNumber(e,\\\"offset\\\"),void 0!==o[e]&&void 0!==o[e+d]||boundsError(e,o.length-(d+1))}\",\"bundled_function\":\"function checkIntBI(t,e,r,n,o,i){if(t>r||t<e){const n=\\\"bigint\\\"==typeof e?\\\"n\\\":\\\"\\\";let o;throw o=i>3?0===e||e===BigInt(0)?`>= 0${n} and < 2${n} ** ${8*(i+1)}${n}`:`>= -(2${n} ** ${8*(i+1)-1}${n}) and < 2 ** ${8*(i+1)-1}${n}`:`>= ${e}${n} and <= ${r}${n}`,new u.ERR_OUT_OF_RANGE(\\\"value\\\",o,t)}!function checkBounds(t,e,r){validateNumber(e,\\\"offset\\\"),void 0!==t[e]&&void 0!==t[e+r]||boundsError(e,t.length-(r+1))}(n,o,i)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "acd8f00747ab04b1577d005c1a748cc72593a52666394a2777a1b3f6f695cc8c",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:21:42.952161444Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1789014986,
+          "load_duration": 84894247,
+          "prompt_eval_count": 1246,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1529976000,
+          "eval_count": 2,
+          "eval_duration": 71747000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0004"
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:a7db6456a98b04d50e514552ed57bbffe1fdd62fe2c880116337fa599d400263:52350:52571",
+    "bundleId": "<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:27367:27781",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function checkBounds (buf, offset, byteLength) {\\n  validateNumber(offset, 'offset')\\n  if (buf[offset] === undefined || buf[offset + byteLength] === undefined) {\\n    boundsError(offset, buf.length - (byteLength + 1))\\n  }\\n}\",\"minified_source_function\":\"function(o,e,d){validateNumber(e,\\\"offset\\\"),void 0!==o[e]&&void 0!==o[e+d]||boundsError(e,o.length-(d+1))}\",\"bundled_function\":\"function checkIntBI(s,o,i,a,u,_){if(s>i||s<o){const a=\\\"bigint\\\"==typeof o?\\\"n\\\":\\\"\\\";let u;throw u=_>3?0===o||o===BigInt(0)?`>= 0${a} and < 2${a} ** ${8*(_+1)}${a}`:`>= -(2${a} ** ${8*(_+1)-1}${a}) and < 2 ** ${8*(_+1)-1}${a}`:`>= ${o}${a} and <= ${i}${a}`,new C.ERR_OUT_OF_RANGE(\\\"value\\\",u,s)}!function checkBounds(s,o,i){validateNumber(o,\\\"offset\\\"),void 0!==s[o]&&void 0!==s[o+i]||boundsError(o,s.length-(i+1))}(a,u,_)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "30aa31460fdbcfc283d45e8eeae3a196375a8eaccdd64f5aafa56f621ed8453f",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:23:41.079445011Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1008887122,
+          "load_duration": 901124,
+          "prompt_eval_count": 1246,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 890761000,
+          "eval_count": 2,
+          "eval_duration": 26689000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0005"
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "sourceId": "reference:7135f367ae3ba5e459af4190bd38536b62b09dee0f1ab17933d478fefbc6ba26:8458:8585",
+    "bundleId": "<local>/swagger-ui-bundle.js#d1084e726bc23a623941f9fd22fd34b1f796442ef09da963434d0a9eba447869:233595:234284",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function castCurry(name, func, n) {\\n    return (forceCurry || (config.curry && n > 1))\\n      ? curry(func, n)\\n      : func;\\n  }\",\"minified_source_function\":\"function(r,c,n){return forceCurry||config.curry&&n>1?curry(c,n):c}\",\"bundled_function\":\"function wrap(s,o,i){var u,_=a.aliasToReal[s]||s,w=o,x=Re[_];return x?w=x(o):$&&(a.mutate.array[_]?w=wrapImmutable(o,cloneArray):a.mutate.object[_]?w=wrapImmutable(o,function createCloner(s){return function(o){return s({},o)}}(o)):a.mutate.set[_]&&(w=wrapImmutable(o,cloneByPath))),de(Te,(function(s){return de(a.aryMethod[s],(function(o){if(_==o){var i=a.methodSpread[_],x=i&&i.afterRearg;return u=x?castFixed(_,castRearg(_,w,s),s):castRearg(_,castFixed(_,w,s),s),u=function castCurry(s,o,i){return U||L&&i>1?pe(o,i):o}(0,u=castCap(_,u),s),!1}})),!u})),u||(u=w),u==o&&(u=U?pe(u,1):function(){return o.apply(this,arguments)}),u.convert=createConverter(_,o),u.placeholder=o.placeholder=i,u}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "1b3696240cc1a2e8d9371cb7745b6ac263aedb8fff7b0e3795514459ed25b25d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T18:27:40.37494601Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1307607188,
+          "load_duration": 1265262,
+          "prompt_eval_count": 1277,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1214826000,
+          "eval_count": 2,
+          "eval_duration": 80462000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          6
+        ]
+      }
+    ],
+    "id": "webpack/swagger-api--swagger-ui/FP-0006"
+  }
+]

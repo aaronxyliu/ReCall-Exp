@@ -1,1 +1,988 @@
-[{"subject":"turbopack/umami-software--umami","sourceId":"reference:f2646a6750e4e20242f59ae9e42a0b13aaff91a4601d0d8adda7a1d7380960b8:1666:2362","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:375427:375668","groundTruth":"T","input":"{\"source_function\":\"function applyStack(stack, value, dsIndex, options = {}) {\\n  const keys = stack.keys;\\n  const singleMode = options.mode === 'single';\\n  let i, ilen, datasetIndex, otherValue;\\n\\n  if (value === null) {\\n    return;\\n  }\\n\\n  let found = false;\\n  for (i = 0, ilen = keys.length; i < ilen; ++i) {\\n    datasetIndex = +keys[i];\\n    if (datasetIndex === dsIndex) {\\n      found = true;\\n      if (options.all) {\\n        continue;\\n      }\\n      break;\\n    }\\n    otherValue = stack.values[datasetIndex];\\n    if (isFinite(otherValue) && (singleMode || (value === 0 || sign(value) === sign(otherValue)))) {\\n      value += otherValue;\\n    }\\n  }\\n\\n  if (!found && !options.all) {\\n    return 0;\\n  }\\n\\n  return value;\\n}\",\"minified_source_function\":\"function(e,n,i,l={}){const t=e.keys,r=\\\"single\\\"===l.mode;let s,o,a,c;if(null===n)return;let u=!1;for(s=0,o=t.length;s<o;++s){if(a=+t[s],a===i){if(u=!0,l.all)continue;break}c=e.values[a],isFinite(c)&&(r||0===n||sign(n)===sign(c))&&(n+=c)}return u||l.all?n:0}\",\"bundled_function\":\"function iN(e,t,i,a={}){let n,r,o,s,l=e.keys,u=\\\"single\\\"===a.mode;if(null===t)return;let d=!1;for(n=0,r=l.length;n<r;++n){if((o=+l[n])===i){if(d=!0,a.all)continue;break}ew(s=e.values[o])&&(u||0===t||eq(t)===eq(s))&&(t+=s)}return d||a.all?t:0}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"0853eedd0a895e260f6dce1bb1c1164df884ec040467d156938dd5d3db359430","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:39.181774355Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":929137051,"load_duration":1874305,"prompt_eval_count":1428,"prompt_eval_cached_count":960,"prompt_eval_duration":815625000,"eval_count":2,"eval_duration":27069000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"turbopack/umami-software--umami/FN-0001"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:eebfb78668585929f4eb6802a434c6a3dc259d65f5fb2f5caa1d7c57ffea61f2:6763:6932","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:397911:397984","groundTruth":"T","input":"{\"source_function\":\"function setInflateAmount(properties, {inflateAmount}, ratio) {\\n  properties.inflateAmount = inflateAmount === 'auto'\\n    ? ratio === 1 ? 0.33 : 0\\n    : inflateAmount;\\n}\",\"minified_source_function\":\"function(n,{inflateAmount:t},o){n.inflateAmount=\\\"auto\\\"===t?1===o?.33:0:t}\",\"bundled_function\":\"function(e,{inflateAmount:t},i){e.inflateAmount=\\\"auto\\\"===t?.33*(1===i):t}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"93ac37c9eafe301ae47668956f1b26c983e4603e4daf66edb0bb1479b8de9b3a","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:40.185640949Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1001777884,"load_duration":954597,"prompt_eval_count":1093,"prompt_eval_cached_count":960,"prompt_eval_duration":910286000,"eval_count":2,"eval_duration":73405000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"turbopack/umami-software--umami/FN-0002"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:cb117bf19878b91bc7e5a0d4814468c3f7ba8c233dc85dcd1a746393a014fe3c:13965:14262","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:412217:412294","groundTruth":"T","input":"{\"source_function\":\"point(chart, e, options, useFinalPosition) {\\n      const position = getRelativePosition(e, chart);\\n      const axis = options.axis || 'xy';\\n      const includeInvisible = options.includeInvisible || false;\\n      return getIntersectItems(chart, position, axis, useFinalPosition, includeInvisible);\\n    }\",\"minified_source_function\":\"point(chart,e,options,useFinalPosition){const position=getRelativePosition(e,chart),axis=options.axis||\\\"xy\\\",includeInvisible=options.includeInvisible||!1;return getIntersectItems(chart,position,axis,useFinalPosition,includeInvisible)}\",\"bundled_function\":\"point(e,t,i,a){let n=is(t,e);return i1(e,n,i.axis||\\\"xy\\\",a,i.includeInvisible||!1)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"43725524cd24f51e2992539af3b67b9f4f482cd9edc304471fbd47b26b5ee91e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:41.113979677Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":925137857,"load_duration":1552302,"prompt_eval_count":1148,"prompt_eval_cached_count":960,"prompt_eval_duration":882346000,"eval_count":2,"eval_duration":27185000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"turbopack/umami-software--umami/FN-0003"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:8a05a9191cef5b85d23fdc0f4d621f1769fa8db0b59695c4932ea460782410c9:1353:1600","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:449790:449898","groundTruth":"T","input":"{\"source_function\":\"function onAnimationsComplete(context) {\\n  const chart = context.chart;\\n  const animationOptions = chart.options.animation;\\n\\n  chart.notifyPlugins('afterRender');\\n  callCallback(animationOptions && animationOptions.onComplete, [context], chart);\\n}\",\"minified_source_function\":\"function(n){const o=n.chart,t=o.options.animation;o.notifyPlugins(\\\"afterRender\\\"),callCallback(t&&t.onComplete,[n],o)}\",\"bundled_function\":\"function a$(e){let t=e.chart,i=t.options.animation;t.notifyPlugins(\\\"afterRender\\\"),eS(i&&i.onComplete,[e],t)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"c3f3888924b96453489cfef926286d682b540370ea1ef361284af42e5c4e1197","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:42.286280221Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1169810495,"load_duration":64707488,"prompt_eval_count":1107,"prompt_eval_cached_count":960,"prompt_eval_duration":1017772000,"eval_count":2,"eval_duration":69676000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"turbopack/umami-software--umami/FN-0004"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:8a05a9191cef5b85d23fdc0f4d621f1769fa8db0b59695c4932ea460782410c9:6415:6885","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:451815:451939","groundTruth":"T","input":"{\"source_function\":\"get aspectRatio() {\\n    const {options: {aspectRatio, maintainAspectRatio}, width, height, _aspectRatio} = this;\\n    if (!isNullOrUndef(aspectRatio)) {\\n      // If aspectRatio is defined in options, use that.\\n      return aspectRatio;\\n    }\\n\\n    if (maintainAspectRatio && _aspectRatio) {\\n      // If maintainAspectRatio is truthly and we had previously determined _aspectRatio, use that\\n      return _aspectRatio;\\n    }\\n\\n    // Calculate\\n    return height ? width / height : null;\\n  }\",\"minified_source_function\":\"get aspectRatio(){const{options:{aspectRatio:aspectRatio,maintainAspectRatio:maintainAspectRatio},width:width,height:height,_aspectRatio:_aspectRatio}=this;return isNullOrUndef(aspectRatio)?maintainAspectRatio&&_aspectRatio?_aspectRatio:height?width/height:null:aspectRatio}\",\"bundled_function\":\"get aspectRatio(){let{options:{aspectRatio:e,maintainAspectRatio:t},width:i,height:a,_aspectRatio:n}=this;return eb(e)?t&&n?n:a?i/a:null:e}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"06e685cf0c929f7cca18bef1da64a12648ae5db98486cbd04f60e8a2c5f61d67","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:43.288907569Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":999494668,"load_duration":1556133,"prompt_eval_count":1228,"prompt_eval_cached_count":960,"prompt_eval_duration":914036000,"eval_count":2,"eval_duration":68060000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"turbopack/umami-software--umami/FN-0005"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:cf307d549989c3981299a7b69a026404fc5d420bcf146fff3a3c0c664f58175d:1820:2587","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:474262:474471","groundTruth":"T","input":"{\"source_function\":\"function clipArc(ctx: CanvasRenderingContext2D, element: ArcElement, endAngle: number) {\\n  const {startAngle, pixelMargin, x, y, outerRadius, innerRadius} = element;\\n  let angleMargin = pixelMargin / outerRadius;\\n\\n  // Draw an inner border by clipping the arc and drawing a double-width border\\n  // Enlarge the clipping arc by 0.33 pixels to eliminate glitches between borders\\n  ctx.beginPath();\\n  ctx.arc(x, y, outerRadius, startAngle - angleMargin, endAngle + angleMargin);\\n  if (innerRadius > pixelMargin) {\\n    angleMargin = pixelMargin / innerRadius;\\n    ctx.arc(x, y, innerRadius, endAngle + angleMargin, startAngle - angleMargin, true);\\n  } else {\\n    ctx.arc(x, y, pixelMargin, endAngle + HALF_PI, startAngle - HALF_PI);\\n  }\\n  ctx.closePath();\\n  ctx.clip();\\n}\",\"minified_source_function\":\"function(a,c,e){const{startAngle:n,pixelMargin:t,x:i,y:r,outerRadius:o,innerRadius:s}=c;let l=t/o;a.beginPath(),a.arc(i,r,o,n-l,e+l),s>t?(l=t/s,a.arc(i,r,s,e+l,n-l,!0)):a.arc(i,r,t,e+HALF_PI,n-HALF_PI),a.closePath(),a.clip()}\",\"bundled_function\":\"function(e,t,i){let{startAngle:a,pixelMargin:n,x:r,y:o,outerRadius:s,innerRadius:l}=t,u=n/s;e.beginPath(),e.arc(r,o,s,a-u,i+u),l>n?(u=n/l,e.arc(r,o,l,i+u,a-u,!0)):e.arc(r,o,n,i+eG,a-eG),e.closePath(),e.clip()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"03009c4b3370258d84888293fecaef59a9aaa14f14a2372e769d4e22c81a7e22","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:45.287922405Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1098307563,"load_duration":1510198,"prompt_eval_count":1373,"prompt_eval_cached_count":960,"prompt_eval_duration":1010057000,"eval_count":2,"eval_duration":68770000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"turbopack/umami-software--umami/FN-0006"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:cf307d549989c3981299a7b69a026404fc5d420bcf146fff3a3c0c664f58175d:9105:9688","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:473639:473825","groundTruth":"T","input":"{\"source_function\":\"function drawArc(\\n  ctx: CanvasRenderingContext2D,\\n  element: ArcElement,\\n  offset: number,\\n  spacing: number,\\n  circular: boolean,\\n) {\\n  const {fullCircles, startAngle, circumference} = element;\\n  let endAngle = element.endAngle;\\n  if (fullCircles) {\\n    pathArc(ctx, element, offset, spacing, endAngle, circular);\\n    for (let i = 0; i < fullCircles; ++i) {\\n      ctx.fill();\\n    }\\n    if (!isNaN(circumference)) {\\n      endAngle = startAngle + (circumference % TAU || TAU);\\n    }\\n  }\\n  pathArc(ctx, element, offset, spacing, endAngle, circular);\\n  ctx.fill();\\n  return endAngle;\\n}\",\"minified_source_function\":\"function(e,c,l,r,t){const{fullCircles:n,startAngle:i,circumference:f}=c;let a=c.endAngle;if(n){pathArc(e,c,l,r,a,t);for(let c=0;c<n;++c)e.fill();isNaN(f)||(a=i+(f%TAU||TAU))}return pathArc(e,c,l,r,a,t),e.fill(),a}\",\"bundled_function\":\"function(e,t,i,a,n){let{fullCircles:r,startAngle:o,circumference:s}=t,l=t.endAngle;if(r){a2(e,t,i,a,l,n);for(let t=0;t<r;++t)e.fill();isNaN(s)||(l=o+(s%ez||ez))}a2(e,t,i,a,l,n),e.fill()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"fd304402ad40a7043e138d569ef5a0b1aae9b223d49c7fb509e9a36f4df9098f","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:46.287270491Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":997317832,"load_duration":1102183,"prompt_eval_count":1336,"prompt_eval_cached_count":960,"prompt_eval_duration":914682000,"eval_count":2,"eval_duration":67074000},"targetedRecheck":true,"traceRounds":[1]}],"id":"turbopack/umami-software--umami/FN-0007"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:7fbff0687eaf3925e826b5a5dab6488e35904a6a96458f0952d0b91d6d48f166:393:897","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:508906:509082","groundTruth":"T","input":"{\"source_function\":\"function _resolveTarget(sources, index, propagate) {\\n  const source = sources[index];\\n  let fill = source.fill;\\n  const visited = [index];\\n  let target;\\n\\n  if (!propagate) {\\n    return fill;\\n  }\\n\\n  while (fill !== false && visited.indexOf(fill) === -1) {\\n    if (!isFinite(fill)) {\\n      return fill;\\n    }\\n\\n    target = sources[fill];\\n    if (!target) {\\n      return false;\\n    }\\n\\n    if (target.visible) {\\n      return fill;\\n    }\\n\\n    visited.push(fill);\\n    fill = target.fill;\\n  }\\n\\n  return false;\\n}\",\"minified_source_function\":\"function(i,e,r){let n=i[e].fill;const t=[e];let f;if(!r)return n;for(;!1!==n&&-1===t.indexOf(n);){if(!isFinite(n))return n;if(f=i[n],!f)return!1;if(f.visible)return n;t.push(n),n=f.fill}return!1}\",\"bundled_function\":\"function(e,t,i){let a,n=e[t].fill,r=[t];if(!i)return n;for(;!1!==n&&-1===r.indexOf(n);){if(!ew(n))return n;if(!(a=e[n]))break;if(a.visible)return n;r.push(n),n=a.fill}return!1}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"3eacfa8a0ad8bd5bec42a3790760db900e15798cfa7d4efb8ebf5592e06377f6","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:47.286301813Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":996265851,"load_duration":1314802,"prompt_eval_count":1293,"prompt_eval_cached_count":960,"prompt_eval_duration":909881000,"eval_count":2,"eval_duration":72217000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"turbopack/umami-software--umami/FN-0008"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:12184699411d82e88b9f5ac5e24feb4e8fc3afa01fd34f1d15512fddb892eb94:15015:15173","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:497493:497553","groundTruth":"T","input":"{\"source_function\":\"getBeforeBody(tooltipItems, options) {\\n    return getBeforeAfterBodyLines(\\n      invokeCallbackWithFallback(options.callbacks, 'beforeBody', this, tooltipItems)\\n    );\\n  }\",\"minified_source_function\":\"getBeforeBody(tooltipItems,options){return getBeforeAfterBodyLines(invokeCallbackWithFallback(options.callbacks,\\\"beforeBody\\\",this,tooltipItems))}\",\"bundled_function\":\"getBeforeBody(e,t){return nR([],nI(nz(t.callbacks,\\\"beforeBody\\\",this,e)))}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"717c3e3193e90b269cef4b5ef156de227061dbdd3cb8a7c04bb67d85627890b7","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:48.086221373Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":797410786,"load_duration":1629117,"prompt_eval_count":1087,"prompt_eval_cached_count":960,"prompt_eval_duration":713971000,"eval_count":2,"eval_duration":68931000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"turbopack/umami-software--umami/FN-0009"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:99251d62aa99832fdfab7808aa441a7187fd53e37ff782e1ebfc241ab713d463:12546:12813","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:520951:521080","groundTruth":"T","input":"{\"source_function\":\"determineDataLimits() {\\n    const {min, max} = this.getMinMax(false);\\n\\n    this.min = isFinite(min) && !isNaN(min) ? min : 0;\\n    this.max = isFinite(max) && !isNaN(max) ? max : 0;\\n\\n    // Common base implementation to handle min, max, beginAtZero\\n    this.handleTickRangeOptions();\\n  }\",\"minified_source_function\":\"determineDataLimits(){const{min:min,max:max}=this.getMinMax(!1);this.min=isFinite(min)&&!isNaN(min)?min:0,this.max=isFinite(max)&&!isNaN(max)?max:0,this.handleTickRangeOptions()}\",\"bundled_function\":\"determineDataLimits(){let{min:e,max:t}=this.getMinMax(!1);this.min=ew(e)&&!isNaN(e)?e:0,this.max=ew(t)&&!isNaN(t)?t:0,this.handleTickRangeOptions()}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"deb65a1586ec31a009931c57d3ec30ade2d5927493131b6b26bd634c6f358887","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:49.113543559Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1024303747,"load_duration":2151865,"prompt_eval_count":1177,"prompt_eval_cached_count":960,"prompt_eval_duration":980101000,"eval_count":2,"eval_duration":27014000},"targetedRecheck":true,"traceRounds":[1,2,3]}],"id":"turbopack/umami-software--umami/FN-0010"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:b7a191efd98a395bf4ff5f267858da222490d064e56a774a46676eaa0e1a1c53:1374:2079","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:527860:528151","groundTruth":"T","input":"{\"source_function\":\"function parse(scale, input) {\\n  if (isNullOrUndef(input)) {\\n    return null;\\n  }\\n\\n  const adapter = scale._adapter;\\n  const {parser, round, isoWeekday} = scale._parseOpts;\\n  let value = input;\\n\\n  if (typeof parser === 'function') {\\n    value = parser(value);\\n  }\\n\\n  // Only parse if it's not a timestamp already\\n  if (!isFinite(value)) {\\n    value = typeof parser === 'string'\\n      ? adapter.parse(value, parser)\\n      : adapter.parse(value);\\n  }\\n\\n  if (value === null) {\\n    return null;\\n  }\\n\\n  if (round) {\\n    value = round === 'week' && (isNumber(isoWeekday) || isoWeekday === true)\\n      ? adapter.startOf(value, 'isoWeek', isoWeekday)\\n      : adapter.startOf(value, round);\\n  }\\n\\n  return +value;\\n}\",\"minified_source_function\":\"function(e,r){if(isNullOrUndef(r))return null;const t=e._adapter,{parser:n,round:s,isoWeekday:i}=e._parseOpts;let a=r;return\\\"function\\\"==typeof n&&(a=n(a)),isFinite(a)||(a=\\\"string\\\"==typeof n?t.parse(a,n):t.parse(a)),null===a?null:(s&&(a=\\\"week\\\"!==s||!isNumber(i)&&!0!==i?t.startOf(a,s):t.startOf(a,\\\"isoWeek\\\",i)),+a)}\",\"bundled_function\":\"function n4(e,t){if(eb(t))return null;let i=e._adapter,{parser:a,round:n,isoWeekday:r}=e._parseOpts,o=t;return(\\\"function\\\"==typeof a&&(o=a(o)),ew(o)||(o=\\\"string\\\"==typeof a?i.parse(o,a):i.parse(o)),null===o)?null:(n&&(o=\\\"week\\\"===n&&(eX(r)||!0===r)?i.startOf(o,\\\"isoWeek\\\",r):i.startOf(o,n)),+o)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"2a2c53493f99a837cd2b1753cbae630783cf000957a5250a34d8292669ce321e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:50.213133058Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1096687600,"load_duration":1460749,"prompt_eval_count":1439,"prompt_eval_cached_count":960,"prompt_eval_duration":999830000,"eval_count":2,"eval_duration":26623000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"turbopack/umami-software--umami/FN-0011"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:96cda97882dadc5caa2cab0ae778676e2965c577144b4068fe0ad6683ff6ccde:2584:2654","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:347490:347521","groundTruth":"T","input":"{\"source_function\":\"function toRadians(degrees: number) {\\n  return degrees * (PI / 180);\\n}\",\"minified_source_function\":\"function(n){return n*(PI/180)}\",\"bundled_function\":\"function eJ(e){return eH/180*e}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"a8f01e80bfd313382a478bc33da962c9f8533135c42ca48ff4b347fe2850a8b6","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:51.186335456Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":970262189,"load_duration":1231756,"prompt_eval_count":1038,"prompt_eval_cached_count":960,"prompt_eval_duration":882848000,"eval_count":2,"eval_duration":72995000},"targetedRecheck":true,"traceRounds":[2,5,6]}],"id":"turbopack/umami-software--umami/FN-0012"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:6aea97200e8c3b95d15af38b685817be910a0206b6bcbbe42f8c2e2ea88e29c7:11721:11826","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:420059:420984","groundTruth":"T","input":"{\"source_function\":\"getMaximumSize(canvas, width, height, aspectRatio) {\\n    return getMaximumSize(canvas, width, height, aspectRatio);\\n  }\",\"minified_source_function\":\"getMaximumSize(canvas,width,height,aspectRatio){return getMaximumSize(canvas,width,height,aspectRatio)}\",\"bundled_function\":\"getMaximumSize(e,t,i,a){return function(e,t,i,a){let n=ia(e),r=io(n,\\\"margin\\\"),o=ii(n.maxWidth,e,\\\"clientWidth\\\")||1/0,s=ii(n.maxHeight,e,\\\"clientHeight\\\")||1/0,l=function(e,t,i){let a,n;if(void 0===t||void 0===i){let r=e&&it(e);if(r){let e=r.getBoundingClientRect(),o=ia(r),s=io(o,\\\"border\\\",\\\"width\\\"),l=io(o,\\\"padding\\\");t=e.width-l.width-s.width,i=e.height-l.height-s.height,a=ii(o.maxWidth,r,\\\"clientWidth\\\"),n=ii(o.maxHeight,r,\\\"clientHeight\\\")}else t=e.clientWidth,i=e.clientHeight}return{width:t,height:i,maxWidth:a||1/0,maxHeight:n||1/0}}(e,t,i),{width:u,height:d}=l;if(\\\"content-box\\\"===n.boxSizing){let e=io(n,\\\"border\\\",\\\"width\\\"),t=io(n,\\\"padding\\\");u-=t.width+e.width,d-=t.height+e.height}return u=Math.max(0,u-r.width),d=Math.max(0,a?u/a:d-r.height),u=il(Math.min(u,o,l.maxWidth)),d=il(Math.min(d,s,l.maxHeight)),u&&!d&&(d=il(u/2)),(void 0!==t||void 0!==i)&&a&&l.height&&d>l.height&&(u=il(Math.floor((d=l.height)*a))),{width:u,height:d}}(e,t,i,a)}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"2509383219db32016a6b92c7f7c534bf2f78ce3ba80e876f0165f2aca6fb0268","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:52.286890202Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1097984049,"load_duration":1093038,"prompt_eval_count":1388,"prompt_eval_cached_count":960,"prompt_eval_duration":1012476000,"eval_count":2,"eval_duration":69864000},"targetedRecheck":true,"traceRounds":[2,3,4]}],"id":"turbopack/umami-software--umami/FN-0013"},{"subject":"turbopack/umami-software--umami","sourceId":"reference:23aa93dd8075615e0a7b4c091067d77f7115df32d170e4cf1c5fcf8a2e53c1f2:2245:2797","bundleId":"<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:536437:536675","groundTruth":"T","input":"{\"source_function\":\"buildTicks() {\\n    const min = this.min;\\n    const max = this.max;\\n    const offset = this.options.offset;\\n    const ticks = [];\\n    let labels = this.getLabels();\\n\\n    // If we are viewing some subset of labels, slice the original array\\n    labels = (min === 0 && max === labels.length - 1) ? labels : labels.slice(min, max + 1);\\n\\n    this._valueRange = Math.max(labels.length - (offset ? 0 : 1), 1);\\n    this._startValue = this.min - (offset ? 0.5 : 0);\\n\\n    for (let value = min; value <= max; value++) {\\n      ticks.push({value});\\n    }\\n    return ticks;\\n  }\",\"minified_source_function\":\"buildTicks(){const min=this.min,max=this.max,offset=this.options.offset,ticks=[];let labels=this.getLabels();labels=0===min&&max===labels.length-1?labels:labels.slice(min,max+1),this._valueRange=Math.max(labels.length-(offset?0:1),1),this._startValue=this.min-(offset?.5:0);for(let value=min;value<=max;value++)ticks.push({value:value});return ticks}\",\"bundled_function\":\"buildTicks(){let e=this.min,t=this.max,i=this.options.offset,a=[],n=this.getLabels();n=0===e&&t===n.length-1?n:n.slice(e,t+1),this._valueRange=Math.max(n.length-!i,1),this._startValue=this.min-.5*!!i;for(let i=e;i<=t;i++)a.push({value:i});return a}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"30c2524ae560d128d7dc372dba2b83ce0bd29cb442c4346d03222f732b661d90","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:32:53.397427823Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":1107251090,"load_duration":1577311,"prompt_eval_count":1346,"prompt_eval_cached_count":960,"prompt_eval_duration":1017557000,"eval_count":2,"eval_duration":73454000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"turbopack/umami-software--umami/FN-0014"}]
+[
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:f2646a6750e4e20242f59ae9e42a0b13aaff91a4601d0d8adda7a1d7380960b8:1666:2362",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:375427:375668",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function applyStack(stack, value, dsIndex, options = {}) {\\n  const keys = stack.keys;\\n  const singleMode = options.mode === 'single';\\n  let i, ilen, datasetIndex, otherValue;\\n\\n  if (value === null) {\\n    return;\\n  }\\n\\n  let found = false;\\n  for (i = 0, ilen = keys.length; i < ilen; ++i) {\\n    datasetIndex = +keys[i];\\n    if (datasetIndex === dsIndex) {\\n      found = true;\\n      if (options.all) {\\n        continue;\\n      }\\n      break;\\n    }\\n    otherValue = stack.values[datasetIndex];\\n    if (isFinite(otherValue) && (singleMode || (value === 0 || sign(value) === sign(otherValue)))) {\\n      value += otherValue;\\n    }\\n  }\\n\\n  if (!found && !options.all) {\\n    return 0;\\n  }\\n\\n  return value;\\n}\",\"minified_source_function\":\"function(e,n,i,l={}){const t=e.keys,r=\\\"single\\\"===l.mode;let s,o,a,c;if(null===n)return;let u=!1;for(s=0,o=t.length;s<o;++s){if(a=+t[s],a===i){if(u=!0,l.all)continue;break}c=e.values[a],isFinite(c)&&(r||0===n||sign(n)===sign(c))&&(n+=c)}return u||l.all?n:0}\",\"bundled_function\":\"function iN(e,t,i,a={}){let n,r,o,s,l=e.keys,u=\\\"single\\\"===a.mode;if(null===t)return;let d=!1;for(n=0,r=l.length;n<r;++n){if((o=+l[n])===i){if(d=!0,a.all)continue;break}ew(s=e.values[o])&&(u||0===t||eq(t)===eq(s))&&(t+=s)}return d||a.all?t:0}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "0853eedd0a895e260f6dce1bb1c1164df884ec040467d156938dd5d3db359430",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:39.181774355Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 929137051,
+          "load_duration": 1874305,
+          "prompt_eval_count": 1428,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 815625000,
+          "eval_count": 2,
+          "eval_duration": 27069000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0001",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to two critical discrepancies in external variable bindings and logic:\n\n1.  **Missing/Incorrect External Binding `isFinite`**: The source function uses the global `isFinite()` function to check if a value is finite. The bundled function replaces this with `ew()`. Unless `ew` is an alias for `isFinite` (which is not indicated in the provided context), this changes the behavior of the condition, potentially allowing non-finite numbers (like `Infinity`) to pass through or failing to filter them correctly.\n2.  **Missing/Incorrect External Binding `sign`**: The source function uses a helper `sign()` to compare the signs of values (`sign(value) === sign(otherValue)`). The bundled function replaces this with `eq()`. The name `eq` typically implies an equality check, not a sign comparison. Even if `eq` were a custom function, without evidence that it behaves identically to `sign`, the logic is altered.\n\nThese substitutions of external functions (`isFinite` → `ew`, `sign` → `eq`) represent clear semantic differences unless specific build-time replacements are assumed, which contradicts the instruction to treat code as data and verify equivalence based on the provided text.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:38:11.710114546Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to two critical discrepancies in external variable bindings and logic:\n\n1.  **Missing/Incorrect External Binding `isFinite`**: The source function uses the global `isFinite()` function to check if a value is finite. The bundled function replaces this with `ew()`. Unless `ew` is an alias for `isFinite` (which is not indicated in the provided context), this changes the behavior of the condition, potentially allowing non-finite numbers (like `Infinity`) to pass through or failing to filter them correctly.\n2.  **Missing/Incorrect External Binding `sign`**: The source function uses a helper `sign()` to compare the signs of values (`sign(value) === sign(otherValue)`). The bundled function replaces this with `eq()`. The name `eq` typically implies an equality check, not a sign comparison. Even if `eq` were a custom function, without evidence that it behaves identically to `sign`, the logic is altered.\n\nThese substitutions of external functions (`isFinite` → `ew`, `sign` → `eq`) represent clear semantic differences unless specific build-time replacements are assumed, which contradicts the instruction to treat code as data and verify equivalence based on the provided text."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 12299639363,
+        "load_duration": 1499904,
+        "prompt_eval_count": 1458,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 885950000,
+        "eval_count": 267,
+        "eval_duration": 11396143000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:eebfb78668585929f4eb6802a434c6a3dc259d65f5fb2f5caa1d7c57ffea61f2:6763:6932",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:397911:397984",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function setInflateAmount(properties, {inflateAmount}, ratio) {\\n  properties.inflateAmount = inflateAmount === 'auto'\\n    ? ratio === 1 ? 0.33 : 0\\n    : inflateAmount;\\n}\",\"minified_source_function\":\"function(n,{inflateAmount:t},o){n.inflateAmount=\\\"auto\\\"===t?1===o?.33:0:t}\",\"bundled_function\":\"function(e,{inflateAmount:t},i){e.inflateAmount=\\\"auto\\\"===t?.33*(1===i):t}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "93ac37c9eafe301ae47668956f1b26c983e4603e4daf66edb0bb1479b8de9b3a",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:40.185640949Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1001777884,
+          "load_duration": 954597,
+          "prompt_eval_count": 1093,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 910286000,
+          "eval_count": 2,
+          "eval_duration": 73405000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0002",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a change in logic regarding the `ratio` (mapped to `i`) value.\n\n**Mapping:**\n- Source `properties` $\\leftrightarrow$ Bundled `e`\n- Source `inflateAmount` $\\leftrightarrow$ Bundled `t`\n- Source `ratio` $\\leftrightarrow$ Bundled `i`\n\n**Analysis:**\n1.  **Source Logic**: When `inflateAmount` is `'auto'`, the function checks if `ratio === 1`.\n    - If `ratio === 1`, it returns `0.33`.\n    - If `ratio !== 1`, it returns `0`.\n    - Expression: `ratio === 1 ? 0.33 : 0`\n\n2.  **Bundled Logic**: The bundled function uses the expression `.33 * (1 === i)`.\n    - In JavaScript, `(1 === i)` evaluates to a boolean (`true` or `false`).\n    - When multiplied by a number, `true` becomes `1` and `false` becomes `0`.\n    - If `i === 1`: `.33 * true` $\\rightarrow$ `.33 * 1` = `0.33`. (Matches source)\n    - If `i !== 1`: `.33 * false` $\\rightarrow$ `.33 * 0` = `0`. (Matches source)\n\n**Wait, let me re-evaluate the bundled expression carefully.**\nThe bundled code is: `e.inflateAmount=\"auto\"===t?.33*(1===i):t`\nThis parses as: `\"auto\" === t ? (.33 * (1 === i)) : t`\n\nLet's trace the values again:\n- Case",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:38:27.809471358Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a change in logic regarding the `ratio` (mapped to `i`) value.\n\n**Mapping:**\n- Source `properties` $\\leftrightarrow$ Bundled `e`\n- Source `inflateAmount` $\\leftrightarrow$ Bundled `t`\n- Source `ratio` $\\leftrightarrow$ Bundled `i`\n\n**Analysis:**\n1.  **Source Logic**: When `inflateAmount` is `'auto'`, the function checks if `ratio === 1`.\n    - If `ratio === 1`, it returns `0.33`.\n    - If `ratio !== 1`, it returns `0`.\n    - Expression: `ratio === 1 ? 0.33 : 0`\n\n2.  **Bundled Logic**: The bundled function uses the expression `.33 * (1 === i)`.\n    - In JavaScript, `(1 === i)` evaluates to a boolean (`true` or `false`).\n    - When multiplied by a number, `true` becomes `1` and `false` becomes `0`.\n    - If `i === 1`: `.33 * true` $\\rightarrow$ `.33 * 1` = `0.33`. (Matches source)\n    - If `i !== 1`: `.33 * false` $\\rightarrow$ `.33 * 0` = `0`. (Matches source)\n\n**Wait, let me re-evaluate the bundled expression carefully.**\nThe bundled code is: `e.inflateAmount=\"auto\"===t?.33*(1===i):t`\nThis parses as: `\"auto\" === t ? (.33 * (1 === i)) : t`\n\nLet's trace the values again:\n- Case"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 16096631879,
+        "load_duration": 962637,
+        "prompt_eval_count": 1123,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 873419000,
+        "eval_count": 384,
+        "eval_duration": 15206801000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:cb117bf19878b91bc7e5a0d4814468c3f7ba8c233dc85dcd1a746393a014fe3c:13965:14262",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:412217:412294",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"point(chart, e, options, useFinalPosition) {\\n      const position = getRelativePosition(e, chart);\\n      const axis = options.axis || 'xy';\\n      const includeInvisible = options.includeInvisible || false;\\n      return getIntersectItems(chart, position, axis, useFinalPosition, includeInvisible);\\n    }\",\"minified_source_function\":\"point(chart,e,options,useFinalPosition){const position=getRelativePosition(e,chart),axis=options.axis||\\\"xy\\\",includeInvisible=options.includeInvisible||!1;return getIntersectItems(chart,position,axis,useFinalPosition,includeInvisible)}\",\"bundled_function\":\"point(e,t,i,a){let n=is(t,e);return i1(e,n,i.axis||\\\"xy\\\",a,i.includeInvisible||!1)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "43725524cd24f51e2992539af3b67b9f4f482cd9edc304471fbd47b26b5ee91e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:41.113979677Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 925137857,
+          "load_duration": 1552302,
+          "prompt_eval_count": 1148,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 882346000,
+          "eval_count": 2,
+          "eval_duration": 27185000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0003",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical difference in argument ordering for the `getRelativePosition` (mapped to `is`) call.\n\n1.  **Argument Order Mismatch**:\n    *   **Source Function**: Calls `getRelativePosition(e, chart)`. The first argument is the event (`e`), and the second is the chart (`chart`).\n    *   **Bundled Function**: Calls `is(t, e)`. Based on parameter mapping (`chart` $\\to$ `t`, `e` $\\to$ `e`), this translates to `getRelativePosition(chart, e)`. The arguments are swapped.\n\n2.  **Mapping Analysis**:\n    *   Source parameters: `(chart, e, options, useFinalPosition)`\n    *   Bundled parameters: `(e, t, i, a)`\n    *   Mapping: `chart` $\\to$ `t`, `e` $\\to$ `e`, `options` $\\to$ `i`, `useFinalPosition` $\\to$ `a`.\n    *   Source call: `getRelativePosition(e, chart)` becomes `is(e, t)`.\n    *   Bundled call: `is(t, e)`.\n\nSince the order of arguments passed to the external function `is` (which corresponds to `getRelativePosition`) is reversed, the logic will produce different results unless that specific function ignores argument order (which is not a safe assumption for semantic equivalence). Additionally, the bundled function uses `let n = ...` while the source uses `const`, but this is a minor difference compared to the swapped arguments.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:38:43.58632723Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical difference in argument ordering for the `getRelativePosition` (mapped to `is`) call.\n\n1.  **Argument Order Mismatch**:\n    *   **Source Function**: Calls `getRelativePosition(e, chart)`. The first argument is the event (`e`), and the second is the chart (`chart`).\n    *   **Bundled Function**: Calls `is(t, e)`. Based on parameter mapping (`chart` $\\to$ `t`, `e` $\\to$ `e`), this translates to `getRelativePosition(chart, e)`. The arguments are swapped.\n\n2.  **Mapping Analysis**:\n    *   Source parameters: `(chart, e, options, useFinalPosition)`\n    *   Bundled parameters: `(e, t, i, a)`\n    *   Mapping: `chart` $\\to$ `t`, `e` $\\to$ `e`, `options` $\\to$ `i`, `useFinalPosition` $\\to$ `a`.\n    *   Source call: `getRelativePosition(e, chart)` becomes `is(e, t)`.\n    *   Bundled call: `is(t, e)`.\n\nSince the order of arguments passed to the external function `is` (which corresponds to `getRelativePosition`) is reversed, the logic will produce different results unless that specific function ignores argument order (which is not a safe assumption for semantic equivalence). Additionally, the bundled function uses `let n = ...` while the source uses `const`, but this is a minor difference compared to the swapped arguments."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 15772482839,
+        "load_duration": 1801499,
+        "prompt_eval_count": 1178,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1123844000,
+        "eval_count": 351,
+        "eval_duration": 14563626000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:8a05a9191cef5b85d23fdc0f4d621f1769fa8db0b59695c4932ea460782410c9:1353:1600",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:449790:449898",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function onAnimationsComplete(context) {\\n  const chart = context.chart;\\n  const animationOptions = chart.options.animation;\\n\\n  chart.notifyPlugins('afterRender');\\n  callCallback(animationOptions && animationOptions.onComplete, [context], chart);\\n}\",\"minified_source_function\":\"function(n){const o=n.chart,t=o.options.animation;o.notifyPlugins(\\\"afterRender\\\"),callCallback(t&&t.onComplete,[n],o)}\",\"bundled_function\":\"function a$(e){let t=e.chart,i=t.options.animation;t.notifyPlugins(\\\"afterRender\\\"),eS(i&&i.onComplete,[e],t)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "c3f3888924b96453489cfef926286d682b540370ea1ef361284af42e5c4e1197",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:42.286280221Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1169810495,
+          "load_duration": 64707488,
+          "prompt_eval_count": 1107,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 1017772000,
+          "eval_count": 2,
+          "eval_duration": 69676000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0004",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:38:51.209722698Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The variable names are renamed (`context` → `e`, `chart` → `t`, `animationOptions` → `i`), and `const` declarations in the source are mapped to `let` in the bundled version, which does not affect semantics here as variables are not reassigned. Crucially, the function call `callCallback` in the source is replaced by `eS` in the bundled version. Per the instructions, external bindings (like `callCallback`) may be renamed during bundling/minification, and assuming `eS` is the valid binding for `callCallback` in the bundled context, the logic remains identical: it retrieves the chart and animation options, notifies plugins, and conditionally invokes the completion callback with the same arguments."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7620476349,
+        "load_duration": 1626001,
+        "prompt_eval_count": 1137,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 893264000,
+        "eval_count": 169,
+        "eval_duration": 6689867000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:8a05a9191cef5b85d23fdc0f4d621f1769fa8db0b59695c4932ea460782410c9:6415:6885",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:451815:451939",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"get aspectRatio() {\\n    const {options: {aspectRatio, maintainAspectRatio}, width, height, _aspectRatio} = this;\\n    if (!isNullOrUndef(aspectRatio)) {\\n      // If aspectRatio is defined in options, use that.\\n      return aspectRatio;\\n    }\\n\\n    if (maintainAspectRatio && _aspectRatio) {\\n      // If maintainAspectRatio is truthly and we had previously determined _aspectRatio, use that\\n      return _aspectRatio;\\n    }\\n\\n    // Calculate\\n    return height ? width / height : null;\\n  }\",\"minified_source_function\":\"get aspectRatio(){const{options:{aspectRatio:aspectRatio,maintainAspectRatio:maintainAspectRatio},width:width,height:height,_aspectRatio:_aspectRatio}=this;return isNullOrUndef(aspectRatio)?maintainAspectRatio&&_aspectRatio?_aspectRatio:height?width/height:null:aspectRatio}\",\"bundled_function\":\"get aspectRatio(){let{options:{aspectRatio:e,maintainAspectRatio:t},width:i,height:a,_aspectRatio:n}=this;return eb(e)?t&&n?n:a?i/a:null:e}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "06e685cf0c929f7cca18bef1da64a12648ae5db98486cbd04f60e8a2c5f61d67",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:43.288907569Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 999494668,
+          "load_duration": 1556133,
+          "prompt_eval_count": 1228,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 914036000,
+          "eval_count": 2,
+          "eval_duration": 68060000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0005",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical error in the condition check.\n\n1.  **Logic Mismatch**:\n    *   **Source Function**: Checks `if (!isNullOrUndef(aspectRatio))`. If true, it returns `aspectRatio`. Otherwise, it proceeds to other checks.\n    *   **Bundled Function**: Uses `return eb(e) ? ... : e`. This structure implies: \"If `eb(e)` is true, return the fallback logic; otherwise, return `e`\".\n    *   **The Error**: The bundled function calls `eb(e)` (presumably a minified `isNullOrUndef`) but does **not** negate the result.\n        *   In the source: `!isNullOrUndef(x)` means \"x is defined\". If defined, return `x`.\n        *   In the bundle: `eb(e)` likely returns `true` if `e` is null/undefined. The ternary `eb(e) ? ... : e` means \"If `e` is null/undefined, do fallback; else return `e`\".\n    *   **Wait, let's re-evaluate the minified source**:\n        *   Minified Source: `return isNullOrUndef(aspectRatio)?maintainAspectRatio&&_aspectRatio?_aspectRatio:height?width/height:null:aspectRatio`\n        *   This translates to: `if (isNullOrUndef(aspectRatio)) { return fallback; } else { return aspectRatio; }`.\n        *   This is logically equivalent to the source code: `if (!isNullOrUndef) return aspectRatio; else return fallback`.\n\n2.  **Re-evaluating the Bundled Function**:\n    *   Code: `return eb",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:39:09.408092241Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical error in the condition check.\n\n1.  **Logic Mismatch**:\n    *   **Source Function**: Checks `if (!isNullOrUndef(aspectRatio))`. If true, it returns `aspectRatio`. Otherwise, it proceeds to other checks.\n    *   **Bundled Function**: Uses `return eb(e) ? ... : e`. This structure implies: \"If `eb(e)` is true, return the fallback logic; otherwise, return `e`\".\n    *   **The Error**: The bundled function calls `eb(e)` (presumably a minified `isNullOrUndef`) but does **not** negate the result.\n        *   In the source: `!isNullOrUndef(x)` means \"x is defined\". If defined, return `x`.\n        *   In the bundle: `eb(e)` likely returns `true` if `e` is null/undefined. The ternary `eb(e) ? ... : e` means \"If `e` is null/undefined, do fallback; else return `e`\".\n    *   **Wait, let's re-evaluate the minified source**:\n        *   Minified Source: `return isNullOrUndef(aspectRatio)?maintainAspectRatio&&_aspectRatio?_aspectRatio:height?width/height:null:aspectRatio`\n        *   This translates to: `if (isNullOrUndef(aspectRatio)) { return fallback; } else { return aspectRatio; }`.\n        *   This is logically equivalent to the source code: `if (!isNullOrUndef) return aspectRatio; else return fallback`.\n\n2.  **Re-evaluating the Bundled Function**:\n    *   Code: `return eb"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 18193954134,
+        "load_duration": 1914081,
+        "prompt_eval_count": 1258,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 782657000,
+        "eval_count": 384,
+        "eval_duration": 17391299000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:cf307d549989c3981299a7b69a026404fc5d420bcf146fff3a3c0c664f58175d:1820:2587",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:474262:474471",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function clipArc(ctx: CanvasRenderingContext2D, element: ArcElement, endAngle: number) {\\n  const {startAngle, pixelMargin, x, y, outerRadius, innerRadius} = element;\\n  let angleMargin = pixelMargin / outerRadius;\\n\\n  // Draw an inner border by clipping the arc and drawing a double-width border\\n  // Enlarge the clipping arc by 0.33 pixels to eliminate glitches between borders\\n  ctx.beginPath();\\n  ctx.arc(x, y, outerRadius, startAngle - angleMargin, endAngle + angleMargin);\\n  if (innerRadius > pixelMargin) {\\n    angleMargin = pixelMargin / innerRadius;\\n    ctx.arc(x, y, innerRadius, endAngle + angleMargin, startAngle - angleMargin, true);\\n  } else {\\n    ctx.arc(x, y, pixelMargin, endAngle + HALF_PI, startAngle - HALF_PI);\\n  }\\n  ctx.closePath();\\n  ctx.clip();\\n}\",\"minified_source_function\":\"function(a,c,e){const{startAngle:n,pixelMargin:t,x:i,y:r,outerRadius:o,innerRadius:s}=c;let l=t/o;a.beginPath(),a.arc(i,r,o,n-l,e+l),s>t?(l=t/s,a.arc(i,r,s,e+l,n-l,!0)):a.arc(i,r,t,e+HALF_PI,n-HALF_PI),a.closePath(),a.clip()}\",\"bundled_function\":\"function(e,t,i){let{startAngle:a,pixelMargin:n,x:r,y:o,outerRadius:s,innerRadius:l}=t,u=n/s;e.beginPath(),e.arc(r,o,s,a-u,i+u),l>n?(u=n/l,e.arc(r,o,l,i+u,a-u,!0)):e.arc(r,o,n,i+eG,a-eG),e.closePath(),e.clip()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "03009c4b3370258d84888293fecaef59a9aaa14f14a2372e769d4e22c81a7e22",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:45.287922405Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1098307563,
+          "load_duration": 1510198,
+          "prompt_eval_count": 1373,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 1010057000,
+          "eval_count": 2,
+          "eval_duration": 68770000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0006",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a critical difference in how the constant `HALF_PI` is referenced.\n\n1.  **Source Function**: Uses the identifier `HALF_PI` directly in the `else` branch: `endAngle + HALF_PI` and `startAngle - HALF_PI`.\n2.  **Bundled Function**: Uses the identifier `eG` in the corresponding positions: `i+eG` and `a-eG`.\n\nWhile variable renaming (minification) is expected, `HALF_PI` is an external constant that must be preserved or mapped to a valid binding in the bundled scope. The symbol `eG` does not appear in the source function's context as a known alias for `HALF_PI`, nor is it defined within the provided snippet. Unless `eG` is guaranteed to be bound to the same value as `HALF_PI` in the specific build environment (which cannot be verified from the code alone), this represents a semantic divergence where the bundled function relies on an undefined or different external binding compared to the source.\n\nAdditionally, the parameter mapping shows:\n- Source `ctx` $\\to$ Bundled `e`\n- Source `element` $\\to$ Bundled `t`\n- Source `endAngle` $\\to$ Bundled `i`\n- Destructured locals map correctly (e.g., `startAngle` $\\to$ `a`, `pixelMargin` $\\to$ `n`).\n\nThe logic flow and arithmetic operations are identical except for the `HALF_PI` vs `eG` discrepancy.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:39:25.209290341Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a critical difference in how the constant `HALF_PI` is referenced.\n\n1.  **Source Function**: Uses the identifier `HALF_PI` directly in the `else` branch: `endAngle + HALF_PI` and `startAngle - HALF_PI`.\n2.  **Bundled Function**: Uses the identifier `eG` in the corresponding positions: `i+eG` and `a-eG`.\n\nWhile variable renaming (minification) is expected, `HALF_PI` is an external constant that must be preserved or mapped to a valid binding in the bundled scope. The symbol `eG` does not appear in the source function's context as a known alias for `HALF_PI`, nor is it defined within the provided snippet. Unless `eG` is guaranteed to be bound to the same value as `HALF_PI` in the specific build environment (which cannot be verified from the code alone), this represents a semantic divergence where the bundled function relies on an undefined or different external binding compared to the source.\n\nAdditionally, the parameter mapping shows:\n- Source `ctx` $\\to$ Bundled `e`\n- Source `element` $\\to$ Bundled `t`\n- Source `endAngle` $\\to$ Bundled `i`\n- Destructured locals map correctly (e.g., `startAngle` $\\to$ `a`, `pixelMargin` $\\to$ `n`).\n\nThe logic flow and arithmetic operations are identical except for the `HALF_PI` vs `eG` discrepancy."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 15725219923,
+        "load_duration": 1950092,
+        "prompt_eval_count": 1403,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1198451000,
+        "eval_count": 340,
+        "eval_duration": 14510418000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:cf307d549989c3981299a7b69a026404fc5d420bcf146fff3a3c0c664f58175d:9105:9688",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:473639:473825",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function drawArc(\\n  ctx: CanvasRenderingContext2D,\\n  element: ArcElement,\\n  offset: number,\\n  spacing: number,\\n  circular: boolean,\\n) {\\n  const {fullCircles, startAngle, circumference} = element;\\n  let endAngle = element.endAngle;\\n  if (fullCircles) {\\n    pathArc(ctx, element, offset, spacing, endAngle, circular);\\n    for (let i = 0; i < fullCircles; ++i) {\\n      ctx.fill();\\n    }\\n    if (!isNaN(circumference)) {\\n      endAngle = startAngle + (circumference % TAU || TAU);\\n    }\\n  }\\n  pathArc(ctx, element, offset, spacing, endAngle, circular);\\n  ctx.fill();\\n  return endAngle;\\n}\",\"minified_source_function\":\"function(e,c,l,r,t){const{fullCircles:n,startAngle:i,circumference:f}=c;let a=c.endAngle;if(n){pathArc(e,c,l,r,a,t);for(let c=0;c<n;++c)e.fill();isNaN(f)||(a=i+(f%TAU||TAU))}return pathArc(e,c,l,r,a,t),e.fill(),a}\",\"bundled_function\":\"function(e,t,i,a,n){let{fullCircles:r,startAngle:o,circumference:s}=t,l=t.endAngle;if(r){a2(e,t,i,a,l,n);for(let t=0;t<r;++t)e.fill();isNaN(s)||(l=o+(s%ez||ez))}a2(e,t,i,a,l,n),e.fill()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "fd304402ad40a7043e138d569ef5a0b1aae9b223d49c7fb509e9a36f4df9098f",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:46.287270491Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 997317832,
+          "load_duration": 1102183,
+          "prompt_eval_count": 1336,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 914682000,
+          "eval_count": 2,
+          "eval_duration": 67074000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0007",
+    "explain": "The bundled function is **not** semantically equivalent to the source function because it omits the return statement. \n\n1.  **Return Value Mismatch**: The source function explicitly returns `endAngle` (mapped to variable `l` in the bundled version) at the end of execution (`return endAngle;`). The bundled function executes the same logic but ends with a statement sequence `a2(...), e.fill()` without returning any value, resulting in `undefined`.\n2.  **Mapping**:\n    *   Source `endAngle` $\\leftrightarrow$ Bundled `l`.\n    *   Source `pathArc` $\\leftrightarrow$ Bundled `a2`.\n    *   Source `TAU` $\\leftrightarrow$ Bundled `ez`.\n    *   Source logic flow (if/for/assignment) is preserved, but the final `return` is missing.\n\nSince the return value is a core part of the function's semantics and differs between the two (`number` vs `undefined`), they are not equivalent.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:39:35.809938528Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function because it omits the return statement. \n\n1.  **Return Value Mismatch**: The source function explicitly returns `endAngle` (mapped to variable `l` in the bundled version) at the end of execution (`return endAngle;`). The bundled function executes the same logic but ends with a statement sequence `a2(...), e.fill()` without returning any value, resulting in `undefined`.\n2.  **Mapping**:\n    *   Source `endAngle` $\\leftrightarrow$ Bundled `l`.\n    *   Source `pathArc` $\\leftrightarrow$ Bundled `a2`.\n    *   Source `TAU` $\\leftrightarrow$ Bundled `ez`.\n    *   Source logic flow (if/for/assignment) is preserved, but the final `return` is missing.\n\nSince the return value is a core part of the function's semantics and differs between the two (`number` vs `undefined`), they are not equivalent."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10597865796,
+        "load_duration": 1069098,
+        "prompt_eval_count": 1366,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1303982000,
+        "eval_count": 215,
+        "eval_duration": 9205545000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:7fbff0687eaf3925e826b5a5dab6488e35904a6a96458f0952d0b91d6d48f166:393:897",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:508906:509082",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function _resolveTarget(sources, index, propagate) {\\n  const source = sources[index];\\n  let fill = source.fill;\\n  const visited = [index];\\n  let target;\\n\\n  if (!propagate) {\\n    return fill;\\n  }\\n\\n  while (fill !== false && visited.indexOf(fill) === -1) {\\n    if (!isFinite(fill)) {\\n      return fill;\\n    }\\n\\n    target = sources[fill];\\n    if (!target) {\\n      return false;\\n    }\\n\\n    if (target.visible) {\\n      return fill;\\n    }\\n\\n    visited.push(fill);\\n    fill = target.fill;\\n  }\\n\\n  return false;\\n}\",\"minified_source_function\":\"function(i,e,r){let n=i[e].fill;const t=[e];let f;if(!r)return n;for(;!1!==n&&-1===t.indexOf(n);){if(!isFinite(n))return n;if(f=i[n],!f)return!1;if(f.visible)return n;t.push(n),n=f.fill}return!1}\",\"bundled_function\":\"function(e,t,i){let a,n=e[t].fill,r=[t];if(!i)return n;for(;!1!==n&&-1===r.indexOf(n);){if(!ew(n))return n;if(!(a=e[n]))break;if(a.visible)return n;r.push(n),n=a.fill}return!1}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "3eacfa8a0ad8bd5bec42a3790760db900e15798cfa7d4efb8ebf5592e06377f6",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:47.286301813Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 996265851,
+          "load_duration": 1314802,
+          "prompt_eval_count": 1293,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 909881000,
+          "eval_count": 2,
+          "eval_duration": 72217000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0008",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to a difference in control flow within the loop:\n\n1.  **Missing Return Statement**: In the source function, if `target` (mapped to `a` in the bundled version) is falsy (`!target`), it explicitly executes `return false;`.\n2.  **Premature Loop Termination**: In the bundled function, the corresponding check `if (!(a=e[n])) break;` uses a `break` statement instead of `return !1`. This causes the loop to terminate immediately without returning a value from inside the loop body.\n3.  **Divergent Outcome**: After the `break`, execution falls through to the final `return !1` (which is `false`). While both paths eventually result in `false` for this specific branch, the logic structure differs significantly. More critically, if there were any code after the loop that depended on the loop's exit condition or if the `break` was intended to be a `continue` in a different context, it would matter. However, the primary issue here is that the bundled function changes an explicit early return into a loop break followed by a default return. While they might produce the same result for this specific input path, the transformation `return false;` $\\to$ `break; ... return false;` is not listed in the allowed equivalences (which cover statement sequences to comma expressions, conditionals to logical operators, etc.).\n\nWait, let's re-evaluate strictly based on the provided rules.\nSource: `if (!target) { return false; }`\nBundled: `if (!(a=e[n])) break;` ... `return !1` at the end.\n\nIf `!target` is true:\n- Source returns `false` immediately.\n- Bundled breaks",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:39:52.586980355Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to a difference in control flow within the loop:\n\n1.  **Missing Return Statement**: In the source function, if `target` (mapped to `a` in the bundled version) is falsy (`!target`), it explicitly executes `return false;`.\n2.  **Premature Loop Termination**: In the bundled function, the corresponding check `if (!(a=e[n])) break;` uses a `break` statement instead of `return !1`. This causes the loop to terminate immediately without returning a value from inside the loop body.\n3.  **Divergent Outcome**: After the `break`, execution falls through to the final `return !1` (which is `false`). While both paths eventually result in `false` for this specific branch, the logic structure differs significantly. More critically, if there were any code after the loop that depended on the loop's exit condition or if the `break` was intended to be a `continue` in a different context, it would matter. However, the primary issue here is that the bundled function changes an explicit early return into a loop break followed by a default return. While they might produce the same result for this specific input path, the transformation `return false;` $\\to$ `break; ... return false;` is not listed in the allowed equivalences (which cover statement sequences to comma expressions, conditionals to logical operators, etc.).\n\nWait, let's re-evaluate strictly based on the provided rules.\nSource: `if (!target) { return false; }`\nBundled: `if (!(a=e[n])) break;` ... `return !1` at the end.\n\nIf `!target` is true:\n- Source returns `false` immediately.\n- Bundled breaks"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 16773468155,
+        "load_duration": 1771878,
+        "prompt_eval_count": 1323,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 927189000,
+        "eval_count": 384,
+        "eval_duration": 15771697000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:12184699411d82e88b9f5ac5e24feb4e8fc3afa01fd34f1d15512fddb892eb94:15015:15173",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:497493:497553",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"getBeforeBody(tooltipItems, options) {\\n    return getBeforeAfterBodyLines(\\n      invokeCallbackWithFallback(options.callbacks, 'beforeBody', this, tooltipItems)\\n    );\\n  }\",\"minified_source_function\":\"getBeforeBody(tooltipItems,options){return getBeforeAfterBodyLines(invokeCallbackWithFallback(options.callbacks,\\\"beforeBody\\\",this,tooltipItems))}\",\"bundled_function\":\"getBeforeBody(e,t){return nR([],nI(nz(t.callbacks,\\\"beforeBody\\\",this,e)))}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "717c3e3193e90b269cef4b5ef156de227061dbdd3cb8a7c04bb67d85627890b7",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:48.086221373Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 797410786,
+          "load_duration": 1629117,
+          "prompt_eval_count": 1087,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 713971000,
+          "eval_count": 2,
+          "eval_duration": 68931000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0009",
+    "explain": "The bundled function is not semantically equivalent to the source function. While the parameter mapping (`e` → `tooltipItems`, `t` → `options`) and the call structure are similar, there is a critical difference in the arguments passed to the outer function:\n1.  **Source Function**: Calls `getBeforeAfterBodyLines(...)` with a single argument (the result of `invokeCallbackWithFallback`).\n2.  **Bundled Function**: Calls `nR([], ...)` where `nR` corresponds to `getBeforeAfterBodyLines`. It passes an empty array `[]` as the first argument and the result of `nz(...)` (corresponding to `invokeCallbackWithFallback`) as the second argument.\n\nThe source function does not pass an empty array, nor does it expect two arguments in that specific order based on the provided code. This structural difference in function invocation indicates a semantic mismatch.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:40:01.828393289Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function. While the parameter mapping (`e` → `tooltipItems`, `t` → `options`) and the call structure are similar, there is a critical difference in the arguments passed to the outer function:\n1.  **Source Function**: Calls `getBeforeAfterBodyLines(...)` with a single argument (the result of `invokeCallbackWithFallback`).\n2.  **Bundled Function**: Calls `nR([], ...)` where `nR` corresponds to `getBeforeAfterBodyLines`. It passes an empty array `[]` as the first argument and the result of `nz(...)` (corresponding to `invokeCallbackWithFallback`) as the second argument.\n\nThe source function does not pass an empty array, nor does it expect two arguments in that specific order based on the provided code. This structural difference in function invocation indicates a semantic mismatch."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 9236705136,
+        "load_duration": 1582292,
+        "prompt_eval_count": 1117,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1207309000,
+        "eval_count": 192,
+        "eval_duration": 8015471000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:99251d62aa99832fdfab7808aa441a7187fd53e37ff782e1ebfc241ab713d463:12546:12813",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:520951:521080",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"determineDataLimits() {\\n    const {min, max} = this.getMinMax(false);\\n\\n    this.min = isFinite(min) && !isNaN(min) ? min : 0;\\n    this.max = isFinite(max) && !isNaN(max) ? max : 0;\\n\\n    // Common base implementation to handle min, max, beginAtZero\\n    this.handleTickRangeOptions();\\n  }\",\"minified_source_function\":\"determineDataLimits(){const{min:min,max:max}=this.getMinMax(!1);this.min=isFinite(min)&&!isNaN(min)?min:0,this.max=isFinite(max)&&!isNaN(max)?max:0,this.handleTickRangeOptions()}\",\"bundled_function\":\"determineDataLimits(){let{min:e,max:t}=this.getMinMax(!1);this.min=ew(e)&&!isNaN(e)?e:0,this.max=ew(t)&&!isNaN(t)?t:0,this.handleTickRangeOptions()}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "deb65a1586ec31a009931c57d3ec30ade2d5927493131b6b26bd634c6f358887",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:49.113543559Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1024303747,
+          "load_duration": 2151865,
+          "prompt_eval_count": 1177,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 980101000,
+          "eval_count": 2,
+          "eval_duration": 27014000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0010",
+    "explain": "The bundled function is not semantically equivalent to the source function because it replaces the global `isFinite` function with an external binding named `ew`. While `ew` might be intended to represent `isFinite`, the provided code does not define `ew` or guarantee that it behaves identically to the native `isFinite` (e.g., handling of edge cases like `Infinity`, `-Infinity`, or type coercion differences). In strict semantic equivalence checking, replacing a standard global function with an undefined external variable constitutes a difference unless the external binding is verified to be identical. Additionally, the source uses `const` for destructuring while the bundled version uses `let`, though this is less critical than the function substitution. The primary failure is the unverified substitution of `isFinite` with `ew`.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:40:09.81008081Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it replaces the global `isFinite` function with an external binding named `ew`. While `ew` might be intended to represent `isFinite`, the provided code does not define `ew` or guarantee that it behaves identically to the native `isFinite` (e.g., handling of edge cases like `Infinity`, `-Infinity`, or type coercion differences). In strict semantic equivalence checking, replacing a standard global function with an undefined external variable constitutes a difference unless the external binding is verified to be identical. Additionally, the source uses `const` for destructuring while the bundled version uses `let`, though this is less critical than the function substitution. The primary failure is the unverified substitution of `isFinite` with `ew`."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7925536895,
+        "load_duration": 1216849,
+        "prompt_eval_count": 1207,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 981202000,
+        "eval_count": 164,
+        "eval_duration": 6923981000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:b7a191efd98a395bf4ff5f267858da222490d064e56a774a46676eaa0e1a1c53:1374:2079",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:527860:528151",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function parse(scale, input) {\\n  if (isNullOrUndef(input)) {\\n    return null;\\n  }\\n\\n  const adapter = scale._adapter;\\n  const {parser, round, isoWeekday} = scale._parseOpts;\\n  let value = input;\\n\\n  if (typeof parser === 'function') {\\n    value = parser(value);\\n  }\\n\\n  // Only parse if it's not a timestamp already\\n  if (!isFinite(value)) {\\n    value = typeof parser === 'string'\\n      ? adapter.parse(value, parser)\\n      : adapter.parse(value);\\n  }\\n\\n  if (value === null) {\\n    return null;\\n  }\\n\\n  if (round) {\\n    value = round === 'week' && (isNumber(isoWeekday) || isoWeekday === true)\\n      ? adapter.startOf(value, 'isoWeek', isoWeekday)\\n      : adapter.startOf(value, round);\\n  }\\n\\n  return +value;\\n}\",\"minified_source_function\":\"function(e,r){if(isNullOrUndef(r))return null;const t=e._adapter,{parser:n,round:s,isoWeekday:i}=e._parseOpts;let a=r;return\\\"function\\\"==typeof n&&(a=n(a)),isFinite(a)||(a=\\\"string\\\"==typeof n?t.parse(a,n):t.parse(a)),null===a?null:(s&&(a=\\\"week\\\"!==s||!isNumber(i)&&!0!==i?t.startOf(a,s):t.startOf(a,\\\"isoWeek\\\",i)),+a)}\",\"bundled_function\":\"function n4(e,t){if(eb(t))return null;let i=e._adapter,{parser:a,round:n,isoWeekday:r}=e._parseOpts,o=t;return(\\\"function\\\"==typeof a&&(o=a(o)),ew(o)||(o=\\\"string\\\"==typeof a?i.parse(o,a):i.parse(o)),null===o)?null:(n&&(o=\\\"week\\\"===n&&(eX(r)||!0===r)?i.startOf(o,\\\"isoWeek\\\",r):i.startOf(o,n)),+o)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "2a2c53493f99a837cd2b1753cbae630783cf000957a5250a34d8292669ce321e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:50.213133058Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1096687600,
+          "load_duration": 1460749,
+          "prompt_eval_count": 1439,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 999830000,
+          "eval_count": 2,
+          "eval_duration": 26623000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0011",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:40:20.832014025Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. The differences are purely syntactic (minification/obfuscation) and variable renaming:\n1.  **Variable Mapping**: `e`→`scale`, `t`→`input`, `i`→`adapter`, `a`→`parser`, `n`→`round`, `r`→`isoWeekday`, `o`→`value`.\n2.  **External Bindings**: `eb` corresponds to `isNullOrUndef`, `ew` to `!isFinite` (or the check logic), and `eX` to `isNumber`. The logic flow remains identical: null check, parser application, finite check with conditional parsing, null return, rounding logic, and final numeric coercion.\n3.  **Logic Preservation**: The complex ternary for rounding (`round === 'week' && ...`) is preserved exactly in structure, just using the mapped variables. The use of comma expressions and short-circuit evaluation in the bundled version matches the statement sequences in the source (e.g., `A; B; return C` vs `(A, B, C)`)."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 11018355255,
+        "load_duration": 1864206,
+        "prompt_eval_count": 1469,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 946831000,
+        "eval_count": 243,
+        "eval_duration": 10049854000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:96cda97882dadc5caa2cab0ae778676e2965c577144b4068fe0ad6683ff6ccde:2584:2654",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:347490:347521",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function toRadians(degrees: number) {\\n  return degrees * (PI / 180);\\n}\",\"minified_source_function\":\"function(n){return n*(PI/180)}\",\"bundled_function\":\"function eJ(e){return eH/180*e}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "a8f01e80bfd313382a478bc33da962c9f8533135c42ca48ff4b347fe2850a8b6",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:51.186335456Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 970262189,
+          "load_duration": 1231756,
+          "prompt_eval_count": 1038,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 882848000,
+          "eval_count": 2,
+          "eval_duration": 72995000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          5,
+          6
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0012",
+    "explain": "The bundled function is **not** semantically equivalent to the source function.\n\n**Reasoning:**\n1.  **Missing External Binding**: The source function uses an external variable `PI` (representing $\\pi$). The bundled function replaces this with `eH`. While `eH` could theoretically be a renamed binding for `PI`, there is no evidence in the provided code that `eH` equals `PI`. In minification/bundling, constants like `Math.PI` are often inlined or renamed, but if `eH` is an arbitrary variable not defined as $\\pi$, the calculation result will be incorrect.\n2.  **Expression Structure**: The source calculates `degrees * (PI / 180)`. The bundled function calculates `eH / 180 * e`. Due to floating-point arithmetic properties, `(a * b) / c` is not always strictly identical to `b / c * a` in all edge cases (though usually close), but the primary failure here is the substitution of the constant `PI` with an unverified variable `eH`. Without knowing that `eH === PI`, the functions are not equivalent.\n\nIf `eH` were confirmed to be the bundled name for `PI`, the result would be T (due to commutativity of multiplication: `degrees * (PI / 180)` $\\equiv$ `(PI / 180) * degrees`). However, based strictly on the provided text where `eH` is an unknown external binding, they are not equivalent.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:40:37.709826854Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function.\n\n**Reasoning:**\n1.  **Missing External Binding**: The source function uses an external variable `PI` (representing $\\pi$). The bundled function replaces this with `eH`. While `eH` could theoretically be a renamed binding for `PI`, there is no evidence in the provided code that `eH` equals `PI`. In minification/bundling, constants like `Math.PI` are often inlined or renamed, but if `eH` is an arbitrary variable not defined as $\\pi$, the calculation result will be incorrect.\n2.  **Expression Structure**: The source calculates `degrees * (PI / 180)`. The bundled function calculates `eH / 180 * e`. Due to floating-point arithmetic properties, `(a * b) / c` is not always strictly identical to `b / c * a` in all edge cases (though usually close), but the primary failure here is the substitution of the constant `PI` with an unverified variable `eH`. Without knowing that `eH === PI`, the functions are not equivalent.\n\nIf `eH` were confirmed to be the bundled name for `PI`, the result would be T (due to commutativity of multiplication: `degrees * (PI / 180)` $\\equiv$ `(PI / 180) * degrees`). However, based strictly on the provided text where `eH` is an unknown external binding, they are not equivalent."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 16825627332,
+        "load_duration": 1911596,
+        "prompt_eval_count": 1068,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1119573000,
+        "eval_count": 327,
+        "eval_duration": 15691488000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:6aea97200e8c3b95d15af38b685817be910a0206b6bcbbe42f8c2e2ea88e29c7:11721:11826",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:420059:420984",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"getMaximumSize(canvas, width, height, aspectRatio) {\\n    return getMaximumSize(canvas, width, height, aspectRatio);\\n  }\",\"minified_source_function\":\"getMaximumSize(canvas,width,height,aspectRatio){return getMaximumSize(canvas,width,height,aspectRatio)}\",\"bundled_function\":\"getMaximumSize(e,t,i,a){return function(e,t,i,a){let n=ia(e),r=io(n,\\\"margin\\\"),o=ii(n.maxWidth,e,\\\"clientWidth\\\")||1/0,s=ii(n.maxHeight,e,\\\"clientHeight\\\")||1/0,l=function(e,t,i){let a,n;if(void 0===t||void 0===i){let r=e&&it(e);if(r){let e=r.getBoundingClientRect(),o=ia(r),s=io(o,\\\"border\\\",\\\"width\\\"),l=io(o,\\\"padding\\\");t=e.width-l.width-s.width,i=e.height-l.height-s.height,a=ii(o.maxWidth,r,\\\"clientWidth\\\"),n=ii(o.maxHeight,r,\\\"clientHeight\\\")}else t=e.clientWidth,i=e.clientHeight}return{width:t,height:i,maxWidth:a||1/0,maxHeight:n||1/0}}(e,t,i),{width:u,height:d}=l;if(\\\"content-box\\\"===n.boxSizing){let e=io(n,\\\"border\\\",\\\"width\\\"),t=io(n,\\\"padding\\\");u-=t.width+e.width,d-=t.height+e.height}return u=Math.max(0,u-r.width),d=Math.max(0,a?u/a:d-r.height),u=il(Math.min(u,o,l.maxWidth)),d=il(Math.min(d,s,l.maxHeight)),u&&!d&&(d=il(u/2)),(void 0!==t||void 0!==i)&&a&&l.height&&d>l.height&&(u=il(Math.floor((d=l.height)*a))),{width:u,height:d}}(e,t,i,a)}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "2509383219db32016a6b92c7f7c534bf2f78ce3ba80e876f0165f2aca6fb0268",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:52.286890202Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1097984049,
+          "load_duration": 1093038,
+          "prompt_eval_count": 1388,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 1012476000,
+          "eval_count": 2,
+          "eval_duration": 69864000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0013",
+    "explain": "The bundled function implements a complex algorithm to calculate maximum dimensions based on canvas properties, CSS styles (margin, border, padding), and aspect ratios. It performs DOM queries (`getBoundingClientRect`, `ia`, `io`, `ii`), handles `content-box` vs `border-box` sizing logic, and applies mathematical constraints.\n\nIn contrast, the source function is a trivial recursive call that immediately returns the result of calling itself with the exact same arguments (`return getMaximumSize(canvas, width, height, aspectRatio)`). This would result in an infinite loop (or immediate stack overflow) if executed, whereas the bundled function performs actual computation and returns a calculated object `{width: u, height: d}`. The logic is fundamentally different; the source function does not contain the implementation present in the bundled version.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:40:46.285512652Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function implements a complex algorithm to calculate maximum dimensions based on canvas properties, CSS styles (margin, border, padding), and aspect ratios. It performs DOM queries (`getBoundingClientRect`, `ia`, `io`, `ii`), handles `content-box` vs `border-box` sizing logic, and applies mathematical constraints.\n\nIn contrast, the source function is a trivial recursive call that immediately returns the result of calling itself with the exact same arguments (`return getMaximumSize(canvas, width, height, aspectRatio)`). This would result in an infinite loop (or immediate stack overflow) if executed, whereas the bundled function performs actual computation and returns a calculated object `{width: u, height: d}`. The logic is fundamentally different; the source function does not contain the implementation present in the bundled version."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8571153327,
+        "load_duration": 2096382,
+        "prompt_eval_count": 1418,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 777571000,
+        "eval_count": 166,
+        "eval_duration": 7770392000
+      }
+    }
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "sourceId": "reference:23aa93dd8075615e0a7b4c091067d77f7115df32d170e4cf1c5fcf8a2e53c1f2:2245:2797",
+    "bundleId": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7:536437:536675",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"buildTicks() {\\n    const min = this.min;\\n    const max = this.max;\\n    const offset = this.options.offset;\\n    const ticks = [];\\n    let labels = this.getLabels();\\n\\n    // If we are viewing some subset of labels, slice the original array\\n    labels = (min === 0 && max === labels.length - 1) ? labels : labels.slice(min, max + 1);\\n\\n    this._valueRange = Math.max(labels.length - (offset ? 0 : 1), 1);\\n    this._startValue = this.min - (offset ? 0.5 : 0);\\n\\n    for (let value = min; value <= max; value++) {\\n      ticks.push({value});\\n    }\\n    return ticks;\\n  }\",\"minified_source_function\":\"buildTicks(){const min=this.min,max=this.max,offset=this.options.offset,ticks=[];let labels=this.getLabels();labels=0===min&&max===labels.length-1?labels:labels.slice(min,max+1),this._valueRange=Math.max(labels.length-(offset?0:1),1),this._startValue=this.min-(offset?.5:0);for(let value=min;value<=max;value++)ticks.push({value:value});return ticks}\",\"bundled_function\":\"buildTicks(){let e=this.min,t=this.max,i=this.options.offset,a=[],n=this.getLabels();n=0===e&&t===n.length-1?n:n.slice(e,t+1),this._valueRange=Math.max(n.length-!i,1),this._startValue=this.min-.5*!!i;for(let i=e;i<=t;i++)a.push({value:i});return a}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "30c2524ae560d128d7dc372dba2b83ce0bd29cb442c4346d03222f732b661d90",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:32:53.397427823Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1107251090,
+          "load_duration": 1577311,
+          "prompt_eval_count": 1346,
+          "prompt_eval_cached_count": 960,
+          "prompt_eval_duration": 1017557000,
+          "eval_count": 2,
+          "eval_duration": 73454000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "turbopack/umami-software--umami/FN-0014",
+    "explain": "The bundled function is **not** semantically equivalent to the source function due to incorrect logic transformations in two specific areas:\n\n1.  **`_valueRange` Calculation**:\n    *   **Source**: `Math.max(labels.length - (offset ? 0 : 1), 1)` subtracts `0` if `offset` is truthy, and `1` if falsy.\n    *   **Bundled**: `Math.max(n.length - !i, 1)` subtracts `!i`. If `i` (offset) is truthy, `!i` is `0` (correct). However, if `i` is falsy, `!i` is `1` (correct). Wait, let's re-evaluate.\n    *   Source: `(offset ? 0 : 1)` -> Truthy offset yields 0, Falsy yields 1.\n    *   Bundled: `!i` -> Truthy `i` yields `false` (0), Falsy `i` yields `true` (1).\n    *   **Correction**: This part is actually equivalent numerically (`0` vs `0`, `1` vs `1`). My initial quick scan was wrong. Let's look closer at the second point.\n\n2.  **`_startValue` Calculation**:\n    *   **Source**: `this.min - (offset ? 0.5 : 0)`. If `offset` is truthy, subtract `0.5`. If falsy, subtract `0`.\n    *   **Bundled**: `this.min -.5*!!i`.\n        *   If `i` is truthy: `!!i` is `1`, so it subtracts `0.5 * 1 = 0.5`. (",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T05:41:03.628840545Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is **not** semantically equivalent to the source function due to incorrect logic transformations in two specific areas:\n\n1.  **`_valueRange` Calculation**:\n    *   **Source**: `Math.max(labels.length - (offset ? 0 : 1), 1)` subtracts `0` if `offset` is truthy, and `1` if falsy.\n    *   **Bundled**: `Math.max(n.length - !i, 1)` subtracts `!i`. If `i` (offset) is truthy, `!i` is `0` (correct). However, if `i` is falsy, `!i` is `1` (correct). Wait, let's re-evaluate.\n    *   Source: `(offset ? 0 : 1)` -> Truthy offset yields 0, Falsy yields 1.\n    *   Bundled: `!i` -> Truthy `i` yields `false` (0), Falsy `i` yields `true` (1).\n    *   **Correction**: This part is actually equivalent numerically (`0` vs `0`, `1` vs `1`). My initial quick scan was wrong. Let's look closer at the second point.\n\n2.  **`_startValue` Calculation**:\n    *   **Source**: `this.min - (offset ? 0.5 : 0)`. If `offset` is truthy, subtract `0.5`. If falsy, subtract `0`.\n    *   **Bundled**: `this.min -.5*!!i`.\n        *   If `i` is truthy: `!!i` is `1`, so it subtracts `0.5 * 1 = 0.5`. ("
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 17340930517,
+        "load_duration": 998832,
+        "prompt_eval_count": 1376,
+        "prompt_eval_cached_count": 990,
+        "prompt_eval_duration": 1182827000,
+        "eval_count": 384,
+        "eval_duration": 16140205000
+      }
+    }
+  }
+]

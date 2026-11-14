@@ -1,1 +1,1298 @@
-[{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11687:11787","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5258:5292","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/resize-event\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/resize-event\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"5924\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"26def76333f3b58b9b380347218050e9de7154397f27c3aac47f104bdef4f54d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:09.617705281Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1997150505,"load_duration":1146978,"prompt_eval_count":1015,"prompt_eval_cached_count":936,"prompt_eval_duration":1831209000,"eval_count":2,"eval_duration":63629000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0001"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11807:11898","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5221:5255","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/dom\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/dom\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4010\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"c8d2548c211447d1c1a5cc0aef11d082616b3585d47d5bdb869dd34a3025cdda","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:11.819302665Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2100546756,"load_duration":1050100,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1932506000,"eval_count":2,"eval_duration":65435000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0002"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:7232:7330","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15604:15638","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/aria-utils\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/aria-utils\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"f494\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"147515332af61e8c356e059f4332c5cb90eab8a368ead41d89b9b033e14d581c","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:18.7191366Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1097262885,"load_duration":1520455,"prompt_eval_count":1015,"prompt_eval_cached_count":936,"prompt_eval_duration":925130000,"eval_count":2,"eval_duration":77651000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0003"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:45325:45420","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:32152:32186","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/locale\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/locale\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"7f4d\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"f88b18e624a961f4b6e3de507f02c477870d71f177ceada7617ee3960d3c7d07","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:23.917926466Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1097208411,"load_duration":868206,"prompt_eval_count":1015,"prompt_eval_cached_count":936,"prompt_eval_duration":1010332000,"eval_count":2,"eval_duration":75761000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0004"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:45440:45533","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:32115:32149","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/merge\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/merge\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6b7c\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"1c7ddfe8a62b1aacd743ca8aed736d9f232128b78a916650114fd49608327203","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:25.918526899Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1901415303,"load_duration":1050420,"prompt_eval_count":1013,"prompt_eval_cached_count":936,"prompt_eval_duration":1815483000,"eval_count":2,"eval_duration":74364000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0005"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8547:8636","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73355:73387","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/popover\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,o){e.exports=require(\\\"element-ui/lib/popover\\\")}\",\"bundled_function\":\"function(e,t,i){e.exports=i(46)}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"52edbc8bc2dc9441919d4604a3f9116081cb4e71cc4402f5f54470854a79fd8e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:36:34.719747241Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1548620271,"load_duration":42297593,"prompt_eval_count":1009,"prompt_eval_cached_count":936,"prompt_eval_duration":1421697000,"eval_count":2,"eval_duration":69416000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0006"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:77bf7ded3feb9b3f36534e5b8fa7dac1bb9029df2a93e0eab2250be892fb6c0e:6759:6857","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:582568:582602","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/vue-popper\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/vue-popper\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2b0e\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"256277737147aa0e6a9947f50791e9c7592f69188cb6eae889f36b1a8b074dbe","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:37:45.418652909Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1395402751,"load_duration":960298,"prompt_eval_count":1015,"prompt_eval_cached_count":936,"prompt_eval_duration":1306173000,"eval_count":2,"eval_duration":75813000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0007"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:77bf7ded3feb9b3f36534e5b8fa7dac1bb9029df2a93e0eab2250be892fb6c0e:6877:6947","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:582531:582565","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"vue\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,r){e.exports=require(\\\"vue\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e974\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"3852d578b4cc8b5d2e8474b6a9555977488f9df78a2ee1d0b9e9a2c2f870567a","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:37:47.529443842Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2004498985,"load_duration":88676246,"prompt_eval_count":1003,"prompt_eval_cached_count":936,"prompt_eval_duration":1740724000,"eval_count":2,"eval_duration":74378000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0008"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:536ee1d64d7f5136cb0ffebfefa2d019af7a03ae26d8a70dfc5b4bca78dd07ba:20264:20355","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:637726:637760","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/dom\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/dom\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"12f2\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"cd5e92e47e6d6411cf25e81fd1cbddef6935c5d500339887d3e438761bc7eeeb","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:38:00.218412098Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1100541025,"load_duration":1346895,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1023699000,"eval_count":2,"eval_duration":64918000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0009"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:536ee1d64d7f5136cb0ffebfefa2d019af7a03ae26d8a70dfc5b4bca78dd07ba:20376:20470","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:637688:637722","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/focus\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/focus\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"5924\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"e675b443b53194021b424488c06aeb092d723d143ce7bf7f4c994d059bee389d","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:38:02.329784464Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2011446082,"load_duration":1193423,"prompt_eval_count":1017,"prompt_eval_cached_count":936,"prompt_eval_duration":1838556000,"eval_count":2,"eval_duration":70827000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0010"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:8d1ad32dd1506ebc9160211c54b3fdd31bef0cd0aec67bc417df5068c503ad7a:6656:6750","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:655118:655152","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"d010\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"44f245bb154e9f143edb5d9f6e20c551a5d4c6f770b5e84d888e5cd4ff8110bd","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:38:05.919140956Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1403897242,"load_duration":1848576,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1314108000,"eval_count":2,"eval_duration":74244000},"targetedRecheck":false,"traceRounds":[1]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0011"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11918:12010","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5333:5367","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e62d\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"99fb8a8b108a3dcf4662bf25e32a36749ac4ebc3346ae40d9481aa2693bab3b9","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:17.117353538Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1296785668,"load_duration":1510267,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1214201000,"eval_count":2,"eval_duration":67903000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0012"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:12031:12134","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5295:5329","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/scrollbar-width\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/scrollbar-width\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"539ca52d35805caa6720e19b465a8a78ef84c3e6bce529398d4ce1fc73aaac7e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:19.046396231Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1827822807,"load_duration":755222,"prompt_eval_count":1017,"prompt_eval_cached_count":936,"prompt_eval_duration":1705879000,"eval_count":2,"eval_duration":26381000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0013"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:09798bf54fb161b0c8064d213fab6a00ac7e4098d9a92aa1f4e575689ed5ee23:11738:11830","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:10423:10457","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e974\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"b8e0a68b7ce747c3b4d0d48921054f8710b295ff790eac7181410652782995c2","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:20.21860246Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":989570213,"load_duration":1376631,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":900048000,"eval_count":2,"eval_duration":77534000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0014"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:09798bf54fb161b0c8064d213fab6a00ac7e4098d9a92aa1f4e575689ed5ee23:11850:11948","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:10386:10420","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/vue-popper\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/vue-popper\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"b24133a8bc6193978a2c9f5556dfa03ddd47e59af896bf475ba9f4c5a7f01ded","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:21.319193931Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1096659274,"load_duration":1513390,"prompt_eval_count":1015,"prompt_eval_cached_count":936,"prompt_eval_duration":1003352000,"eval_count":2,"eval_duration":78813000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0015"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:6994:7086","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15528:15562","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2a5e\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"2f510977226453d538689877a4b8cf2927ae429debc9ffe6233874b0594e3393","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:28.342433154Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1186781233,"load_duration":57933297,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1089371000,"eval_count":2,"eval_duration":27529000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0016"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:6550:6642","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37337:37371","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"d010\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"3deab827755b5e9283482d3644a50b6e2448474adb96fbb0347eb1e7b5a30466","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:31.624282954Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1111346406,"load_duration":2570342,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1024982000,"eval_count":2,"eval_duration":69094000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0017"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8441:8528","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73320:73354","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/radio\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/radio\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6ac9\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"6b20ff7178b87d5ced903852e06bb4a6eaa3d433b11520811361107289dd0570","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:45:39.91861393Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1198976767,"load_duration":3429307,"prompt_eval_count":1010,"prompt_eval_cached_count":936,"prompt_eval_duration":1113177000,"eval_count":2,"eval_duration":69351000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0018"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:a559581a9fad01236b6d971093c4fe425eb537b3a3f5c0a53e36e92a4dc8966a:68:143","bundleId":"<local>/static/js/chunk-libs.3d26209f.js#b5e66721ed1b421ffd01313995badc927f5250f4bba3edc6917c70c0e7eafd46:355892:355942","groundTruth":"F","input":"{\"source_function\":\"function () {\\n  return Object.isExtensible(Object.preventExtensions({}));\\n}\",\"minified_source_function\":\"function(){return Object.isExtensible(Object.preventExtensions({}))}\",\"bundled_function\":\"function(){return c(Object.preventExtensions({}))}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"f3dde37512a0ee313709aed5a776f76a059d263609f2b4448cac239a1279b9b1","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:46:53.414760669Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1794898120,"load_duration":1084655,"prompt_eval_count":999,"prompt_eval_cached_count":936,"prompt_eval_duration":1591916000,"eval_count":2,"eval_duration":100835000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0019"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:f12707fc0918c44c2f8385a0b1759766dae1722772f7d3867260920f5d09b2df:268:336","bundleId":"<local>/static/js/chunk-libs.3d26209f.js#b5e66721ed1b421ffd01313995badc927f5250f4bba3edc6917c70c0e7eafd46:331119:331187","groundTruth":"F","input":"{\"source_function\":\"function () {\\n  return isExtensible(Object.preventExtensions({}));\\n}\",\"minified_source_function\":\"function(){return isExtensible(Object.preventExtensions({}))}\",\"bundled_function\":\"function(){return Object.isExtensible(Object.preventExtensions({}))}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"41c270b838a71a83766a8d556a97fca5f2925fa4c8cf35b1233726a0fe592c35","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:47:10.217191791Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1396789939,"load_duration":1388291,"prompt_eval_count":1000,"prompt_eval_cached_count":936,"prompt_eval_duration":1307537000,"eval_count":2,"eval_duration":73588000},"targetedRecheck":false,"traceRounds":[2]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0020"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:6760:6854","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15490:15524","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"06799daad9bcbc424188da8cd60637287b80ba7ac26e07024305c08f078f9337","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:49:00.919944785Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1398617414,"load_duration":1207218,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":1307701000,"eval_count":2,"eval_duration":76813000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0021"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:6660:6756","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37407:37441","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/emitter\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/emitter\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6b7c\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"2af5bf2fa123c96bc5c16e60b2c2e90e9709e053628c3164c0fcbf3d2fef5c6b","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:49:05.417553Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1094955713,"load_duration":957921,"prompt_eval_count":1017,"prompt_eval_cached_count":936,"prompt_eval_duration":1008878000,"eval_count":2,"eval_duration":75308000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0022"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:7754:7848","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37624:37658","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4897\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"0f36929d00289d10d3ff7e32acd96246b4aec8a907e1bfb229875cd8f57edc44","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:55:44.286413072Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1174453290,"load_duration":1253461,"prompt_eval_count":1042,"prompt_eval_cached_count":967,"prompt_eval_duration":1015420000,"eval_count":2,"eval_duration":78333000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0023"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8213:8307","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73250:73284","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/input-number\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,n){e.exports=require(\\\"element-ui/lib/input-number\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4726\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"d0f6720f4fc546bd0cd75bfa9284beacf73f0ed7257415093eab5df00629f04e","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T14:49:13.446478516Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1026405819,"load_duration":1674732,"prompt_eval_count":1011,"prompt_eval_cached_count":936,"prompt_eval_duration":986324000,"eval_count":2,"eval_duration":27405000},"targetedRecheck":false,"traceRounds":[3]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0024"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6778:6876","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72795:72829","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/aria-utils\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/aria-utils\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"845f\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"906078ae67d208b0d7336776b86675c6dbc9bf1c5d617e87d9c9f5a84100a8dd","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:56:03.186151844Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":1305150094,"load_duration":1813636,"prompt_eval_count":1046,"prompt_eval_cached_count":967,"prompt_eval_duration":1224256000,"eval_count":2,"eval_duration":67960000},"targetedRecheck":false,"traceRounds":[11]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0025"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6547:6636","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72725:72759","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/tooltip\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,t){e.exports=require(\\\"element-ui/lib/tooltip\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2a5e\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"4fb0b9d72a8e2fa143bbfd9bb79c9ad1f60fdc831cacf6ba990fbba4ddf7c265","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:56:07.686042098Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":994939103,"load_duration":1890103,"prompt_eval_count":1042,"prompt_eval_cached_count":967,"prompt_eval_duration":910045000,"eval_count":2,"eval_duration":64613000},"targetedRecheck":false,"traceRounds":[12]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0026"},{"subject":"webpack/PanJiaChen--vue-element-admin","sourceId":"reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6435:6528","bundleId":"<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72690:72724","groundTruth":"F","input":"{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"throttle-debounce/throttle\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,t){e.exports=require(\\\"throttle-debounce/throttle\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"299c\\\")}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"7fd70d492302597e9c0c4a10407b6cc5e122eb9b438dfb3329b2c19bfb567b04","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T02:56:12.92677994Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2234677010,"load_duration":976403,"prompt_eval_count":1044,"prompt_eval_cached_count":967,"prompt_eval_duration":2016629000,"eval_count":2,"eval_duration":27379000},"targetedRecheck":false,"traceRounds":[13]}],"id":"webpack/PanJiaChen--vue-element-admin/FP-0027"}]
+[
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11687:11787",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5258:5292",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/resize-event\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/resize-event\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"5924\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "26def76333f3b58b9b380347218050e9de7154397f27c3aac47f104bdef4f54d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:09.617705281Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1997150505,
+          "load_duration": 1146978,
+          "prompt_eval_count": 1015,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1831209000,
+          "eval_count": 2,
+          "eval_duration": 63629000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0001"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11807:11898",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5221:5255",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/dom\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/dom\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4010\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "c8d2548c211447d1c1a5cc0aef11d082616b3585d47d5bdb869dd34a3025cdda",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:11.819302665Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2100546756,
+          "load_duration": 1050100,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1932506000,
+          "eval_count": 2,
+          "eval_duration": 65435000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0002"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:7232:7330",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15604:15638",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/aria-utils\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/aria-utils\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"f494\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "147515332af61e8c356e059f4332c5cb90eab8a368ead41d89b9b033e14d581c",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:18.7191366Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1097262885,
+          "load_duration": 1520455,
+          "prompt_eval_count": 1015,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 925130000,
+          "eval_count": 2,
+          "eval_duration": 77651000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0003"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:45325:45420",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:32152:32186",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/locale\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/locale\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"7f4d\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "f88b18e624a961f4b6e3de507f02c477870d71f177ceada7617ee3960d3c7d07",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:23.917926466Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1097208411,
+          "load_duration": 868206,
+          "prompt_eval_count": 1015,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1010332000,
+          "eval_count": 2,
+          "eval_duration": 75761000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0004"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:45440:45533",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:32115:32149",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/merge\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/merge\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6b7c\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "1c7ddfe8a62b1aacd743ca8aed736d9f232128b78a916650114fd49608327203",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:25.918526899Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1901415303,
+          "load_duration": 1050420,
+          "prompt_eval_count": 1013,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1815483000,
+          "eval_count": 2,
+          "eval_duration": 74364000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0005"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8547:8636",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73355:73387",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/popover\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,o){e.exports=require(\\\"element-ui/lib/popover\\\")}\",\"bundled_function\":\"function(e,t,i){e.exports=i(46)}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "52edbc8bc2dc9441919d4604a3f9116081cb4e71cc4402f5f54470854a79fd8e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:36:34.719747241Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1548620271,
+          "load_duration": 42297593,
+          "prompt_eval_count": 1009,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1421697000,
+          "eval_count": 2,
+          "eval_duration": 69416000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0006"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:77bf7ded3feb9b3f36534e5b8fa7dac1bb9029df2a93e0eab2250be892fb6c0e:6759:6857",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:582568:582602",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/vue-popper\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/vue-popper\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2b0e\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "256277737147aa0e6a9947f50791e9c7592f69188cb6eae889f36b1a8b074dbe",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:37:45.418652909Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1395402751,
+          "load_duration": 960298,
+          "prompt_eval_count": 1015,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1306173000,
+          "eval_count": 2,
+          "eval_duration": 75813000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0007"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:77bf7ded3feb9b3f36534e5b8fa7dac1bb9029df2a93e0eab2250be892fb6c0e:6877:6947",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:582531:582565",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"vue\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,r){e.exports=require(\\\"vue\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e974\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "3852d578b4cc8b5d2e8474b6a9555977488f9df78a2ee1d0b9e9a2c2f870567a",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:37:47.529443842Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2004498985,
+          "load_duration": 88676246,
+          "prompt_eval_count": 1003,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1740724000,
+          "eval_count": 2,
+          "eval_duration": 74378000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0008"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:536ee1d64d7f5136cb0ffebfefa2d019af7a03ae26d8a70dfc5b4bca78dd07ba:20264:20355",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:637726:637760",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/dom\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/dom\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"12f2\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "cd5e92e47e6d6411cf25e81fd1cbddef6935c5d500339887d3e438761bc7eeeb",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:38:00.218412098Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1100541025,
+          "load_duration": 1346895,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1023699000,
+          "eval_count": 2,
+          "eval_duration": 64918000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0009"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:536ee1d64d7f5136cb0ffebfefa2d019af7a03ae26d8a70dfc5b4bca78dd07ba:20376:20470",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:637688:637722",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/focus\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/focus\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"5924\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "e675b443b53194021b424488c06aeb092d723d143ce7bf7f4c994d059bee389d",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:38:02.329784464Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2011446082,
+          "load_duration": 1193423,
+          "prompt_eval_count": 1017,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1838556000,
+          "eval_count": 2,
+          "eval_duration": 70827000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0010"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:8d1ad32dd1506ebc9160211c54b3fdd31bef0cd0aec67bc417df5068c503ad7a:6656:6750",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:655118:655152",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"d010\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "44f245bb154e9f143edb5d9f6e20c551a5d4c6f770b5e84d888e5cd4ff8110bd",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:38:05.919140956Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1403897242,
+          "load_duration": 1848576,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1314108000,
+          "eval_count": 2,
+          "eval_duration": 74244000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          1
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0011"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:11918:12010",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5333:5367",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e62d\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "99fb8a8b108a3dcf4662bf25e32a36749ac4ebc3346ae40d9481aa2693bab3b9",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:17.117353538Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1296785668,
+          "load_duration": 1510267,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1214201000,
+          "eval_count": 2,
+          "eval_duration": 67903000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0012"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:3f8f7f85e0004ba90ae91ea6885a4dd11fdfafc5e99f668320ef57fe56d916e2:12031:12134",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:5295:5329",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/scrollbar-width\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/scrollbar-width\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "539ca52d35805caa6720e19b465a8a78ef84c3e6bce529398d4ce1fc73aaac7e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:19.046396231Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1827822807,
+          "load_duration": 755222,
+          "prompt_eval_count": 1017,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1705879000,
+          "eval_count": 2,
+          "eval_duration": 26381000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0013"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:09798bf54fb161b0c8064d213fab6a00ac7e4098d9a92aa1f4e575689ed5ee23:11738:11830",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:10423:10457",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"e974\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "b8e0a68b7ce747c3b4d0d48921054f8710b295ff790eac7181410652782995c2",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:20.21860246Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 989570213,
+          "load_duration": 1376631,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 900048000,
+          "eval_count": 2,
+          "eval_duration": 77534000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0014"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:09798bf54fb161b0c8064d213fab6a00ac7e4098d9a92aa1f4e575689ed5ee23:11850:11948",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:10386:10420",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/vue-popper\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/vue-popper\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "b24133a8bc6193978a2c9f5556dfa03ddd47e59af896bf475ba9f4c5a7f01ded",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:21.319193931Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1096659274,
+          "load_duration": 1513390,
+          "prompt_eval_count": 1015,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1003352000,
+          "eval_count": 2,
+          "eval_duration": 78813000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0015"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:6994:7086",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15528:15562",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2a5e\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "2f510977226453d538689877a4b8cf2927ae429debc9ffe6233874b0594e3393",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:28.342433154Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1186781233,
+          "load_duration": 57933297,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1089371000,
+          "eval_count": 2,
+          "eval_duration": 27529000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0016"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:6550:6642",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37337:37371",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/util\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/util\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"d010\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "3deab827755b5e9283482d3644a50b6e2448474adb96fbb0347eb1e7b5a30466",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:31.624282954Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1111346406,
+          "load_duration": 2570342,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1024982000,
+          "eval_count": 2,
+          "eval_duration": 69094000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0017"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8441:8528",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73320:73354",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/radio\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/radio\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6ac9\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "6b20ff7178b87d5ced903852e06bb4a6eaa3d433b11520811361107289dd0570",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:45:39.91861393Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1198976767,
+          "load_duration": 3429307,
+          "prompt_eval_count": 1010,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1113177000,
+          "eval_count": 2,
+          "eval_duration": 69351000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0018"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:a559581a9fad01236b6d971093c4fe425eb537b3a3f5c0a53e36e92a4dc8966a:68:143",
+    "bundleId": "<local>/static/js/chunk-libs.3d26209f.js#b5e66721ed1b421ffd01313995badc927f5250f4bba3edc6917c70c0e7eafd46:355892:355942",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function () {\\n  return Object.isExtensible(Object.preventExtensions({}));\\n}\",\"minified_source_function\":\"function(){return Object.isExtensible(Object.preventExtensions({}))}\",\"bundled_function\":\"function(){return c(Object.preventExtensions({}))}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "f3dde37512a0ee313709aed5a776f76a059d263609f2b4448cac239a1279b9b1",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:46:53.414760669Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1794898120,
+          "load_duration": 1084655,
+          "prompt_eval_count": 999,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1591916000,
+          "eval_count": 2,
+          "eval_duration": 100835000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0019"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:f12707fc0918c44c2f8385a0b1759766dae1722772f7d3867260920f5d09b2df:268:336",
+    "bundleId": "<local>/static/js/chunk-libs.3d26209f.js#b5e66721ed1b421ffd01313995badc927f5250f4bba3edc6917c70c0e7eafd46:331119:331187",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function () {\\n  return isExtensible(Object.preventExtensions({}));\\n}\",\"minified_source_function\":\"function(){return isExtensible(Object.preventExtensions({}))}\",\"bundled_function\":\"function(){return Object.isExtensible(Object.preventExtensions({}))}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "41c270b838a71a83766a8d556a97fca5f2925fa4c8cf35b1233726a0fe592c35",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:47:10.217191791Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1396789939,
+          "load_duration": 1388291,
+          "prompt_eval_count": 1000,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1307537000,
+          "eval_count": 2,
+          "eval_duration": 73588000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0020"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:01f7b9d518d5f0708fd14dfaf5f6fe5262abaf9aff271c6be0b60cc47bcc915a:6760:6854",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:15490:15524",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"8122\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "06799daad9bcbc424188da8cd60637287b80ba7ac26e07024305c08f078f9337",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:49:00.919944785Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1398617414,
+          "load_duration": 1207218,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1307701000,
+          "eval_count": 2,
+          "eval_duration": 76813000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0021"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:6660:6756",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37407:37441",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/mixins/emitter\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/mixins/emitter\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"6b7c\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "2af5bf2fa123c96bc5c16e60b2c2e90e9709e053628c3164c0fcbf3d2fef5c6b",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:49:05.417553Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1094955713,
+          "load_duration": 957921,
+          "prompt_eval_count": 1017,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 1008878000,
+          "eval_count": 2,
+          "eval_duration": 75308000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0022"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:526eafe8eaf5197880af13d080456ad9f2634747cb68313467014a2be6064922:7754:7848",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:37624:37658",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/shared\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/shared\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4897\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "0f36929d00289d10d3ff7e32acd96246b4aec8a907e1bfb229875cd8f57edc44",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:55:44.286413072Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1174453290,
+          "load_duration": 1253461,
+          "prompt_eval_count": 1042,
+          "prompt_eval_cached_count": 967,
+          "prompt_eval_duration": 1015420000,
+          "eval_count": 2,
+          "eval_duration": 78333000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0023"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:8213:8307",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:73250:73284",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/input-number\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,n){e.exports=require(\\\"element-ui/lib/input-number\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"4726\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "d0f6720f4fc546bd0cd75bfa9284beacf73f0ed7257415093eab5df00629f04e",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T14:49:13.446478516Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1026405819,
+          "load_duration": 1674732,
+          "prompt_eval_count": 1011,
+          "prompt_eval_cached_count": 936,
+          "prompt_eval_duration": 986324000,
+          "eval_count": 2,
+          "eval_duration": 27405000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          3
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0024"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6778:6876",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72795:72829",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/utils/aria-utils\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,i){e.exports=require(\\\"element-ui/lib/utils/aria-utils\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"845f\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "906078ae67d208b0d7336776b86675c6dbc9bf1c5d617e87d9c9f5a84100a8dd",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:56:03.186151844Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1305150094,
+          "load_duration": 1813636,
+          "prompt_eval_count": 1046,
+          "prompt_eval_cached_count": 967,
+          "prompt_eval_duration": 1224256000,
+          "eval_count": 2,
+          "eval_duration": 67960000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          11
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0025"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6547:6636",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72725:72759",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"element-ui/lib/tooltip\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,t){e.exports=require(\\\"element-ui/lib/tooltip\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"2a5e\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "4fb0b9d72a8e2fa143bbfd9bb79c9ad1f60fdc831cacf6ba990fbba4ddf7c265",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:56:07.686042098Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 994939103,
+          "load_duration": 1890103,
+          "prompt_eval_count": 1042,
+          "prompt_eval_cached_count": 967,
+          "prompt_eval_duration": 910045000,
+          "eval_count": 2,
+          "eval_duration": 64613000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          12
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0026"
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "sourceId": "reference:faf9c3da6423797c311caf852bd60244775b5870138e451ea2ce107541c7297d:6435:6528",
+    "bundleId": "<local>/static/js/chunk-elementUI.32ca29fe.js#91336bd1f989813fe4800c2b4df87509be5c2a8d106023fc05d8fb04a8d11ad8:72690:72724",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"function(module, exports) {\\n\\nmodule.exports = require(\\\"throttle-debounce/throttle\\\");\\n\\n/***/ }\",\"minified_source_function\":\"function(e,t){e.exports=require(\\\"throttle-debounce/throttle\\\")}\",\"bundled_function\":\"function(e,t){e.exports=i(\\\"299c\\\")}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "7fd70d492302597e9c0c4a10407b6cc5e122eb9b438dfb3329b2c19bfb567b04",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T02:56:12.92677994Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2234677010,
+          "load_duration": 976403,
+          "prompt_eval_count": 1044,
+          "prompt_eval_cached_count": 967,
+          "prompt_eval_duration": 2016629000,
+          "eval_count": 2,
+          "eval_duration": 27379000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          13
+        ]
+      }
+    ],
+    "id": "webpack/PanJiaChen--vue-element-admin/FP-0027"
+  }
+]

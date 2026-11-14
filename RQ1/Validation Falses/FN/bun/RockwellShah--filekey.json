@@ -1,1 +1,142 @@
-[{"subject":"bun/RockwellShah--filekey","sourceId":"reference:5d3a66aee3122dbdcb1a1762457dae98214b0f8657c58d00501cf5fa0b7f8d32:44068:44551","bundleId":"<local>/dist/app.js#405b6c4b50ff14aef656897794e3c19e0c1ebe63bb644511cac8325a0a6c382e:592380:592552","groundTruth":"T","input":"{\"source_function\":\"function isValidPublicKey(publicKey, isCompressed) {\\n        const { publicKey: comp, publicKeyUncompressed } = lengths;\\n        try {\\n            const l = publicKey.length;\\n            if (isCompressed === true && l !== comp)\\n                return false;\\n            if (isCompressed === false && l !== publicKeyUncompressed)\\n                return false;\\n            return !!Point.fromBytes(publicKey);\\n        }\\n        catch (error) {\\n            return false;\\n        }\\n    }\",\"minified_source_function\":\"function(t,e){const{publicKey:n,publicKeyUncompressed:c}=lengths;try{const r=t.length;return!(!0===e&&r!==n||!1===e&&r!==c||!Point.fromBytes(t))}catch(t){return!1}}\",\"bundled_function\":\"function s(E,A){let{publicKey:B,publicKeyUncompressed:k}=h;try{let I=E.length;if(A===!0&&I!==B)return!1;if(A===!1&&I!==k)return!1;return!!e.fromBytes(E)}catch(I){return!1}}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"0f9558ac7f682424ec8e86f85312a3fc76108c8c58abaf4ddc21fe5dc34fcaf9","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T01:56:20.188421006Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":14195268081,"load_duration":972029,"prompt_eval_count":1221,"prompt_eval_cached_count":756,"prompt_eval_duration":965473000,"eval_count":2,"eval_duration":72996000},"targetedRecheck":true,"traceRounds":[1,2]}],"id":"bun/RockwellShah--filekey/FN-0001"},{"subject":"bun/RockwellShah--filekey","sourceId":"reference:e32aea8d7f6197d0f881c6c28c18ee255f851d096f9a0a179fd0c3339934c368:24362:24506","bundleId":"<local>/dist/app.js#405b6c4b50ff14aef656897794e3c19e0c1ebe63bb644511cac8325a0a6c382e:582584:582642","groundTruth":"T","input":"{\"source_function\":\"function keygen(seed) {\\n        const secretKey = randomSecretKey(seed);\\n        return { secretKey, publicKey: getPublicKey(secretKey) };\\n    }\",\"minified_source_function\":\"function(e){const c=randomSecretKey(e);return{secretKey:c,publicKey:getPublicKey(c)}}\",\"bundled_function\":\"function(f){let h=e(f);return{secretKey:h,publicKey:r(h)}}\"}","finalPairPromoted":false,"judgments":[{"requestKey":"399cf1c01740aadebf0deb1b38b55748cf2bffe197af4da36e1b08701295a5ba","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-14T01:57:07.291582463Z","message":{"role":"assistant","content":"F"},"done":true,"done_reason":"stop","total_duration":8800421089,"load_duration":1663319,"prompt_eval_count":1065,"prompt_eval_cached_count":921,"prompt_eval_duration":733196000,"eval_count":2,"eval_duration":66808000},"targetedRecheck":true,"traceRounds":[2,3]}],"id":"bun/RockwellShah--filekey/FN-0002"}]
+[
+  {
+    "subject": "bun/RockwellShah--filekey",
+    "sourceId": "reference:5d3a66aee3122dbdcb1a1762457dae98214b0f8657c58d00501cf5fa0b7f8d32:44068:44551",
+    "bundleId": "<local>/dist/app.js#405b6c4b50ff14aef656897794e3c19e0c1ebe63bb644511cac8325a0a6c382e:592380:592552",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function isValidPublicKey(publicKey, isCompressed) {\\n        const { publicKey: comp, publicKeyUncompressed } = lengths;\\n        try {\\n            const l = publicKey.length;\\n            if (isCompressed === true && l !== comp)\\n                return false;\\n            if (isCompressed === false && l !== publicKeyUncompressed)\\n                return false;\\n            return !!Point.fromBytes(publicKey);\\n        }\\n        catch (error) {\\n            return false;\\n        }\\n    }\",\"minified_source_function\":\"function(t,e){const{publicKey:n,publicKeyUncompressed:c}=lengths;try{const r=t.length;return!(!0===e&&r!==n||!1===e&&r!==c||!Point.fromBytes(t))}catch(t){return!1}}\",\"bundled_function\":\"function s(E,A){let{publicKey:B,publicKeyUncompressed:k}=h;try{let I=E.length;if(A===!0&&I!==B)return!1;if(A===!1&&I!==k)return!1;return!!e.fromBytes(E)}catch(I){return!1}}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "0f9558ac7f682424ec8e86f85312a3fc76108c8c58abaf4ddc21fe5dc34fcaf9",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T01:56:20.188421006Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 14195268081,
+          "load_duration": 972029,
+          "prompt_eval_count": 1221,
+          "prompt_eval_cached_count": 756,
+          "prompt_eval_duration": 965473000,
+          "eval_count": 2,
+          "eval_duration": 72996000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "id": "bun/RockwellShah--filekey/FN-0001",
+    "explain": "The result turn into T after requiring explanation",
+    "explanationReplay": {
+      "verdict": "T",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:25:26.610243337Z",
+        "message": {
+          "role": "assistant",
+          "content": "T\nThe bundled function is semantically equivalent to the source function. \n\n**Mapping:**\n- `s` (bundled) ↔ `isValidPublicKey` (source)\n- `E` ↔ `publicKey`\n- `A` ↔ `isCompressed`\n- `h` ↔ `lengths` (external binding)\n- `B` ↔ `publicKey` (property of `lengths`)\n- `k` ↔ `publicKeyUncompressed` (property of `lengths`)\n- `I` ↔ `l` (local variable for length)\n- `e` ↔ `Point` (external binding)\n\n**Equivalence Analysis:**\n1. **Logic Flow**: The source function uses explicit `if` statements to check conditions and return `false`. The bundled function preserves this exact logic structure: `if (A===!0&&I!==B)return!1; if (A===!1&&I!==k)return!1;`. This matches the source's `if (isCompressed === true && l !== comp) return false;` and `if (isCompressed === false && l !== publicKeyUncompressed) return false;`.\n2. **Return Value**: Both functions return `!!Point.fromBytes(publicKey)` (source) or `!!e.fromBytes(E)` (bundled) if the length checks pass. The double negation ensures a boolean result in both cases.\n3. **Error Handling**: Both wrap the logic in a `try...catch` block that returns `false` (`!1`) upon any exception.\n4. **External Bindings**: The external variables `lengths` (mapped to `h`) and `Point` (mapped to `e`) are used identically. The renaming of these external bindings is allowed per the instructions.\n\nThe bundled function is a direct,"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 18239608142,
+        "load_duration": 1696629,
+        "prompt_eval_count": 1251,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 1155237000,
+        "eval_count": 384,
+        "eval_duration": 15394539000
+      }
+    }
+  },
+  {
+    "subject": "bun/RockwellShah--filekey",
+    "sourceId": "reference:e32aea8d7f6197d0f881c6c28c18ee255f851d096f9a0a179fd0c3339934c368:24362:24506",
+    "bundleId": "<local>/dist/app.js#405b6c4b50ff14aef656897794e3c19e0c1ebe63bb644511cac8325a0a6c382e:582584:582642",
+    "groundTruth": "T",
+    "input": "{\"source_function\":\"function keygen(seed) {\\n        const secretKey = randomSecretKey(seed);\\n        return { secretKey, publicKey: getPublicKey(secretKey) };\\n    }\",\"minified_source_function\":\"function(e){const c=randomSecretKey(e);return{secretKey:c,publicKey:getPublicKey(c)}}\",\"bundled_function\":\"function(f){let h=e(f);return{secretKey:h,publicKey:r(h)}}\"}",
+    "finalPairPromoted": false,
+    "judgments": [
+      {
+        "requestKey": "399cf1c01740aadebf0deb1b38b55748cf2bffe197af4da36e1b08701295a5ba",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-14T01:57:07.291582463Z",
+          "message": {
+            "role": "assistant",
+            "content": "F"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 8800421089,
+          "load_duration": 1663319,
+          "prompt_eval_count": 1065,
+          "prompt_eval_cached_count": 921,
+          "prompt_eval_duration": 733196000,
+          "eval_count": 2,
+          "eval_duration": 66808000
+        },
+        "targetedRecheck": true,
+        "traceRounds": [
+          2,
+          3
+        ]
+      }
+    ],
+    "id": "bun/RockwellShah--filekey/FN-0002",
+    "explain": "The bundled function is not semantically equivalent to the source function because it relies on external bindings (`e` and `r`) that are not defined within the function scope, whereas the source function explicitly calls `randomSecretKey` and `getPublicKey`. While bundlers often rename functions, the bundled version assumes these specific external variables exist and map correctly. Without explicit evidence that `e` corresponds to `randomSecretKey` and `r` corresponds to `getPublicKey` in the surrounding context (which is missing here), we cannot verify equivalence. The source function uses named calls, while the bundled function uses unbound identifiers, representing a structural difference in dependency resolution.",
+    "explanationReplay": {
+      "verdict": "F",
+      "output": {
+        "model": "qwen3.5:27b",
+        "created_at": "2026-11-14T03:25:33.309333323Z",
+        "message": {
+          "role": "assistant",
+          "content": "F\n\nThe bundled function is not semantically equivalent to the source function because it relies on external bindings (`e` and `r`) that are not defined within the function scope, whereas the source function explicitly calls `randomSecretKey` and `getPublicKey`. While bundlers often rename functions, the bundled version assumes these specific external variables exist and map correctly. Without explicit evidence that `e` corresponds to `randomSecretKey` and `r` corresponds to `getPublicKey` in the surrounding context (which is missing here), we cannot verify equivalence. The source function uses named calls, while the bundled function uses unbound identifiers, representing a structural difference in dependency resolution."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6694932029,
+        "load_duration": 67193966,
+        "prompt_eval_count": 1095,
+        "prompt_eval_cached_count": 739,
+        "prompt_eval_duration": 1123104000,
+        "eval_count": 136,
+        "eval_duration": 5484766000
+      }
+    }
+  }
+]

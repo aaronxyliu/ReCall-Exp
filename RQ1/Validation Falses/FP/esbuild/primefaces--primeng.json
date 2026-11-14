@@ -1,1 +1,50 @@
-[{"subject":"esbuild/primefaces--primeng","sourceId":"reference:f3dd694d093a0352e7f8eb8a710076328c5828b7290c82bbfe08ea6b8cc21c10:2474:3061","bundleId":"<local>/chunk-CXSS7KAI.js#ac02970b87a6d093c0531286a6918180522594443232ffa91f85f3fb5ed04abe:2646:3034","groundTruth":"F","input":"{\"source_function\":\"(resolve) => {\\n            const duration = resolveDuration(opts.duration, phase);\\n\\n            const cleanup = () => {\\n                removeClass(element, [toClass, activeClass]);\\n                cancelCurrent = null;\\n            };\\n\\n            const onDone = () => {\\n                cleanup();\\n                onAfter?.(event);\\n                resolve();\\n            };\\n\\n            cancelCurrent = () => {\\n                cleanup();\\n                onCancelled?.(event);\\n                resolve();\\n            };\\n\\n            whenEnd(element, opts.type, duration, onDone);\\n        }\",\"minified_source_function\":\"e=>{const n=resolveDuration(opts.duration,phase),t=()=>{removeClass(element,[toClass,activeClass]),cancelCurrent=null};cancelCurrent=()=>{t(),onCancelled?.(event),e()},whenEnd(element,opts.type,n,()=>{t(),onAfter?.(event),e()})}\",\"bundled_function\":\"function*(){a?.();let{onBefore:f,onStart:h,onAfter:p,onCancelled:C}=u[l]||{},c={element:t};if(n){f?.(c),h?.(c),p?.(c);return}let{from:q,active:U,to:z}=s[l]||{};return Be(t,e.autoHeight,e.autoWidth),f?.(c),F(t,q),F(t,U),t.offsetHeight,R(t,q),F(t,z),h?.(c),new Promise(G=>{let ye=L(e.duration,l),J=()=>{R(t,[z,U]),a=null},ge=()=>{J(),p?.(c),G()};a=()=>{J(),C?.(c),G()},we(t,e.type,ye,ge)})}\"}","finalPairPromoted":true,"judgments":[{"requestKey":"3b4b804d04b148a1409c1e030c2e5d63d4a07fb53d03d00592e780104078e0b9","model":"qwen3.5:27b","modelDigest":"64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59","settings":{"think":false,"stream":false,"keep_alive":"60m","options":{"temperature":0,"num_ctx":16384,"num_predict":384,"seed":42}},"output":{"model":"qwen3.5:27b","created_at":"2026-11-13T05:05:32.383738765Z","message":{"role":"assistant","content":"T"},"done":true,"done_reason":"stop","total_duration":2193962833,"load_duration":1357541,"prompt_eval_count":1325,"prompt_eval_cached_count":929,"prompt_eval_duration":729968000,"eval_count":2,"eval_duration":68531000},"targetedRecheck":false,"traceRounds":[2]}],"id":"esbuild/primefaces--primeng/FP-0001"}]
+[
+  {
+    "subject": "esbuild/primefaces--primeng",
+    "sourceId": "reference:f3dd694d093a0352e7f8eb8a710076328c5828b7290c82bbfe08ea6b8cc21c10:2474:3061",
+    "bundleId": "<local>/chunk-CXSS7KAI.js#ac02970b87a6d093c0531286a6918180522594443232ffa91f85f3fb5ed04abe:2646:3034",
+    "groundTruth": "F",
+    "input": "{\"source_function\":\"(resolve) => {\\n            const duration = resolveDuration(opts.duration, phase);\\n\\n            const cleanup = () => {\\n                removeClass(element, [toClass, activeClass]);\\n                cancelCurrent = null;\\n            };\\n\\n            const onDone = () => {\\n                cleanup();\\n                onAfter?.(event);\\n                resolve();\\n            };\\n\\n            cancelCurrent = () => {\\n                cleanup();\\n                onCancelled?.(event);\\n                resolve();\\n            };\\n\\n            whenEnd(element, opts.type, duration, onDone);\\n        }\",\"minified_source_function\":\"e=>{const n=resolveDuration(opts.duration,phase),t=()=>{removeClass(element,[toClass,activeClass]),cancelCurrent=null};cancelCurrent=()=>{t(),onCancelled?.(event),e()},whenEnd(element,opts.type,n,()=>{t(),onAfter?.(event),e()})}\",\"bundled_function\":\"function*(){a?.();let{onBefore:f,onStart:h,onAfter:p,onCancelled:C}=u[l]||{},c={element:t};if(n){f?.(c),h?.(c),p?.(c);return}let{from:q,active:U,to:z}=s[l]||{};return Be(t,e.autoHeight,e.autoWidth),f?.(c),F(t,q),F(t,U),t.offsetHeight,R(t,q),F(t,z),h?.(c),new Promise(G=>{let ye=L(e.duration,l),J=()=>{R(t,[z,U]),a=null},ge=()=>{J(),p?.(c),G()};a=()=>{J(),C?.(c),G()},we(t,e.type,ye,ge)})}\"}",
+    "finalPairPromoted": true,
+    "judgments": [
+      {
+        "requestKey": "3b4b804d04b148a1409c1e030c2e5d63d4a07fb53d03d00592e780104078e0b9",
+        "model": "qwen3.5:27b",
+        "modelDigest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "settings": {
+          "think": false,
+          "stream": false,
+          "keep_alive": "60m",
+          "options": {
+            "temperature": 0,
+            "num_ctx": 16384,
+            "num_predict": 384,
+            "seed": 42
+          }
+        },
+        "output": {
+          "model": "qwen3.5:27b",
+          "created_at": "2026-11-13T05:05:32.383738765Z",
+          "message": {
+            "role": "assistant",
+            "content": "T"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 2193962833,
+          "load_duration": 1357541,
+          "prompt_eval_count": 1325,
+          "prompt_eval_cached_count": 929,
+          "prompt_eval_duration": 729968000,
+          "eval_count": 2,
+          "eval_duration": 68531000
+        },
+        "targetedRecheck": false,
+        "traceRounds": [
+          2
+        ]
+      }
+    ],
+    "id": "esbuild/primefaces--primeng/FP-0001"
+  }
+]

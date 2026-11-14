@@ -1,5 +1,0 @@
-{
-  "basePromptSHA256": "a2addb7f9d6b387872433ab22aaa4e47ec5552eb96e0ea737c61e4406774c34d",
-  "explanationPromptSHA256": "b5a31235f5bb82505bc3ffc7883d0cca667971e414143a8f92015033c0d0d244",
-  "policy": "One request per FN pair using the exact archived user input. Use the revised validator prompt with a first-line verdict and concise explanation. Keep the archived model, digest, and generation options. Ground truth is absent from the request."
-}
