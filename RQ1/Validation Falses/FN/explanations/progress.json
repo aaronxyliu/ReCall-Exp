@@ -1,0 +1,154 @@
+{
+  "completed": 1422,
+  "total": 1422,
+  "active": null,
+  "verdicts": {
+    "T": 403,
+    "F": 1019,
+    "invalid": 0
+  },
+  "emptyExplanations": 0,
+  "lengthStops": 676,
+  "bySubject": {
+    "bun/RockwellShah--filekey": {
+      "completed": 2,
+      "total": 2
+    },
+    "bun/micahkepe--jsongrep": {
+      "completed": 1,
+      "total": 1
+    },
+    "esbuild/mattlewis92--angular-calendar": {
+      "completed": 0,
+      "total": 0
+    },
+    "esbuild/primefaces--primeng": {
+      "completed": 2,
+      "total": 2
+    },
+    "esbuild/primefaces--sakai-ng": {
+      "completed": 12,
+      "total": 12
+    },
+    "esbuild/sissbruecker--linkding": {
+      "completed": 28,
+      "total": 28
+    },
+    "esbuild/swimlane--ngx-charts": {
+      "completed": 29,
+      "total": 29
+    },
+    "esbuild/swimlane--ngx-datatable": {
+      "completed": 18,
+      "total": 18
+    },
+    "parcel/parcel-bundler--website": {
+      "completed": 13,
+      "total": 13
+    },
+    "parcel/tensorflow--tfjs": {
+      "completed": 184,
+      "total": 184
+    },
+    "rollup/daybrush--scenejs": {
+      "completed": 0,
+      "total": 0
+    },
+    "rollup/omnibrain--svguitar": {
+      "completed": 0,
+      "total": 0
+    },
+    "rollup/vega--vega-lite": {
+      "completed": 0,
+      "total": 0
+    },
+    "turbopack/CalCom--cal.com": {
+      "completed": 60,
+      "total": 60
+    },
+    "turbopack/CapSoftware--Cap": {
+      "completed": 36,
+      "total": 36
+    },
+    "turbopack/DayuanJiang--next-ai-draw-io": {
+      "completed": 30,
+      "total": 30
+    },
+    "turbopack/colinhacks--zod": {
+      "completed": 95,
+      "total": 95
+    },
+    "turbopack/shadcn-ui--ui": {
+      "completed": 47,
+      "total": 47
+    },
+    "turbopack/umami-software--umami": {
+      "completed": 14,
+      "total": 14
+    },
+    "vite/CorentinTh--it-tools": {
+      "completed": 66,
+      "total": 66
+    },
+    "vite/DavidHDev--react-bits": {
+      "completed": 5,
+      "total": 5
+    },
+    "vite/LibreChat-AI--LibreChat": {
+      "completed": 69,
+      "total": 69
+    },
+    "vite/Lissy93--dashy": {
+      "completed": 70,
+      "total": 70
+    },
+    "vite/drawdb-io--drawdb": {
+      "completed": 115,
+      "total": 115
+    },
+    "vite/excalidraw--excalidraw": {
+      "completed": 5,
+      "total": 5
+    },
+    "vite/hoppscotch--hoppscotch": {
+      "completed": 40,
+      "total": 40
+    },
+    "vite/immich-app--immich": {
+      "completed": 54,
+      "total": 54
+    },
+    "webpack/PanJiaChen--vue-element-admin": {
+      "completed": 48,
+      "total": 48
+    },
+    "webpack/akveo--ngx-admin": {
+      "completed": 165,
+      "total": 165
+    },
+    "webpack/bailicangdu--vue2-elm": {
+      "completed": 0,
+      "total": 0
+    },
+    "webpack/dair-ai--Prompt-Engineering-Guide": {
+      "completed": 64,
+      "total": 64
+    },
+    "webpack/dokploy--dokploy": {
+      "completed": 27,
+      "total": 27
+    },
+    "webpack/freeCodeCamp--freeCodeCamp": {
+      "completed": 18,
+      "total": 18
+    },
+    "webpack/supabase--supabase": {
+      "completed": 62,
+      "total": 62
+    },
+    "webpack/swagger-api--swagger-ui": {
+      "completed": 43,
+      "total": 43
+    }
+  }
+}
