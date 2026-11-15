@@ -6,22 +6,50 @@
 \subsubsection{Data Collection}
 \label{sec:data-collection}
 
-To evaluate how much functions can be correctly recovered by ReCall, we utilize the open-source web applicatons collected
-from Github as the subject of our experiments. In this way we can easily get the loaded library source code, and use source map
-to build the ground truth mapping between the bundled functions and the source functions. 
+We evaluate ReCall on web applications with source code publicly available on GitHub. Access to their source code and build configurations allows us to obtain library sources and generate source maps for establishing ground-truth correspondences between source and bundled functions.
 
-For the Github repository selection, we first refer to the technique report about the popular bundlers used in the wild~\footnote{State of JS build tools survey: \url{https://2025.stateofjs.com/en-US/libraries/build-tools/}}. 
-According to the usage data from the survery, we select the top seven most used bundlers: Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun.
-We search on the Github for web applications types of repository that using one of the above bundlers, and select from high star to low star.
-We require the repository must have an openable frontend web page to be a valid web application, and must have at least 5 production libraries.
-Finally, we get 35 repositories meeting our requirements.
-For each of them, we randomly select at most 10 libraries from the production libraries collected from the config files, and collect 282 libraries in total. And ajust their setup config to
-enable the source map during the build process. After that, we manually setup each repository to make sure their front-end page can be correctly opened.
-We intercept the javascript files loaded by the home page as previous work did (CITE LATER), and do not consider the lazy loading files.
-And we retrieve the source map from the build output.
+We select seven widely used bundlers based on the bundler usage survey\footnote{\label{fn:bundler-usage-survey}State of JS build-tools survey: \url{https://2025.stateofjs.com/en-US/libraries/build-tools/}}: Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun. For each bundler, we search GitHub for applications that use it and examine repositories in descending order of star count. We require each application to have a frontend page that builds and opens successfully and at least five production library dependencies. This process yields 35 repositories.
 
-Build process may change the boundary of the functions, and we classified into four groups:
-combine, split, remove, and addition. These four groups of transformations will b
+We construct the ground-truth dataset by collecting library source code, runtime intercepted JavaScript files, and source maps from each repository. We identify production libraries from project configuration files and randomly select up to ten per repository, yielding 282 library instances from 35 repositories. We manually enable source-map generation and verify that each application’s frontend opens successfully. Following prior work (CITE LATER), we capture JavaScript files loaded when the home page opens and retrieve their source maps from the build output. Our collection does not cover additional files whose loading requires page interactions.
+
+Before establishing ground-truth mappings, we need to first discuss four special function transformations introduced by the build process that affect recovery: removal, addition, combination, and splitting. Removal eliminates source functions, for example through tree shaking, while addition introduces functions such as generated helpers or functions produced by factories. Removed functions are absent from the bundle, and added functions have no original source counterpart to recover. Recovery is therefore not meaningful in either case, and we exclude both from the recovery evaluation.
+
+Combination and splitting can preserve program behavior while breaking the function-level semantic equivalence on which ReCall relies. To assess their impact on ReCall’s applicability, we estimate the frequency of them using source-map relationship: one-to-many correspondences indicate splitting, many-to-one correspondences indicate combination, and source functions without any mapped bundled counterpart indicate removal. We omit addition because generated library functions are difficult to distinguish from application code.
+
+Our source-map analysis shows that one-to-one correspondences dominate the observed category counts across the 35 repositories. We identify 1,835 split candidates (2.49\%), 1,319 combine candidates (1.79\%), and 12,438 remove candidates (16.87\%), alongside 58,128 one-to-one function pairs (78.85\%). The relatively small shares of split and combine candidates suggest that boundary-changing transformations have a limited impact on ReCall’s applicability within this dataset. As a result, we can safely construct the ground-truth dataset using only one-to-one mappings, assuming that each bundled function has exactly one correct source-function counterpart in our experiments and vice versa.
+
+Table~\ref{tab:rq1-dataset-bundlers} summarizes the collected dataset that will be used throughout our evaluation.
+
+\begin{table}[htbp]
+\caption{Library function recovery ground-truth dataset composition by bundler.}
+\label{tab:rq1-dataset-bundlers}
+\centering
+\small
+\renewcommand{\arraystretch}{1.00}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{0.9\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+\textbf{Bundler} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{Bundler Market}\\\textbf{Share}\footnotemark\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{\# Collected}\\\textbf{Repositories}\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{\# Library}\\\textbf{Instances}\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{\# Ground-truth}\\\textbf{Function Pairs}\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{Avg. \# Pairs}\\\textbf{per Library}\end{tabular}} \\
+\midrule
+Webpack & 22.89\% & 8 & 75 & 19,055 & 254.1 \\
+Vite & 22.11\% & 8 & 79 & 19,630 & 248.5 \\
+esbuild & 14.21\% & 6 & 41 & 5,208 & 127.0 \\
+Rollup & 12.37\% & 3 & 9 & 1,062 & 118.0 \\
+Turbopack & 7.37\% & 6 & 60 & 8,605 & 143.4 \\
+Parcel & 6.84\% & 2 & 9 & 2,880 & 320.0 \\
+Bun & 6.58\% & 2 & 9 & 1,688 & 187.6 \\
+\midrule
+\textbf{Total} & \textbf{92.37\%} & \textbf{35} & \textbf{282} & \textbf{58,128} & \textbf{206.1} \\
+\bottomrule
+\end{tabular*}
+\end{table}
+\footnotetext{Bundler market shares are approximated by normalizing the usage figures reported in the JS build-tools survey (Footnote~\ref{fn:bundler-usage-survey}). Under this approximation, the seven listed bundlers account for 92.37\% of the market.}
+
 
 
 \begin{table}[htbp]

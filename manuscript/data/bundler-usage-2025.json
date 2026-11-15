@@ -1,0 +1,34 @@
+{
+  "url": "https://2025.stateofjs.com/en-US/libraries/build-tools/",
+  "data_url": "https://2025.stateofjs.com/page-data/en-US/libraries/build-tools/page-data.json",
+  "retrieved": "2026-11-15",
+  "metric": "Published js2025 ratios.usage; proportion having used the tool",
+  "values": {
+    "Webpack": 87,
+    "Vite": 84,
+    "esbuild": 54,
+    "Rollup": 47,
+    "Turbopack": 28,
+    "Parcel": 26,
+    "Bun": 25,
+    "tsup": 12,
+    "Rspack": 7,
+    "Rolldown": 10
+  },
+  "normalization": {
+    "tools": [
+      "Webpack",
+      "Vite",
+      "esbuild",
+      "Rollup",
+      "Turbopack",
+      "Parcel",
+      "Bun",
+      "tsup",
+      "Rspack",
+      "Rolldown"
+    ],
+    "sum_of_reported_percentages": 380,
+    "listed_tools_share_percent": 92.37
+  }
+}
