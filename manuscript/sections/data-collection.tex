@@ -1,43 +1,67 @@
-\subsection{Data collection}
+\subsection{Data Collection}
 \label{sec:data-collection}
-We construct a ground-truth dataset for the planned evaluation of ReCall's function-recovery performance. The current snapshot contains 78,884 one-to-one source/bundled function pairs from 26 open-source repositories. Dataset preparation is complete for this snapshot; running ReCall and measuring its recovery performance on these pairs remain planned.
 
-\paragraph{Repository and build-tool selection.}
-We start from the public frontend catalog described in Section~\ref{sec:planned-websites}. Its purposive selection uses GitHub searches by tool name or topic, excludes forks and archived projects from those queries, inspects results in descending star order, and supplements them with code search and upstream references. Eligibility requires a public frontend page and source evidence for its production build. We select one application, interactive demo, or project frontend per repository and pin its commit. Local eligibility additionally requires that the intended interface renders in Chromium after the required services start; an HTTP-success response alone is insufficient.
+We evaluate ReCall on web applications with source code publicly available on GitHub. Access to their source code and build configurations allows us to obtain library sources and generate source maps for establishing ground-truth correspondences between source and bundled functions.
 
-We prioritize webpack, Vite, and esbuild, the three highest-usage frontend build-tool categories in the archived State of JavaScript 2025 selection, with reported usage ratios of 87\%, 84\%, and 54\%, respectively~\cite{stateofjs2025}. These ratios measure respondents who have used a tool. We initially take ten repositories per category. The category follows the selected production command, so Vite denotes its build pipeline and can use different underlying engines. We reproduce each application in Docker, follow its documented production workflow, enable source maps, and preserve normal optimization settings. Runtime dependencies are started when needed. Build and packaging corrections, commits, image identities, and captured artifact hashes are retained.
+We select seven widely used bundlers based on the bundler usage survey\footnote{\label{fn:bundler-usage-survey}State of JS build-tools survey: \url{https://2025.stateofjs.com/en-US/libraries/build-tools/}}: Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun. For each bundler, we search GitHub for applications that use it and examine repositories in descending order of star count. We require each application to have a frontend page that builds and opens successfully and at least five production library dependencies. This process yields 35 repositories.
 
-We exclude four subjects from the evaluation snapshot: tldraw requires unavailable Clerk configuration; Actual Budget and PDF.js have empty eligible samples under their selected manifests; and VS Code supplies no qualifying one-to-one pairs for its sampled libraries. The resulting cohort contains nine webpack, eight Vite, and nine esbuild repositories. These exclusions make the reported recovery population conditional on successful preparation and an available one-to-one target set. The dataset is a purposive sample of reproducible frontends.
+We construct the ground-truth dataset by collecting library source code, runtime intercepted JavaScript files, and source maps from each repository. We identify production libraries from project configuration files and randomly select up to ten per repository, yielding 282 library instances from 35 repositories. We manually enable source-map generation and verify that each application’s frontend opens successfully. Following prior work (CITE LATER), we capture JavaScript files loaded when the home page opens and retrieve their source maps from the build output. Our collection does not cover additional files whose loading requires page interactions.
 
-\paragraph{Library selection.}
-For each selected application manifest, the initial pool consists of direct \texttt{dependencies}, excluding type-only packages and workspace/local-path specifications. We select at most ten names using a reproducible pseudorandom ordering obtained by hashing a fixed seed, the pinned commit, and the package name. This initial draw precedes examination of function-pair counts. Framework runtimes are eligible in this cohort.
+Before establishing ground-truth mappings, we need to first discuss four special function transformations introduced by the build process that affect recovery: removal, addition, combination, and splitting. Removal eliminates source functions, for example through tree shaking, while addition introduces functions such as generated helpers or functions produced by factories. Removed functions are absent from the bundle, and added functions have no original source counterpart to recover. Recovery is therefore not meaningful in either case, and we exclude both from the recovery evaluation.
 
-For five retained subjects whose original samples yielded no qualifying pairs, we perform a documented follow-up draw from declared packages with original positions in the captured frontend maps. If no declared production dependency satisfies that condition, we use captured libraries declared in \texttt{devDependencies}; this occurs for speedscope and PrimeNG. We rank the whole eligible pool with a second fixed seed before examining the new pair counts. The original and follow-up pools and selections are retained. We subsequently complete samples for subjects with more than ten eligible declared libraries but fewer than ten contributing libraries. We retain previously contributing libraries, rank remaining candidates with a fixed seed, and add candidates with at least one accepted one-to-one pair until ten libraries contribute or the eligible pool is exhausted. This step uses the existing captured scripts and maps: twelve subjects reach ten contributing libraries, and six exhaust their pools below ten. Candidate counts, seeds, and previous selections are retained. This adaptive preparation conditions the sample on capturable, counterpart-supported libraries and must be considered when generalizing recovery results. The final sample contains 185 repository/package cases covering 146 package names.
+Combination and splitting can preserve program behavior while breaking the function-level semantic equivalence on which ReCall relies. To assess their impact on ReCall’s applicability, we estimate the frequency of them using source-map relationship: one-to-many correspondences indicate splitting, many-to-one correspondences indicate combination, and source functions without any mapped bundled counterpart indicate removal. We omit addition because generated library functions are difficult to distinguish from application code.
 
-\paragraph{Browser capture.}
-We host each pinned production build locally and intercept the JavaScript observed while Chromium visits its documented entry route. The collector records successful script responses, inline/evaluated scripts exposed by the debugger, and scripts from attached workers. After \texttt{DOMContentLoaded}, it waits for a bounded network-idle interval and an additional settling interval. We retain all scripts observed within this capture scope and record failed reads. Browser-based acquisition is also used by DEBUN, which collects website JavaScript with Puppeteer~\cite{kim2025debun}, and by Lauinger et al., whose crawler visits homepages for a fixed interval and scrolls to trigger dynamic content~\cite{lauinger2017libraries}. Our collection performs no further interaction, route exploration, or discovery of unrequested lazy chunks. A dynamically loaded script observed during the visit is retained, while a chunk requiring a later action may remain absent. This defines the supplied-code boundary for the experiment.
+Our source-map analysis shows that one-to-one correspondences dominate the observed category counts across the 35 repositories. We identify 1,835 split candidates (2.49\%), 1,319 combine candidates (1.79\%), and 12,438 remove candidates (16.87\%), alongside 58,128 one-to-one function pairs (78.85\%). The relatively small shares of split and combine candidates suggest that boundary-changing transformations have a limited impact on ReCall’s applicability. As a result, we can safely construct the ground-truth dataset using \textbf{only one-to-one mappings}, assuming that each bundled function has exactly one correct source-function counterpart in our experiments and vice versa, and leave boundary-changing transformation cases for future work.
 
-\paragraph{Function-level correspondence.}
-Source maps serve as the evaluation oracle and are withheld from ReCall. We parse the captured JavaScript and available original library texts, recognizing function declarations, expressions, arrows, and methods with bodies. For each decoded mapping point, we identify the innermost enclosing function definition on each side. An edge is retained only when both endpoints resolve to parsed function definitions; top-level positions and unavailable counterparts are recorded separately. Nested functions receive their own positions. Relations are aggregated across the captured scripts of a repository. A source definition is identified by its path, source-content hash, and half-open UTF-16 offsets, and a bundled definition by its captured artifact identity and offsets.
+Table~\ref{tab:rq1-dataset-bundlers} summarizes the collected dataset which will be used throughout our evaluation.
 
-Let $G(s)$ be the bundled definitions linked to source definition $s$, and $S(b)$ the selected-library source definitions linked to bundled definition $b$. We accept a one-to-one pair $(s,b)$ when $G(s)=\{b\}$ and $S(b)=\{s\}$, at least two distinct original positions support it, and all observed points associated with either definition stay within the paired definitions. We independently check artifact hashes and both function spans. Renaming and syntax rewriting are permitted. These labels express source-map-supported function correspondence; semantic equivalence is outside the oracle's claim. This reciprocal rule applies to the new dataset; the earlier pilot and graph cohorts retain their historical identity policies in Section~\ref{sec:identity-measurements}.
+\begin{table}[htbp]
+\caption{Ground-truth dataset for library function recovery, grouped by bundler.}
+\label{tab:rq1-dataset-bundlers}
+\centering
+\small
+\renewcommand{\arraystretch}{1.00}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{0.9\linewidth}{@{\extracolsep{\fill}}lccccc@{}}
+\toprule
+\textbf{Bundler} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{Bundler}\\\textbf{Market Share}\footnotemark\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{\# Collected}\\\textbf{Repos}\end{tabular}} &
+\multicolumn{1}{c}{\textbf{\# Lib}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{\# Ground-truth}\\\textbf{Function Pairs}\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}\textbf{Avg. \# Pairs}\\\textbf{per Lib}\end{tabular}} \\
+\midrule
+Webpack & 22.89\% & 8 & 75 & 19,055 & 254.1 \\
+Vite & 22.11\% & 8 & 79 & 19,630 & 248.5 \\
+esbuild & 14.21\% & 6 & 41 & 5,208 & 127.0 \\
+Rollup & 12.37\% & 3 & 9 & 1,062 & 118.0 \\
+Turbopack & 7.37\% & 6 & 60 & 8,605 & 143.4 \\
+Parcel & 6.84\% & 2 & 9 & 2,880 & 320.0 \\
+Bun & 6.58\% & 2 & 9 & 1,688 & 187.6 \\
+\midrule
+\textbf{Total} & \textbf{92.37\%} & \textbf{35} & \textbf{282} & \textbf{58,128} & \textbf{206.1} \\
+\bottomrule
+\end{tabular*}
+\end{table}
+\footnotetext{Bundler market shares are approximated by normalizing the usage figures reported in the JS build-tools survey (Footnote~\ref{fn:bundler-usage-survey}). Under this approximation, the seven listed bundlers account for 92.37\% of the market.}
 
-\paragraph{Transformations and unresolved cases.}
-We distinguish four possible transformations. A \emph{split} relates one source definition to multiple bundled definitions. A \emph{combine} relates multiple source definitions to one bundled definition, potentially through inlining. A \emph{removal} leaves a source definition without a bundled-function counterpart. An \emph{addition} introduces a bundled definition without a source-function counterpart. Source maps expose correspondence patterns rather than compiler transformation events, so split and combine patterns remain candidates; duplication and mapping artifacts can produce similar patterns.
 
-For removal, we count source functions with no mapped function counterpart in the captured code. Possible reasons include removal by tree shaking or inclusion in a lazy chunk that the browser never loaded. Inlining into top-level code and missing mapping evidence are additional explanations. Consequently, the 8058 no-counterpart functions are possible-removal cases, and their count does not establish compiler deletion. Addition has no trivial source-map-based tracking procedure: an unmapped bundled function may be generated runtime code or an original function with missing map information, and its library ownership can be unresolved. When a function truly has no source counterpart, ReCall has no source function against which to match it. We leave additions unmeasured and outside the one-to-one recovery target population.
 
-\input{data/collection-transformations}
+\begin{table}[htbp]
+\caption{Stage-level outcomes pooled across 35 repositories. TP, FP, FN, and TN denote true positives, false positives, false negatives, and true negatives, respectively.}
+\label{tab:rq1-stage-accuracy}
+\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Stage & TP & FP & FN & TN & Precision & Recall \\
+\midrule
+POG & 6,643 & 9 & 2,811 & --- & 99.86\% & 70.27\% \\
+AST match & 34,080 & 279 & 10,914 & 347,553 & 99.19\% & 75.74\% \\
+Qwen & 9,144 & 373 & 1,421 & 7,144 & 96.08\% & 86.55\% \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Table~\ref{tab:collection-transformations} uses 95,716 analyzable source definitions from available selected-library source texts as its common denominator. Each definition is counted once within its repository. For an exclusive partition, split-only cases have multiple bundled partners with no multi-source partner, combine-only cases have one bundled partner with multiple source contributors, and the combined row records both patterns. In total, 1599 source definitions participate in a split pattern and 4225 in a combine pattern, including 1514 in both. A further 3211 reciprocal candidates have unresolved or top-level mapping points, and 1253 lack two distinct original positions. Missing source contents, parsing failures, and rejected maps limit the inventory and are retained in the evidence artifact; entirely unrepresented library files are outside this denominator.
+Table~\ref{tab:rq1-stage-accuracy} reports assessed precision as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ and stage recall as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$. POG recall uses the 9,454 ground-truth pairs in which both functions have a POG fingerprint and at least ten own-body property-operation occurrences. Of these, 7,212 had equal fingerprints, 6,738 appeared in the raw anchor list, and 6,643 were retained by one-to-one allocation. POG uses fingerprint lookup and produces no explicit negative comparisons, so its TN count is undefined under this protocol.
 
-\paragraph{Ground-truth size and evaluation scope.}
-Our planned recovery experiments focus on the 78,884 accepted one-to-one pairs, representing 82.41\% of the analyzed source definitions. Table~\ref{tab:collection-repositories} gives the per-repository counts. The webpack, Vite, and esbuild groups contribute 13,900, 16,616, and 48,368 pairs, respectively. Counts range from 29 to 43,064 per repository, with a median of 907.5 and a mean of 3,034.0.
-
-\input{data/collection-repositories}
-
-Of the 185 selected repository/package cases, 180 contribute at least one pair, covering 141 package names. Among contributing cases, pair counts range from 1 to 42,085, with a median of 49 and a mean of 438.2. Table~\ref{tab:collection-libraries} shows the six largest package totals. Monaco Editor contributes 42,085 pairs (53.35\% of all pairs) from bundlejs, so the pooled dataset is concentrated in one large package. Repeated packages across repositories remain separate cases with their own source and captured artifact identities. We will report repository- and library-level recovery alongside pooled results so that large packages do not determine the entire evaluation summary.
-
-\input{data/collection-libraries}
-
-The artifact retains captured JavaScript, source maps, pinned build recipes, and function-location records for every retained repository. Ground-truth pairs store relationships and offsets; the archived artifacts supply the function text. This supports evaluation of ReCall on the supplied code while keeping capture coverage, unsupported transformations, and unresolved mappings explicit.
+AST and Qwen counts use distinct examined pairs within each repository. AST counts come from a local replay that logged every AST comparison and reproduced the final recovery trace using archived model responses. Qwen counts use pairs with binary verdicts in that trace. A pair examined more than once within a stage counts as positive if that stage accepted it. Stage recall uses only ground-truth-positive pairs eligible for POG, examined by AST, or given a binary Qwen verdict, respectively. A pair may enter more than one stage denominator. Ground-truth-unassessed pairs are excluded from the table.
