@@ -1,0 +1,527 @@
+[
+  {
+    "subject": "webpack/dokploy--dokploy",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "dokploy",
+      "100.00",
+      "100.00",
+      "96.15",
+      "99.52",
+      "79.49",
+      "01:11:07",
+      "7.11"
+    ]
+  },
+  {
+    "subject": "webpack/freeCodeCamp--freeCodeCamp",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "freeCodeCamp",
+      "100.00",
+      "99.06",
+      "95.16",
+      "98.87",
+      "82.39",
+      "00:14:24",
+      "1.44"
+    ]
+  },
+  {
+    "subject": "webpack/akveo--ngx-admin",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "ngx-\\allowbreak admin",
+      "100.00",
+      "99.69",
+      "97.94",
+      "99.53",
+      "91.56",
+      "00:48:00",
+      "4.80"
+    ]
+  },
+  {
+    "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+    "libraries": 8,
+    "values": [
+      "Webpack",
+      "Prompt-\\allowbreak Engineering-\\allowbreak Guide",
+      "99.32",
+      "93.38",
+      "95.93",
+      "94.85",
+      "70.99",
+      "00:28:42",
+      "3.59"
+    ]
+  },
+  {
+    "subject": "webpack/supabase--supabase",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "supabase",
+      "100.00",
+      "99.85",
+      "98.87",
+      "99.57",
+      "85.42",
+      "00:44:17",
+      "4.43"
+    ]
+  },
+  {
+    "subject": "webpack/swagger-api--swagger-ui",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "swagger-\\allowbreak ui",
+      "100.00",
+      "99.53",
+      "96.69",
+      "99.37",
+      "92.75",
+      "00:22:46",
+      "2.28"
+    ]
+  },
+  {
+    "subject": "webpack/PanJiaChen--vue-element-admin",
+    "libraries": 10,
+    "values": [
+      "Webpack",
+      "vue-\\allowbreak element-\\allowbreak admin",
+      "99.54",
+      "99.52",
+      "82.58",
+      "99.04",
+      "96.16",
+      "00:19:13",
+      "1.92"
+    ]
+  },
+  {
+    "subject": "webpack/bailicangdu--vue2-elm",
+    "libraries": 7,
+    "values": [
+      "Webpack",
+      "vue2-\\allowbreak elm",
+      "100.00",
+      "100.00",
+      "100.00",
+      "100.00",
+      "99.59",
+      "00:04:04",
+      "0.58"
+    ]
+  },
+  {
+    "subject": "vite/Lissy93--dashy",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "dashy",
+      "100.00",
+      "100.00",
+      "98.70",
+      "99.68",
+      "90.69",
+      "00:25:43",
+      "2.57"
+    ]
+  },
+  {
+    "subject": "vite/drawdb-io--drawdb",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "drawdb",
+      "99.41",
+      "96.77",
+      "87.15",
+      "94.71",
+      "88.32",
+      "01:24:42",
+      "8.47"
+    ]
+  },
+  {
+    "subject": "vite/excalidraw--excalidraw",
+    "libraries": 9,
+    "values": [
+      "Vite",
+      "excalidraw",
+      "100.00",
+      "100.00",
+      "100.00",
+      "100.00",
+      "98.27",
+      "00:04:23",
+      "0.49"
+    ]
+  },
+  {
+    "subject": "vite/hoppscotch--hoppscotch",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "hoppscotch",
+      "100.00",
+      "99.68",
+      "95.28",
+      "99.29",
+      "73.18",
+      "00:41:25",
+      "4.14"
+    ]
+  },
+  {
+    "subject": "vite/immich-app--immich",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "immich",
+      "99.35",
+      "99.79",
+      "96.20",
+      "98.94",
+      "89.99",
+      "00:16:42",
+      "1.67"
+    ]
+  },
+  {
+    "subject": "vite/CorentinTh--it-tools",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "it-\\allowbreak tools",
+      "100.00",
+      "99.30",
+      "98.31",
+      "99.25",
+      "89.00",
+      "00:31:51",
+      "3.19"
+    ]
+  },
+  {
+    "subject": "vite/LibreChat-AI--LibreChat",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "LibreChat",
+      "100.00",
+      "99.34",
+      "99.79",
+      "99.53",
+      "77.19",
+      "00:25:16",
+      "2.53"
+    ]
+  },
+  {
+    "subject": "vite/DavidHDev--react-bits",
+    "libraries": 10,
+    "values": [
+      "Vite",
+      "react-\\allowbreak bits",
+      "100.00",
+      "100.00",
+      "96.88",
+      "99.75",
+      "90.81",
+      "00:03:49",
+      "0.38"
+    ]
+  },
+  {
+    "subject": "esbuild/mattlewis92--angular-calendar",
+    "libraries": 4,
+    "values": [
+      "esbuild",
+      "angular-\\allowbreak calendar",
+      "100.00",
+      "100.00",
+      "100.00",
+      "100.00",
+      "62.16",
+      "00:00:31",
+      "0.13"
+    ]
+  },
+  {
+    "subject": "esbuild/sissbruecker--linkding",
+    "libraries": 4,
+    "values": [
+      "esbuild",
+      "linkding",
+      "100.00",
+      "100.00",
+      "99.08",
+      "99.77",
+      "96.60",
+      "00:08:43",
+      "2.18"
+    ]
+  },
+  {
+    "subject": "esbuild/swimlane--ngx-charts",
+    "libraries": 10,
+    "values": [
+      "esbuild",
+      "ngx-\\allowbreak charts",
+      "100.00",
+      "100.00",
+      "97.90",
+      "99.87",
+      "94.20",
+      "00:09:27",
+      "0.95"
+    ]
+  },
+  {
+    "subject": "esbuild/swimlane--ngx-datatable",
+    "libraries": 10,
+    "values": [
+      "esbuild",
+      "ngx-\\allowbreak datatable",
+      "100.00",
+      "100.00",
+      "98.68",
+      "99.62",
+      "78.27",
+      "00:04:41",
+      "0.47"
+    ]
+  },
+  {
+    "subject": "esbuild/primefaces--primeng",
+    "libraries": 3,
+    "values": [
+      "esbuild",
+      "primeng",
+      "100.00",
+      "100.00",
+      "97.22",
+      "99.32",
+      "58.57",
+      "00:03:31",
+      "1.17"
+    ]
+  },
+  {
+    "subject": "esbuild/primefaces--sakai-ng",
+    "libraries": 10,
+    "values": [
+      "esbuild",
+      "sakai-\\allowbreak ng",
+      "100.00",
+      "100.00",
+      "100.00",
+      "100.00",
+      "91.44",
+      "00:11:22",
+      "1.14"
+    ]
+  },
+  {
+    "subject": "rollup/daybrush--scenejs",
+    "libraries": 3,
+    "values": [
+      "Rollup",
+      "scenejs",
+      "100.00",
+      "97.83",
+      "100.00",
+      "98.23",
+      "89.52",
+      "00:01:41",
+      "0.56"
+    ]
+  },
+  {
+    "subject": "rollup/omnibrain--svguitar",
+    "libraries": 3,
+    "values": [
+      "Rollup",
+      "svguitar",
+      "100.00",
+      "100.00",
+      "---",
+      "100.00",
+      "97.06",
+      "00:00:13",
+      "0.07"
+    ]
+  },
+  {
+    "subject": "rollup/vega--vega-lite",
+    "libraries": 3,
+    "values": [
+      "Rollup",
+      "vega-\\allowbreak lite",
+      "100.00",
+      "100.00",
+      "---",
+      "100.00",
+      "100.00",
+      "00:00:10",
+      "0.05"
+    ]
+  },
+  {
+    "subject": "turbopack/CalCom--cal.com",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "cal.com",
+      "100.00",
+      "99.72",
+      "97.45",
+      "99.13",
+      "70.43",
+      "00:44:11",
+      "4.42"
+    ]
+  },
+  {
+    "subject": "turbopack/CapSoftware--Cap",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "Cap",
+      "100.00",
+      "99.85",
+      "97.60",
+      "99.50",
+      "72.80",
+      "00:36:37",
+      "3.66"
+    ]
+  },
+  {
+    "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "next-\\allowbreak ai-\\allowbreak draw-\\allowbreak io",
+      "100.00",
+      "99.85",
+      "98.67",
+      "99.69",
+      "81.81",
+      "00:43:42",
+      "4.37"
+    ]
+  },
+  {
+    "subject": "turbopack/shadcn-ui--ui",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "ui",
+      "100.00",
+      "99.63",
+      "98.31",
+      "99.05",
+      "69.35",
+      "00:59:03",
+      "5.91"
+    ]
+  },
+  {
+    "subject": "turbopack/umami-software--umami",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "umami",
+      "100.00",
+      "94.41",
+      "100.00",
+      "96.83",
+      "69.10",
+      "00:20:55",
+      "2.09"
+    ]
+  },
+  {
+    "subject": "turbopack/colinhacks--zod",
+    "libraries": 10,
+    "values": [
+      "Turbopack",
+      "zod",
+      "100.00",
+      "99.40",
+      "99.64",
+      "99.51",
+      "72.23",
+      "00:38:04",
+      "3.81"
+    ]
+  },
+  {
+    "subject": "parcel/tensorflow--tfjs",
+    "libraries": 3,
+    "values": [
+      "Parcel",
+      "tfjs",
+      "100.00",
+      "98.75",
+      "96.70",
+      "96.88",
+      "75.45",
+      "01:29:34",
+      "29.86"
+    ]
+  },
+  {
+    "subject": "parcel/parcel-bundler--website",
+    "libraries": 6,
+    "values": [
+      "Parcel",
+      "website",
+      "100.00",
+      "100.00",
+      "100.00",
+      "100.00",
+      "75.44",
+      "00:07:49",
+      "1.30"
+    ]
+  },
+  {
+    "subject": "bun/RockwellShah--filekey",
+    "libraries": 6,
+    "values": [
+      "Bun",
+      "filekey",
+      "100.00",
+      "100.00",
+      "98.92",
+      "99.58",
+      "98.54",
+      "00:09:26",
+      "1.57"
+    ]
+  },
+  {
+    "subject": "bun/micahkepe--jsongrep",
+    "libraries": 3,
+    "values": [
+      "Bun",
+      "jsongrep",
+      "99.50",
+      "100.00",
+      "100.00",
+      "99.92",
+      "99.34",
+      "00:01:48",
+      "0.60"
+    ]
+  }
+]

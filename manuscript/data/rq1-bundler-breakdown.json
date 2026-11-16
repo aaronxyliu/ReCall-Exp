@@ -1,0 +1,1494 @@
+{
+  "run": "final RQ1 recovery traces",
+  "timing": "Workflow wall time plus additional processing, minus estimated queue delays during known concurrency.",
+  "uncontendedChatOverheadSeconds": 0.02445000450000001,
+  "timingInputSHA256": "f99a93370f4dcae553423d32d7ad414436f5b3bde81cc8edad5247286ac2749f",
+  "provenance": {
+    "RQ1/final-results/progress.json": "32bda6907699ae3393cf53bc3b9977c6df4a063d94010d4ccea564b33de4e40e",
+    "RQ1/final-results/protocol.json": "b6ed174248d72b246e5581cff1c991c4f9cd6dc18283c46de6745f54fc0351d1",
+    "results/autodl-rejected-pair-replay/diagnostic-stop-checkpoint.json": "4c1e351cba3a741a269441beed59fd5955861c9c0d5d1a083d8ea533c9deeb35",
+    "results/rq1-stage-recall-audit/stage-recall.json": "eaf657a7908a793624de4b76c93c24fbac3a4a6e96de5c75b2ee284b0a0b06b1"
+  },
+  "byBundler": {
+    "webpack": {
+      "repositories": 8,
+      "libraries": 75,
+      "seconds": 15152.64653607,
+      "stages": {
+        "POG": {
+          "correct": 2662,
+          "assessedPredictions": 2666,
+          "promotions": 3107,
+          "denominator": 19055
+        },
+        "AST": {
+          "correct": 12840,
+          "assessedPredictions": 12932,
+          "promotions": 15905,
+          "denominator": 19055
+        },
+        "Validation": {
+          "correct": 1724,
+          "assessedPredictions": 1792,
+          "promotions": 3180,
+          "denominator": 19055
+        },
+        "Overall": {
+          "correct": 17226,
+          "assessedPredictions": 17390,
+          "promotions": 22192,
+          "denominator": 19055
+        }
+      },
+      "workflowSeconds": 13901.059119715,
+      "additionalProcessingSeconds": 1251.5874163550009,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "anchorCount": 3107
+    },
+    "vite": {
+      "repositories": 8,
+      "libraries": 79,
+      "seconds": 14031.960079994999,
+      "stages": {
+        "POG": {
+          "correct": 1822,
+          "assessedPredictions": 1826,
+          "promotions": 1905,
+          "denominator": 19630
+        },
+        "AST": {
+          "correct": 11897,
+          "assessedPredictions": 12051,
+          "promotions": 12885,
+          "denominator": 19630
+        },
+        "Validation": {
+          "correct": 3079,
+          "assessedPredictions": 3293,
+          "promotions": 3367,
+          "denominator": 19630
+        },
+        "Overall": {
+          "correct": 16798,
+          "assessedPredictions": 17170,
+          "promotions": 18157,
+          "denominator": 19630
+        }
+      },
+      "workflowSeconds": 12893.572720604001,
+      "additionalProcessingSeconds": 1138.387359391,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "anchorCount": 1905
+    },
+    "esbuild": {
+      "repositories": 6,
+      "libraries": 41,
+      "seconds": 2295.4504146510003,
+      "stages": {
+        "POG": {
+          "correct": 878,
+          "assessedPredictions": 878,
+          "promotions": 883,
+          "denominator": 5208
+        },
+        "AST": {
+          "correct": 3037,
+          "assessedPredictions": 3037,
+          "promotions": 3048,
+          "denominator": 5208
+        },
+        "Validation": {
+          "correct": 822,
+          "assessedPredictions": 829,
+          "promotions": 858,
+          "denominator": 5208
+        },
+        "Overall": {
+          "correct": 4737,
+          "assessedPredictions": 4744,
+          "promotions": 4789,
+          "denominator": 5208
+        }
+      },
+      "workflowSeconds": 2144.6813344360003,
+      "additionalProcessingSeconds": 803.3280941310001,
+      "overlappingRequests": 52,
+      "estimatedQueueSeconds": 652.559013916,
+      "anchorCount": 883
+    },
+    "rollup": {
+      "repositories": 3,
+      "libraries": 9,
+      "seconds": 123.43218358199968,
+      "stages": {
+        "POG": {
+          "correct": 164,
+          "assessedPredictions": 164,
+          "promotions": 164,
+          "denominator": 1062
+        },
+        "AST": {
+          "correct": 857,
+          "assessedPredictions": 859,
+          "promotions": 859,
+          "denominator": 1062
+        },
+        "Validation": {
+          "correct": 3,
+          "assessedPredictions": 3,
+          "promotions": 4,
+          "denominator": 1062
+        },
+        "Overall": {
+          "correct": 1024,
+          "assessedPredictions": 1026,
+          "promotions": 1027,
+          "denominator": 1062
+        }
+      },
+      "workflowSeconds": 120.245138065,
+      "additionalProcessingSeconds": 3.1870455169996714,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "anchorCount": 164
+    },
+    "turbopack": {
+      "repositories": 6,
+      "libraries": 60,
+      "seconds": 14552.408144183999,
+      "stages": {
+        "POG": {
+          "correct": 790,
+          "assessedPredictions": 790,
+          "promotions": 1287,
+          "denominator": 8605
+        },
+        "AST": {
+          "correct": 3886,
+          "assessedPredictions": 3916,
+          "promotions": 5567,
+          "denominator": 8605
+        },
+        "Validation": {
+          "correct": 1560,
+          "assessedPredictions": 1584,
+          "promotions": 2768,
+          "denominator": 8605
+        },
+        "Overall": {
+          "correct": 6236,
+          "assessedPredictions": 6290,
+          "promotions": 9622,
+          "denominator": 8605
+        }
+      },
+      "workflowSeconds": 13646.746116702,
+      "additionalProcessingSeconds": 905.6620274819998,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "anchorCount": 1287
+    },
+    "parcel": {
+      "repositories": 2,
+      "libraries": 9,
+      "seconds": 5842.934504643,
+      "stages": {
+        "POG": {
+          "correct": 70,
+          "assessedPredictions": 70,
+          "promotions": 71,
+          "denominator": 2880
+        },
+        "AST": {
+          "correct": 358,
+          "assessedPredictions": 359,
+          "promotions": 362,
+          "denominator": 2880
+        },
+        "Validation": {
+          "correct": 1745,
+          "assessedPredictions": 1803,
+          "promotions": 1983,
+          "denominator": 2880
+        },
+        "Overall": {
+          "correct": 2173,
+          "assessedPredictions": 2232,
+          "promotions": 2416,
+          "denominator": 2880
+        }
+      },
+      "workflowSeconds": 5470.020643729001,
+      "additionalProcessingSeconds": 372.9138609140001,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "anchorCount": 71
+    },
+    "bun": {
+      "repositories": 2,
+      "libraries": 9,
+      "seconds": 674.1683649640001,
+      "stages": {
+        "POG": {
+          "correct": 257,
+          "assessedPredictions": 258,
+          "promotions": 261,
+          "denominator": 1688
+        },
+        "AST": {
+          "correct": 1205,
+          "assessedPredictions": 1205,
+          "promotions": 1205,
+          "denominator": 1688
+        },
+        "Validation": {
+          "correct": 211,
+          "assessedPredictions": 213,
+          "promotions": 218,
+          "denominator": 1688
+        },
+        "Overall": {
+          "correct": 1673,
+          "assessedPredictions": 1676,
+          "promotions": 1684,
+          "denominator": 1688
+        }
+      },
+      "workflowSeconds": 646.1359230730001,
+      "additionalProcessingSeconds": 131.053725454,
+      "overlappingRequests": 8,
+      "estimatedQueueSeconds": 103.021283563,
+      "anchorCount": 261
+    }
+  },
+  "total": {
+    "repositories": 35,
+    "libraries": 282,
+    "seconds": 52673.000228089004,
+    "stages": {
+      "POG": {
+        "correct": 6643,
+        "assessedPredictions": 6652,
+        "promotions": 7678,
+        "denominator": 58128
+      },
+      "AST": {
+        "correct": 34080,
+        "assessedPredictions": 34359,
+        "promotions": 39831,
+        "denominator": 58128
+      },
+      "Validation": {
+        "correct": 9144,
+        "assessedPredictions": 9517,
+        "promotions": 12378,
+        "denominator": 58128
+      },
+      "Overall": {
+        "correct": 49867,
+        "assessedPredictions": 50528,
+        "promotions": 59887,
+        "denominator": 58128
+      }
+    },
+    "workflowSeconds": 48822.46099632401,
+    "additionalProcessingSeconds": 4606.119529244001,
+    "overlappingRequests": 60,
+    "estimatedQueueSeconds": 755.580297479,
+    "anchorCount": 7678
+  },
+  "subjects": [
+    {
+      "subject": "bun/RockwellShah--filekey",
+      "stages": {
+        "POG": {
+          "correct": 56,
+          "assessedPredictions": 56,
+          "promotions": 58,
+          "denominator": 480
+        },
+        "AST": {
+          "correct": 233,
+          "assessedPredictions": 233,
+          "promotions": 233,
+          "denominator": 480
+        },
+        "Validation": {
+          "correct": 184,
+          "assessedPredictions": 186,
+          "promotions": 190,
+          "denominator": 480
+        },
+        "Overall": {
+          "correct": 473,
+          "assessedPredictions": 475,
+          "promotions": 481,
+          "denominator": 480
+        }
+      },
+      "workflowSeconds": 552.368117145,
+      "additionalProcessingSeconds": 94.691792541,
+      "overlappingRequests": 6,
+      "estimatedQueueSeconds": 80.66607774399999,
+      "processSeconds": 566.3938319420001
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "stages": {
+        "POG": {
+          "correct": 201,
+          "assessedPredictions": 202,
+          "promotions": 203,
+          "denominator": 1208
+        },
+        "AST": {
+          "correct": 972,
+          "assessedPredictions": 972,
+          "promotions": 972,
+          "denominator": 1208
+        },
+        "Validation": {
+          "correct": 27,
+          "assessedPredictions": 27,
+          "promotions": 28,
+          "denominator": 1208
+        },
+        "Overall": {
+          "correct": 1200,
+          "assessedPredictions": 1201,
+          "promotions": 1203,
+          "denominator": 1208
+        }
+      },
+      "workflowSeconds": 93.767805928,
+      "additionalProcessingSeconds": 36.361932913,
+      "overlappingRequests": 2,
+      "estimatedQueueSeconds": 22.355205819,
+      "processSeconds": 107.77453302200001
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "stages": {
+        "POG": {
+          "correct": 1,
+          "assessedPredictions": 1,
+          "promotions": 1,
+          "denominator": 37
+        },
+        "AST": {
+          "correct": 21,
+          "assessedPredictions": 21,
+          "promotions": 21,
+          "denominator": 37
+        },
+        "Validation": {
+          "correct": 1,
+          "assessedPredictions": 1,
+          "promotions": 1,
+          "denominator": 37
+        },
+        "Overall": {
+          "correct": 23,
+          "assessedPredictions": 23,
+          "promotions": 23,
+          "denominator": 37
+        }
+      },
+      "workflowSeconds": 30.163398347999998,
+      "additionalProcessingSeconds": 0.841174658999982,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 31.00457300699998
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "stages": {
+        "POG": {
+          "correct": 28,
+          "assessedPredictions": 28,
+          "promotions": 33,
+          "denominator": 251
+        },
+        "AST": {
+          "correct": 84,
+          "assessedPredictions": 84,
+          "promotions": 87,
+          "denominator": 251
+        },
+        "Validation": {
+          "correct": 35,
+          "assessedPredictions": 36,
+          "promotions": 53,
+          "denominator": 251
+        },
+        "Overall": {
+          "correct": 147,
+          "assessedPredictions": 148,
+          "promotions": 173,
+          "denominator": 251
+        }
+      },
+      "workflowSeconds": 202.83906920299998,
+      "additionalProcessingSeconds": 31.198404960000016,
+      "overlappingRequests": 2,
+      "estimatedQueueSeconds": 22.867938869000003,
+      "processSeconds": 211.16953529399999
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "stages": {
+        "POG": {
+          "correct": 265,
+          "assessedPredictions": 265,
+          "promotions": 265,
+          "denominator": 1309
+        },
+        "AST": {
+          "correct": 576,
+          "assessedPredictions": 576,
+          "promotions": 577,
+          "denominator": 1309
+        },
+        "Validation": {
+          "correct": 356,
+          "assessedPredictions": 356,
+          "promotions": 358,
+          "denominator": 1309
+        },
+        "Overall": {
+          "correct": 1197,
+          "assessedPredictions": 1197,
+          "promotions": 1200,
+          "denominator": 1309
+        }
+      },
+      "workflowSeconds": 657.8801702750001,
+      "additionalProcessingSeconds": 173.50758773700002,
+      "overlappingRequests": 13,
+      "estimatedQueueSeconds": 149.5411220225,
+      "processSeconds": 681.8466359895001
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "stages": {
+        "POG": {
+          "correct": 77,
+          "assessedPredictions": 77,
+          "promotions": 77,
+          "denominator": 911
+        },
+        "AST": {
+          "correct": 588,
+          "assessedPredictions": 588,
+          "promotions": 588,
+          "denominator": 911
+        },
+        "Validation": {
+          "correct": 215,
+          "assessedPredictions": 217,
+          "promotions": 217,
+          "denominator": 911
+        },
+        "Overall": {
+          "correct": 880,
+          "assessedPredictions": 882,
+          "promotions": 882,
+          "denominator": 911
+        }
+      },
+      "workflowSeconds": 486.995590445,
+      "additionalProcessingSeconds": 471.132432238,
+      "overlappingRequests": 32,
+      "estimatedQueueSeconds": 434.884159174,
+      "processSeconds": 523.243863509
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-charts",
+      "stages": {
+        "POG": {
+          "correct": 504,
+          "assessedPredictions": 504,
+          "promotions": 504,
+          "denominator": 2364
+        },
+        "AST": {
+          "correct": 1583,
+          "assessedPredictions": 1583,
+          "promotions": 1588,
+          "denominator": 2364
+        },
+        "Validation": {
+          "correct": 140,
+          "assessedPredictions": 143,
+          "promotions": 150,
+          "denominator": 2364
+        },
+        "Overall": {
+          "correct": 2227,
+          "assessedPredictions": 2230,
+          "promotions": 2242,
+          "denominator": 2364
+        }
+      },
+      "workflowSeconds": 510.560646143,
+      "additionalProcessingSeconds": 101.82655476900004,
+      "overlappingRequests": 5,
+      "estimatedQueueSeconds": 45.2657938505,
+      "processSeconds": 567.1214070615
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "stages": {
+        "POG": {
+          "correct": 3,
+          "assessedPredictions": 3,
+          "promotions": 3,
+          "denominator": 336
+        },
+        "AST": {
+          "correct": 185,
+          "assessedPredictions": 185,
+          "promotions": 187,
+          "denominator": 336
+        },
+        "Validation": {
+          "correct": 75,
+          "assessedPredictions": 76,
+          "promotions": 79,
+          "denominator": 336
+        },
+        "Overall": {
+          "correct": 263,
+          "assessedPredictions": 264,
+          "promotions": 269,
+          "denominator": 336
+        }
+      },
+      "workflowSeconds": 256.242460022,
+      "additionalProcessingSeconds": 24.82193976800004,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 281.06439979000004
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "stages": {
+        "POG": {
+          "correct": 18,
+          "assessedPredictions": 18,
+          "promotions": 18,
+          "denominator": 452
+        },
+        "AST": {
+          "correct": 279,
+          "assessedPredictions": 279,
+          "promotions": 280,
+          "denominator": 452
+        },
+        "Validation": {
+          "correct": 44,
+          "assessedPredictions": 44,
+          "promotions": 54,
+          "denominator": 452
+        },
+        "Overall": {
+          "correct": 341,
+          "assessedPredictions": 341,
+          "promotions": 352,
+          "denominator": 452
+        }
+      },
+      "workflowSeconds": 440.84513295200003,
+      "additionalProcessingSeconds": 28.089436638999963,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 468.934569591
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "stages": {
+        "POG": {
+          "correct": 52,
+          "assessedPredictions": 52,
+          "promotions": 53,
+          "denominator": 2428
+        },
+        "AST": {
+          "correct": 79,
+          "assessedPredictions": 80,
+          "promotions": 82,
+          "denominator": 2428
+        },
+        "Validation": {
+          "correct": 1701,
+          "assessedPredictions": 1759,
+          "promotions": 1929,
+          "denominator": 2428
+        },
+        "Overall": {
+          "correct": 1832,
+          "assessedPredictions": 1891,
+          "promotions": 2064,
+          "denominator": 2428
+        }
+      },
+      "workflowSeconds": 5029.175510777,
+      "additionalProcessingSeconds": 344.8244242750001,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 5373.999935052
+    },
+    {
+      "subject": "rollup/daybrush--scenejs",
+      "stages": {
+        "POG": {
+          "correct": 18,
+          "assessedPredictions": 18,
+          "promotions": 18,
+          "denominator": 124
+        },
+        "AST": {
+          "correct": 90,
+          "assessedPredictions": 92,
+          "promotions": 92,
+          "denominator": 124
+        },
+        "Validation": {
+          "correct": 3,
+          "assessedPredictions": 3,
+          "promotions": 4,
+          "denominator": 124
+        },
+        "Overall": {
+          "correct": 111,
+          "assessedPredictions": 113,
+          "promotions": 114,
+          "denominator": 124
+        }
+      },
+      "workflowSeconds": 100.010572862,
+      "additionalProcessingSeconds": 0.6549173069999088,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 100.66549016899991
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "stages": {
+        "POG": {
+          "correct": 131,
+          "assessedPredictions": 131,
+          "promotions": 131,
+          "denominator": 851
+        },
+        "AST": {
+          "correct": 695,
+          "assessedPredictions": 695,
+          "promotions": 695,
+          "denominator": 851
+        },
+        "Validation": {
+          "correct": 0,
+          "assessedPredictions": 0,
+          "promotions": 0,
+          "denominator": 851
+        },
+        "Overall": {
+          "correct": 826,
+          "assessedPredictions": 826,
+          "promotions": 826,
+          "denominator": 851
+        }
+      },
+      "workflowSeconds": 11.300998346999998,
+      "additionalProcessingSeconds": 1.8545762459998951,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 13.155574592999894
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "stages": {
+        "POG": {
+          "correct": 15,
+          "assessedPredictions": 15,
+          "promotions": 15,
+          "denominator": 87
+        },
+        "AST": {
+          "correct": 72,
+          "assessedPredictions": 72,
+          "promotions": 72,
+          "denominator": 87
+        },
+        "Validation": {
+          "correct": 0,
+          "assessedPredictions": 0,
+          "promotions": 0,
+          "denominator": 87
+        },
+        "Overall": {
+          "correct": 87,
+          "assessedPredictions": 87,
+          "promotions": 87,
+          "denominator": 87
+        }
+      },
+      "workflowSeconds": 8.933566856,
+      "additionalProcessingSeconds": 0.6775519639998674,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 9.611118819999868
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "stages": {
+        "POG": {
+          "correct": 131,
+          "assessedPredictions": 131,
+          "promotions": 287,
+          "denominator": 1620
+        },
+        "AST": {
+          "correct": 704,
+          "assessedPredictions": 706,
+          "promotions": 1292,
+          "denominator": 1620
+        },
+        "Validation": {
+          "correct": 306,
+          "assessedPredictions": 314,
+          "promotions": 496,
+          "denominator": 1620
+        },
+        "Overall": {
+          "correct": 1141,
+          "assessedPredictions": 1151,
+          "promotions": 2075,
+          "denominator": 1620
+        }
+      },
+      "workflowSeconds": 2470.608258273,
+      "additionalProcessingSeconds": 180.68638641900012,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2651.294644692
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "stages": {
+        "POG": {
+          "correct": 161,
+          "assessedPredictions": 161,
+          "promotions": 206,
+          "denominator": 1375
+        },
+        "AST": {
+          "correct": 677,
+          "assessedPredictions": 678,
+          "promotions": 827,
+          "denominator": 1375
+        },
+        "Validation": {
+          "correct": 163,
+          "assessedPredictions": 167,
+          "promotions": 318,
+          "denominator": 1375
+        },
+        "Overall": {
+          "correct": 1001,
+          "assessedPredictions": 1006,
+          "promotions": 1351,
+          "denominator": 1375
+        }
+      },
+      "workflowSeconds": 2053.5095164259997,
+      "additionalProcessingSeconds": 143.91952114000009,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2197.429037566
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "stages": {
+        "POG": {
+          "correct": 170,
+          "assessedPredictions": 170,
+          "promotions": 289,
+          "denominator": 1193
+        },
+        "AST": {
+          "correct": 658,
+          "assessedPredictions": 659,
+          "promotions": 1080,
+          "denominator": 1193
+        },
+        "Validation": {
+          "correct": 148,
+          "assessedPredictions": 150,
+          "promotions": 415,
+          "denominator": 1193
+        },
+        "Overall": {
+          "correct": 976,
+          "assessedPredictions": 979,
+          "promotions": 1784,
+          "denominator": 1193
+        }
+      },
+      "workflowSeconds": 2537.67353724,
+      "additionalProcessingSeconds": 84.020920316,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2621.694457556
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "stages": {
+        "POG": {
+          "correct": 151,
+          "assessedPredictions": 151,
+          "promotions": 166,
+          "denominator": 1970
+        },
+        "AST": {
+          "correct": 999,
+          "assessedPredictions": 1005,
+          "promotions": 1046,
+          "denominator": 1970
+        },
+        "Validation": {
+          "correct": 273,
+          "assessedPredictions": 274,
+          "promotions": 382,
+          "denominator": 1970
+        },
+        "Overall": {
+          "correct": 1423,
+          "assessedPredictions": 1430,
+          "promotions": 1594,
+          "denominator": 1970
+        }
+      },
+      "workflowSeconds": 2031.021673463,
+      "additionalProcessingSeconds": 252.56218811800005,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2283.5838615810003
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "stages": {
+        "POG": {
+          "correct": 76,
+          "assessedPredictions": 76,
+          "promotions": 108,
+          "denominator": 1651
+        },
+        "AST": {
+          "correct": 544,
+          "assessedPredictions": 546,
+          "promotions": 799,
+          "denominator": 1651
+        },
+        "Validation": {
+          "correct": 525,
+          "assessedPredictions": 534,
+          "promotions": 818,
+          "denominator": 1651
+        },
+        "Overall": {
+          "correct": 1145,
+          "assessedPredictions": 1156,
+          "promotions": 1725,
+          "denominator": 1651
+        }
+      },
+      "workflowSeconds": 3318.98015148,
+      "additionalProcessingSeconds": 224.12812554799976,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 3543.108277028
+    },
+    {
+      "subject": "turbopack/umami-software--umami",
+      "stages": {
+        "POG": {
+          "correct": 101,
+          "assessedPredictions": 101,
+          "promotions": 231,
+          "denominator": 796
+        },
+        "AST": {
+          "correct": 304,
+          "assessedPredictions": 322,
+          "promotions": 523,
+          "denominator": 796
+        },
+        "Validation": {
+          "correct": 145,
+          "assessedPredictions": 145,
+          "promotions": 339,
+          "denominator": 796
+        },
+        "Overall": {
+          "correct": 550,
+          "assessedPredictions": 568,
+          "promotions": 1093,
+          "denominator": 796
+        }
+      },
+      "workflowSeconds": 1234.95297982,
+      "additionalProcessingSeconds": 20.344885940999724,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1255.297865761
+    },
+    {
+      "subject": "vite/CorentinTh--it-tools",
+      "stages": {
+        "POG": {
+          "correct": 245,
+          "assessedPredictions": 245,
+          "promotions": 245,
+          "denominator": 2681
+        },
+        "AST": {
+          "correct": 1851,
+          "assessedPredictions": 1864,
+          "promotions": 1877,
+          "denominator": 2681
+        },
+        "Validation": {
+          "correct": 290,
+          "assessedPredictions": 295,
+          "promotions": 296,
+          "denominator": 2681
+        },
+        "Overall": {
+          "correct": 2386,
+          "assessedPredictions": 2404,
+          "promotions": 2418,
+          "denominator": 2681
+        }
+      },
+      "workflowSeconds": 1671.2840250660001,
+      "additionalProcessingSeconds": 239.9298722359999,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1911.213897302
+    },
+    {
+      "subject": "vite/DavidHDev--react-bits",
+      "stages": {
+        "POG": {
+          "correct": 121,
+          "assessedPredictions": 121,
+          "promotions": 121,
+          "denominator": 881
+        },
+        "AST": {
+          "correct": 617,
+          "assessedPredictions": 617,
+          "promotions": 617,
+          "denominator": 881
+        },
+        "Validation": {
+          "correct": 62,
+          "assessedPredictions": 64,
+          "promotions": 64,
+          "denominator": 881
+        },
+        "Overall": {
+          "correct": 800,
+          "assessedPredictions": 802,
+          "promotions": 802,
+          "denominator": 881
+        }
+      },
+      "workflowSeconds": 213.855435061,
+      "additionalProcessingSeconds": 15.472821325000375,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 229.3282563860004
+    },
+    {
+      "subject": "vite/LibreChat-AI--LibreChat",
+      "stages": {
+        "POG": {
+          "correct": 150,
+          "assessedPredictions": 150,
+          "promotions": 150,
+          "denominator": 2188
+        },
+        "AST": {
+          "correct": 1056,
+          "assessedPredictions": 1063,
+          "promotions": 1076,
+          "denominator": 2188
+        },
+        "Validation": {
+          "correct": 483,
+          "assessedPredictions": 484,
+          "promotions": 491,
+          "denominator": 2188
+        },
+        "Overall": {
+          "correct": 1689,
+          "assessedPredictions": 1697,
+          "promotions": 1717,
+          "denominator": 2188
+        }
+      },
+      "workflowSeconds": 1374.354427008,
+      "additionalProcessingSeconds": 141.83242020800012,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1516.186847216
+    },
+    {
+      "subject": "vite/Lissy93--dashy",
+      "stages": {
+        "POG": {
+          "correct": 256,
+          "assessedPredictions": 256,
+          "promotions": 256,
+          "denominator": 2063
+        },
+        "AST": {
+          "correct": 1160,
+          "assessedPredictions": 1160,
+          "promotions": 1172,
+          "denominator": 2063
+        },
+        "Validation": {
+          "correct": 455,
+          "assessedPredictions": 461,
+          "promotions": 468,
+          "denominator": 2063
+        },
+        "Overall": {
+          "correct": 1871,
+          "assessedPredictions": 1877,
+          "promotions": 1896,
+          "denominator": 2063
+        }
+      },
+      "workflowSeconds": 1322.543813572,
+      "additionalProcessingSeconds": 220.81272160399985,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1543.3565351759999
+    },
+    {
+      "subject": "vite/drawdb-io--drawdb",
+      "stages": {
+        "POG": {
+          "correct": 502,
+          "assessedPredictions": 505,
+          "promotions": 506,
+          "denominator": 6206
+        },
+        "AST": {
+          "correct": 3779,
+          "assessedPredictions": 3905,
+          "promotions": 3959,
+          "denominator": 6206
+        },
+        "Validation": {
+          "correct": 1200,
+          "assessedPredictions": 1377,
+          "promotions": 1385,
+          "denominator": 6206
+        },
+        "Overall": {
+          "correct": 5481,
+          "assessedPredictions": 5787,
+          "promotions": 5850,
+          "denominator": 6206
+        }
+      },
+      "workflowSeconds": 4844.766025316,
+      "additionalProcessingSeconds": 237.22578802200033,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 5081.991813338001
+    },
+    {
+      "subject": "vite/excalidraw--excalidraw",
+      "stages": {
+        "POG": {
+          "correct": 131,
+          "assessedPredictions": 131,
+          "promotions": 138,
+          "denominator": 809
+        },
+        "AST": {
+          "correct": 601,
+          "assessedPredictions": 601,
+          "promotions": 665,
+          "denominator": 809
+        },
+        "Validation": {
+          "correct": 63,
+          "assessedPredictions": 63,
+          "promotions": 67,
+          "denominator": 809
+        },
+        "Overall": {
+          "correct": 795,
+          "assessedPredictions": 795,
+          "promotions": 870,
+          "denominator": 809
+        }
+      },
+      "workflowSeconds": 250.593764997,
+      "additionalProcessingSeconds": 12.031850581999867,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 262.6256155789999
+    },
+    {
+      "subject": "vite/hoppscotch--hoppscotch",
+      "stages": {
+        "POG": {
+          "correct": 263,
+          "assessedPredictions": 263,
+          "promotions": 334,
+          "denominator": 3244
+        },
+        "AST": {
+          "correct": 1889,
+          "assessedPredictions": 1895,
+          "promotions": 2561,
+          "denominator": 3244
+        },
+        "Validation": {
+          "correct": 222,
+          "assessedPredictions": 233,
+          "promotions": 277,
+          "denominator": 3244
+        },
+        "Overall": {
+          "correct": 2374,
+          "assessedPredictions": 2391,
+          "promotions": 3172,
+          "denominator": 3244
+        }
+      },
+      "workflowSeconds": 2300.508650883,
+      "additionalProcessingSeconds": 184.39801751499996,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2484.906668398
+    },
+    {
+      "subject": "vite/immich-app--immich",
+      "stages": {
+        "POG": {
+          "correct": 154,
+          "assessedPredictions": 155,
+          "promotions": 155,
+          "denominator": 1558
+        },
+        "AST": {
+          "correct": 944,
+          "assessedPredictions": 946,
+          "promotions": 958,
+          "denominator": 1558
+        },
+        "Validation": {
+          "correct": 304,
+          "assessedPredictions": 316,
+          "promotions": 319,
+          "denominator": 1558
+        },
+        "Overall": {
+          "correct": 1402,
+          "assessedPredictions": 1417,
+          "promotions": 1432,
+          "denominator": 1558
+        }
+      },
+      "workflowSeconds": 915.6665787009999,
+      "additionalProcessingSeconds": 86.68386789899971,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1002.3504465999996
+    },
+    {
+      "subject": "webpack/PanJiaChen--vue-element-admin",
+      "stages": {
+        "POG": {
+          "correct": 650,
+          "assessedPredictions": 653,
+          "promotions": 653,
+          "denominator": 5578
+        },
+        "AST": {
+          "correct": 4586,
+          "assessedPredictions": 4608,
+          "promotions": 4630,
+          "denominator": 5578
+        },
+        "Validation": {
+          "correct": 128,
+          "assessedPredictions": 155,
+          "promotions": 156,
+          "denominator": 5578
+        },
+        "Overall": {
+          "correct": 5364,
+          "assessedPredictions": 5416,
+          "promotions": 5439,
+          "denominator": 5578
+        }
+      },
+      "workflowSeconds": 893.0774691739999,
+      "additionalProcessingSeconds": 259.49707025900017,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1152.5745394330002
+    },
+    {
+      "subject": "webpack/akveo--ngx-admin",
+      "stages": {
+        "POG": {
+          "correct": 1109,
+          "assessedPredictions": 1109,
+          "promotions": 1130,
+          "denominator": 5838
+        },
+        "AST": {
+          "correct": 3571,
+          "assessedPredictions": 3582,
+          "promotions": 3636,
+          "denominator": 5838
+        },
+        "Validation": {
+          "correct": 665,
+          "assessedPredictions": 679,
+          "promotions": 699,
+          "denominator": 5838
+        },
+        "Overall": {
+          "correct": 5345,
+          "assessedPredictions": 5370,
+          "promotions": 5465,
+          "denominator": 5838
+        }
+      },
+      "workflowSeconds": 2542.576406252,
+      "additionalProcessingSeconds": 337.4943788140002,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2880.0707850660006
+    },
+    {
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "stages": {
+        "POG": {
+          "correct": 137,
+          "assessedPredictions": 137,
+          "promotions": 160,
+          "denominator": 492
+        },
+        "AST": {
+          "correct": 339,
+          "assessedPredictions": 339,
+          "promotions": 712,
+          "denominator": 492
+        },
+        "Validation": {
+          "correct": 14,
+          "assessedPredictions": 14,
+          "promotions": 28,
+          "denominator": 492
+        },
+        "Overall": {
+          "correct": 490,
+          "assessedPredictions": 490,
+          "promotions": 900,
+          "denominator": 492
+        }
+      },
+      "workflowSeconds": 219.529500655,
+      "additionalProcessingSeconds": 23.97208182199998,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 243.50158247699997
+    },
+    {
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "stages": {
+        "POG": {
+          "correct": 147,
+          "assessedPredictions": 148,
+          "promotions": 154,
+          "denominator": 1427
+        },
+        "AST": {
+          "correct": 607,
+          "assessedPredictions": 650,
+          "promotions": 857,
+          "denominator": 1427
+        },
+        "Validation": {
+          "correct": 259,
+          "assessedPredictions": 270,
+          "promotions": 323,
+          "denominator": 1427
+        },
+        "Overall": {
+          "correct": 1013,
+          "assessedPredictions": 1068,
+          "promotions": 1334,
+          "denominator": 1427
+        }
+      },
+      "workflowSeconds": 1509.5228593900001,
+      "additionalProcessingSeconds": 212.7963976139999,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1722.319257004
+    },
+    {
+      "subject": "webpack/dokploy--dokploy",
+      "stages": {
+        "POG": {
+          "correct": 108,
+          "assessedPredictions": 108,
+          "promotions": 329,
+          "denominator": 780
+        },
+        "AST": {
+          "correct": 437,
+          "assessedPredictions": 437,
+          "promotions": 1791,
+          "denominator": 780
+        },
+        "Validation": {
+          "correct": 75,
+          "assessedPredictions": 78,
+          "promotions": 1025,
+          "denominator": 780
+        },
+        "Overall": {
+          "correct": 620,
+          "assessedPredictions": 623,
+          "promotions": 3145,
+          "denominator": 780
+        }
+      },
+      "workflowSeconds": 4181.841261392,
+      "additionalProcessingSeconds": 84.97770918200025,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 4266.818970574001
+    },
+    {
+      "subject": "webpack/freeCodeCamp--freeCodeCamp",
+      "stages": {
+        "POG": {
+          "correct": 115,
+          "assessedPredictions": 115,
+          "promotions": 172,
+          "denominator": 852
+        },
+        "AST": {
+          "correct": 528,
+          "assessedPredictions": 533,
+          "promotions": 1012,
+          "denominator": 852
+        },
+        "Validation": {
+          "correct": 59,
+          "assessedPredictions": 62,
+          "promotions": 108,
+          "denominator": 852
+        },
+        "Overall": {
+          "correct": 702,
+          "assessedPredictions": 710,
+          "promotions": 1292,
+          "denominator": 852
+        }
+      },
+      "workflowSeconds": 817.3504423090001,
+      "additionalProcessingSeconds": 46.700354410000145,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 864.0507967190002
+    },
+    {
+      "subject": "webpack/supabase--supabase",
+      "stages": {
+        "POG": {
+          "correct": 155,
+          "assessedPredictions": 155,
+          "promotions": 230,
+          "denominator": 1358
+        },
+        "AST": {
+          "correct": 656,
+          "assessedPredictions": 657,
+          "promotions": 1137,
+          "denominator": 1358
+        },
+        "Validation": {
+          "correct": 349,
+          "assessedPredictions": 353,
+          "promotions": 560,
+          "denominator": 1358
+        },
+        "Overall": {
+          "correct": 1160,
+          "assessedPredictions": 1165,
+          "promotions": 1927,
+          "denominator": 1358
+        }
+      },
+      "workflowSeconds": 2447.4784387249997,
+      "additionalProcessingSeconds": 209.99611536800023,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 2657.474554093
+    },
+    {
+      "subject": "webpack/swagger-api--swagger-ui",
+      "stages": {
+        "POG": {
+          "correct": 241,
+          "assessedPredictions": 241,
+          "promotions": 279,
+          "denominator": 2730
+        },
+        "AST": {
+          "correct": 2116,
+          "assessedPredictions": 2126,
+          "promotions": 2130,
+          "denominator": 2730
+        },
+        "Validation": {
+          "correct": 175,
+          "assessedPredictions": 181,
+          "promotions": 281,
+          "denominator": 2730
+        },
+        "Overall": {
+          "correct": 2532,
+          "assessedPredictions": 2548,
+          "promotions": 2690,
+          "denominator": 2730
+        }
+      },
+      "workflowSeconds": 1289.682741818,
+      "additionalProcessingSeconds": 76.15330888599996,
+      "overlappingRequests": 0,
+      "estimatedQueueSeconds": 0,
+      "processSeconds": 1365.836050704
+    }
+  ]
+}

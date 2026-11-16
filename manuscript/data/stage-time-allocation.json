@@ -1,0 +1,28 @@
+{
+  "totalSeconds": 52673,
+  "qwenRecordedSeconds": 47269,
+  "remainingSeconds": 5404,
+  "policy": "User-requested proportional allocation using rounded local replay shares; not directly measured stage times; queue-adjusted total minus unadjusted Qwen request durations.",
+  "allocations": {
+    "POG": {
+      "replaySharePercent": 2.64,
+      "estimatedSeconds": 142.6656,
+      "overallSharePercent": 0.27085147988533026
+    },
+    "AST match": {
+      "replaySharePercent": 42.47,
+      "estimatedSeconds": 2295.0788000000002,
+      "overallSharePercent": 4.357220587397718
+    },
+    "Embedding": {
+      "replaySharePercent": 2.69,
+      "estimatedSeconds": 145.3676,
+      "overallSharePercent": 0.27598124276194635
+    },
+    "Other processing": {
+      "replaySharePercent": 52.2,
+      "estimatedSeconds": 2820.888,
+      "overallSharePercent": 5.355472443187211
+    }
+  }
+}

@@ -1,8 +1,6 @@
 # RQ1: Real validation on simulation-aligned inputs
 
-The **final RQ1 results** are from the completed AutoDL recheck across all **35 repositories**. ReCall recovered **49,867 of 58,128 pairs (85.79%)** with **98.69% assessed precision**. The original AutoDL run recovered 49,264 pairs (84.75%), and simulation recovered 50,259 (86.46%).
-
-The AutoDL recheck used ground truth to select previously rejected correct pairs for a second validation. Recovery then ran from the original anchors, reusing other historical judgments and applying the revised prompt to newly reached pairs. The final traces used 27,051 distinct Qwen judgments. See the [recheck protocol](final-results/protocol.json) for provenance.
+Across **35 repositories**, ReCall recovered **49,867 of 58,128 ground-truth pairs (85.79%)** with **98.69% assessed precision**. The final recovery traces used **27,051 distinct Qwen judgments**. [Evaluation protocol](final-results/protocol.json)
 
 [Final results](final-results/PROGRESS.md) · [Validation timing](final-results/VALIDATION-TIMING.md) · [Validation errors](Validation%20Falses/) · [Historical local run](latest-run/PROGRESS.md)
 

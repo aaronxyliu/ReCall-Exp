@@ -1,95 +1,93 @@
 \subsection{RQ1: How does ReCall perform across applications, bundlers, and libraries?}
 \label{sec:rq1}
 
+We ran ReCall with its default settings on all 35 repositories in our ground-truth dataset. For each repository, ReCall takes the library source code and the JavaScript files captured at runtime as input and returns a partial one-to-one mapping from bundled functions to library source definitions. We count a match as correct when the reported source location agrees with the ground truth for that bundled function.
 
+We assess recovery performance using precision and recovery rate. Precision measures the fraction of output mappings that are correct, while recovery rate measures the fraction of ground-truth pairs recovered. As shown in Table~\ref{tab:rq1-bundler-breakdown}, ReCall achieved strong recovery performance across all seven bundlers. Across the full dataset, ReCall correctly recovered 49,867 of 58,128 ground-truth pairs, achieving an overall 85.79\% recovery rate and 98.69\% precision. This combination is important for practical use: recovered mappings must be accurate enough to support subsequent analysis while covering as much of the bundled library code as possible. The full experiment took 14 hours and 38 minutes, averaging 1.06 seconds per correctly recovered function.
 
-
-\subsubsection{Completed evidence: jQuery model recovery}
-These completed results use the known-version jQuery fixture and original local graph (Section~\ref{sec:model-fixture}). All three builds reach a fixed point.
-
-The reference distribution contains 558 static definitions: 85 (15.23\%) have at least ten own-body property-operation occurrences, 393 have one to nine, and 80 have none. These are implementation instances, not distinct implementation patterns. Eligibility alone does not establish a stable or unique fingerprint.
-
-\input{data/exp4-recovery}
-
-Table~\ref{tab:exp4-recovery} separates initial POG matches from final recovery. The builds contain 568, 568, and 577 total function definitions, respectively. Of these, 545, 544, and 540 have supported jQuery identities and form the recovery denominators. Matching nevertheless retains all definitions, including application and runtime code.
-
-Initial POG matching supplies 85, 77, and 76 correct anchors. Expansion adds 429, 427, and 444 correct matches. Final recovery ranges from 92.65\% to 96.30\%. The descriptive pooled result is 1538/1629 supported bundled-function occurrences (94.41\%), including 1300 correct matches beyond the 238 initial POG correspondences. There are 14 wrong identities and 45 unassessed promotions. Repeated occurrences across builds are correlated. Across configurations, 541 distinct reference identities are correctly recovered; this uses the 558-definition reference inventory as its denominator and must not be confused with bundled-target recovery.
-
-\paragraph{Validation and final identity accuracy.}
-
-\input{data/exp4-validation}
-
-Table~\ref{tab:exp4-validation} distinguishes precision among assessable accepted pairs from precision of final matches. The procedure performs 2962 pair checks using 2286 distinct fresh requests and 676 exact-request cache hits. All responses satisfy the T/F contract; no API error or thinking text is recorded. Among 1485 accepted checks, 1363 agree with supported reference identities, 77 disagree, and 45 are unassessed. Assessed accepted-pair precision is 1363/1440 (94.65\%), rather than 1363/1485. Repeated checks are not independent trials.
-
-Across attempted assessable pairs, there are 1363 true positives, 68 false negatives, 77 false positives, and 1363 true negatives under the identity-label policy. These counts concern candidates actually examined, not arbitrary function pairs. Final assessed identity precision is 1538/(1538+14), or 99.10\%. Initial POG matches, repeated-query outcomes, and one-to-one filtering explain why pair and final-match denominators differ; a positive judgment alone is not the final output.
-
-Top-five recall is conditional on attempted queries with a supported counterpart. A function may contribute several queries as its matched neighborhood changes. Of the 1300 correct model-promoted matches, 1104 were accepted at rank one, 132 at rank two, 36 at rank three, 12 at rank four, and 16 at rank five. Thus, 28 correct promotions occur at ranks four or five in their saved queries. This is an observed distribution, not an isolated estimate of the gain from increasing the validation budget.
-
-\paragraph{Remaining failures.}
-
-\input{data/exp4-barriers}
-
-Table~\ref{tab:exp4-barriers} assigns an exclusive outcome to each of the 91 supported targets not correctly recovered. Wrong promotion takes precedence; the other outcomes inspect all saved queries. The largest categories are explicit rejection of a correct top-five pair (21), an accepted correct pair blocked by a reference-identity conflict (17), a correct candidate never entering the top five (16), and early acceptance preventing validation of a correct top-five candidate (15). Six targets lack a matched neighbor. One exceeds the input limit and one never has its correct reference in a candidate pool. The 14 wrong promotions are included in the 91, not added to it.
-
-These are observed outcomes, not additive estimates of gains from repairs. Changing a match changes later neighborhoods and reference availability. The decrease in unmatched-neighbor failures from 75 to six is consistent with greater expansion coverage, but does not isolate graph stability or the effect of an individual component.
-
-The detailed review of all 14 wrong identities is retained in Appendix~\ref{sec:wrong-identities}.
-
-\subsubsection{Preliminary multi-repository evidence: anchor coverage and recovery}
-\label{sec:rq1-anchor-coverage}
-We examine whether initial anchor coverage is associated with recovery in a snapshot of the ongoing top-three experiment. At 13:56 China time on 8 November 2026, 22 of the 26 repositories had completed recovery. This run uses module-aware neighborhoods, AST comparison followed by Qwen3.5:27b validation of up to three ranked candidates, and no embedding-similarity cutoff. Accepted matches initialize subsequent rounds, and a source identity may match multiple bundled targets. For 21 repositories, the run incrementally continues saved top-three results after the method-parsing and source-resolution fixes, retaining prior accepted matches; it is not a fresh run of a single revised configuration. The subsequent local graph-syntax repairs are not included in this snapshot. These results are preliminary and separate from the jQuery pilot above.
-
-The observation unit is a repository--library instance, so the same package in different repositories contributes separate observations. We exclude instances with no initial anchor or fewer than 20 ground-truth (GT) pairs, retaining 84 instances. For comparability, the anchor count includes only GT-evaluable bundled targets assigned an initial POG match, whether that identity is correct or incorrect; unassessed anchors are excluded. Let $G$ be the number of GT pairs, $A$ the number of initially anchored GT targets, $C$ the number of correctly recovered pairs, and $C_A$ the number of correct anchors. Initial anchor percentage is $A/G$, and overall recovery is $C/G$. To remove the direct contribution of anchors to recovery, we also measure recovery among initially unanchored targets as $(C-C_A)/(G-A)$.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{figures/rq1-anchor-recovery.pdf}
-\caption{Initial anchor percentage and recovery for 84 repository--library instances with at least 20 GT pairs and one initial anchor. Each blue point represents one instance. Orange lines connect the unweighted mean instance recovery rates within five-percentage-point anchor ranges; labels give the number of instances in each range. Panel~(b) excludes initially anchored targets from the recovery population. The x-axis spans 0--50\%; all retained instances fall within this range.}
-\label{fig:rq1-anchor-recovery}
-\end{figure}
-
-Figure~\ref{fig:rq1-anchor-recovery} shows a positive association between anchor percentage and recovery. Mean overall recovery increases from 59.4\% in the 0--5\% anchor range (26 instances) to 77.5\% in the 5--10\% range (21 instances), and 83.2\% in the 10--15\% range (14 instances). The corresponding non-anchor recovery rates are 58.1\%, 75.7\%, and 81.1\%. Across the 84 instances, Spearman's rank correlation is 0.53 between anchor percentage and overall recovery and 0.47 between anchor percentage and non-anchor recovery. In contrast, the correlation between absolute anchor count and overall recovery is 0.19. Thus, the association is stronger for relative anchor coverage than for anchor count alone and persists after removing the direct contribution of anchors.
-
-These observations are consistent with initial anchor coverage affecting the opportunity for propagation, but do not establish that unrecovered functions lack relationships with existing anchors. Missing graph edges, candidate ranking, and validation decisions can also limit recovery, while code that readily yields anchors may also be easier to recover. Repeated packages across repositories are not independent observations. Each range above 20\% anchor coverage contains only one to three instances, so its mean should not be interpreted as a stable trend. Direct reachability analysis and controlled anchor ablations are needed to distinguish these explanations.
-
-\subsubsection{Planned experiment 1: different bundlers}
-\label{sec:rq1-bundlers}
-We will apply the complete method, including the extended relationship graphs, to local repository builds produced by different bundlers. The verification cohort will be held out from configuration selection, with references and input conditions fixed in advance. We will report recovery, assessed precision, wrong and unassessed mappings, runtime, and model calls per bundler, with macro summaries and pooled counts. Where the same subject can be built with multiple bundlers, we will retain paired comparisons; comparisons between different applications will be described as cohort differences rather than isolated bundler effects. Failure analysis will distinguish absent matched neighbors, missing or poorly ranked candidates, model decisions, and allocation conflicts.
-
-\subsubsection{Planned experiment 2: different libraries and frameworks}
-\label{sec:rq1-libraries}
-Using local builds and exact versioned references, we will evaluate different libraries and frameworks and report the same recovery and cost measures per target package. Package selection and the inclusion of framework runtimes will be declared before observing results. The framework-runtime exclusions in the completed graph cohorts remain part of those historical cohorts; they do not constitute completed framework recovery evidence. The planned evaluation will retain reference sizes, supported target counts, parse failures, and unresolved cases, and distinguish previously used subjects from held-out subjects. We will report POG size eligibility and admitted anchors separately; the planned eligibility measurement in Background remains unfilled.
-
-\rqoverview{Local builds across\\bundlers and packages}{Run fixed method;\\validate transformations}{Recovery, precision,\\cost, and associations}{Planned RQ1 experiments 1--3: evaluate bundler and library/framework performance and relate validated transformations to recovery.}{fig:rq1-goal}
-
-\subsubsection{Planned experiment 3: function transformations and recovery rate}
-\label{sec:boundary-characterization}
-Section~\ref{sec:data-collection} reports the initial split, combine, and no-counterpart screen on the new capture dataset. We will manually validate flagged candidates before drawing conclusions about compiler transformation frequency. For each selected library and build, we will relate source definitions to the bundled functions receiving their mapping points. Nested bodies will be attributed to their innermost functions. We will retain all contributor votes rather than only the dominant identity used by the recovery oracle. The current screen retains point-supported contributor edges and requires two distinct original positions for accepted one-to-one pairs. Follow-up validation will examine sensitivity to stronger edge-support thresholds. Relations will be aggregated across the supplied chunks of one build; independent builds will remain separate.
 
 \begin{table}[htbp]
-\caption{Planned source-map screening for function-boundary transformations. Each relation identifies a candidate requiring manual validation.}
-\label{tab:boundary-candidates}
+\caption{ReCall's recovery accuracy, initial anchor set, and estimated process time excluding queue delays by bundler.}
+\label{tab:rq1-bundler-breakdown}
 \centering\small
-\begin{tabular}{@{}p{.43\linewidth}p{.52\linewidth}@{}}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccc@{}}
 \toprule
-Observed relation & Candidate interpretation\\
+\multirow{3}{*}{\shortstack{\textbf{Bundler}\\\textbf{Group}}} & \multirow{3}{*}{\shortstack{\textbf{Initial}\\\textbf{Anchor (\%)}}} & \multicolumn{4}{c}{\textbf{Precision (\%)}} & \multirow{3}{*}{\shortstack{\textbf{Recovery}\\\textbf{(\%)}}} & \multicolumn{2}{c}{\textbf{Process time}} \\
+\cmidrule(lr){3-6}\cmidrule(l){8-9}
+ & & \shortstack{POG\\Match} & \shortstack{AST\\Match} & \shortstack{Model\\Validation} & Overall & & \shortstack{Total\\(h:min:s)} & \shortstack{Per Lib\\(min)} \\
 \midrule
-One source function $\rightarrow$ multiple bundled functions & Split candidate; duplication or mapping artifacts are alternatives.\\
-\addlinespace
-Multiple source functions $\rightarrow$ one bundled function & Combine candidate, including inlining.\\
-\addlinespace
-Source function $\rightarrow$ no mapped target & Possible removal; missing mappings or surviving top-level code are alternatives.\\
+Webpack & 16.31 & 99.85 & 99.29 & 96.21 & 99.06 & 90.40 & 04:12:33 & 3.37 \\
+Vite & 9.70 & 99.78 & 98.72 & 93.50 & 97.83 & 85.57 & 03:53:52 & 2.96 \\
+esbuild & 16.95 & 100.00 & 100.00 & 99.16 & 99.85 & 90.96 & 00:38:15 & 0.93 \\
+Rollup & 15.44 & 100.00 & 99.77 & 100.00 & 99.81 & 96.42 & 00:02:03 & 0.23 \\
+Turbopack & 14.96 & 100.00 & 99.23 & 98.48 & 99.14 & 72.47 & 04:02:32 & 4.04 \\
+Parcel & 2.47 & 100.00 & 99.72 & 96.78 & 97.36 & 75.45 & 01:37:23 & 10.82 \\
+Bun & 15.46 & 99.61 & 100.00 & 99.06 & 99.82 & 99.11 & 00:11:14 & 1.25 \\
+\midrule
+\textbf{Overall} & \textbf{13.21} & \textbf{99.86} & \textbf{99.19} & \textbf{96.08} & \textbf{98.69} & \textbf{85.79} & \textbf{14:37:53} & \textbf{3.11} \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+% \input{data/rq1-repository-breakdown}
+
+ReCall first uses POG matching to identify an initial set of function correspondences. The ``Initial Anchor (\%)'' column in Table~\ref{tab:rq1-bundler-breakdown} compares the size of this set with the number of ground-truth function pairs. The overall ratio is only 13.21\%, highlighting the need for subsequent recovery stages to identify functions that POG matching cannot resolve.
+
+Table~\ref{tab:rq1-stage} reports the separate performance and time cost of four stages: POG matching, AST matching, neighborhood ranking, and model validation. Model validation accounts for 89.71\% of the total process time, making it the primary runtime bottleneck. Outside these stages, function relationship graph construction accounts for an estimated 4.88\%, and other processing accounts for 0.48\%.
+
+\begin{table}[htbp]
+\caption{Stage-level outcomes pooled across 35 repositories. TP, FP, FN, and TN denote true positives, false positives, false negatives, and true negatives, respectively.}
+\label{tab:rq1-stage}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular*}{0.93\linewidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+\textbf{Key Stage} & \textbf{TP} & \textbf{FP} & \textbf{FN} & \textbf{TN} & \begin{tabular}[c]{@{}c@{}}\textbf{Precision}\\\textbf{(\%)}\end{tabular} & \begin{tabular}[c]{@{}c@{}}\textbf{Recall}\\\textbf{(\%)}\end{tabular} & \begin{tabular}[c]{@{}c@{}}\textbf{Time Cost}\\\textbf{h:min:s (\%)}\end{tabular} \\
+\midrule
+POG Match & 6,643 & 9 & 2,811 & --- & 99.86 & 70.27 & 00:02:23 (0.27\%) \\
+AST Match & 34,080 & 279 & 10,914 & 347,553 & 99.19 & 75.74 & 00:38:15 (4.36\%) \\
+Neighbor Ranking & 13,088 & --- & 2,311 & --- & --- & 84.99 & 00:02:25 (0.28\%) \\
+Model Validation & 9,144 & 373 & 1,421 & 7,144 & 96.08 & 86.55 & 13:07:49 (89.74\%) \\
+
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+
+For matching and validation, an accepted function pair is a positive prediction, and the ground-truth mapping determines whether it is correct. Each stage is evaluated on the pairs it examines, so the confusion matrices describe stage-specific decisions rather than a shared set of comparisons. All three stages achieve high precision. However, POG matching misses approximately 30\% of the correct pairs, and AST matching rejects approximately 25\% of the correct pairs it examines. These unresolved pairs are left for semantic checking in the later stage.
+
+
+Neighborhood ranking selects up to three candidates for model validation. Its recall measures how often the correct counterpart appears among these candidates. We count a query as a true positive when the correct counterpart is included and as a false negative when it is not. In approximately 15\% of assessed queries, the correct counterpart falls outside the selected candidates and therefore does not reach model validation in that query. Model validation produces 373 false positives and 1,421 false negatives, representing incorrect acceptances and rejections, respectively. To investigate these errors, we modify the prompt to request an explanation of each decision and group the resulting explanations into the categories shown in Table~\ref{tab:rq1-rejection-reasons}.
+
+
+\begin{table}[!htbp]
+\caption{Model validation error analysis. Shares are computed within each group, using 373 false positives (FP) and 1,019 persistent false negatives (FN).}
+\label{tab:rq1-rejection-reasons}
+\centering\small
+\begin{tabular}{@{}w{c}{0.08\linewidth}>{\centering\arraybackslash}m{0.27\linewidth}>{\centering\arraybackslash}m{0.11\linewidth}>{\raggedright\arraybackslash}m{\dimexpr0.46\linewidth-6\tabcolsep\relax}@{}}
+\toprule
+\textbf{Error} & \multicolumn{1}{c}{\textbf{Reason}} & \multicolumn{1}{c}{\textbf{Share}} & \multicolumn{1}{c@{}}{\textbf{Description}} \\
+\midrule
+FP & External bindings & 100.00\% & Accepted distinct external bindings as renamed versions of the same binding. \\
+\midrule
+FN & \multicolumn{3}{@{\hspace{\tabcolsep}}l@{}}{%
+\begin{tabular}[c]{@{}>{\centering\arraybackslash}m{0.27\linewidth}>{\centering\arraybackslash}m{0.11\linewidth}>{\raggedright\arraybackslash}m{\dimexpr0.46\linewidth-6\tabcolsep\relax}@{}}
+Changed behavior & 45.83\% & Inferred changes in control flow, return values, or executed operations. \\
+\addlinespace[2pt]
+External bindings & 20.31\% & Doubted that external names referred to corresponding functions or values. \\
+\addlinespace[2pt]
+Helper inlining or constant substitution & 14.92\% & Inferred different behavior from helper inlining or constant substitution. \\
+\addlinespace[2pt]
+Build or runtime specialization & 12.86\% & Expected a branch omitted under the bundle’s build or runtime conditions. \\
+\addlinespace[2pt]
+Scope or argument correspondence & 6.08\% & Inferred variable shadowing or a mismatch in argument positions. \\
+\end{tabular}} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\paragraph{Manual validation.}
-Review will inspect the exact source and generated code, mapping locations, and enclosing contexts. Multi-target cases will be checked for genuine partitioning versus duplicated copies or nesting artifacts; multi-source cases will be checked for combined contributions, including inlining. For no-target cases, reviewers will also inspect generated top-level regions and all supplied chunks, using build-input inventories and compiler evidence where available. A missing function definition after inlining will count as combination when its computation survives, rather than as removal. Removal requires evidence that the function's computation was eliminated. Cases without sufficient evidence will remain unresolved. Each decision will retain source/generated locations, supporting evidence, and review notes, with disagreements adjudicated explicitly. These labels will be independent of ReCall's predictions.
 
-\paragraph{Counts and recovery consequences.}
-We will report screened candidates, confirmed transformations, alternative explanations, and unresolved cases per library and bundler. Counts will identify affected source definitions per build, with bundled-function and transformation-group counts reported separately. Overlapping transformations will be marked explicitly rather than summed into an exclusive partition. The source-inventory scope, parsing failures, missing artifacts, and map coverage will accompany each denominator. Final conclusions will distinguish observed frequency from unresolved coverage and relate validated cases to ReCall's outcomes: recovery and assessed precision for surviving supported counterparts, and coverage limits where no standalone counterpart remains. Confirmed removals will be reported as build elimination rather than matcher failures. The existing supported-target recovery denominator will remain explicit; the characterization will not silently convert unsupported transformations into assessed matches or exclude them from the scope discussion.
-
-For each library/build case, we will relate its confirmed split, combine, and remove frequencies to its library recovery rate, retaining unresolved transformation cases separately. We will compare cases within bundler and library groups where the data permit and report target counts, source-inventory coverage, and anchor coverage alongside the association. This analysis will describe relationships rather than establish that transformations alone cause differences in recovery. Rates over surviving supported targets and coverage relative to the source inventory will remain separate, since removal or loss of a standalone boundary can change the available target population.
-
-\paragraph{Status.}
-\textit{Pending: experiments 1--3 across bundlers and libraries/frameworks, validated transformation counts, and their relationship with library recovery rate. The completed jQuery pilot and preliminary anchor-coverage snapshot do not complete these broader evaluations.}

@@ -1,11 +1,11 @@
-\subsection{Data Collection}
+\subsection{Groud-truth Dataset Construction}
 \label{sec:data-collection}
 
 We evaluate ReCall on web applications with source code publicly available on GitHub. Access to their source code and build configurations allows us to obtain library sources and generate source maps for establishing ground-truth correspondences between source and bundled functions.
 
 We select seven widely used bundlers based on the bundler usage survey\footnote{\label{fn:bundler-usage-survey}State of JS build-tools survey: \url{https://2025.stateofjs.com/en-US/libraries/build-tools/}}: Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun. For each bundler, we search GitHub for applications that use it and examine repositories in descending order of star count. We require each application to have a frontend page that builds and opens successfully and at least five production library dependencies. This process yields 35 repositories.
 
-We construct the ground-truth dataset by collecting library source code, runtime intercepted JavaScript files, and source maps from each repository. We identify production libraries from project configuration files and randomly select up to ten per repository, yielding 282 library instances from 35 repositories. We manually enable source-map generation and verify that each application’s frontend opens successfully. Following prior work (CITE LATER), we capture JavaScript files loaded when the home page opens and retrieve their source maps from the build output. Our collection does not cover additional files whose loading requires page interactions.
+For each repository, the ground-truth dataset is consisted of three components: \textbf{library source code}, \textbf{runtime intercepted JavaScript files}, and \textbf{ground-truth function mappings}. Given a repository, we first identify production libraries from project configuration files and randomly select up to ten per repository, yielding 282 library instances in total. Then, we manually enable source-map generation and verify that each application’s frontend opens successfully. Following prior work (CITE LATER), we capture JavaScript files loaded when the home page opens and retrieve their source maps from the build output. Our collection does not cover additional files whose loading requires page interactions.
 
 Before establishing ground-truth mappings, we need to first discuss four special function transformations introduced by the build process that affect recovery: removal, addition, combination, and splitting. Removal eliminates source functions, for example through tree shaking, while addition introduces functions such as generated helpers or functions produced by factories. Removed functions are absent from the bundle, and added functions have no original source counterpart to recover. Recovery is therefore not meaningful in either case, and we exclude both from the recovery evaluation.
 
@@ -13,14 +13,14 @@ Combination and splitting can preserve program behavior while breaking the funct
 
 Our source-map analysis shows that one-to-one correspondences dominate the observed category counts across the 35 repositories. We identify 1,835 split candidates (2.49\%), 1,319 combine candidates (1.79\%), and 12,438 remove candidates (16.87\%), alongside 58,128 one-to-one function pairs (78.85\%). The relatively small shares of split and combine candidates suggest that boundary-changing transformations have a limited impact on ReCall’s applicability. As a result, we can safely construct the ground-truth dataset using \textbf{only one-to-one mappings}, assuming that each bundled function has exactly one correct source-function counterpart in our experiments and vice versa, and leave boundary-changing transformation cases for future work.
 
-Table~\ref{tab:rq1-dataset-bundlers} summarizes the collected dataset which will be used throughout our evaluation.
+Table~\ref{tab:rq1-dataset-bundlers} summarizes the collected dataset which will be used throughout RQ1 to RQ3.
 
 \begin{table}[htbp]
-\caption{Ground-truth dataset for library function recovery, grouped by bundler.}
+\caption{Ground-truth dataset for library function recovery evaluation, grouped by bundler.}
 \label{tab:rq1-dataset-bundlers}
 \centering
 \small
-\renewcommand{\arraystretch}{1.00}
+\renewcommand{\arraystretch}{1.10}
 \setlength{\tabcolsep}{3pt}
 \begin{tabular*}{0.9\linewidth}{@{\extracolsep{\fill}}lccccc@{}}
 \toprule
@@ -47,21 +47,3 @@ Bun & 6.58\% & 2 & 9 & 1,688 & 187.6 \\
 
 
 
-\begin{table}[htbp]
-\caption{Stage-level outcomes pooled across 35 repositories. TP, FP, FN, and TN denote true positives, false positives, false negatives, and true negatives, respectively.}
-\label{tab:rq1-stage-accuracy}
-\centering\small
-\begin{tabular}{@{}lrrrrrr@{}}
-\toprule
-Stage & TP & FP & FN & TN & Precision & Recall \\
-\midrule
-POG & 6,643 & 9 & 2,811 & --- & 99.86\% & 70.27\% \\
-AST match & 34,080 & 279 & 10,914 & 347,553 & 99.19\% & 75.74\% \\
-Qwen & 9,144 & 373 & 1,421 & 7,144 & 96.08\% & 86.55\% \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Table~\ref{tab:rq1-stage-accuracy} reports assessed precision as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ and stage recall as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$. POG recall uses the 9,454 ground-truth pairs in which both functions have a POG fingerprint and at least ten own-body property-operation occurrences. Of these, 7,212 had equal fingerprints, 6,738 appeared in the raw anchor list, and 6,643 were retained by one-to-one allocation. POG uses fingerprint lookup and produces no explicit negative comparisons, so its TN count is undefined under this protocol.
-
-AST and Qwen counts use distinct examined pairs within each repository. AST counts come from a local replay that logged every AST comparison and reproduced the final recovery trace using archived model responses. Qwen counts use pairs with binary verdicts in that trace. A pair examined more than once within a stage counts as positive if that stage accepted it. Stage recall uses only ground-truth-positive pairs eligible for POG, examined by AST, or given a binary Qwen verdict, respectively. A pair may enter more than one stage denominator. Ground-truth-unassessed pairs are excluded from the table.
