@@ -1,8 +1,24 @@
 \section{Evaluation}
 \label{sec:evaluation}
 
+We evaluate ReCall through four research questions that examine its recovery performance, comparison with existing methods, design tradeoffs, and utility for downstream security analysis:
+\begin{list}{}{%
+    \setlength{\labelwidth}{3.3em}%
+    \setlength{\labelsep}{0.6em}%
+    \setlength{\leftmargin}{3.9em}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\topsep}{5pt}%
+    \setlength{\itemsep}{4pt}%
+    \setlength{\parsep}{0pt}%
+    \renewcommand{\makelabel}[1]{\raisebox{0.25ex}{{\scriptsize\textbullet}}\hspace{0.5em}\textbf{#1}\hfil}}
+    \item[RQ1] How does ReCall perform across applications, bundlers, and libraries? (Section~\ref{sec:rq1})
+    \item[RQ2] How does ReCall compare with existing recovery methods? (Section~\ref{sec:rq2})
+    \item[RQ3] What tradeoffs do ReCall's settings introduce, and how much does each component contribute? (Section~\ref{sec:rq3})
+    \item[RQ4] How does ReCall benefit downstream security analysis? (Section~\ref{sec:rq4})
+\end{list}
+We first describe the dataset and ground-truth construction, then address each research question in turn.
 
-Our evaluation is organized around four research questions: how accurately ReCall recovers functions across applications, bundlers, and libraries (RQ1); how neighborhood ranking and module-aware graph construction contribute to recovery quality and efficiency (RQ2); how the POG threshold and validation model affect the tradeoff between recovery quality and computational cost (RQ3); and how ReCall can support practical analysis tasks (RQ4). We first describe the dataset and ground-truth construction in Section~\ref{sec:data-collection}, then discuss the four research questions in Sections~\ref{sec:rq1}--\ref{sec:rq4}, respectively.
+All experiments run on an Ubuntu 22.04 server equipped with one NVIDIA RTX 4090 GPU with 24\,GB of GPU memory, 16 vCPUs backed by an Intel Xeon Platinum 8352V processor at 2.10\,GHz, and 120\,GB of RAM. The software environment uses Miniconda, Python 3.10, and CUDA 11.8.
 
 \input{sections/data-collection}
 
