@@ -1,20 +1,23 @@
 \subsection{RQ1: How does ReCall perform across applications, bundlers, and libraries?}
 \label{sec:rq1}
 
+
 We ran ReCall with its default settings on all 35 repositories in our ground-truth dataset. For each repository, ReCall takes the library source code and the JavaScript files captured at runtime as input and returns a partial one-to-one mapping from bundled functions to library source definitions. We count a match as correct when the reported source location agrees with the ground truth for that bundled function.
 
-We assess recovery performance using precision and recovery rate. Precision measures the fraction of output mappings that are correct, while recovery rate measures the fraction of ground-truth pairs recovered. As shown in Table~\ref{tab:rq1-bundler-breakdown}, ReCall achieved strong recovery performance across all seven bundlers. Across the full dataset, ReCall correctly recovered 49,867 of 58,128 ground-truth pairs, achieving an overall 85.79\% recovery rate and 98.69\% precision. This combination is important for practical use: recovered mappings must be accurate enough to support subsequent analysis while covering as much of the bundled library code as possible. The full experiment took 14 hours and 38 minutes, averaging 1.06 seconds per correctly recovered function.
+\subsubsection{Performance Evaluation}
+
+We assess recovery performance using precision and recovery rate. Precision measures the fraction of output mappings that are correct, while recovery rate measures the fraction of ground-truth pairs recovered. As shown in Table~\ref{tab:rq1-bundler-breakdown}, ReCall spent 14 hours and 38 minutes, averaging 1.06 seconds per function, to finish the recovery, and achieved strong recovery performance across all seven bundlers. Across the full dataset, ReCall correctly recovered 49,867 of 58,128 ground-truth pairs, achieving an overall 85.79\% recovery rate and 98.69\% precision. This combination is important for practical use: recovered mappings must be accurate enough to support subsequent analysis while covering as much of the bundled library code as possible. For the functions that we failed to recovery, we randomly pick some libraries and do manually code inspection, we find that if our model validation can correctly judge every function pairs, the improvement is still limited. The major problem lies in there are some separate files of library, have no function relationship with other recovered ones and no big function meet POG size requierment to become an anchor. So our anchor based exploration algorihtm fail to reach them.
 
 
 \begin{table}[htbp]
-\caption{ReCall's recovery accuracy, initial anchor set, and estimated process time excluding queue delays by bundler.}
+\caption{ReCall’s precison, recovery rate, and time cost across seven bundler groups.}
 \label{tab:rq1-bundler-breakdown}
 \centering\small
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccc@{}}
 \toprule
-\multirow{3}{*}{\shortstack{\textbf{Bundler}\\\textbf{Group}}} & \multirow{3}{*}{\shortstack{\textbf{Initial}\\\textbf{Anchor (\%)}}} & \multicolumn{4}{c}{\textbf{Precision (\%)}} & \multirow{3}{*}{\shortstack{\textbf{Recovery}\\\textbf{(\%)}}} & \multicolumn{2}{c}{\textbf{Process time}} \\
+\multirow{3}{*}{\shortstack{\textbf{Bundler}\\\textbf{Group}}} & \multirow{3}{*}{\shortstack{\textbf{Initial}\\\textbf{Anchor (\%)}}} & \multicolumn{4}{c}{\textbf{Precision (\%)}} & \multirow{3}{*}{\shortstack{\textbf{Recovery}\\\textbf{(\%)}}} & \multicolumn{2}{c}{\textbf{Time cost}} \\
 \cmidrule(lr){3-6}\cmidrule(l){8-9}
  & & \shortstack{POG\\Match} & \shortstack{AST\\Match} & \shortstack{Model\\Validation} & Overall & & \shortstack{Total\\(h:min:s)} & \shortstack{Per Lib\\(min)} \\
 \midrule
@@ -38,7 +41,7 @@ ReCall first uses POG matching to identify an initial set of function correspond
 Table~\ref{tab:rq1-stage} reports the separate performance and time cost of four stages: POG matching, AST matching, neighborhood ranking, and model validation. Model validation accounts for 89.71\% of the total process time, making it the primary runtime bottleneck. Outside these stages, function relationship graph construction accounts for an estimated 4.88\%, and other processing accounts for 0.48\%.
 
 \begin{table}[htbp]
-\caption{Stage-level outcomes pooled across 35 repositories. TP, FP, FN, and TN denote true positives, false positives, false negatives, and true negatives, respectively.}
+\caption{ReCall's stage-specific performance across 35 repositories.}
 \label{tab:rq1-stage}
 \centering\small
 \setlength{\tabcolsep}{3pt}
@@ -61,11 +64,15 @@ Model Validation & 9,144 & 373 & 1,421 & 7,144 & 96.08 & 86.55 & 13:07:49 (89.74
 For matching and validation, an accepted function pair is a positive prediction, and the ground-truth mapping determines whether it is correct. Each stage is evaluated on the pairs it examines, so the confusion matrices describe stage-specific decisions rather than a shared set of comparisons. All three stages achieve high precision. However, POG matching misses approximately 30\% of the correct pairs, and AST matching rejects approximately 25\% of the correct pairs it examines. These unresolved pairs are left for semantic checking in the later stage.
 
 
-Neighborhood ranking selects up to three candidates for model validation. Its recall measures how often the correct counterpart appears among these candidates. We count a query as a true positive when the correct counterpart is included and as a false negative when it is not. In approximately 15\% of assessed queries, the correct counterpart falls outside the selected candidates and therefore does not reach model validation in that query. Model validation produces 373 false positives and 1,421 false negatives, representing incorrect acceptances and rejections, respectively. To investigate these errors, we modify the prompt to request an explanation of each decision and group the resulting explanations into the categories shown in Table~\ref{tab:rq1-rejection-reasons}.
+Neighborhood ranking selects up to three candidates for model validation. We use define recall as how often the correct counterpart appears among these candidates. We count a query as a true positive when the correct counterpart is included and as a false negative when it is not. In approximately 15\% of assessed queries, the correct counterpart falls outside the selected candidates and therefore does not reach model validation in that query. Model validation produces 373 false positives and 1,421 false negatives, representing incorrect acceptances and rejections, respectively. 
+
+\subsubsection{Failure Analysis}
+Table~\ref{tab:rq1-stage} reveals limitations at different stages of recovery. POG and AST matching rely on structural features that bundling can alter, causing them to miss some valid correspondences. Neighborhood ranking can also miss correct counterparts when embedding similarity does not adequately capture the relationship between the original and transformed code. To investigate model validation errors, we modify the prompt to request explanations of the model's decisions, manually inspect the affected function pairs, and classify the reasons into the categories shown in Table~\ref{tab:rq1-rejection-reasons}.
+
 
 
 \begin{table}[!htbp]
-\caption{Model validation error analysis. Shares are computed within each group, using 373 false positives (FP) and 1,019 persistent false negatives (FN).}
+\caption{Classified reasons for 373 false positives and 1,421 false negatives at model validation stage.}
 \label{tab:rq1-rejection-reasons}
 \centering\small
 \begin{tabular}{@{}w{c}{0.08\linewidth}>{\centering\arraybackslash}m{0.27\linewidth}>{\centering\arraybackslash}m{0.11\linewidth}>{\raggedright\arraybackslash}m{\dimexpr0.46\linewidth-6\tabcolsep\relax}@{}}
@@ -88,6 +95,23 @@ Scope or argument correspondence & 6.08\% & Inferred variable shadowing or a mis
 \end{tabular}} \\
 \bottomrule
 \end{tabular}
+\par\smallskip
 \end{table}
 
+As shown in Table~\ref{tab:rq1-rejection-reasons}, all false positives fall into the external bindings category: the model treats references to different external bindings as identifier renaming. For example, \texttt{return encodeURIComponent(x)} and \texttt{return escape(x)} have the same local structure but call functions with different behavior. Because ReCall validates function bodies without their surrounding context, the model cannot resolve external references to their definitions and may incorrectly accept such pairs. These errors account for less than 4\% of validated pairs, suggesting that function-body-only validation offers a practical tradeoff between accuracy and analysis cost. Resolving external bindings through additional context or pointer analysis could reduce these errors, but would introduce complexity and overhead.
 
+False negatives reflect several difficulties in recognizing valid transformations. Despite explicit instructions to allow consistent renaming of external bindings and omission of build-only branches, the model still rejects some pairs that differ only in these permitted ways. More complex transformations, such as restructuring conditional branches, make it difficult for the model to determine whether different control-flow structures preserve the same behavior.
+
+We further investigate this gap by selecting low-recovery-rate libraries with unrecovered functions and manually inspecting their code. A major obstacle we found is that some library files have neither a function that meets the POG anchor-size requirement nor a function relationship connecting them to an already recovered function. These files provide no starting point or entry path for anchor-based exploration. Consequently, their functions remain unreachable even when the subsequent matching and validation decisions are correct.
+
+
+\par\medskip
+\noindent\begin{tikzpicture}
+\node[fill=black!4, inner xsep=11pt, inner ysep=9pt,
+      text width=\dimexpr\linewidth-22pt\relax, align=justify] (rqanswer) {%
+\textbf{Answer to RQ1}\par\smallskip
+Across 282 libraries instances in 35 repositories spanning seven bundler groups, ReCall correctly recovers 49,867 of 58,128 ground-truth function pairs (85.79\%) with 98.69\% precision. The processing time averages 3.11 minutes per library instance, or 1.06 seconds per correctly recovered function, with model validation accounting for most of the cost.};
+\draw[black!45, line width=1.5pt]
+  (rqanswer.north west) -- (rqanswer.south west);
+\end{tikzpicture}
+\par\medskip
