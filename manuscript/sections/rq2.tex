@@ -1,14 +1,70 @@
 \subsection{RQ2: How does ReCall compare with existing recovery methods?}
 \label{sec:rq2}
 
+\subsubsection{Experiment design}
+We compare ReCall with four baselines on our ground-truth dataset of 35 repositories. Each baseline takes library source code and bundled JavaScript files as input and returns function mappings. We use the source-map-derived ground truth to evaluate recovery performance. The baselines are selected to answer the following four sub-questions.
+
+
+\paragraph{RQ2.1: How does exhaustive matching compare with ReCall's anchor-guided recovery?}
+We construct an \textbf{AST-Match} baseline using ReCall’s normalized AST matcher. The baseline compares every source function with every bundled function within a repository to assess how much can be recovered through normalized AST matching alone. We do not apply model validation to pairs rejected by the AST matcher as in ReCall workflow, because validating this large candidate set would be prohibitively expensive. Although additional validation could improve recovery, it would not correct false positives already accepted by AST matching. As later we will show, these false positives substantially reduce this baseline’s overall precision, limiting the benefit of adding an expensive validation stage.
+
+
+\paragraph{RQ2.2: How effectively can state-of-the-art code embeddings match source and bundled functions?}
+We use \textbf{JCE-0.5B}~\cite{kryvosheieva2025efficient} as a representative code embedding model. It achieves an average score of 78.72\% on the MTEB (Massive Text Embedding Benchmark) Code benchmark, outperforming other models of similar size. We embed all source and bundled functions and compare their vectors using cosine similarity. For each source function, we select the bundled function with the highest similarity score as its counterpart.
+
+\paragraph{RQ2.3: How does ReCall compare with existing function-level web library recovery techniques?}
+Two closely related approaches are Debun and D-Bundlr~\cite{xu2026dbundlr}. Debun introduces the POG representation used by ReCall to identify initial matches. Section~\ref{sec:rq1} evaluates POG matching within ReCall, showing that it achieves high precision but produces an anchor set equivalent to only about 13\% of the ground-truth pairs. We therefore focus this comparison on \textbf{D-Bundlr}, which recovers function identities to support security analysis. D-Bundlr fine-tunes GraphCodeBERT with a classification head on original and bundled function snippets. For each bundled function, the classifier predicts an identity from a fixed label set, which we use to construct the corresponding function mapping.
+
+\paragraph{RQ2.4: Can a latest LLM agent recover library functions from a single task instruction?}
+Rapid advances in commercial LLM capabilities for software engineering, as highlighted by Salsabil et al.~\cite{salsabil2026whatsurvives}, raise the question of whether a general-purpose agent can match ReCall's specialized recovery workflow. To investigate this question, we evaluate a \textbf{Codex} agent with tool and network access, using GPT-6.1-Sol with high reasoning effort in a fresh Codex CLI 0.169.0 session. The agent receives a single prompt that describes the recovery task, identifies the input files, and requests one-to-one mappings between source and bundled functions.
+
+\subsubsection{Results analysis}
+
+Table~\ref{tab:rq2-baseline-comparison} shows the comparison between baselines on ReCall on recovery rate, precision, Cross-Library Misidentification Rate (CLMR), and time cost. CLMR measures how often an prediction assigns a bundled function to the wrong source library. As shown in the table, ReCall achieved the highest recovery (85.79\%) and precision (98.69\%), and the lowest CLMR (0.022\%). AST-Match had the highest baseline recovery on the full cohort at 62.79\%, a gap of 23.00 percentage points. ReCall took longer in its reported execution environment. Its row uses the final RQ1 run on collection-aligned references, which reused prior judgments and used ground truth to select previously rejected pairs for revalidation.
+
+\begin{table}[htbp]
+\caption{The performance comparison between ReCall and four baselines on our ground-truth dataset.}
+\label{tab:rq2-baseline-comparison}
+\centering\small
+\begin{minipage}{\linewidth}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.41\linewidth}rrrr@{}}
+\toprule
+\shortstack[l]{\textbf{Method}\\\strut} & \shortstack[l]{\textbf{Key technique}\\\strut} &
+\shortstack[r]{\textbf{Recovery}\\\textbf{(\%)}} &
+\shortstack[r]{\textbf{Precision}\\\textbf{(\%)}} &
+\shortstack[r]{\textbf{CLMR}\\\textbf{(\%)}} &
+\shortstack[r]{\textbf{Time}\\\textbf{(h:min:s)}} \\
+\midrule
+ReCall & POG-anchor-based exploration and LLM semantic validation & 85.79 & 98.69 & 0.022 & 14:37:53 \\
+AST-Match & All-pairs normalized AST matching & 62.79 & 2.64 & 14.10 & 00:16:27 \\
+JCE-0.5B & Function embeddings with cosine matching & 9.16 & 21.51 & 7.63 & 04:20:35 \\
+D-Bundlr\footnote{We evaluate D-Bundlr only on the 8 repos in the dataset’s Webpack group because its artifact targets Webpack bundles.} & Fine-tuned LLM classifier & 1.30 & 48.44 & 2.34 & 00:21:58 \\
+Codex & Agent-designed bundled function recovery & 1.71 & 23.90 & 12.39 & 00:23:53 \\
+
+\bottomrule
+\end{tabular*}
+\end{minipage}
+\end{table}
+
+\textbf{AST-Match.} Exhaustive matching recovered 36,497 exact origins, including 78.04\% of pairs with both endpoints available. However, 93,718 of the 111,726 bundled functions with a match (83.88\%) had multiple candidates. Normalization can give distinct definitions the same AST, so retaining every match yielded 2.64\% assessed precision. This motivates applying AST comparison inside neighborhoods of functions whose counterparts are already known. ReCall uses POG anchors and function relationships to narrow the candidate pool, and semantic validation to check candidates that AST comparison cannot resolve.
+
+\textbf{JCE-0.5B.} The model's published benchmarks reward relevant continuations or equivalent implementations, while our labels identify the specific source definition that generated the bundled occurrence~\cite{kryvosheieva2025efficient,li2025coir}. On the 46,767 pairs with both endpoints available, exact-origin Hit@10 was 54.50\% and tie-adjusted nDCG@10 was 0.333. The exact origin fell outside the top ten for 21,279 pairs and ranked second through tenth for 18,589. Of the 6,899 first-rank hits, 5,326 passed unique reciprocal matching (11.39\% recovery on this subset). Hit@10 was 88.68\% for the 265 byte-identical pairs and 54.31\% for pairs with differing text. This comparison does not isolate individual transformations. Duplicate text on either side made unique reciprocal matching impossible for 23,751 available pairs (50.79\%). In Filekey, for example, six copies of a private-member access helper received the same score, although the recorded origin was in \path{esm/src/mutex.js} in \path{@hpke/core}. This motivates using embeddings to rank candidates identified through function relationships. The relationships can supply evidence about the origin that is absent from the function text.
+
+\textbf{D-Bundlr.} Its classifier has a fixed vocabulary of package, file, and function labels. Of the 19,055 Webpack pairs, 3,174 belonged to packages represented in that vocabulary. Both exact endpoints were available for 2,754 of those pairs, and the correct source label resolved uniquely for just 316. Eligibility was determined independently of the predictions. On that subset, D-Bundlr recovered 248 pairs (78.48\%), with 95.38\% assessed precision (248 of 260) and 0.00\% CLMR. The subset included 277 pairs from one Vue repository and eight bundled snippets that appeared byte for byte in the authors' released data. Archived ReCall recovered 289 of the same 316 pairs (91.46\%) under the RQ1 protocol described above. The coverage gap motivates ReCall's use of the supplied source inventory as its candidate space, which lets it consider definitions outside a pretrained label vocabulary.
+
+\textbf{Codex.} The generated procedure relied on normalized AST fingerprints, a minimum AST size, and local context to accept matches. It recovered 995 of the 46,767 pairs with both endpoints available (2.13\%), so missing inputs explain only part of the low overall recovery. In an evaluation-only replay on Filekey, all 480 exact pairs were available, yet the size gate excluded 152 and unequal fingerprints excluded a further 274. This suggests that the generated procedure missed small helpers and functions whose structure changed in bundling. ReCall applies its structural eligibility threshold to the initial POG anchors and explores their neighbors to consider small or transformed functions for semantic validation.
 
 \par\medskip
 \noindent\begin{tikzpicture}
 \node[fill=black!4, inner xsep=11pt, inner ysep=9pt,
       text width=\dimexpr\linewidth-22pt\relax, align=justify] (rqanswer) {%
 \textbf{Answer to RQ2}\par\smallskip
-ReCall outperforms existing tools.};
+ReCall perfrom much better than baselines.};
 \draw[black!45, line width=1.5pt]
   (rqanswer.north west) -- (rqanswer.south west);
 \end{tikzpicture}
 \par\medskip
+
+
+
